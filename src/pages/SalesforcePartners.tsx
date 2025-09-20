@@ -74,7 +74,7 @@ const SalesforcePartners = () => {
             <Users className="h-4 w-4" />
             PARTNER PROGRAM
           </div>
-          <h1 className="font-grotesk text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl md:text-5xl font-bold mb-6">
             Partner with CWT Studio
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -94,7 +94,7 @@ const SalesforcePartners = () => {
         {/* Partner Benefits */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">Why Partner with Us</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">Why Partner with Us</h2>
             <p className="text-xl text-muted-foreground">
               Proven revenue systems expertise that complements your Salesforce capabilities
             </p>
@@ -118,7 +118,7 @@ const SalesforcePartners = () => {
         {/* Partnership Process */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">How It Works</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">How It Works</h2>
             <p className="text-xl text-muted-foreground">
               A streamlined process that maximizes success for both parties
             </p>
@@ -145,7 +145,7 @@ const SalesforcePartners = () => {
         <section className="mb-16">
           <div className="bg-muted/30 rounded-lg p-8">
             <div className="text-center mb-8">
-              <h2 className="font-grotesk text-3xl font-bold mb-4">Partner Requirements</h2>
+              <h2 className="font-mono text-3xl font-bold mb-4">Partner Requirements</h2>
               <p className="text-xl text-muted-foreground">
                 We work with experienced AEs who serve enterprise accounts
               </p>
@@ -193,7 +193,7 @@ const SalesforcePartners = () => {
         {/* CTA */}
         <section className="text-center bg-card border border-border rounded-lg p-12">
           <Handshake className="h-12 w-12 mx-auto mb-6 text-primary" />
-          <h2 className="font-grotesk text-3xl font-bold mb-4">Ready to Partner?</h2>
+          <h2 className="font-mono text-3xl font-bold mb-4">Ready to Partner?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join our partner network and start earning revenue from your enterprise Salesforce accounts.
           </p>

@@ -116,7 +116,7 @@ const SalesforceDelivery = () => {
             <Settings className="h-4 w-4" />
             DELIVERY MODEL
           </div>
-          <h1 className="font-grotesk text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl md:text-5xl font-bold mb-6">
             How We Deliver Results
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -136,7 +136,7 @@ const SalesforceDelivery = () => {
         {/* Partnership Model */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">Partnership Model</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">Partnership Model</h2>
             <p className="text-xl text-muted-foreground">
               Strategic collaboration that delivers both business value and technical excellence
             </p>
@@ -168,7 +168,7 @@ const SalesforceDelivery = () => {
         {/* Delivery Timeline */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">12-Week Implementation Timeline</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">12-Week Implementation Timeline</h2>
             <p className="text-xl text-muted-foreground">
               Structured approach from audit to optimization
             </p>
@@ -206,7 +206,7 @@ const SalesforceDelivery = () => {
         {/* Competitive Advantages */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">Why This Model Works</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">Why This Model Works</h2>
             <p className="text-xl text-muted-foreground">
               Advantages over traditional Salesforce consulting approaches
             </p>
@@ -231,7 +231,7 @@ const SalesforceDelivery = () => {
         <section className="mb-16">
           <div className="bg-muted/30 rounded-lg p-8">
             <div className="text-center mb-8">
-              <h2 className="font-grotesk text-3xl font-bold mb-4">Quality Assurance</h2>
+              <h2 className="font-mono text-3xl font-bold mb-4">Quality Assurance</h2>
               <p className="text-xl text-muted-foreground">
                 Enterprise standards for every implementation
               </p>
@@ -260,7 +260,7 @@ const SalesforceDelivery = () => {
         {/* CTA */}
         <section className="text-center bg-card border border-border rounded-lg p-12">
           <Settings className="h-12 w-12 mx-auto mb-6 text-primary" />
-          <h2 className="font-grotesk text-3xl font-bold mb-4">Ready to Transform Your Salesforce?</h2>
+          <h2 className="font-mono text-3xl font-bold mb-4">Ready to Transform Your Salesforce?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Experience the difference of revenue-focused Salesforce optimization with enterprise-grade delivery.
           </p>
