@@ -17,6 +17,8 @@ import SalesforceDelivery from "@/pages/SalesforceDelivery";
 import Fractional from "@/pages/Fractional";
 import SampleReport from "@/pages/SampleReport";
 import Proof from "@/pages/Proof";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +42,8 @@ const App = () => (
           <Route path="/fractional" element={<Fractional />} />
           <Route path="/sample-report" element={<SampleReport />} />
           <Route path="/proof" element={<Proof />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
