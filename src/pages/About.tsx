@@ -51,9 +51,9 @@ const About = () => {
               <div className="bg-muted/30 rounded-lg aspect-square flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">CW</span>
+                    <span className="text-2xl font-bold text-primary">SM</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Founder Photo</p>
+                  <p className="text-sm text-muted-foreground">Shannon Maguire, Founder</p>
                 </div>
               </div>
             </div>
@@ -61,18 +61,19 @@ const About = () => {
             <div className="lg:col-span-2">
               <h2 className="font-mono text-2xl font-bold mb-6">Leadership</h2>
               <div className="prose prose-gray max-w-none">
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  <strong>Christopher Thompson</strong> spent 15 years building and breaking revenue systems 
-                  at companies from Series A to IPO. Former VP Revenue Operations at three unicorns. 
-                  Former Salesforce Principal Solutions Engineer.
+                <p className="text-foreground/80 leading-relaxed mb-4">
+                  <strong>Shannon Maguire</strong> builds revenue infrastructure for companies that can't afford to stall. 
+                  She started inside the Salesforce ecosystem—running enterprise GTM motions and seeing how deals move 
+                  when the systems are tight, and how fast they break when they aren't.
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Built the revenue infrastructure that supported $100M+ ARR scale at two different companies. 
-                  Seen every way a system can fail when the backend can't hold the growth.
+                <p className="text-foreground/80 leading-relaxed mb-4">
+                  Since then, she's worked across SaaS, cybersecurity, compliance, and creator markets, designing the 
+                  back-end engines that carry growth past the first sprint.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Started CWT Studio to give growing businesses the same quality of revenue infrastructure 
-                  that enterprise companies get, without the enterprise timeline or complexity.
+                <p className="text-foreground/80 leading-relaxed">
+                  At CWT Studio, Shannon's role is simple: translate complexity into working revenue systems. Whether it's 
+                  standing up outbound command centers, building assessment frameworks, or wiring Salesforce into the rest 
+                  of the stack, she operates as both architect and operator—getting companies the leverage they need to scale.
                 </p>
               </div>
             </div>
