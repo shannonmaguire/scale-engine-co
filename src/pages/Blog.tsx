@@ -206,16 +206,29 @@ const Blog = () => {
               </div>
               
               <aside className="space-y-6">
-                <div className="bg-muted/30 p-4 rounded-lg border">
-                  <h3 className="font-mono text-sm font-semibold text-foreground mb-3">
-                    Topics Covered
-                  </h3>
-                  <div className="space-y-2">
-                    {featuredPost.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs mr-1 mb-1">
-                        {tag}
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-1 h-6 bg-primary rounded-full"></div>
+                    <h3 className="font-mono text-base font-bold text-foreground">
+                      Article Topics
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {featuredPost.tags.map((tag, index) => (
+                      <Badge 
+                        key={tag} 
+                        variant="secondary" 
+                        className="text-xs font-medium px-3 py-1.5 bg-background/80 hover:bg-primary/10 transition-colors cursor-pointer border border-primary/20"
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
+                        #{tag}
                       </Badge>
                     ))}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-primary/20">
+                    <p className="text-xs text-muted-foreground italic">
+                      Deep dive into these key areas
+                    </p>
                   </div>
                 </div>
               </aside>
