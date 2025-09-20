@@ -61,7 +61,7 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="console-line mb-4">
@@ -98,7 +98,7 @@ const Home = () => {
 
       {/* The System Section */}
       <section id="system" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <div className="console-line mx-auto mb-4 w-fit">
               <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">The System</span>
@@ -146,7 +146,7 @@ const Home = () => {
 
       {/* Before and After Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-8">Before and After</h2>
@@ -197,7 +197,7 @@ const Home = () => {
 
       {/* Assessment Details Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">The Diagnostic</h2>
@@ -246,7 +246,7 @@ const Home = () => {
 
       {/* Proof Section */}
       <section className="py-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
             <div className="console-line mx-auto mb-4 w-fit">
               <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Proof</span>
@@ -273,7 +273,7 @@ const Home = () => {
 
       {/* Salesforce Block */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
               Salesforce without wasted motion
@@ -297,7 +297,7 @@ const Home = () => {
 
       {/* Final CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-6 max-w-7xl text-center">
           <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
             Scale only works when the backend holds
           </h2>
