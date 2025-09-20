@@ -65,7 +65,7 @@ const Services = () => {
           <div className="blueprint-line mx-auto mb-4 w-fit">
             <span className="text-sm text-muted-foreground uppercase tracking-wide">Services</span>
           </div>
-          <h1 className="font-grotesk text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Revenue Systems That Scale
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -85,7 +85,7 @@ const Services = () => {
                         <service.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="font-grotesk text-2xl">{service.title}</CardTitle>
+                        <CardTitle className="font-mono text-2xl">{service.title}</CardTitle>
                         <p className="text-muted-foreground italic">{service.tagline}</p>
                       </div>
                     </div>
@@ -96,7 +96,7 @@ const Services = () => {
                     </p>
                     
                     <div>
-                      <h4 className="font-grotesk font-bold mb-3">What's Included</h4>
+                      <h4 className="font-mono font-bold mb-3">What's Included</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2">
@@ -118,7 +118,7 @@ const Services = () => {
                       </div>
                     </div>
                     
-                    <Button asChild className="w-full cta-primary">
+                    <Button asChild className="w-full btn-console">
                       <Link to={service.link}>
                         {service.cta}
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -131,7 +131,7 @@ const Services = () => {
               <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <div className="bg-muted/30 rounded-lg p-8 text-center">
                   <service.icon className="w-16 h-16 text-primary mx-auto mb-4" />
-                  <h3 className="font-grotesk text-xl font-bold mb-2">
+                  <h3 className="font-mono text-xl font-bold mb-2">
                     Step {index + 1}: {service.title}
                   </h3>
                   <p className="text-muted-foreground">
@@ -146,7 +146,7 @@ const Services = () => {
         {/* Process Flow */}
         <section className="py-20">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">The Complete System</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">The Complete System</h2>
             <p className="text-xl text-muted-foreground">
               How our services work together to transform your revenue operations
             </p>
@@ -158,7 +158,7 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   1
                 </div>
-                <h3 className="font-grotesk font-bold text-lg mb-2">Assess</h3>
+                <h3 className="font-mono font-bold text-lg mb-2">Assess</h3>
                 <p className="text-muted-foreground text-sm">
                   Comprehensive diagnostic reveals what's blocking your scale
                 </p>
@@ -168,7 +168,7 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   2
                 </div>
-                <h3 className="font-grotesk font-bold text-lg mb-2">Build</h3>
+                <h3 className="font-mono font-bold text-lg mb-2">Build</h3>
                 <p className="text-muted-foreground text-sm">
                   Fast implementation of the systems that drive results
                 </p>
@@ -178,7 +178,7 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   3
                 </div>
-                <h3 className="font-grotesk font-bold text-lg mb-2">Operate</h3>
+                <h3 className="font-mono font-bold text-lg mb-2">Operate</h3>
                 <p className="text-muted-foreground text-sm">
                   Ongoing optimization keeps your system ahead of growth
                 </p>
@@ -189,13 +189,13 @@ const Services = () => {
 
         {/* CTA */}
         <div className="text-center bg-card border border-border rounded-lg p-8">
-          <h2 className="font-grotesk text-2xl font-bold mb-4">
+          <h2 className="font-mono text-2xl font-bold mb-4">
             Ready to scale your revenue system?
           </h2>
           <p className="text-muted-foreground mb-6">
             Start with an assessment. See exactly what needs to change.
           </p>
-          <Button asChild size="lg" className="cta-primary">
+          <Button asChild size="lg" className="btn-console">
             <Link to="/contact">
               Book Assessment
               <ArrowRight className="ml-2 h-5 w-5" />

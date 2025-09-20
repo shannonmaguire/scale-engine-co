@@ -35,7 +35,7 @@ const About = () => {
           <div className="blueprint-line mx-auto mb-4 w-fit">
             <span className="text-sm text-muted-foreground uppercase tracking-wide">About</span>
           </div>
-          <h1 className="font-grotesk text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Built for Operators
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -59,7 +59,7 @@ const About = () => {
             </div>
             
             <div className="lg:col-span-2">
-              <h2 className="font-grotesk text-2xl font-bold mb-6">Leadership</h2>
+              <h2 className="font-mono text-2xl font-bold mb-6">Leadership</h2>
               <div className="prose prose-gray max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   <strong>Christopher Thompson</strong> spent 15 years building and breaking revenue systems 
@@ -82,7 +82,7 @@ const About = () => {
         {/* Values */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">How We Operate</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">How We Operate</h2>
             <p className="text-xl text-muted-foreground">
               The principles that guide every engagement
             </p>
@@ -97,7 +97,7 @@ const About = () => {
                       <value.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-grotesk text-xl font-bold mb-3">{value.title}</h3>
+                      <h3 className="font-mono text-xl font-bold mb-3">{value.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                     </div>
                   </div>
@@ -110,7 +110,7 @@ const About = () => {
         {/* Philosophy */}
         <section className="mb-16">
           <div className="bg-muted/30 rounded-lg p-8">
-            <h2 className="font-grotesk text-2xl font-bold mb-6 text-center">Our Philosophy</h2>
+            <h2 className="font-mono text-2xl font-bold mb-6 text-center">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
               <blockquote className="text-lg text-muted-foreground italic leading-relaxed mb-6">
                 "Revenue systems are like plumbing. When they work, nobody thinks about them. 
@@ -126,18 +126,18 @@ const About = () => {
 
         {/* Expertise Areas */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">Expertise Areas</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Expertise Areas</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6 border border-border rounded-lg">
-              <h3 className="font-grotesk font-bold mb-2">Revenue Operations</h3>
+              <h3 className="font-mono font-bold mb-2">Revenue Operations</h3>
               <p className="text-sm text-muted-foreground">Process, governance, and optimization</p>
             </div>
             <div className="text-center p-6 border border-border rounded-lg">
-              <h3 className="font-grotesk font-bold mb-2">Salesforce Architecture</h3>
+              <h3 className="font-mono font-bold mb-2">Salesforce Architecture</h3>
               <p className="text-sm text-muted-foreground">Platform design and integration</p>
             </div>
             <div className="text-center p-6 border border-border rounded-lg">
-              <h3 className="font-grotesk font-bold mb-2">Marketing Technology</h3>
+              <h3 className="font-mono font-bold mb-2">Marketing Technology</h3>
               <p className="text-sm text-muted-foreground">Automation and attribution</p>
             </div>
           </div>
@@ -146,10 +146,10 @@ const About = () => {
         {/* Working with Us */}
         <section className="mb-16">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-grotesk text-2xl font-bold mb-4">Working with CWT Studio</h2>
+            <h2 className="font-mono text-2xl font-bold mb-4">Working with CWT Studio</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-grotesk font-bold mb-3">What We Do</h3>
+                <h3 className="font-mono font-bold mb-3">What We Do</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Deep diagnostic of your revenue infrastructure</li>
                   <li>• Fast implementation of priority fixes</li>
@@ -158,7 +158,7 @@ const About = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-grotesk font-bold mb-3">What We Don't Do</h3>
+                <h3 className="font-mono font-bold mb-3">What We Don't Do</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Long discovery phases without action</li>
                   <li>• Generic solutions that don't fit</li>
@@ -173,13 +173,13 @@ const About = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-grotesk text-2xl font-bold mb-4">
+            <h2 className="font-mono text-2xl font-bold mb-4">
               Ready to build systems that scale?
             </h2>
             <p className="text-muted-foreground mb-6">
               Let's diagnose what's slowing down your growth.
             </p>
-            <Button asChild size="lg" className="cta-primary">
+            <Button asChild size="lg" className="btn-console">
               <Link to="/contact">
                 Book Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

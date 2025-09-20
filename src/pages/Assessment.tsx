@@ -63,7 +63,7 @@ const Assessment = () => {
           <div className="blueprint-line mx-auto mb-4 w-fit">
             <span className="text-sm text-muted-foreground uppercase tracking-wide">Assessment</span>
           </div>
-          <h1 className="font-grotesk text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Infrastructure Assessment
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -73,7 +73,7 @@ const Assessment = () => {
 
         {/* Deliverables */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">What You Get</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">What You Get</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {deliverables.map((item, index) => (
               <Card key={index} className="border-border">
@@ -93,7 +93,7 @@ const Assessment = () => {
 
         {/* Process Timeline */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">Process</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Process</h2>
           <div className="space-y-6">
             {process.map((item, index) => (
               <div key={index} className="flex items-start gap-4">
@@ -101,7 +101,7 @@ const Assessment = () => {
                   {index + 1}
                 </div>
                 <div>
-                  <h3 className="font-grotesk font-bold text-lg mb-1">{item.step}</h3>
+                  <h3 className="font-mono font-bold text-lg mb-1">{item.step}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
               </div>
@@ -115,13 +115,13 @@ const Assessment = () => {
             <div className="grid md:grid-cols-3 gap-6 items-center">
               <div className="text-center">
                 <DollarSign className="w-8 h-8 text-primary mx-auto mb-2" />
-                <h3 className="font-grotesk font-bold text-lg mb-1">Virtual Assessment</h3>
+                <h3 className="font-mono font-bold text-lg mb-1">Virtual Assessment</h3>
                 <p className="text-2xl font-bold text-primary">From $7,500</p>
               </div>
               
               <div className="text-center">
                 <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
-                <h3 className="font-grotesk font-bold text-lg mb-1">In-Person Assessment</h3>
+                <h3 className="font-mono font-bold text-lg mb-1">In-Person Assessment</h3>
                 <p className="text-2xl font-bold text-primary">From $12,500</p>
               </div>
               
@@ -129,7 +129,7 @@ const Assessment = () => {
                 <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-2 text-sm font-bold">
                   %
                 </div>
-                <h3 className="font-grotesk font-bold text-lg mb-1">Sprint Credit</h3>
+                <h3 className="font-mono font-bold text-lg mb-1">Sprint Credit</h3>
                 <p className="text-sm text-muted-foreground">50% applies to Sprint if you move forward within 45 days</p>
               </div>
             </div>
@@ -138,7 +138,7 @@ const Assessment = () => {
 
         {/* FAQ */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
@@ -160,13 +160,13 @@ const Assessment = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-grotesk text-2xl font-bold mb-4">
+            <h2 className="font-mono text-2xl font-bold mb-4">
               Ready to diagnose your revenue system?
             </h2>
             <p className="text-muted-foreground mb-6">
               Get the clarity you need to scale with confidence.
             </p>
-            <Button asChild size="lg" className="cta-primary">
+            <Button asChild size="lg" className="btn-console">
               <Link to="/contact">
                 Book Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

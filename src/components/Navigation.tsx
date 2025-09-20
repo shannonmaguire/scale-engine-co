@@ -28,7 +28,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img 
               src={cwtLogoMark} 
-              alt="CWT Studio"
+              alt="CWT Studio - Revenue Systems Consulting"
               className="h-8 w-8"
             />
             <span className="font-mono font-bold text-lg text-foreground hidden sm:block">Studio</span>

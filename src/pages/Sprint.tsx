@@ -68,7 +68,7 @@ const Sprint = () => {
           <div className="blueprint-line mx-auto mb-4 w-fit">
             <span className="text-sm text-muted-foreground uppercase tracking-wide">Sprint</span>
           </div>
-          <h1 className="font-grotesk text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Revenue Sprint
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -78,7 +78,7 @@ const Sprint = () => {
 
         {/* Workstreams */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">What We Build</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">What We Build</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {workstreams.map((stream, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
@@ -100,7 +100,7 @@ const Sprint = () => {
 
         {/* Timeline */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">Sprint Timeline</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Sprint Timeline</h2>
           <div className="space-y-6">
             {timeline.map((phase, index) => (
               <div key={index} className="relative">
@@ -110,7 +110,7 @@ const Sprint = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
-                      <h3 className="font-grotesk font-bold text-lg">{phase.title}</h3>
+                      <h3 className="font-mono font-bold text-lg">{phase.title}</h3>
                       <span className="text-sm text-muted-foreground bg-muted px-3 py-1 rounded-full w-fit">
                         {phase.week}
                       </span>
@@ -132,7 +132,7 @@ const Sprint = () => {
         <section className="mb-16">
           <div className="bg-muted/30 rounded-lg p-8 text-center">
             <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="font-grotesk text-2xl font-bold mb-2">Sprint Investment</h2>
+            <h2 className="font-mono text-2xl font-bold mb-2">Sprint Investment</h2>
             <p className="text-3xl font-bold text-primary mb-2">$15,000 - $25,000</p>
             <p className="text-muted-foreground">Depending on scope and complexity</p>
           </div>
@@ -140,7 +140,7 @@ const Sprint = () => {
 
         {/* Success Metrics */}
         <section className="mb-16">
-          <h2 className="font-grotesk text-2xl font-bold mb-8">Success Metrics</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Success Metrics</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">90%+</div>
@@ -160,7 +160,7 @@ const Sprint = () => {
         {/* Prerequisites */}
         <section className="mb-16">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-grotesk text-xl font-bold mb-4">Sprint Prerequisites</h2>
+            <h2 className="font-mono text-xl font-bold mb-4">Sprint Prerequisites</h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
@@ -185,13 +185,13 @@ const Sprint = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-grotesk text-2xl font-bold mb-4">
+            <h2 className="font-mono text-2xl font-bold mb-4">
               Ready to install your revenue system?
             </h2>
             <p className="text-muted-foreground mb-6">
               Let's build the infrastructure that scales with your growth.
             </p>
-            <Button asChild size="lg" className="cta-primary">
+            <Button asChild size="lg" className="btn-console">
               <Link to="/contact">
                 Plan Your Sprint
                 <ArrowRight className="ml-2 h-5 w-5" />

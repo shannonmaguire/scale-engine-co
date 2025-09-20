@@ -14,6 +14,8 @@ import Systems from "@/pages/Systems";
 import Salesforce from "@/pages/Salesforce";
 import SalesforcePartners from "@/pages/SalesforcePartners";
 import SalesforceDelivery from "@/pages/SalesforceDelivery";
+import Fractional from "@/pages/Fractional";
+import SampleReport from "@/pages/SampleReport";
 import Proof from "@/pages/Proof";
 import NotFound from "./pages/NotFound";
 
@@ -35,6 +37,8 @@ const App = () => (
           <Route path="/salesforce" element={<Salesforce />} />
           <Route path="/salesforce/partners" element={<SalesforcePartners />} />
           <Route path="/salesforce/delivery" element={<SalesforceDelivery />} />
+          <Route path="/fractional" element={<Fractional />} />
+          <Route path="/sample-report" element={<SampleReport />} />
           <Route path="/proof" element={<Proof />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

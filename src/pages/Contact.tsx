@@ -53,17 +53,18 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name" className="font-mono text-sm">Name *</Label>
+                      <Label htmlFor="name" className="font-mono text-sm font-medium">Name *</Label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         required
                         className="mt-2 font-mono"
+                        aria-describedby="name-error"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email" className="font-mono text-sm">Email *</Label>
+                      <Label htmlFor="email" className="font-mono text-sm font-medium">Email *</Label>
                       <Input
                         id="email"
                         type="email"
@@ -71,25 +72,27 @@ const Contact = () => {
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         required
                         className="mt-2 font-mono"
+                        aria-describedby="email-error"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="company" className="font-mono text-sm">Company *</Label>
+                    <Label htmlFor="company" className="font-mono text-sm font-medium">Company *</Label>
                     <Input
                       id="company"
                       value={formData.company}
                       onChange={(e) => handleInputChange("company", e.target.value)}
                       required
                       className="mt-2 font-mono"
+                      aria-describedby="company-error"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="path" className="font-mono text-sm">Choose Path *</Label>
+                    <Label htmlFor="path" className="font-mono text-sm font-medium">Choose Path *</Label>
                     <Select onValueChange={(value) => handleInputChange("path", value)}>
-                      <SelectTrigger className="mt-2 font-mono">
+                      <SelectTrigger className="mt-2 font-mono" aria-describedby="path-error">
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                       <SelectContent>
@@ -102,7 +105,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="objective" className="font-mono text-sm">One sentence objective *</Label>
+                    <Label htmlFor="objective" className="font-mono text-sm font-medium">One sentence objective *</Label>
                     <Textarea
                       id="objective"
                       value={formData.objective}
@@ -111,6 +114,7 @@ const Contact = () => {
                       required
                       className="mt-2 font-mono"
                       rows={3}
+                      aria-describedby="objective-error"
                     />
                   </div>
 
@@ -161,7 +165,7 @@ const Contact = () => {
             {/* Contact Details */}
             <Card className="border-border">
               <CardHeader>
-                <CardTitle className="font-grotesk text-xl">Get in Touch</CardTitle>
+                <CardTitle className="font-mono text-xl">Get in Touch</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -184,7 +188,7 @@ const Contact = () => {
             {/* What Happens Next */}
             <Card className="border-border">
               <CardHeader>
-                <CardTitle className="font-grotesk text-xl">What Happens Next</CardTitle>
+                <CardTitle className="font-mono text-xl">What Happens Next</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -221,7 +225,7 @@ const Contact = () => {
 
             {/* Pricing Context */}
             <div className="bg-muted/30 rounded-lg p-6">
-              <h3 className="font-grotesk font-bold mb-3">Assessment Pricing</h3>
+              <h3 className="font-mono font-bold mb-3">Assessment Pricing</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Virtual</span>
