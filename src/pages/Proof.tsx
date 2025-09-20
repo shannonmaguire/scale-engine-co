@@ -3,110 +3,65 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, TrendingUp, Target, Zap, DollarSign, Clock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Proof = () => {
-  const caseStudies = [
-    {
-      id: "CS001",
-      industry: "Gov Contractor",
-      vertical: "Federal Compliance",
-      impact: "$2.5M ARR",
-      metric: "250% Growth",
-      timeline: "90 Days",
-      challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes.",
-      approach: [
-        "Deployed fixed-scope service packages ($25K-$50K range)",
-        "Architected compliance-aligned documentation system",
-        "Installed GTM sprint targeting SaaS/GovTech segments", 
-        "Implemented CRM + RevOps pipeline tracking"
-      ],
-      outcomes: [
-        "Standardized service productization achieved",
-        "Clear sales motion established for SaaS compliance market",
-        "Founder extracted from delivery bottleneck",
-        "Recurring revenue model operational"
-      ],
-      status: "DEPLOYED"
-    },
-    {
-      id: "CS002", 
-      industry: "Professional Services",
-      vertical: "Legal Advisory",
-      impact: "$480K MRR",
-      metric: "340% Growth",
-      timeline: "120 Days",
-      challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue.",
-      approach: [
-        "Designed subscription architecture (tiers, deliverables, billing)",
-        "Rebuilt client journey: funnels → onboarding → retention",
-        "Installed revenue dashboard + partner reporting cadence",
-        "Executed 90-day repositioning sprint"
-      ],
-      outcomes: [
-        "Subscription model deployed with predictable MRR",
-        "Category-defining market position established", 
-        "Partners gained pipeline/profitability visibility",
-        "Revenue predictability achieved"
-      ],
-      status: "OPTIMIZED"
-    },
-    {
-      id: "CS003",
-      industry: "Creator Economy",
-      vertical: "Media + Education",
-      impact: "$1.8M ARR",
-      metric: "520% Growth",
-      timeline: "150 Days",
-      challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers.",
-      approach: [
-        "Audited existing funnels, pricing, community mechanics",
-        "Designed Revenue Sprint: growth roadmap + affiliate program",
-        "Installed automation backbone: CRM, billing, analytics",
-        "Trained internal team on GTM operations"
-      ],
-      outcomes: [
-        "LTV increased via upsell flows + affiliate acquisition",
-        "Audience converted from followers to paying members",
-        "Operational system deployed to match creative output",
-        "Founder bottleneck eliminated"
-      ],
-      status: "SCALED"
-    },
-    {
-      id: "CS004",
-      industry: "SaaS Startup",
-      vertical: "Enterprise Software",
-      impact: "$3.2M ARR",
-      metric: "420% Growth",
-      timeline: "180 Days",
-      challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity.",
-      approach: [
-        "Built ICP + GTM framework for enterprise/SMB segments",
-        "Created outbound/inbound motion via Salesforce ecosystem",
-        "Installed RevOps pipeline + early customer success loops",
-        "Partnered on pricing architecture + packaging strategy"
-      ],
-      outcomes: [
-        "First enterprise deals secured with clear positioning",
-        "GTM risk removed from 'spray and pray' founder sales",
-        "Repeatable SaaS revenue foundation established",
-        "Revenue growth infrastructure operational"
-      ],
-      status: "DEPLOYED"
-    }
-  ];
-
+  const caseStudies = [{
+    id: "CS001",
+    industry: "Gov Contractor",
+    vertical: "Federal Compliance",
+    impact: "$2.5M ARR",
+    metric: "250% Growth",
+    timeline: "90 Days",
+    challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes.",
+    approach: ["Deployed fixed-scope service packages ($25K-$50K range)", "Architected compliance-aligned documentation system", "Installed GTM sprint targeting SaaS/GovTech segments", "Implemented CRM + RevOps pipeline tracking"],
+    outcomes: ["Standardized service productization achieved", "Clear sales motion established for SaaS compliance market", "Founder extracted from delivery bottleneck", "Recurring revenue model operational"],
+    status: "DEPLOYED"
+  }, {
+    id: "CS002",
+    industry: "Professional Services",
+    vertical: "Legal Advisory",
+    impact: "$480K MRR",
+    metric: "340% Growth",
+    timeline: "120 Days",
+    challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue.",
+    approach: ["Designed subscription architecture (tiers, deliverables, billing)", "Rebuilt client journey: funnels → onboarding → retention", "Installed revenue dashboard + partner reporting cadence", "Executed 90-day repositioning sprint"],
+    outcomes: ["Subscription model deployed with predictable MRR", "Category-defining market position established", "Partners gained pipeline/profitability visibility", "Revenue predictability achieved"],
+    status: "OPTIMIZED"
+  }, {
+    id: "CS003",
+    industry: "Creator Economy",
+    vertical: "Media + Education",
+    impact: "$1.8M ARR",
+    metric: "520% Growth",
+    timeline: "150 Days",
+    challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers.",
+    approach: ["Audited existing funnels, pricing, community mechanics", "Designed Revenue Sprint: growth roadmap + affiliate program", "Installed automation backbone: CRM, billing, analytics", "Trained internal team on GTM operations"],
+    outcomes: ["LTV increased via upsell flows + affiliate acquisition", "Audience converted from followers to paying members", "Operational system deployed to match creative output", "Founder bottleneck eliminated"],
+    status: "SCALED"
+  }, {
+    id: "CS004",
+    industry: "SaaS Startup",
+    vertical: "Enterprise Software",
+    impact: "$3.2M ARR",
+    metric: "420% Growth",
+    timeline: "180 Days",
+    challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity.",
+    approach: ["Built ICP + GTM framework for enterprise/SMB segments", "Created outbound/inbound motion via Salesforce ecosystem", "Installed RevOps pipeline + early customer success loops", "Partnered on pricing architecture + packaging strategy"],
+    outcomes: ["First enterprise deals secured with clear positioning", "GTM risk removed from 'spray and pray' founder sales", "Repeatable SaaS revenue foundation established", "Revenue growth infrastructure operational"],
+    status: "DEPLOYED"
+  }];
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "DEPLOYED": return "bg-green-500/20 text-green-500";
-      case "OPTIMIZED": return "bg-yellow-500/20 text-yellow-600";  
-      case "SCALED": return "bg-blue-500/20 text-blue-500";
-      default: return "bg-muted text-muted-foreground";
+      case "DEPLOYED":
+        return "bg-green-500/20 text-green-500";
+      case "OPTIMIZED":
+        return "bg-yellow-500/20 text-yellow-600";
+      case "SCALED":
+        return "bg-blue-500/20 text-blue-500";
+      default:
+        return "bg-muted text-muted-foreground";
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -124,29 +79,7 @@ const Proof = () => {
           </p>
           
           {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white border rounded-lg p-6 text-center">
-              <div className="flex items-center justify-center mb-2">
-                <DollarSign className="h-6 w-6 text-primary mr-2" />
-                <span className="text-2xl font-bold text-gray-900">$10.0M+</span>
-              </div>
-              <p className="text-sm text-gray-600">Total ARR Generated</p>
-            </div>
-            <div className="bg-white border rounded-lg p-6 text-center">
-              <div className="flex items-center justify-center mb-2">
-                <TrendingUp className="h-6 w-6 text-primary mr-2" />
-                <span className="text-2xl font-bold text-gray-900">382%</span>
-              </div>
-              <p className="text-sm text-gray-600">Average Growth Rate</p>
-            </div>
-            <div className="bg-white border rounded-lg p-6 text-center">
-              <div className="flex items-center justify-center mb-2">
-                <Clock className="h-6 w-6 text-primary mr-2" />
-                <span className="text-2xl font-bold text-gray-900">135</span>
-              </div>
-              <p className="text-sm text-gray-600">Days Average Deploy</p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
@@ -159,8 +92,7 @@ const Proof = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study) => (
-              <Card key={study.id} className="bg-white border-0 shadow-sm hover:shadow-md transition-shadow h-full">
+            {caseStudies.map(study => <Card key={study.id} className="bg-white border-0 shadow-sm hover:shadow-md transition-shadow h-full">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-3">
                     <Badge className={`text-xs font-semibold ${getStatusColor(study.status)}`}>
@@ -202,12 +134,10 @@ const Proof = () => {
                       Solution
                     </h4>
                     <ul className="space-y-2">
-                      {study.approach.map((item, idx) => (
-                        <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
+                      {study.approach.map((item, idx) => <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
                           <Target className="h-3 w-3 mt-0.5 flex-shrink-0 text-primary" />
                           {item}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
 
@@ -216,17 +146,14 @@ const Proof = () => {
                       Results
                     </h4>
                     <ul className="space-y-2">
-                      {study.outcomes.map((outcome, idx) => (
-                        <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
+                      {study.outcomes.map((outcome, idx) => <li key={idx} className="text-sm text-gray-700 flex items-start gap-2">
                           <CheckCircle className="h-3 w-3 mt-0.5 flex-shrink-0 text-green-600" />
                           {outcome}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -297,8 +224,6 @@ const Proof = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Proof;
