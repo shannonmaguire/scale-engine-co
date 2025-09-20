@@ -86,9 +86,9 @@ const Proof = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case "DEPLOYED": return "bg-green-500/20 text-green-400";
-      case "OPTIMIZED": return "bg-blue-500/20 text-blue-400";  
-      case "SCALED": return "bg-purple-500/20 text-purple-400";
+      case "DEPLOYED": return "bg-green-500/20 text-green-500";
+      case "OPTIMIZED": return "bg-yellow-500/20 text-yellow-600";  
+      case "SCALED": return "bg-blue-500/20 text-blue-500";
       default: return "bg-muted text-muted-foreground";
     }
   };
@@ -99,9 +99,9 @@ const Proof = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="console-grid mb-8">
-            <div className="console-line">
+            <div className="console-line flex items-center justify-between">
               <span className="text-foreground font-mono text-sm">SYSTEM STATUS</span>
-              <Badge className="bg-green-500/20 text-green-400 font-mono">OPERATIONAL</Badge>
+              <Badge className="bg-green-500/20 text-green-500 font-mono">OPERATIONAL</Badge>
             </div>
           </div>
           
@@ -118,9 +118,9 @@ const Proof = () => {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="console-grid mb-12">
-            <div className="console-line">
+            <div className="console-line flex items-center justify-between">
               <span className="text-foreground font-mono text-sm">CASE STUDIES</span>
-              <span className="font-mono text-sm">4 DEPLOYMENTS</span>
+              <span className="font-mono text-sm text-foreground/90">4 DEPLOYMENTS</span>
             </div>
           </div>
 
@@ -185,33 +185,44 @@ const Proof = () => {
       </section>
 
       {/* Process Methodology */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Deployment Methodology</h2>
+      <section className="py-20 px-4 bg-muted/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="console-grid mb-12">
+            <div className="console-line flex items-center justify-between">
+              <span className="text-foreground font-mono text-sm">DEPLOYMENT METHODOLOGY</span>
+              <span className="font-mono text-xs text-foreground/90">3-PHASE SYSTEM</span>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="console-card">
-              <div className="p-6">
-                <TrendingUp className="h-8 w-8 mx-auto mb-4 text-primary" />
-                <h3 className="font-mono text-lg font-semibold mb-2">Assessment</h3>
-                <p className="text-sm text-foreground/90">
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <TrendingUp className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-mono text-lg font-semibold mb-3 text-primary">01. Assessment</h3>
+                <p className="text-sm text-foreground/90 leading-relaxed">
                   System audit, revenue analysis, operational bottleneck identification
                 </p>
               </div>
             </div>
             <div className="console-card">
-              <div className="p-6">
-                <Zap className="h-8 w-8 mx-auto mb-4 text-primary" />
-                <h3 className="font-mono text-lg font-semibold mb-2">Sprint</h3>
-                <p className="text-sm text-foreground/90">
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-mono text-lg font-semibold mb-3 text-primary">02. Sprint</h3>
+                <p className="text-sm text-foreground/90 leading-relaxed">
                   Rapid deployment, system installation, process optimization
                 </p>
               </div>
             </div>
             <div className="console-card">
-              <div className="p-6">
-                <CheckCircle className="h-8 w-8 mx-auto mb-4 text-primary" />
-                <h3 className="font-mono text-lg font-semibold mb-2">Results</h3>
-                <p className="text-sm text-foreground/90">
+              <div className="p-6 text-center">
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <CheckCircle className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-mono text-lg font-semibold mb-3 text-primary">03. Results</h3>
+                <p className="text-sm text-foreground/90 leading-relaxed">
                   Measurable impact, operational stability, revenue growth
                 </p>
               </div>
@@ -224,7 +235,7 @@ const Proof = () => {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="console-grid mb-8">
-            <div className="console-line justify-center">
+            <div className="console-line flex items-center justify-center">
               <Badge className="bg-primary/20 text-primary font-mono">
                 SYSTEM READY
               </Badge>
