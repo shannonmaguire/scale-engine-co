@@ -1,111 +1,58 @@
-import { useEffect, useState } from "react";
-import heroSystemDiagram from "@/assets/hero-system-diagram.jpg";
-
 const SystemDiagram = () => {
-  const [activeStep, setActiveStep] = useState(0);
-  
-  const steps = [
-    { id: 'assess', label: 'Assessment', x: 20, y: 50 },
-    { id: 'build', label: 'Sprint', x: 50, y: 30 },
-    { id: 'operate', label: 'Fractional Ops', x: 80, y: 50 },
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % steps.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [steps.length]);
-
   return (
-    <div className="relative w-full h-64 bg-card border border-border overflow-hidden console-card">
-      {/* Background image with console overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${heroSystemDiagram})` }}
-      />
+    <div className="w-full h-64 bg-card border border-border console-card font-mono">
+      {/* Console Header */}
+      <div className="border-b border-border p-3 bg-muted/5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span className="text-xs font-mono text-muted-foreground">SYSTEM STATUS</span>
+          </div>
+          <span className="text-xs font-mono text-muted-foreground">ONLINE</span>
+        </div>
+      </div>
       
-      {/* Console grid overlay */}
-      <div className="absolute inset-0 console-grid" />
-      
-      {/* System nodes */}
-      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-        {/* Connection lines */}
-        <path
-          d="M 15 50 L 35 35"
-          stroke="hsl(var(--border))"
-          strokeWidth="0.5"
-          strokeDasharray="2,2"
-          className={`transition-opacity duration-500 ${activeStep >= 1 ? 'opacity-100' : 'opacity-30'}`}
-        />
-        <path
-          d="M 45 35 L 65 45"
-          stroke="hsl(var(--border))"  
-          strokeWidth="0.5"
-          strokeDasharray="2,2"
-          className={`transition-opacity duration-500 ${activeStep >= 2 ? 'opacity-100' : 'opacity-30'}`}
-        />
-        
-        {/* System nodes */}
-        {steps.map((step, index) => (
-          <g key={step.id}>
-            {/* Node circle */}
-            <circle
-              cx={step.x}
-              cy={step.y}
-              r="3"
-              fill={activeStep >= index ? "hsl(var(--primary))" : "hsl(var(--border))"}
-              className="transition-all duration-500"
-            />
+      {/* Console Content */}
+      <div className="p-4 space-y-4">
+        {/* Process Flow */}
+        <div className="space-y-2">
+          <div className="text-xs text-muted-foreground mb-3">REVENUE.SYS PROCESS FLOW:</div>
+          
+          <div className="grid grid-cols-3 gap-4 text-xs">
+            <div className="space-y-1">
+              <div className="text-primary font-bold">01 ASSESS</div>
+              <div className="text-muted-foreground">Infrastructure audit</div>
+              <div className="text-muted-foreground">Diagnostic complete</div>
+            </div>
             
-            {/* Node pulse effect when active */}
-            {activeStep === index && (
-              <circle
-                cx={step.x}
-                cy={step.y}
-                r="3"
-                fill="none"
-                stroke="hsl(var(--primary))"
-                strokeWidth="0.5"
-                className="animate-ping"
-              />
-            )}
+            <div className="space-y-1">
+              <div className="text-primary font-bold">02 BUILD</div>
+              <div className="text-muted-foreground">System implementation</div>
+              <div className="text-muted-foreground">Sprint execution</div>
+            </div>
             
-            {/* Label */}
-            <text
-              x={step.x}
-              y={step.y - 8}
-              textAnchor="middle"
-              className="fill-foreground text-xs font-medium"
-              style={{ fontSize: '3px' }}
-            >
-              {step.label}
-            </text>
-          </g>
-        ))}
-        
-        {/* Measurement ticks */}
-        <g stroke="hsl(var(--muted-foreground))" strokeWidth="0.3">
-          <line x1="5" y1="10" x2="5" y2="90" />
-          <line x1="3" y1="10" x2="7" y2="10" />
-          <line x1="3" y1="90" x2="7" y2="90" />
-        </g>
-      </svg>
-      
-        {/* Status Display - Console style */}
-        <div className="absolute top-4 left-4">
-          <div className="system-badge bg-primary text-primary-foreground">
-            SYS.ONLINE
+            <div className="space-y-1">
+              <div className="text-primary font-bold">03 OPERATE</div>
+              <div className="text-muted-foreground">Ongoing maintenance</div>
+              <div className="text-muted-foreground">Performance monitoring</div>
+            </div>
           </div>
         </div>
         
-        {/* Active Step Indicator */}
-        <div className="absolute bottom-4 right-4">
-          <div className="font-mono text-xs text-muted-foreground">
-            STEP {activeStep + 1}/3: {steps[activeStep]?.label?.toUpperCase()}
+        {/* Status Indicators */}
+        <div className="border-t border-border pt-3 mt-4">
+          <div className="grid grid-cols-2 gap-4 text-xs">
+            <div className="space-y-1">
+              <div className="text-muted-foreground">UPTIME:</div>
+              <div className="tabular-nums">99.97%</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-muted-foreground">PIPELINE.HEALTH:</div>
+              <div className="text-green-500 tabular-nums">OPTIMAL</div>
+            </div>
           </div>
         </div>
+      </div>
     </div>
   );
 };
