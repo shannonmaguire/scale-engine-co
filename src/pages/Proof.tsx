@@ -246,7 +246,7 @@ const Proof = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 console-grid opacity-10"></div>
+        <div className="absolute inset-0 opacity-10"></div>
         <div className="max-w-4xl mx-auto text-center relative">
           <Badge className="system-badge bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30 font-mono mb-6">
             <BarChart3 className="w-3 h-3 mr-2" />
