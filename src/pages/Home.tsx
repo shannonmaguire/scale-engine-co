@@ -108,8 +108,8 @@ const Home = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150">
-                <CardContent className="p-8">
+              <Card key={index} className="console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150 flex flex-col h-full">
+                <CardContent className="p-8 flex flex-col flex-1">
                   <div className="mb-6">
                     <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4">
                       <span className="text-primary font-mono font-bold text-lg">{index + 1}</span>
@@ -118,7 +118,7 @@ const Home = () => {
                     <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
                   </div>
                   
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3 mb-6 flex-1">
                     {service.timeline && (
                       <div className="text-sm">
                         <span className="text-muted-foreground font-mono">Timeline: </span>
@@ -134,7 +134,7 @@ const Home = () => {
                     )}
                   </div>
                   
-                  <Button asChild className="w-full btn-console">
+                  <Button asChild className="w-full btn-console mt-auto">
                     <Link to={service.link}>{service.cta}</Link>
                   </Button>
                 </CardContent>
