@@ -88,7 +88,7 @@ const Blog = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="text-center border-b border-border/50 pb-4 mb-4">
             <h1 className="text-3xl md:text-4xl font-mono font-black text-foreground tracking-tight">
-              CWT REVENUE INTELLIGENCE
+              THE CWT STANDARD
             </h1>
             <div className="flex items-center justify-center gap-4 mt-3 text-xs font-mono text-muted-foreground">
               <time className="uppercase tracking-wide">{new Date().toLocaleDateString('en-US', { 
@@ -103,7 +103,7 @@ const Blog = () => {
           
           <div className="text-center">
             <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
-              Strategic insights for revenue operations excellence
+              Setting the standard for revenue operations excellence
             </p>
           </div>
         </div>
