@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, FileText, Slack, Calendar, BarChart3, Database, Zap } from "lucide-react";
 
@@ -154,6 +155,118 @@ const Systems = () => {
                 </Card>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* System Demo */}
+      <section className="py-20">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">See It In Action</h2>
+            <p className="text-xl text-muted-foreground">Live views from the Outbound Automation v1 system</p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <Tabs defaultValue="dashboard" className="w-full">
+              <TabsList className="grid w-full grid-cols-5 mb-8">
+                <TabsTrigger value="dashboard" className="font-mono text-sm">Dashboard</TabsTrigger>
+                <TabsTrigger value="leads" className="font-mono text-sm">Leads</TabsTrigger>
+                <TabsTrigger value="replies" className="font-mono text-sm">Replies</TabsTrigger>
+                <TabsTrigger value="bookings" className="font-mono text-sm">Bookings</TabsTrigger>
+                <TabsTrigger value="settings" className="font-mono text-sm">Settings</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="dashboard" className="mt-0">
+                <Card className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-mono text-lg font-bold mb-2">System Overview</h3>
+                      <p className="text-sm text-muted-foreground">Real-time metrics and pipeline health monitoring</p>
+                    </div>
+                    <div className="aspect-[16/10] bg-muted rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <BarChart3 className="w-12 h-12 text-muted-foreground mb-4 mx-auto" />
+                        <p className="font-mono text-sm text-muted-foreground">Dashboard Screenshot</p>
+                        <p className="text-xs text-muted-foreground">Replace with actual dashboard view</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="leads" className="mt-0">
+                <Card className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-mono text-lg font-bold mb-2">Lead Management</h3>
+                      <p className="text-sm text-muted-foreground">Import, clean, and organize leads in the Master_Leads sheet</p>
+                    </div>
+                    <div className="aspect-[16/10] bg-muted rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <Database className="w-12 h-12 text-muted-foreground mb-4 mx-auto" />
+                        <p className="font-mono text-sm text-muted-foreground">Leads View Screenshot</p>
+                        <p className="text-xs text-muted-foreground">Replace with actual leads management view</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="replies" className="mt-0">
+                <Card className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-mono text-lg font-bold mb-2">Reply Tracking</h3>
+                      <p className="text-sm text-muted-foreground">Auto-tagged responses with sentiment analysis and Slack alerts</p>
+                    </div>
+                    <div className="aspect-[16/10] bg-muted rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <Slack className="w-12 h-12 text-muted-foreground mb-4 mx-auto" />
+                        <p className="font-mono text-sm text-muted-foreground">Replies View Screenshot</p>
+                        <p className="text-xs text-muted-foreground">Replace with actual replies tracking view</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="bookings" className="mt-0">
+                <Card className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-mono text-lg font-bold mb-2">Meeting Capture</h3>
+                      <p className="text-sm text-muted-foreground">Calendly bookings automatically written back to the system</p>
+                    </div>
+                    <div className="aspect-[16/10] bg-muted rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <Calendar className="w-12 h-12 text-muted-foreground mb-4 mx-auto" />
+                        <p className="font-mono text-sm text-muted-foreground">Bookings View Screenshot</p>
+                        <p className="text-xs text-muted-foreground">Replace with actual bookings management view</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="settings" className="mt-0">
+                <Card className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4">
+                      <h3 className="font-mono text-lg font-bold mb-2">System Configuration</h3>
+                      <p className="text-sm text-muted-foreground">Workflow settings, API connections, and monitoring controls</p>
+                    </div>
+                    <div className="aspect-[16/10] bg-muted rounded-lg flex items-center justify-center">
+                      <div className="text-center">
+                        <Zap className="w-12 h-12 text-muted-foreground mb-4 mx-auto" />
+                        <p className="font-mono text-sm text-muted-foreground">Settings View Screenshot</p>
+                        <p className="text-xs text-muted-foreground">Replace with actual system configuration view</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </section>
