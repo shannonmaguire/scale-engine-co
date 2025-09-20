@@ -12,6 +12,8 @@ import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Systems from "@/pages/Systems";
 import Salesforce from "@/pages/Salesforce";
+import SalesforcePartners from "@/pages/SalesforcePartners";
+import SalesforceDelivery from "@/pages/SalesforceDelivery";
 import Proof from "@/pages/Proof";
 import NotFound from "./pages/NotFound";
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/sprint" element={<Sprint />} />
           <Route path="/salesforce" element={<Salesforce />} />
+          <Route path="/salesforce/partners" element={<SalesforcePartners />} />
+          <Route path="/salesforce/delivery" element={<SalesforceDelivery />} />
           <Route path="/proof" element={<Proof />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
