@@ -5,13 +5,6 @@ import { CheckCircle, TrendingUp, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Proof = () => {
-  const stats = [
-    { label: "Systems Deployed", value: "47", status: "OPERATIONAL" },
-    { label: "Revenue Impact", value: "$2.3M", status: "POSITIVE" },
-    { label: "Avg ROI", value: "340%", status: "OPTIMIZED" },
-    { label: "Client Retention", value: "96%", status: "STABLE" }
-  ];
-
   const caseStudies = [
     {
       id: "CS001",
@@ -96,9 +89,6 @@ const Proof = () => {
       case "DEPLOYED": return "bg-green-500/20 text-green-400";
       case "OPTIMIZED": return "bg-blue-500/20 text-blue-400";  
       case "SCALED": return "bg-purple-500/20 text-purple-400";
-      case "OPERATIONAL": return "bg-green-500/20 text-green-400";
-      case "POSITIVE": return "bg-green-500/20 text-green-400";
-      case "STABLE": return "bg-blue-500/20 text-blue-400";
       default: return "bg-muted text-muted-foreground";
     }
   };
@@ -121,25 +111,6 @@ const Proof = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl font-mono">
             Real system deployments. Quantified revenue impact. Operational excellence delivered.
           </p>
-        </div>
-      </section>
-
-      {/* Executive Summary Stats */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="console-card">
-                <div className="stat-block">
-                  <div className="stat-number tabular-nums">{stat.value}</div>
-                  <div className="stat-label">{stat.label}</div>
-                  <Badge className={`mt-2 font-mono text-xs ${getStatusColor(stat.status)}`}>
-                    {stat.status}
-                  </Badge>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
