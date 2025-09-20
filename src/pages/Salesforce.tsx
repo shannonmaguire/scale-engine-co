@@ -86,13 +86,13 @@ const Salesforce = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="btn-console">
+              <Button asChild variant="console">
                 <Link to="/contact">
                   Book Salesforce Assessment
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild className="btn-console-secondary">
+              <Button asChild variant="console-secondary">
                 <Link to="#process">See the Process</Link>
               </Button>
             </div>
@@ -136,7 +136,7 @@ const Salesforce = () => {
                     <p className="text-muted-foreground leading-relaxed">{option.description}</p>
                   </div>
                   
-                  <Button asChild className={`w-full ${option.primary ? 'btn-console' : 'btn-console-secondary'}`}>
+                  <Button asChild variant={option.primary ? "console" : "console-secondary"} className="w-full">
                     <Link to={option.link}>
                       {option.cta}
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -224,7 +224,7 @@ const Salesforce = () => {
                 </div>
               </div>
               
-              <Button asChild className="btn-console">
+              <Button asChild variant="console">
                 <Link to="/salesforce/delivery">Learn More About Delivery</Link>
               </Button>
             </div>
@@ -280,7 +280,7 @@ const Salesforce = () => {
           </div>
           
           <div className="text-center">
-            <Button asChild className="btn-console">
+            <Button asChild variant="console">
               <Link to="/case-studies">See Salesforce Case Studies</Link>
             </Button>
           </div>

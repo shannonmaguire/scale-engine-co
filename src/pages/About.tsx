@@ -32,10 +32,10 @@ const About = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">About</span>
+          <div className="console-line mx-auto mb-4 w-fit">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">About</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6">
             Built for Operators
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -91,7 +91,7 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+              <Card key={index} className="console-card border-border hover:shadow-md transition-shadow duration-150">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -180,7 +180,7 @@ const About = () => {
             <p className="text-muted-foreground mb-6">
               Let's diagnose what's slowing down your growth.
             </p>
-            <Button asChild size="lg" className="btn-console">
+            <Button asChild variant="console-accent">
               <Link to="/contact">
                 Book Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

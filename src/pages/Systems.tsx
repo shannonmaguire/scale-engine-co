@@ -92,7 +92,7 @@ const Systems = () => {
                   </div>
                 </div>
 
-                <Button className="btn-console">
+                <Button variant="console">
                   <Link to="/contact" className="flex items-center">
                     See the workflow
                     <ArrowRight className="ml-2 h-4 w-4" />

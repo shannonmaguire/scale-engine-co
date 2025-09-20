@@ -193,7 +193,7 @@ const Fractional = () => {
             <p className="text-muted-foreground mb-6">
               Let's keep your revenue systems running at peak performance.
             </p>
-            <Button asChild size="lg" className="btn-console">
+            <Button asChild variant="console" size="lg">
               <Link to="/contact">
                 Discuss Retainer
                 <ArrowRight className="ml-2 h-5 w-5" />

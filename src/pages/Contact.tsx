@@ -34,7 +34,7 @@ const Contact = () => {
           <div className="console-line mx-auto mb-4 w-fit">
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Contact</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6">
             Book Your Assessment
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -118,7 +118,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full btn-console">
+                  <Button type="submit" variant="console" className="w-full">
                     Submit Request
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -141,13 +141,13 @@ const Contact = () => {
                       Prefer to schedule directly? Choose a time that works for you.
                     </p>
                     <div className="space-y-3">
-                      <Button variant="outline" className="w-full btn-console-secondary font-mono text-sm">
+                      <Button variant="console-secondary" className="w-full font-mono text-sm">
                         Tuesday, Dec 19 - 2:00 PM EST
                       </Button>
-                      <Button variant="outline" className="w-full btn-console-secondary font-mono text-sm">
+                      <Button variant="console-secondary" className="w-full font-mono text-sm">
                         Wednesday, Dec 20 - 10:00 AM EST
                       </Button>
-                      <Button variant="outline" className="w-full btn-console-secondary font-mono text-sm">
+                      <Button variant="console-secondary" className="w-full font-mono text-sm">
                         Thursday, Dec 21 - 3:00 PM EST
                       </Button>
                     </div>
@@ -163,7 +163,7 @@ const Contact = () => {
           {/* Contact Info & Process */}
           <div className="space-y-8">
             {/* Contact Details */}
-            <Card className="border-border">
+            <Card className="console-card border-border hover:shadow-md transition-shadow duration-150">
               <CardHeader>
                 <CardTitle className="font-mono text-xl">Get in Touch</CardTitle>
               </CardHeader>
@@ -186,7 +186,7 @@ const Contact = () => {
             </Card>
 
             {/* What Happens Next */}
-            <Card className="border-border">
+            <Card className="console-card border-border hover:shadow-md transition-shadow duration-150">
               <CardHeader>
                 <CardTitle className="font-mono text-xl">What Happens Next</CardTitle>
               </CardHeader>

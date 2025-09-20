@@ -166,7 +166,7 @@ const Assessment = () => {
             <p className="text-muted-foreground mb-6">
               Get the clarity you need to scale with confidence.
             </p>
-            <Button asChild size="lg" className="btn-console">
+            <Button asChild variant="console" size="lg">
               <Link to="/contact">
                 Book Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />

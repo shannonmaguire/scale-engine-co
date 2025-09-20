@@ -286,7 +286,7 @@ const SampleReport = () => {
               needs attention and get a prioritized plan to fix it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-console">
+              <Button asChild variant="console" size="lg">
                 <Link to="/contact">
                   Book Assessment
                   <ArrowRight className="ml-2 h-5 w-5" />

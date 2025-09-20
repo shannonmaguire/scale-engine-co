@@ -464,7 +464,7 @@ const BlogPost = () => {
             <p className="text-foreground/80 mb-8">
               Explore more articles on revenue operations, systems automation, and strategic business intelligence.
             </p>
-            <Button asChild className="btn-console">
+            <Button asChild variant="console">
               <Link to="/blog">
                 View All Articles
               </Link>

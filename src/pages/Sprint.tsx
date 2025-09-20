@@ -191,7 +191,7 @@ const Sprint = () => {
             <p className="text-muted-foreground mb-6">
               Let's build the infrastructure that scales with your growth.
             </p>
-            <Button asChild size="lg" className="btn-console">
+            <Button asChild variant="console" size="lg">
               <Link to="/contact">
                 Plan Your Sprint
                 <ArrowRight className="ml-2 h-5 w-5" />

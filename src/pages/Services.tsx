@@ -62,10 +62,10 @@ const Services = () => {
       <div className="container mx-auto px-6">
         {/* Hero */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">Services</span>
+          <div className="console-line mx-auto mb-4 w-fit">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Services</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6">
             Revenue Systems That Scale
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -78,7 +78,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <Card className="border-border h-full">
+                <Card className="console-card border-border h-full hover:shadow-md transition-shadow duration-150">
                   <CardHeader className="pb-6">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -118,7 +118,7 @@ const Services = () => {
                       </div>
                     </div>
                     
-                    <Button asChild className="w-full btn-console">
+                    <Button asChild variant="console" className="w-full">
                       <Link to={service.link}>
                         {service.cta}
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -195,7 +195,7 @@ const Services = () => {
           <p className="text-muted-foreground mb-6">
             Start with an assessment. See exactly what needs to change.
           </p>
-          <Button asChild size="lg" className="btn-console">
+          <Button asChild variant="console-accent">
             <Link to="/contact">
               Book Assessment
               <ArrowRight className="ml-2 h-5 w-5" />

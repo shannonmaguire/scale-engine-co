@@ -123,20 +123,10 @@
   
   /* Console Line - Clean separator */
   .console-line {
-    @apply relative;
-  }
-  
-  .console-line::before {
-    content: '';
-    @apply absolute left-0 top-0 w-4 h-px bg-border;
-  }
-
-  /* Blueprint Line - Section headers */
-  .blueprint-line {
     @apply relative inline-flex items-center;
   }
   
-  .blueprint-line::before {
+  .console-line::before {
     content: '';
     @apply absolute -left-6 top-1/2 w-4 h-px bg-primary;
   }
@@ -146,62 +136,6 @@
     @apply bg-primary text-primary-foreground hover:bg-primary/90;
     @apply font-mono font-bold uppercase tracking-wider;
     @apply transition-all duration-150;
-    @apply shadow-sm hover:shadow-md;
-  }
-  
-  /* Status Indicators - System monitoring style */
-  .status-positive {
-    @apply bg-green-500 text-white;
-  }
-  
-  .status-negative {
-    @apply bg-red-500 text-white;
-  }
-  
-  .status-neutral {
-    @apply bg-yellow-500 text-black;
-  }
-  
-  .status-new {
-    @apply bg-gray-500 text-white;
-  }
-  
-  /* Stat Block - Clean metrics display */
-  .stat-block {
-    @apply border border-border bg-card p-6;
-    @apply shadow-sm hover:shadow-md transition-shadow duration-150;
-  }
-  
-  .stat-number {
-    @apply text-3xl font-bold text-primary font-mono tabular-nums;
-  }
-  
-  .stat-label {
-    @apply text-xs text-muted-foreground uppercase tracking-wider mt-1 font-mono;
-  }
-  
-  /* Console Buttons - High visibility, functional */
-  .btn-console {
-    @apply bg-foreground text-background border-0;
-    @apply px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider;
-    @apply transition-all duration-150;
-    @apply hover:bg-foreground/90 focus:ring-2 focus:ring-ring focus:ring-offset-2;
-    @apply shadow-sm hover:shadow-md;
-  }
-  
-  .btn-console-secondary {
-    @apply bg-transparent text-foreground border-2 border-foreground;
-    @apply px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider;
-    @apply transition-all duration-150;
-    @apply hover:bg-foreground hover:text-background focus:ring-2 focus:ring-ring focus:ring-offset-2;
-    @apply shadow-sm hover:shadow-md;
-  }
-  
-  .btn-console-accent {
-    @apply bg-accent text-accent-foreground border-0;
-    @apply px-6 py-3 font-mono text-sm font-bold uppercase tracking-wider;
-    @apply transition-all duration-150;
-    @apply hover:bg-accent/90 focus:ring-2 focus:ring-ring focus:ring-offset-2;
     @apply shadow-sm hover:shadow-md;
   }
   
