@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, FileText, Slack, Calendar, BarChart3, Database, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, FileText, Slack, Calendar, BarChart3, Database, Zap, Settings, Users, MessageSquare, Clock } from "lucide-react";
 
 const Systems = () => {
   const toolsWired = [
@@ -178,42 +178,131 @@ const Systems = () => {
               </TabsList>
 
               <TabsContent value="dashboard" className="mt-0">
-                <Card className="console-card bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
+                <Card className="console-card bg-card border-border overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="p-6 border-b border-border">
                       <h3 className="font-mono text-lg font-bold mb-2">System Overview</h3>
                       <p className="text-sm text-muted-foreground">Real-time metrics and pipeline health monitoring</p>
                     </div>
-                    <div className="aspect-[16/10] bg-muted/30 rounded-lg border-2 border-dashed border-border flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <div className="grid grid-cols-5 gap-4 mb-6 text-xs font-mono">
-                          <div className="space-y-1">
-                            <div className="text-primary font-bold">New Leads</div>
-                            <div className="text-2xl font-bold">142</div>
-                            <div className="text-green-500">+12% ↗</div>
+                    
+                    <div className="p-6">
+                      {/* Key Metrics */}
+                      <div className="grid grid-cols-5 gap-4 mb-8">
+                        <Card className="p-4 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+                          <div className="text-sm font-mono text-muted-foreground mb-1">New Leads</div>
+                          <div className="text-3xl font-bold text-primary mb-2">142</div>
+                          <div className="text-xs text-emerald-600 flex items-center gap-1">
+                            <span>+12%</span>
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            </svg>
                           </div>
-                          <div className="space-y-1">
-                            <div className="text-primary font-bold">Queued</div>
-                            <div className="text-2xl font-bold">89</div>
-                            <div className="text-red-500">-3% ↘</div>
+                        </Card>
+
+                        <Card className="p-4 bg-gradient-to-br from-amber-500/5 to-amber-500/10 border-amber-500/20">
+                          <div className="text-sm font-mono text-muted-foreground mb-1">Queued</div>
+                          <div className="text-3xl font-bold text-amber-600 mb-2">89</div>
+                          <div className="text-xs text-red-500 flex items-center gap-1">
+                            <span>-3%</span>
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
                           </div>
-                          <div className="space-y-1">
-                            <div className="text-primary font-bold">Replies</div>
-                            <div className="text-2xl font-bold">23</div>
-                            <div className="text-green-500">+8% ↗</div>
+                        </Card>
+
+                        <Card className="p-4 bg-gradient-to-br from-emerald-500/5 to-emerald-500/10 border-emerald-500/20">
+                          <div className="text-sm font-mono text-muted-foreground mb-1">Replies</div>
+                          <div className="text-3xl font-bold text-emerald-600 mb-2">23</div>
+                          <div className="text-xs text-emerald-600 flex items-center gap-1">
+                            <span>+8%</span>
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            </svg>
                           </div>
-                          <div className="space-y-1">
-                            <div className="text-primary font-bold">Bookings</div>
-                            <div className="text-2xl font-bold">7</div>
-                            <div className="text-muted-foreground">0%</div>
+                        </Card>
+
+                        <Card className="p-4 bg-gradient-to-br from-violet-500/5 to-violet-500/10 border-violet-500/20">
+                          <div className="text-sm font-mono text-muted-foreground mb-1">Bookings</div>
+                          <div className="text-3xl font-bold text-violet-600 mb-2">7</div>
+                          <div className="text-xs text-muted-foreground">Steady</div>
+                        </Card>
+
+                        <Card className="p-4 bg-gradient-to-br from-red-500/5 to-red-500/10 border-red-500/20">
+                          <div className="text-sm font-mono text-muted-foreground mb-1">Errors</div>
+                          <div className="text-3xl font-bold text-red-600 mb-2">2</div>
+                          <div className="text-xs text-emerald-600 flex items-center gap-1">
+                            <span>-50%</span>
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                            </svg>
                           </div>
-                          <div className="space-y-1">
-                            <div className="text-primary font-bold">Errors</div>
-                            <div className="text-2xl font-bold">2</div>
-                            <div className="text-red-500">-50% ↘</div>
+                        </Card>
+                      </div>
+
+                      {/* Activity Feed */}
+                      <div className="grid grid-cols-2 gap-6">
+                        <Card className="p-4">
+                          <h4 className="font-mono font-bold text-sm mb-4">Recent Activity</h4>
+                          <div className="space-y-3 text-sm">
+                            <div className="flex items-center gap-3 p-2 rounded bg-emerald-500/10">
+                              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                              <div className="flex-1">
+                                <div className="font-medium">Marco Ruiz replied</div>
+                                <div className="text-xs text-muted-foreground">Interested in learning more</div>
+                              </div>
+                              <div className="text-xs text-muted-foreground">2m ago</div>
+                            </div>
+                            <div className="flex items-center gap-3 p-2 rounded">
+                              <div className="w-2 h-2 bg-primary rounded-full"></div>
+                              <div className="flex-1">
+                                <div className="font-medium">8 new leads imported</div>
+                                <div className="text-xs text-muted-foreground">From Apollo batch #47</div>
+                              </div>
+                              <div className="text-xs text-muted-foreground">5m ago</div>
+                            </div>
+                            <div className="flex items-center gap-3 p-2 rounded bg-violet-500/10">
+                              <div className="w-2 h-2 bg-violet-500 rounded-full"></div>
+                              <div className="flex-1">
+                                <div className="font-medium">Meeting booked</div>
+                                <div className="text-xs text-muted-foreground">Jane Doe - TelecomOne</div>
+                              </div>
+                              <div className="text-xs text-muted-foreground">8m ago</div>
+                            </div>
                           </div>
-                        </div>
-                        <p className="text-xs text-muted-foreground font-mono">Live metrics with Reply Trends and Today's Activity feed</p>
+                        </Card>
+
+                        <Card className="p-4">
+                          <h4 className="font-mono font-bold text-sm mb-4">Pipeline Health</h4>
+                          <div className="space-y-4">
+                            <div>
+                              <div className="flex justify-between text-sm mb-1">
+                                <span>Reply Rate</span>
+                                <span className="font-mono">16.2%</span>
+                              </div>
+                              <div className="h-2 bg-muted rounded-full">
+                                <div className="h-2 bg-emerald-500 rounded-full" style={{ width: '16.2%' }}></div>
+                              </div>
+                            </div>
+                            <div>
+                              <div className="flex justify-between text-sm mb-1">
+                                <span>Booking Rate</span>
+                                <span className="font-mono">30.4%</span>
+                              </div>
+                              <div className="h-2 bg-muted rounded-full">
+                                <div className="h-2 bg-violet-500 rounded-full" style={{ width: '30.4%' }}></div>
+                              </div>
+                            </div>
+                            <div>
+                              <div className="flex justify-between text-sm mb-1">
+                                <span>System Uptime</span>
+                                <span className="font-mono text-emerald-600">99.97%</span>
+                              </div>
+                              <div className="h-2 bg-muted rounded-full">
+                                <div className="h-2 bg-emerald-500 rounded-full" style={{ width: '99.97%' }}></div>
+                              </div>
+                            </div>
+                          </div>
+                        </Card>
                       </div>
                     </div>
                   </CardContent>
@@ -221,95 +310,205 @@ const Systems = () => {
               </TabsContent>
 
               <TabsContent value="leads" className="mt-0">
-                <Card className="console-card bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      <h3 className="font-mono text-lg font-bold mb-2">Lead Management</h3>
-                      <p className="text-sm text-muted-foreground">Import, clean, and organize leads in the Master_Leads sheet</p>
-                    </div>
-                    <div className="aspect-[16/10] bg-muted/30 rounded-lg border-2 border-dashed border-border flex items-center justify-center">
-                      <div className="text-center p-8 w-full max-w-4xl">
-                        <div className="space-y-3 text-xs font-mono">
-                          <div className="grid grid-cols-6 gap-4 pb-2 border-b border-border font-bold text-muted-foreground">
-                            <div>Name</div>
-                            <div>Title</div>
-                            <div>Company</div>
-                            <div>Email</div>
-                            <div>Source</div>
-                            <div>Status</div>
-                          </div>
-                          <div className="grid grid-cols-6 gap-4 py-1">
-                            <div>Jane Doe</div>
-                            <div>Head of Ops</div>
-                            <div>TelecomOne</div>
-                            <div className="text-muted-foreground">jane.doe@telecomone.com</div>
-                            <div>Apollo</div>
-                            <div className="text-green-500">New</div>
-                          </div>
-                          <div className="grid grid-cols-6 gap-4 py-1">
-                            <div>John Smith</div>
-                            <div>CIO</div>
-                            <div>UtilityCorp</div>
-                            <div className="text-muted-foreground">john.smith@utilitycorp.com</div>
-                            <div>SalesNav</div>
-                            <div className="text-purple-500">Queued</div>
-                          </div>
-                          <div className="grid grid-cols-6 gap-4 py-1">
-                            <div>Marco Ruiz</div>
-                            <div>COO</div>
-                            <div>FiberNorth</div>
-                            <div className="text-muted-foreground">marco@fibernorth.ca</div>
-                            <div>SalesNav</div>
-                            <div className="text-green-500">Positive Reply</div>
-                          </div>
+                <Card className="console-card bg-card border-border overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="p-6 border-b border-border">
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <h3 className="font-mono text-lg font-bold mb-2">Lead Management</h3>
+                          <p className="text-sm text-muted-foreground">Master database with 1,247 total leads</p>
                         </div>
-                        <p className="text-xs text-muted-foreground font-mono mt-4">Master Lead Database with Raw Import and Master tabs</p>
+                        <div className="flex gap-2">
+                          <div className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-mono">142 New</div>
+                          <div className="px-3 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded-full font-mono">89 Queued</div>
+                        </div>
                       </div>
+                    </div>
+                    
+                    <div className="overflow-x-auto">
+                      <table className="w-full">
+                        <thead className="bg-muted/50">
+                          <tr className="text-left border-b border-border">
+                            <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Name</th>
+                            <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Title</th>
+                            <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Company</th>
+                            <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Email</th>
+                            <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Source</th>
+                            <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center">
+                                  <span className="text-xs font-bold text-primary">JD</span>
+                                </div>
+                                <span className="font-medium text-sm">Jane Doe</span>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground">Head of Operations</td>
+                            <td className="px-6 py-4 text-sm font-medium">TelecomOne Ltd</td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground font-mono">jane.doe@telecomone.com</td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-blue-500/10 text-blue-600 text-xs rounded font-mono">Apollo</div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">New</div>
+                            </td>
+                          </tr>
+                          
+                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 bg-gradient-to-br from-violet-500/20 to-violet-500/10 rounded-full flex items-center justify-center">
+                                  <span className="text-xs font-bold text-violet-600">JS</span>
+                                </div>
+                                <span className="font-medium text-sm">John Smith</span>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground">Chief Information Officer</td>
+                            <td className="px-6 py-4 text-sm font-medium">UtilityCorp Inc</td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground font-mono">john.smith@utilitycorp.com</td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-indigo-500/10 text-indigo-600 text-xs rounded font-mono">Sales Navigator</div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-amber-500/10 text-amber-600 text-xs rounded font-mono">Queued</div>
+                            </td>
+                          </tr>
+
+                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-full flex items-center justify-center">
+                                  <span className="text-xs font-bold text-emerald-600">MR</span>
+                                </div>
+                                <span className="font-medium text-sm">Marco Ruiz</span>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground">Chief Operating Officer</td>
+                            <td className="px-6 py-4 text-sm font-medium">FiberNorth Networks</td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground font-mono">marco@fibernorth.ca</td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-indigo-500/10 text-indigo-600 text-xs rounded font-mono">Sales Navigator</div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Positive Reply</div>
+                            </td>
+                          </tr>
+
+                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                            <td className="px-6 py-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 bg-gradient-to-br from-red-500/20 to-red-500/10 rounded-full flex items-center justify-center">
+                                  <span className="text-xs font-bold text-red-600">SC</span>
+                                </div>
+                                <span className="font-medium text-sm">Sarah Chen</span>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground">VP of Technology</td>
+                            <td className="px-6 py-4 text-sm font-medium">PowerGrid Solutions</td>
+                            <td className="px-6 py-4 text-sm text-muted-foreground font-mono">s.chen@powergrid.com</td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-blue-500/10 text-blue-600 text-xs rounded font-mono">Apollo</div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="px-2 py-1 bg-red-500/10 text-red-600 text-xs rounded font-mono">Not Interested</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </CardContent>
                 </Card>
               </TabsContent>
 
               <TabsContent value="replies" className="mt-0">
-                <Card className="console-card bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
+                <Card className="console-card bg-card border-border overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="p-6 border-b border-border">
                       <h3 className="font-mono text-lg font-bold mb-2">Reply Tracking</h3>
-                      <p className="text-sm text-muted-foreground">Auto-tagged responses with sentiment analysis and Slack alerts</p>
+                      <p className="text-sm text-muted-foreground">Auto-tagged responses with sentiment analysis</p>
                     </div>
-                    <div className="aspect-[16/10] bg-muted/30 rounded-lg border-2 border-dashed border-border flex items-center justify-center">
-                      <div className="text-center p-8 w-full max-w-4xl">
-                        <div className="flex gap-4 mb-6 text-xs font-mono justify-center">
-                          <div className="px-3 py-1 bg-primary text-primary-foreground rounded">All (23)</div>
-                          <div className="px-3 py-1 bg-green-500/20 text-green-500 rounded">Positive (8)</div>
-                          <div className="px-3 py-1 bg-muted rounded">Neutral (7)</div>
-                          <div className="px-3 py-1 bg-muted rounded">Not Interested (5)</div>
-                          <div className="px-3 py-1 bg-red-500/20 text-red-500 rounded">Unsub (2)</div>
-                        </div>
-                        <div className="space-y-2 text-xs font-mono">
-                          <div className="grid grid-cols-5 gap-4 pb-2 border-b border-border font-bold text-muted-foreground">
-                            <div>Lead</div>
-                            <div>Company</div>
-                            <div>Campaign</div>
-                            <div>Disposition</div>
-                            <div>Snippet</div>
+                    
+                    <div className="p-6">
+                      {/* Filter Tabs */}
+                      <div className="flex gap-2 mb-6">
+                        <div className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-mono">All (23)</div>
+                        <div className="px-4 py-2 bg-emerald-500/10 text-emerald-600 rounded-lg text-sm font-mono hover:bg-emerald-500/20 cursor-pointer transition-colors">Positive (8)</div>
+                        <div className="px-4 py-2 bg-muted hover:bg-muted/70 rounded-lg text-sm font-mono cursor-pointer transition-colors">Neutral (7)</div>
+                        <div className="px-4 py-2 bg-muted hover:bg-muted/70 rounded-lg text-sm font-mono cursor-pointer transition-colors">Not Interested (5)</div>
+                        <div className="px-4 py-2 bg-red-500/10 text-red-600 rounded-lg text-sm font-mono hover:bg-red-500/20 cursor-pointer transition-colors">Unsubscribed (2)</div>
+                      </div>
+
+                      {/* Reply Cards */}
+                      <div className="space-y-4">
+                        <Card className="p-4 border-l-4 border-l-emerald-500 bg-emerald-500/5">
+                          <div className="flex justify-between items-start mb-3">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-full flex items-center justify-center">
+                                <span className="text-sm font-bold text-emerald-600">MR</span>
+                              </div>
+                              <div>
+                                <div className="font-medium text-sm">Marco Ruiz</div>
+                                <div className="text-xs text-muted-foreground">COO @ FiberNorth Networks</div>
+                              </div>
+                            </div>
+                            <div className="text-xs text-muted-foreground font-mono">2 minutes ago</div>
                           </div>
-                          <div className="grid grid-cols-5 gap-4 py-1">
-                            <div>Marco Ruiz</div>
-                            <div>FiberNorth</div>
-                            <div>Q3 Utility Outreach</div>
-                            <div className="text-green-500">Positive</div>
-                            <div className="text-muted-foreground">"Looks good, can we talk Friday?"</div>
+                          <div className="bg-background p-3 rounded border ml-13">
+                            <p className="text-sm mb-2">"Hi there! Thanks for reaching out. I'd definitely be interested in learning more about your Salesforce optimization services. We've been struggling with our current setup and could use some expert guidance."</p>
+                            <div className="flex gap-2">
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded">Positive</div>
+                              <div className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">Meeting Interest</div>
+                            </div>
                           </div>
-                          <div className="grid grid-cols-5 gap-4 py-1">
-                            <div>Jane Doe</div>
-                            <div>TelecomOne</div>
-                            <div>Telecom Decision Makers</div>
-                            <div className="text-muted-foreground">Neutral</div>
-                            <div className="text-muted-foreground">"Send details."</div>
+                        </Card>
+
+                        <Card className="p-4 border-l-4 border-l-amber-500 bg-amber-500/5">
+                          <div className="flex justify-between items-start mb-3">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 bg-gradient-to-br from-amber-500/20 to-amber-500/10 rounded-full flex items-center justify-center">
+                                <span className="text-sm font-bold text-amber-600">AL</span>
+                              </div>
+                              <div>
+                                <div className="font-medium text-sm">Alex Liu</div>
+                                <div className="text-xs text-muted-foreground">Director IT @ GridTech</div>
+                              </div>
+                            </div>
+                            <div className="text-xs text-muted-foreground font-mono">15 minutes ago</div>
                           </div>
-                        </div>
-                        <p className="text-xs text-muted-foreground font-mono mt-4">AI-powered response categorization with Slack alerts</p>
+                          <div className="bg-background p-3 rounded border ml-13">
+                            <p className="text-sm mb-2">"Thanks for the email. We're not currently looking to make changes to our Salesforce setup, but I'll keep your info on file for future reference."</p>
+                            <div className="flex gap-2">
+                              <div className="px-2 py-1 bg-amber-500/10 text-amber-600 text-xs rounded">Neutral</div>
+                              <div className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded">Future Interest</div>
+                            </div>
+                          </div>
+                        </Card>
+
+                        <Card className="p-4 border-l-4 border-l-red-500 bg-red-500/5">
+                          <div className="flex justify-between items-start mb-3">
+                            <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 bg-gradient-to-br from-red-500/20 to-red-500/10 rounded-full flex items-center justify-center">
+                                <span className="text-sm font-bold text-red-600">SC</span>
+                              </div>
+                              <div>
+                                <div className="font-medium text-sm">Sarah Chen</div>
+                                <div className="text-xs text-muted-foreground">VP Tech @ PowerGrid Solutions</div>
+                              </div>
+                            </div>
+                            <div className="text-xs text-muted-foreground font-mono">1 hour ago</div>
+                          </div>
+                          <div className="bg-background p-3 rounded border ml-13">
+                            <p className="text-sm mb-2">"Not interested. Please remove me from your mailing list."</p>
+                            <div className="flex gap-2">
+                              <div className="px-2 py-1 bg-red-500/10 text-red-600 text-xs rounded">Not Interested</div>
+                              <div className="px-2 py-1 bg-red-500/20 text-red-700 text-xs rounded">Unsubscribe</div>
+                            </div>
+                          </div>
+                        </Card>
                       </div>
                     </div>
                   </CardContent>
@@ -317,52 +516,96 @@ const Systems = () => {
               </TabsContent>
 
               <TabsContent value="bookings" className="mt-0">
-                <Card className="console-card bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
+                <Card className="console-card bg-card border-border overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="p-6 border-b border-border">
                       <h3 className="font-mono text-lg font-bold mb-2">Meeting Capture</h3>
-                      <p className="text-sm text-muted-foreground">Calendly bookings automatically written back to the system</p>
+                      <p className="text-sm text-muted-foreground">Calendly integration with automatic system writeback</p>
                     </div>
-                    <div className="aspect-[16/10] bg-muted/30 rounded-lg border-2 border-dashed border-border flex items-center justify-center">
-                      <div className="text-center p-8 w-full max-w-4xl">
-                        <div className="space-y-4 text-xs font-mono">
-                          <div className="text-left">
-                            <div className="font-bold mb-2">Upcoming Meetings</div>
-                            <div className="space-y-3">
-                              <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                                <div>
-                                  <div className="font-bold">Marco Ruiz - FiberNorth</div>
-                                  <div className="text-muted-foreground">Sept 1 • 10:00-10:30 • Intro Call</div>
-                                  <div className="text-xs text-muted-foreground">https://meet.google.com/abc-defg-hij</div>
-                                </div>
-                                <div className="text-green-500 font-bold">confirmed</div>
+                    
+                    <div className="p-6">
+                      {/* Meeting Stats */}
+                      <div className="grid grid-cols-3 gap-6 mb-6">
+                        <Card className="p-4 text-center bg-gradient-to-br from-violet-500/5 to-violet-500/10 border-violet-500/20">
+                          <Calendar className="w-8 h-8 text-violet-600 mx-auto mb-2" />
+                          <div className="text-2xl font-bold text-violet-600 mb-1">7</div>
+                          <div className="text-sm text-muted-foreground font-mono">This Month</div>
+                        </Card>
+                        <Card className="p-4 text-center bg-gradient-to-br from-emerald-500/5 to-emerald-500/10 border-emerald-500/20">
+                          <Users className="w-8 h-8 text-emerald-600 mx-auto mb-2" />
+                          <div className="text-2xl font-bold text-emerald-600 mb-1">85%</div>
+                          <div className="text-sm text-muted-foreground font-mono">Show Rate</div>
+                        </Card>
+                        <Card className="p-4 text-center bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+                          <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
+                          <div className="text-2xl font-bold text-primary mb-1">2</div>
+                          <div className="text-sm text-muted-foreground font-mono">This Week</div>
+                        </Card>
+                      </div>
+
+                      {/* Upcoming Meetings */}
+                      <div className="space-y-4">
+                        <h4 className="font-mono font-bold text-sm">Upcoming Meetings</h4>
+                        
+                        <Card className="p-4 border-l-4 border-l-emerald-500 bg-emerald-500/5">
+                          <div className="flex justify-between items-start">
+                            <div className="flex items-start gap-3">
+                              <div className="w-10 h-10 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-full flex items-center justify-center">
+                                <span className="text-sm font-bold text-emerald-600">MR</span>
                               </div>
-                              <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                                <div>
-                                  <div className="font-bold">John Smith - UtilityCorp</div>
-                                  <div className="text-muted-foreground">Sept 3 • 14:00-14:45 • Discovery</div>
-                                  <div className="text-xs text-muted-foreground">https://zoom.us/j/123456789</div>
-                                </div>
-                                <div className="text-green-500 font-bold">confirmed</div>
+                              <div>
+                                <div className="font-medium text-sm">Marco Ruiz</div>
+                                <div className="text-xs text-muted-foreground mb-1">COO @ FiberNorth Networks</div>
+                                <div className="text-sm text-muted-foreground font-mono">Sept 22 • 10:00-10:30 AM EST</div>
+                                <div className="text-xs text-primary">Intro Call - Salesforce Optimization</div>
                               </div>
+                            </div>
+                            <div className="text-right">
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono mb-1">Confirmed</div>
+                              <div className="text-xs text-muted-foreground">Google Meet</div>
                             </div>
                           </div>
-                          <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border">
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-red-500">2</div>
-                              <div className="text-muted-foreground">This Week</div>
+                        </Card>
+
+                        <Card className="p-4 border-l-4 border-l-blue-500 bg-blue-500/5">
+                          <div className="flex justify-between items-start">
+                            <div className="flex items-start gap-3">
+                              <div className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-full flex items-center justify-center">
+                                <span className="text-sm font-bold text-blue-600">JS</span>
+                              </div>
+                              <div>
+                                <div className="font-medium text-sm">John Smith</div>
+                                <div className="text-xs text-muted-foreground mb-1">CIO @ UtilityCorp Inc</div>
+                                <div className="text-sm text-muted-foreground font-mono">Sept 24 • 2:00-2:45 PM EST</div>
+                                <div className="text-xs text-primary">Discovery Call - System Assessment</div>
+                              </div>
                             </div>
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-green-500">7</div>
-                              <div className="text-muted-foreground">This Month</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-2xl font-bold text-blue-500">85%</div>
-                              <div className="text-muted-foreground">Show Rate</div>
+                            <div className="text-right">
+                              <div className="px-2 py-1 bg-blue-500/10 text-blue-600 text-xs rounded font-mono mb-1">Confirmed</div>
+                              <div className="text-xs text-muted-foreground">Zoom</div>
                             </div>
                           </div>
-                        </div>
-                        <p className="text-xs text-muted-foreground font-mono mt-4">Calendly integration with automatic writeback to system</p>
+                        </Card>
+
+                        <Card className="p-4 border-l-4 border-l-amber-500 bg-amber-500/5">
+                          <div className="flex justify-between items-start">
+                            <div className="flex items-start gap-3">
+                              <div className="w-10 h-10 bg-gradient-to-br from-amber-500/20 to-amber-500/10 rounded-full flex items-center justify-center">
+                                <span className="text-sm font-bold text-amber-600">JD</span>
+                              </div>
+                              <div>
+                                <div className="font-medium text-sm">Jane Doe</div>
+                                <div className="text-xs text-muted-foreground mb-1">Head of Ops @ TelecomOne</div>
+                                <div className="text-sm text-muted-foreground font-mono">Sept 26 • 11:00-11:30 AM EST</div>
+                                <div className="text-xs text-primary">Follow-up - Process Review</div>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <div className="px-2 py-1 bg-amber-500/10 text-amber-600 text-xs rounded font-mono mb-1">Pending</div>
+                              <div className="text-xs text-muted-foreground">Teams</div>
+                            </div>
+                          </div>
+                        </Card>
                       </div>
                     </div>
                   </CardContent>
@@ -370,55 +613,138 @@ const Systems = () => {
               </TabsContent>
 
               <TabsContent value="settings" className="mt-0">
-                <Card className="console-card bg-card border-border">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
+                <Card className="console-card bg-card border-border overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="p-6 border-b border-border">
                       <h3 className="font-mono text-lg font-bold mb-2">System Configuration</h3>
-                      <p className="text-sm text-muted-foreground">Workflow settings, API connections, and monitoring controls</p>
+                      <p className="text-sm text-muted-foreground">API connections, workflow settings, and monitoring controls</p>
                     </div>
-                    <div className="aspect-[16/10] bg-muted/30 rounded-lg border-2 border-dashed border-border flex items-center justify-center">
-                      <div className="text-center p-8 w-full max-w-4xl">
-                        <div className="text-left">
-                          <div className="font-bold mb-4 font-mono text-sm">Connected Services</div>
-                          <div className="grid grid-cols-2 gap-4 text-xs font-mono">
-                            <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                              <div>
-                                <div className="font-bold">Google Sheets</div>
-                                <div className="text-muted-foreground">Sync leads and data with Google Sheets</div>
+                    
+                    <div className="p-6">
+                      {/* Connection Status */}
+                      <div className="mb-8">
+                        <h4 className="font-mono font-bold text-sm mb-4">Connected Services</h4>
+                        <div className="grid grid-cols-2 gap-4">
+                          <Card className="p-4 bg-emerald-500/5 border-emerald-500/20">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <Database className="w-5 h-5 text-emerald-600" />
+                                <div>
+                                  <div className="font-medium text-sm">Google Sheets</div>
+                                  <div className="text-xs text-muted-foreground">Lead database & tracking</div>
+                                </div>
                               </div>
-                              <div className="text-green-500 font-bold">Connected</div>
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Connected</div>
                             </div>
-                            <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                              <div>
-                                <div className="font-bold">Instantly</div>
-                                <div className="text-muted-foreground">Email delivery and tracking</div>
+                            <div className="text-xs text-muted-foreground font-mono">Last sync: 2 minutes ago</div>
+                          </Card>
+
+                          <Card className="p-4 bg-emerald-500/5 border-emerald-500/20">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <Zap className="w-5 h-5 text-emerald-600" />
+                                <div>
+                                  <div className="font-medium text-sm">Instantly</div>
+                                  <div className="text-xs text-muted-foreground">Email delivery platform</div>
+                                </div>
                               </div>
-                              <div className="text-green-500 font-bold">Connected</div>
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Connected</div>
                             </div>
-                            <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                              <div>
-                                <div className="font-bold">Calendly</div>
-                                <div className="text-muted-foreground">Meeting booking and scheduling</div>
+                            <div className="text-xs text-muted-foreground font-mono">89 emails queued</div>
+                          </Card>
+
+                          <Card className="p-4 bg-emerald-500/5 border-emerald-500/20">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <Calendar className="w-5 h-5 text-emerald-600" />
+                                <div>
+                                  <div className="font-medium text-sm">Calendly</div>
+                                  <div className="text-xs text-muted-foreground">Meeting scheduling</div>
+                                </div>
                               </div>
-                              <div className="text-green-500 font-bold">Connected</div>
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Connected</div>
                             </div>
-                            <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                              <div>
-                                <div className="font-bold">Slack</div>
-                                <div className="text-muted-foreground">Notifications and team updates</div>
+                            <div className="text-xs text-muted-foreground font-mono">3 meetings this week</div>
+                          </Card>
+
+                          <Card className="p-4 bg-amber-500/5 border-amber-500/20">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <Slack className="w-5 h-5 text-amber-600" />
+                                <div>
+                                  <div className="font-medium text-sm">Slack</div>
+                                  <div className="text-xs text-muted-foreground">Team notifications</div>
+                                </div>
                               </div>
-                              <div className="text-muted-foreground font-bold">Pending</div>
+                              <div className="px-2 py-1 bg-amber-500/10 text-amber-600 text-xs rounded font-mono">Pending Setup</div>
                             </div>
-                            <div className="flex justify-between items-center p-3 bg-muted/50 rounded">
-                              <div>
-                                <div className="font-bold">Apollo</div>
-                                <div className="text-muted-foreground">Lead enrichment and data sourcing</div>
+                            <div className="text-xs text-muted-foreground font-mono">Webhook configured</div>
+                          </Card>
+
+                          <Card className="p-4 bg-blue-500/5 border-blue-500/20">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <BarChart3 className="w-5 h-5 text-blue-600" />
+                                <div>
+                                  <div className="font-medium text-sm">Apollo</div>
+                                  <div className="text-xs text-muted-foreground">Lead enrichment API</div>
+                                </div>
                               </div>
-                              <div className="text-yellow-500 font-bold">Coming Soon</div>
+                              <div className="px-2 py-1 bg-blue-500/10 text-blue-600 text-xs rounded font-mono">Integration Ready</div>
                             </div>
-                          </div>
+                            <div className="text-xs text-muted-foreground font-mono">Auto-enrichment enabled</div>
+                          </Card>
+
+                          <Card className="p-4 bg-violet-500/5 border-violet-500/20">
+                            <div className="flex items-center justify-between mb-3">
+                              <div className="flex items-center gap-3">
+                                <FileText className="w-5 h-5 text-violet-600" />
+                                <div>
+                                  <div className="font-medium text-sm">n8n Workflows</div>
+                                  <div className="text-xs text-muted-foreground">Automation engine</div>
+                                </div>
+                              </div>
+                              <div className="px-2 py-1 bg-violet-500/10 text-violet-600 text-xs rounded font-mono">Active</div>
+                            </div>
+                            <div className="text-xs text-muted-foreground font-mono">5 workflows running</div>
+                          </Card>
                         </div>
-                        <p className="text-xs text-muted-foreground font-mono mt-4">Enterprise integrations with API monitoring and health checks</p>
+                      </div>
+
+                      {/* System Settings */}
+                      <div>
+                        <h4 className="font-mono font-bold text-sm mb-4">System Settings</h4>
+                        <div className="space-y-4">
+                          <Card className="p-4">
+                            <div className="flex justify-between items-center">
+                              <div>
+                                <div className="font-medium text-sm">Daily Digest</div>
+                                <div className="text-xs text-muted-foreground">Automated reports at 9:00 AM EST</div>
+                              </div>
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Enabled</div>
+                            </div>
+                          </Card>
+                          
+                          <Card className="p-4">
+                            <div className="flex justify-between items-center">
+                              <div>
+                                <div className="font-medium text-sm">Error Monitoring</div>
+                                <div className="text-xs text-muted-foreground">Instant alerts for workflow failures</div>
+                              </div>
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Active</div>
+                            </div>
+                          </Card>
+                          
+                          <Card className="p-4">
+                            <div className="flex justify-between items-center">
+                              <div>
+                                <div className="font-medium text-sm">Reply Classification</div>
+                                <div className="text-xs text-muted-foreground">AI-powered sentiment analysis</div>
+                              </div>
+                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Running</div>
+                            </div>
+                          </Card>
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -430,96 +756,116 @@ const Systems = () => {
       </section>
 
       {/* What We Ship */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">What We Ship</h2>
-            <p className="text-xl text-muted-foreground">Everything you need to run production</p>
+            <p className="text-xl text-muted-foreground">Everything needed to operate and maintain the system</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {whatWeShip.map((item, index) => (
-              <Card key={index} className="console-card bg-card border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-mono font-bold mb-2">{item.item}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
+              {whatWeShip.map((item, index) => (
+                <Card key={index} className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-3">
+                      <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                      <h3 className="font-mono text-lg font-bold">{item.item}</h3>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Coming Soon */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">Coming Soon</h2>
-            <p className="text-xl text-muted-foreground">More operator engines in development</p>
+            <p className="text-xl text-muted-foreground">Next automation systems in development</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {comingSoon.map((system, index) => (
-              <Card key={index} className="console-card bg-card border-border opacity-75">
-                <CardContent className="p-6">
-                  <Badge className="mb-3 text-xs font-mono bg-muted text-muted-foreground">
-                    {system.status}
-                  </Badge>
-                  <h3 className="font-mono font-bold mb-2">{system.name}</h3>
-                  <p className="text-sm text-muted-foreground">{system.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              {comingSoon.map((item, index) => (
+                <Card key={index} className="console-card bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h3 className="font-mono text-lg font-bold mb-2">{item.name}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </div>
+                      <Badge className="system-badge bg-muted text-foreground">
+                        {item.status}
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Integration with Services */}
-      <section className="py-20">
+      {/* How Systems Fit */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">How Systems Fit</h2>
-            <p className="text-xl text-muted-foreground">Assessment → Sprint → Fractional</p>
+            <p className="text-xl text-muted-foreground">Three-step process from assessment to operation</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="font-mono font-bold text-primary">1</span>
-              </div>
-              <h3 className="font-mono text-lg font-bold mb-2">Assessment</h3>
-              <p className="text-sm text-muted-foreground">We identify which systems you need</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="font-mono font-bold text-primary">2</span>
-              </div>
-              <h3 className="font-mono text-lg font-bold mb-2">Sprint</h3>
-              <p className="text-sm text-muted-foreground">We install the operator engines</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="font-mono font-bold text-primary">3</span>
-              </div>
-              <h3 className="font-mono text-lg font-bold mb-2">Fractional</h3>
-              <p className="text-sm text-muted-foreground">We optimize and iterate monthly</p>
-            </div>
-          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="console-card bg-card border-border text-center">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold text-primary">01</span>
+                  </div>
+                  <h3 className="font-mono text-xl font-bold mb-4">Assessment</h3>
+                  <p className="text-muted-foreground mb-6">
+                    We audit your current systems and identify the optimal automation opportunities.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    <Link to="/assessment">Book Assessment</Link>
+                  </Button>
+                </CardContent>
+              </Card>
 
-          <div className="text-center mt-12">
-            <Button asChild className="btn-console">
-              <Link to="/contact">
-                Start with Assessment
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+              <Card className="console-card bg-card border-border text-center">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold text-primary">02</span>
+                  </div>
+                  <h3 className="font-mono text-xl font-bold mb-4">Sprint</h3>
+                  <p className="text-muted-foreground mb-6">
+                    2-week focused implementation sprint to install and configure your automation system.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    <Link to="/sprint">Revenue Sprint</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="console-card bg-card border-border text-center">
+                <CardContent className="p-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold text-primary">03</span>
+                  </div>
+                  <h3 className="font-mono text-xl font-bold mb-4">Fractional</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Ongoing support and optimization to ensure your systems keep performing.
+                  </p>
+                  <Button variant="outline" className="w-full">
+                    <Link to="/fractional">Fractional Support</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
