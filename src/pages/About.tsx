@@ -53,7 +53,7 @@ const About = () => {
                   <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-primary">SM</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Shannon Maguire, Founder</p>
+                  <p className="text-sm text-foreground/60">Shannon Maguire, Founder</p>
                 </div>
               </div>
             </div>
@@ -63,17 +63,17 @@ const About = () => {
               <div className="prose prose-gray max-w-none">
                 <p className="text-foreground/80 leading-relaxed mb-4">
                   <strong>Shannon Maguire</strong> builds revenue infrastructure for companies that can't afford to stall. 
-                  She started inside the Salesforce ecosystem—running enterprise GTM motions and seeing how deals move 
-                  when the systems are tight, and how fast they break when they aren't.
+                  She started inside the Salesforce ecosystem, running enterprise GTM motions and witnessing firsthand how deals accelerate 
+                  when systems are dialed in and how quickly they collapse when they're not.
                 </p>
                 <p className="text-foreground/80 leading-relaxed mb-4">
                   Since then, she's worked across SaaS, cybersecurity, compliance, and creator markets, designing the 
-                  back-end engines that carry growth past the first sprint.
+                  revenue engines that power growth beyond the first milestone.
                 </p>
                 <p className="text-foreground/80 leading-relaxed">
-                  At CWT Studio, Shannon's role is simple: translate complexity into working revenue systems. Whether it's 
-                  standing up outbound command centers, building assessment frameworks, or wiring Salesforce into the rest 
-                  of the stack, she operates as both architect and operator—getting companies the leverage they need to scale.
+                  At CWT Studio, Shannon's mission is clear: transform operational complexity into efficient revenue systems. Whether 
+                  building outbound command centers, creating assessment frameworks, or integrating Salesforce across your entire stack, 
+                  she functions as both architect and operator, delivering the infrastructure companies need to scale with confidence.
                 </p>
               </div>
             </div>
