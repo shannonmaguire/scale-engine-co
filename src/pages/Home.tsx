@@ -77,13 +77,13 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-        <Button asChild variant="console-accent">
+                <Button asChild className="btn-console-accent">
                   <Link to="/contact">
                     Book Assessment
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-        <Button asChild variant="console-secondary">
+                <Button asChild className="btn-console-secondary">
                   <Link to="#system">See the System</Link>
                 </Button>
               </div>
@@ -103,7 +103,7 @@ const Home = () => {
             <div className="console-line mx-auto mb-4 w-fit">
               <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">The System</span>
             </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">How We Work</h2>
+            <h2 className="font-mono text-3xl lg:text-4xl font-bold">How We Work</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -134,7 +134,7 @@ const Home = () => {
                     )}
                   </div>
                   
-                  <Button asChild variant="console" className="w-full mt-auto">
+                  <Button asChild className="w-full btn-console mt-auto">
                     <Link to={service.link}>{service.cta}</Link>
                   </Button>
                 </CardContent>
@@ -178,7 +178,7 @@ const Home = () => {
               </div>
               
               <div className="mt-8">
-                <Button asChild variant="console-accent">
+                <Button asChild className="btn-console-accent">
                   <Link to="/contact">Book Assessment</Link>
                 </Button>
               </div>
@@ -216,7 +216,7 @@ const Home = () => {
                 </div>
                 
                 <div className="mt-8">
-          <Button asChild variant="console">
+                  <Button asChild className="btn-console">
                     <Link to="/sample-report">View Sample Report</Link>
                   </Button>
                 </div>
@@ -251,7 +251,7 @@ const Home = () => {
             <div className="console-line mx-auto mb-4 w-fit">
               <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Proof</span>
             </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">Results That Matter</h2>
+            <h2 className="font-mono text-3xl lg:text-4xl font-bold">Results That Matter</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -264,7 +264,7 @@ const Home = () => {
           </div>
           
           <div className="text-center">
-          <Button asChild variant="console">
+            <Button asChild className="btn-console">
               <Link to="/systems">See Systems</Link>
             </Button>
           </div>
@@ -284,10 +284,10 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="console">
+              <Button asChild className="btn-console">
                 <Link to="/salesforce/partners">For AEs</Link>
               </Button>
-              <Button asChild variant="console-secondary">
+              <Button asChild className="btn-console-secondary">
                 <Link to="/salesforce/delivery">Delivery Model</Link>
               </Button>
             </div>
@@ -301,7 +301,7 @@ const Home = () => {
           <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
             Scale only works when the backend holds
           </h2>
-          <Button asChild variant="console-accent" className="bg-white text-primary hover:bg-white/90">
+          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md">
             <Link to="/contact">
               Book Assessment
               <Zap className="ml-2 h-5 w-5" />
