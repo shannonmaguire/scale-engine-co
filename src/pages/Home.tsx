@@ -77,7 +77,7 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="btn-console">
+                <Button asChild className="btn-console-accent">
                   <Link to="/contact">
                     Book Assessment
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -178,7 +178,7 @@ const Home = () => {
               </div>
               
               <div className="mt-8">
-                <Button asChild className="btn-console">
+                <Button asChild className="btn-console-accent">
                   <Link to="/contact">Book Assessment</Link>
                 </Button>
               </div>
