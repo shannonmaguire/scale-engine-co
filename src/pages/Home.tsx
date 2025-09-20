@@ -301,7 +301,7 @@ const Home = () => {
           <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
             Scale only works when the backend holds
           </h2>
-          <Button asChild size="lg" className="btn-console-accent">
+          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md">
             <Link to="/contact">
               Book Assessment
               <Zap className="ml-2 h-5 w-5" />
