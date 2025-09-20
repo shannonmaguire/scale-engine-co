@@ -12,6 +12,7 @@ const Navigation = () => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
+    { label: "Systems", href: "/systems" },
     { label: "Proof", href: "/proof" },
     { label: "Salesforce", href: "/salesforce" },
     { label: "About", href: "/about" },

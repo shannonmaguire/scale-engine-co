@@ -265,7 +265,7 @@ const Home = () => {
           
           <div className="text-center">
             <Button asChild className="btn-console">
-              <Link to="/case-studies">See Case Studies</Link>
+              <Link to="/systems">See Systems</Link>
             </Button>
           </div>
         </div>

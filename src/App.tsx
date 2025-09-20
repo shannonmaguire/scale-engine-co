@@ -10,6 +10,7 @@ import Sprint from "@/pages/Sprint";
 import Contact from "@/pages/Contact";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
+import Systems from "@/pages/Systems";
 import Salesforce from "@/pages/Salesforce";
 import Proof from "@/pages/Proof";
 import NotFound from "./pages/NotFound";
@@ -26,6 +27,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/systems" element={<Systems />} />
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/sprint" element={<Sprint />} />
           <Route path="/salesforce" element={<Salesforce />} />
