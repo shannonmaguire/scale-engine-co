@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Target, Zap, Clock, Palette, ArrowRight } from "lucide-react";
-import developmentProcessDiagram from "@/assets/development-process-diagram.png";
 
 const About = () => {
   const values = [
@@ -105,50 +104,6 @@ const About = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </section>
-
-        {/* Development Process */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="font-grotesk text-3xl font-bold mb-4">Our Development Process</h2>
-            <p className="text-xl text-muted-foreground">
-              A proven methodology for building systems that scale
-            </p>
-          </div>
-          
-          <div className="bg-card border border-border rounded-lg p-8">
-            <img 
-              src={developmentProcessDiagram} 
-              alt="6-step development process: Discovery, Strategy, Design, Development, Testing, Launch" 
-              className="w-full h-auto rounded-lg mb-6"
-            />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              <div className="text-center">
-                <h3 className="font-grotesk font-bold mb-2">1. Discovery</h3>
-                <p className="text-sm text-muted-foreground">Deep dive into your current systems and pain points</p>
-              </div>
-              <div className="text-center">
-                <h3 className="font-grotesk font-bold mb-2">2. Strategy</h3>
-                <p className="text-sm text-muted-foreground">Define architecture and implementation roadmap</p>
-              </div>
-              <div className="text-center">
-                <h3 className="font-grotesk font-bold mb-2">3. Design</h3>
-                <p className="text-sm text-muted-foreground">Create user flows and system blueprints</p>
-              </div>
-              <div className="text-center">
-                <h3 className="font-grotesk font-bold mb-2">4. Development</h3>
-                <p className="text-sm text-muted-foreground">Build and configure your revenue systems</p>
-              </div>
-              <div className="text-center">
-                <h3 className="font-grotesk font-bold mb-2">5. Testing</h3>
-                <p className="text-sm text-muted-foreground">Validate functionality and data integrity</p>
-              </div>
-              <div className="text-center">
-                <h3 className="font-grotesk font-bold mb-2">6. Launch</h3>
-                <p className="text-sm text-muted-foreground">Deploy with monitoring and success metrics</p>
-              </div>
-            </div>
           </div>
         </section>
 
