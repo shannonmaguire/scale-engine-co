@@ -100,7 +100,7 @@ const Proof = () => {
         <div className="max-w-6xl mx-auto">
           <div className="console-grid mb-8">
             <div className="console-line">
-              <span className="text-muted-foreground font-mono text-sm">SYSTEM STATUS</span>
+              <span className="text-foreground font-mono text-sm">SYSTEM STATUS</span>
               <Badge className="bg-green-500/20 text-green-400 font-mono">OPERATIONAL</Badge>
             </div>
           </div>
@@ -108,7 +108,7 @@ const Proof = () => {
           <h1 className="text-5xl font-bold mb-6 tracking-tight">
             Operational Proof Points
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl font-mono">
+          <p className="text-xl text-foreground/70 mb-8 max-w-3xl font-mono">
             Real system deployments. Quantified revenue impact. Operational excellence delivered.
           </p>
         </div>
@@ -119,7 +119,7 @@ const Proof = () => {
         <div className="max-w-6xl mx-auto">
           <div className="console-grid mb-12">
             <div className="console-line">
-              <span className="text-muted-foreground font-mono text-sm">CASE STUDIES</span>
+              <span className="text-foreground font-mono text-sm">CASE STUDIES</span>
               <span className="font-mono text-sm">4 DEPLOYMENTS</span>
             </div>
           </div>
@@ -129,7 +129,7 @@ const Proof = () => {
               <Card key={study.id} className="console-card h-full">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-sm text-muted-foreground">{study.id}</span>
+                    <span className="font-mono text-sm text-foreground/70">{study.id}</span>
                     <Badge className={`font-mono text-xs ${getStatusColor(study.status)}`}>
                       {study.status}
                     </Badge>
@@ -145,7 +145,7 @@ const Proof = () => {
                     <h4 className="font-mono text-sm font-semibold text-destructive mb-2 uppercase tracking-wider">
                       Challenge
                     </h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-foreground/80 leading-relaxed">
                       {study.challenge}
                     </p>
                   </div>
@@ -156,7 +156,7 @@ const Proof = () => {
                     </h4>
                     <ul className="space-y-1">
                       {study.approach.map((item, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <li key={idx} className="text-sm text-foreground/80 flex items-start gap-2">
                           <Target className="h-3 w-3 mt-0.5 flex-shrink-0 text-primary" />
                           {item}
                         </li>
@@ -170,7 +170,7 @@ const Proof = () => {
                     </h4>
                     <ul className="space-y-1">
                       {study.outcomes.map((outcome, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <li key={idx} className="text-sm text-foreground/80 flex items-start gap-2">
                           <CheckCircle className="h-3 w-3 mt-0.5 flex-shrink-0 text-green-400" />
                           {outcome}
                         </li>
@@ -193,7 +193,7 @@ const Proof = () => {
               <div className="p-6">
                 <TrendingUp className="h-8 w-8 mx-auto mb-4 text-primary" />
                 <h3 className="font-mono text-lg font-semibold mb-2">Assessment</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-foreground/70">
                   System audit, revenue analysis, operational bottleneck identification
                 </p>
               </div>
@@ -202,7 +202,7 @@ const Proof = () => {
               <div className="p-6">
                 <Zap className="h-8 w-8 mx-auto mb-4 text-primary" />
                 <h3 className="font-mono text-lg font-semibold mb-2">Sprint</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-foreground/70">
                   Rapid deployment, system installation, process optimization
                 </p>
               </div>
@@ -211,7 +211,7 @@ const Proof = () => {
               <div className="p-6">
                 <CheckCircle className="h-8 w-8 mx-auto mb-4 text-primary" />
                 <h3 className="font-mono text-lg font-semibold mb-2">Results</h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-foreground/70">
                   Measurable impact, operational stability, revenue growth
                 </p>
               </div>
@@ -234,7 +234,7 @@ const Proof = () => {
           <h2 className="text-3xl font-bold mb-6">
             Ready to Deploy Your System?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 font-mono">
+          <p className="text-lg text-foreground/70 mb-8 font-mono">
             Run a comprehensive assessment of your current operations.
           </p>
           
