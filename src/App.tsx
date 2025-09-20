@@ -11,6 +11,7 @@ import Contact from "@/pages/Contact";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
 import Salesforce from "@/pages/Salesforce";
+import Proof from "@/pages/Proof";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/assessment" element={<Assessment />} />
           <Route path="/sprint" element={<Sprint />} />
           <Route path="/salesforce" element={<Salesforce />} />
+          <Route path="/proof" element={<Proof />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
