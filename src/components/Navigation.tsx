@@ -21,9 +21,12 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="font-grotesk font-bold text-xl text-foreground hover:text-primary transition-colors">
-            CWT Studio
+          {/* Console Logo - Monogram in square */}
+          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <div className="w-8 h-8 bg-primary flex items-center justify-center text-primary-foreground font-mono text-sm font-bold">
+              CWT
+            </div>
+            <span className="font-mono font-bold text-lg text-foreground">Studio</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,7 +35,7 @@ const Navigation = () => {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-mono font-medium transition-colors hover:text-primary ${
                   isActive(link.href) ? "text-primary" : "text-foreground"
                 }`}
               >
@@ -41,9 +44,9 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Primary CTA */}
+          {/* Primary CTA - Console Button */}
           <div className="hidden md:block">
-            <Button asChild className="cta-primary">
+            <Button asChild className="btn-console">
               <Link to="/contact">Book Assessment</Link>
             </Button>
           </div>
@@ -66,7 +69,7 @@ const Navigation = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
+                  className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-primary ${
                     isActive(link.href) ? "text-primary" : "text-foreground"
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -75,7 +78,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button asChild className="cta-primary w-full">
+                <Button asChild className="btn-console w-full">
                   <Link to="/contact">Book Assessment</Link>
                 </Button>
               </div>

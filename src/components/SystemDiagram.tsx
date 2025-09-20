@@ -19,15 +19,15 @@ const SystemDiagram = () => {
   }, [steps.length]);
 
   return (
-    <div className="relative w-full h-64 bg-card border border-border rounded-lg overflow-hidden">
-      {/* Background image */}
+    <div className="relative w-full h-64 bg-card border border-border overflow-hidden console-card">
+      {/* Background image with console overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-10"
         style={{ backgroundImage: `url(${heroSystemDiagram})` }}
       />
       
-      {/* Blueprint grid overlay */}
-      <div className="absolute inset-0 blueprint-grid opacity-30" />
+      {/* Console grid overlay */}
+      <div className="absolute inset-0 console-grid" />
       
       {/* System nodes */}
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
@@ -93,17 +93,19 @@ const SystemDiagram = () => {
         </g>
       </svg>
       
-      {/* Animated data flow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div 
-          className="absolute w-2 h-2 bg-primary rounded-full opacity-70 animate-pulse"
-          style={{
-            left: `${steps[activeStep]?.x}%`,
-            top: `${steps[activeStep]?.y}%`,
-            transform: 'translate(-50%, -50%)',
-          }}
-        />
-      </div>
+        {/* Status Display - Console style */}
+        <div className="absolute top-4 left-4">
+          <div className="system-badge bg-primary text-primary-foreground">
+            SYS.ONLINE
+          </div>
+        </div>
+        
+        {/* Active Step Indicator */}
+        <div className="absolute bottom-4 right-4">
+          <div className="font-mono text-xs text-muted-foreground">
+            STEP {activeStep + 1}/3: {steps[activeStep]?.label?.toUpperCase()}
+          </div>
+        </div>
     </div>
   );
 };

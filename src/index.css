@@ -2,91 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CWT Studio Design System - B2B operator-focused palette */
+/* CWT Studio Design System - Operator Console Aesthetic */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Core palette - deep burgundy, black, bone, graphite */
-    --background: 42 15% 97%;          /* bone white */
-    --foreground: 0 0% 8%;             /* deep black */
+    /* Operator Console Palette - Industrial Minimalism */
+    --background: 0 0% 100%;           /* pure white */
+    --foreground: 0 0% 9%;             /* near-black #171717 */
 
-    --card: 42 15% 97%;
-    --card-foreground: 0 0% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
 
-    --popover: 42 15% 97%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 0 45% 25%;              /* deep burgundy */
-    --primary-foreground: 42 15% 97%;
+    --primary: 321 69% 20%;            /* CWT Plum #681038 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 25%;             /* graphite */
-    --secondary-foreground: 42 15% 97%;
+    --secondary: 214 32% 64%;          /* Cool Gray #94A3B8 */
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 0 0% 45%;                 /* medium graphite */
-    --muted-foreground: 0 0% 65%;
+    --muted: 214 32% 64%;              /* Cool Gray */
+    --muted-foreground: 0 0% 9%;
 
-    --accent: 0 45% 25%;               /* burgundy accent */
-    --accent-foreground: 42 15% 97%;
+    --accent: 213 100% 50%;            /* Electric Blue #007BFF */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 65% 50%;
-    --destructive-foreground: 42 15% 97%;
+    --destructive: 0 65% 50%;          /* Status Red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;                /* light graphite */
-    --input: 0 0% 88%;
-    --ring: 0 45% 25%;
-
-    --radius: 0.5rem;
-
-    /* Blueprint design elements */
-    --blueprint-grid: url("data:image/svg+xml,%3csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3e%3cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='%23e5e5e5' stroke-width='0.5' opacity='0.3'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)' /%3e%3c/svg%3e");
+    --border: 214 32% 91%;             /* Very light cool gray */
+    --input: 214 32% 91%;
+    --ring: 321 69% 20%;               /* CWT Plum for focus */
     
-    /* Typography system */
-    --font-grotesk: 'Space Grotesk', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    /* Status Colors - System Monitoring */
+    --status-positive: 142 71% 45%;    /* Green */
+    --status-negative: 0 65% 50%;      /* Red */
+    --status-neutral: 45 93% 47%;      /* Yellow */
+    --status-new: 214 32% 64%;         /* Gray */
+
+    --radius: 0.25rem;                 /* Sharp corners for console aesthetic */
+
+    /* Console Design Elements - No blueprint, pure functional */
+    --console-grid: linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px),
+                    linear-gradient(hsl(var(--border)) 1px, transparent 1px);
+    --console-grid-size: 20px 20px;
+    
+    /* Typography system - Terminal/Console */
+    --font-mono: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     
-    /* Animation variables */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Animation variables - Snappy, no bounce */
+    --transition-console: all 0.15s ease-out;
+    --transition-slow: all 0.3s ease-out;
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 42 15% 97%;
+    --background: 0 0% 9%;             /* Dark console background */
+    --foreground: 0 0% 95%;            /* Light text */
 
-    --card: 0 0% 8%;
-    --card-foreground: 42 15% 97%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 42 15% 97%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 0 45% 35%;
-    --primary-foreground: 42 15% 97%;
+    --primary: 321 69% 30%;            /* Lighter plum for dark mode */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 42 15% 97%;
+    --secondary: 214 32% 40%;          /* Darker cool gray */
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 35%;
+    --muted: 214 32% 40%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 0 45% 35%;
-    --accent-foreground: 42 15% 97%;
+    --accent: 213 100% 60%;            /* Brighter blue for dark mode */
+    --accent-foreground: 0 0% 9%;
 
     --destructive: 0 65% 50%;
-    --destructive-foreground: 42 15% 97%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 0 45% 35%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 214 32% 25%;             /* Dark borders */
+    --input: 214 32% 25%;
+    --ring: 321 69% 30%;
   }
 }
 
@@ -97,73 +97,107 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-grotesk);
+    font-family: var(--font-mono);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.025em;
+    font-feature-settings: "ss01", "ss02";
+  }
+  
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
   }
 }
 
 @layer components {
-  /* Blueprint design elements */
-  .blueprint-grid {
-    background-image: var(--blueprint-grid);
+  /* Console Grid - Minimal functional grid */
+  .console-grid {
+    background-image: var(--console-grid);
+    background-size: var(--console-grid-size);
+    opacity: 0.1;
   }
   
-  .blueprint-line {
+  /* Console Line - Clean separator */
+  .console-line {
     @apply relative;
   }
   
-  .blueprint-line::before {
+  .console-line::before {
     content: '';
-    @apply absolute left-0 top-0 w-8 h-px bg-border;
+    @apply absolute left-0 top-0 w-4 h-px bg-border;
   }
   
-  /* System diagram styles */
-  .system-node {
-    @apply relative bg-card border border-border rounded-lg p-4;
-    @apply before:absolute before:w-2 before:h-2 before:bg-primary before:rounded-full;
-    @apply before:-left-1 before:top-1/2 before:-translate-y-1/2;
+  /* Status Indicators - System monitoring style */
+  .status-positive {
+    @apply bg-green-500 text-white;
   }
   
-  .system-connection {
-    @apply absolute top-1/2 right-0 w-8 h-px bg-border;
-    @apply after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2;
-    @apply after:w-0 after:h-0 after:border-l-4 after:border-l-border;
-    @apply after:border-t-2 after:border-b-2 after:border-t-transparent after:border-b-transparent;
+  .status-negative {
+    @apply bg-red-500 text-white;
   }
   
-  /* Stat block styling */
+  .status-neutral {
+    @apply bg-yellow-500 text-black;
+  }
+  
+  .status-new {
+    @apply bg-gray-500 text-white;
+  }
+  
+  /* Stat Block - Clean metrics display */
   .stat-block {
-    @apply text-center p-6 border border-border rounded-lg;
+    @apply border border-border bg-card p-6;
+    @apply shadow-sm hover:shadow-md transition-shadow duration-150;
   }
   
   .stat-number {
-    @apply text-3xl font-bold text-primary font-mono;
+    @apply text-3xl font-bold text-primary font-mono tabular-nums;
   }
   
   .stat-label {
-    @apply text-sm text-muted-foreground uppercase tracking-wide mt-2;
+    @apply text-xs text-muted-foreground uppercase tracking-wider mt-1 font-mono;
   }
   
-  /* CTA button variants */
-  .cta-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90;
-    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
-    @apply shadow-sm hover:shadow-md;
+  /* Console Buttons - Functional, no-nonsense */
+  .btn-console {
+    @apply bg-primary text-primary-foreground border-0;
+    @apply px-4 py-2 font-mono text-sm font-medium;
+    @apply transition-all duration-150;
+    @apply hover:bg-primary/90 focus:ring-2 focus:ring-ring;
   }
   
-  .cta-secondary {
-    @apply bg-transparent text-foreground border border-border hover:bg-muted/50;
-    @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  .btn-console-secondary {
+    @apply bg-transparent text-foreground border border-border;
+    @apply px-4 py-2 font-mono text-sm font-medium;
+    @apply transition-all duration-150;
+    @apply hover:bg-muted focus:ring-2 focus:ring-ring;
   }
   
-  /* Price ribbon */
-  .price-ribbon {
-    @apply absolute -top-3 -right-3 bg-primary text-primary-foreground;
-    @apply px-3 py-1 text-sm rounded-full transform rotate-12;
+  .btn-console-accent {
+    @apply bg-accent text-accent-foreground border-0;
+    @apply px-4 py-2 font-mono text-sm font-medium;
+    @apply transition-all duration-150;
+    @apply hover:bg-accent/90 focus:ring-2 focus:ring-ring;
+  }
+  
+  /* System Badge - Status indicator */
+  .system-badge {
+    @apply inline-flex items-center px-2 py-1 text-xs font-mono font-medium;
+    @apply rounded-full border;
+  }
+  
+  /* Console Card - Clean, functional */
+  .console-card {
+    @apply bg-card border border-border shadow-sm;
+    @apply transition-all duration-150 hover:shadow-md;
+  }
+  
+  /* Monospace Numbers - Tabular alignment */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
   }
 }

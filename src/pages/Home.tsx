@@ -64,11 +64,11 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="blueprint-line mb-4">
-                <span className="text-sm text-muted-foreground uppercase tracking-wide">CWT Studio</span>
+              <div className="console-line mb-4">
+                <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">CWT Studio</span>
               </div>
               
-              <h1 className="font-grotesk text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Your business cannot scale on duct tape
               </h1>
               
@@ -77,13 +77,13 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="cta-primary">
+                <Button asChild className="btn-console">
                   <Link to="/contact">
                     Book Assessment
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="cta-secondary">
+                <Button asChild className="btn-console-secondary">
                   <Link to="#system">See the System</Link>
                 </Button>
               </div>
@@ -100,41 +100,41 @@ const Home = () => {
       <section id="system" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <div className="blueprint-line mx-auto mb-4 w-fit">
-              <span className="text-sm text-muted-foreground uppercase tracking-wide">The System</span>
+            <div className="console-line mx-auto mb-4 w-fit">
+              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">The System</span>
             </div>
-            <h2 className="font-grotesk text-3xl lg:text-4xl font-bold">How We Work</h2>
+            <h2 className="font-mono text-3xl lg:text-4xl font-bold">How We Work</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="relative bg-card border-border hover:shadow-lg transition-shadow duration-300">
+              <Card key={index} className="console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150">
                 <CardContent className="p-8">
                   <div className="mb-6">
-                    <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <span className="text-primary font-bold text-lg">{index + 1}</span>
+                    <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4">
+                      <span className="text-primary font-mono font-bold text-lg">{index + 1}</span>
                     </div>
-                    <h3 className="font-grotesk text-xl font-bold mb-3">{service.title}</h3>
+                    <h3 className="font-mono text-xl font-bold mb-3">{service.title}</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
                   </div>
                   
                   <div className="space-y-3 mb-6">
                     {service.timeline && (
                       <div className="text-sm">
-                        <span className="text-muted-foreground">Timeline: </span>
-                        <span className="font-medium">{service.timeline}</span>
+                        <span className="text-muted-foreground font-mono">Timeline: </span>
+                        <span className="font-medium tabular-nums">{service.timeline}</span>
                       </div>
                     )}
                     <div className="text-sm">
-                      <span className="text-muted-foreground">Price: </span>
-                      <span className="font-medium text-primary">{service.price}</span>
+                      <span className="text-muted-foreground font-mono">Price: </span>
+                      <span className="font-medium text-primary tabular-nums">{service.price}</span>
                     </div>
                     {service.note && (
-                      <p className="text-xs text-muted-foreground italic">{service.note}</p>
+                      <p className="text-xs text-muted-foreground font-mono">{service.note}</p>
                     )}
                   </div>
                   
-                  <Button asChild className="w-full cta-primary">
+                  <Button asChild className="w-full btn-console">
                     <Link to={service.link}>{service.cta}</Link>
                   </Button>
                 </CardContent>
@@ -149,15 +149,15 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-grotesk text-3xl lg:text-4xl font-bold mb-8">Before and After</h2>
+              <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-8">Before and After</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-grotesk text-lg font-bold mb-4 text-muted-foreground">Before</h3>
+                  <h3 className="font-mono text-lg font-bold mb-4 text-muted-foreground">Before</h3>
                   <ul className="space-y-3">
                     {beforeAfter.before.map((item, index) => (
-                      <li key={index} className="flex items-center text-muted-foreground">
-                        <div className="w-2 h-2 bg-muted-foreground rounded-full mr-3" />
+                      <li key={index} className="flex items-center text-muted-foreground font-mono text-sm">
+                        <div className="w-1 h-1 bg-muted-foreground mr-3" />
                         {item}
                       </li>
                     ))}
@@ -165,11 +165,11 @@ const Home = () => {
                 </div>
                 
                 <div>
-                  <h3 className="font-grotesk text-lg font-bold mb-4 text-primary">After</h3>
+                  <h3 className="font-mono text-lg font-bold mb-4 text-primary">After</h3>
                   <ul className="space-y-3">
                     {beforeAfter.after.map((item, index) => (
-                      <li key={index} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3" />
+                      <li key={index} className="flex items-center font-mono text-sm">
+                        <CheckCircle className="w-3 h-3 text-primary mr-3" />
                         {item}
                       </li>
                     ))}
@@ -178,17 +178,17 @@ const Home = () => {
               </div>
               
               <div className="mt-8">
-                <Button asChild className="cta-primary">
+                <Button asChild className="btn-console">
                   <Link to="/contact">Book Assessment</Link>
                 </Button>
               </div>
             </div>
             
             <div className="lg:pl-12">
-              <div className="bg-card border border-border rounded-lg p-8 text-center">
+              <div className="console-card bg-card border border-border p-8 text-center">
                 <BarChart3 className="w-16 h-16 text-primary mx-auto mb-4" />
-                <h3 className="font-grotesk text-xl font-bold mb-2">Revenue System</h3>
-                <p className="text-muted-foreground">Transparent, predictable, scalable</p>
+                <h3 className="font-mono text-xl font-bold mb-2">Revenue System</h3>
+                <p className="text-muted-foreground font-mono text-sm">Transparent, predictable, scalable</p>
               </div>
             </div>
           </div>
@@ -200,7 +200,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="font-grotesk text-3xl lg:text-4xl font-bold mb-4">The Diagnostic</h2>
+              <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">The Diagnostic</h2>
               <p className="text-xl text-muted-foreground">What you get in an Assessment</p>
             </div>
             
@@ -209,32 +209,32 @@ const Home = () => {
                 <div className="space-y-4">
                   {diagnosticDeliverables.map((item, index) => (
                     <div key={index} className="flex items-start">
-                      <Target className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
-                      <span className="text-foreground">{item}</span>
+                      <Target className="w-4 h-4 text-primary mt-1 mr-3 flex-shrink-0" />
+                      <span className="text-foreground font-mono text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="mt-8">
-                  <Button asChild className="cta-primary">
+                  <Button asChild className="btn-console">
                     <Link to="/sample-report">View Sample Report</Link>
                   </Button>
                 </div>
               </div>
               
               <div className="relative">
-                <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
+                <div className="console-card bg-card border border-border p-8 shadow-lg">
                   <div className="space-y-4">
-                    <div className="h-4 bg-muted rounded w-3/4" />
-                    <div className="h-4 bg-muted rounded w-1/2" />
-                    <div className="h-20 bg-muted rounded" />
+                    <div className="h-3 bg-muted w-3/4" />
+                    <div className="h-3 bg-muted w-1/2" />
+                    <div className="h-16 bg-muted" />
                     <div className="grid grid-cols-3 gap-2">
-                      <div className="h-12 bg-primary/20 rounded" />
-                      <div className="h-12 bg-primary/20 rounded" />
-                      <div className="h-12 bg-primary/20 rounded" />
+                      <div className="h-8 bg-primary/20" />
+                      <div className="h-8 bg-primary/20" />
+                      <div className="h-8 bg-primary/20" />
                     </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground px-2 py-1 text-xs rounded transform rotate-12">
+                  <div className="absolute -top-2 -right-2 system-badge bg-primary text-primary-foreground">
                     Sample Report
                   </div>
                 </div>
@@ -248,15 +248,15 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="blueprint-line mx-auto mb-4 w-fit">
-              <span className="text-sm text-muted-foreground uppercase tracking-wide">Proof</span>
+            <div className="console-line mx-auto mb-4 w-fit">
+              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Proof</span>
             </div>
-            <h2 className="font-grotesk text-3xl lg:text-4xl font-bold">Results That Matter</h2>
+            <h2 className="font-mono text-3xl lg:text-4xl font-bold">Results That Matter</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {proofStats.map((stat, index) => (
-              <div key={index} className="stat-block">
+              <div key={index} className="stat-block text-center">
                 <div className="stat-number">{stat.number}</div>
                 <div className="stat-label">{stat.label}</div>
               </div>
@@ -264,7 +264,7 @@ const Home = () => {
           </div>
           
           <div className="text-center">
-            <Button asChild className="cta-primary">
+            <Button asChild className="btn-console">
               <Link to="/case-studies">See Case Studies</Link>
             </Button>
           </div>
@@ -275,7 +275,7 @@ const Home = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-grotesk text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
               Salesforce without wasted motion
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -284,10 +284,10 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="cta-primary">
+              <Button asChild className="btn-console">
                 <Link to="/salesforce/partners">For AEs</Link>
               </Button>
-              <Button asChild variant="outline" className="cta-secondary">
+              <Button asChild className="btn-console-secondary">
                 <Link to="/salesforce/delivery">Delivery Model</Link>
               </Button>
             </div>
@@ -298,10 +298,10 @@ const Home = () => {
       {/* Final CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="font-grotesk text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
             Scale only works when the backend holds
           </h2>
-          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+          <Button asChild size="lg" className="btn-console-accent">
             <Link to="/contact">
               Book Assessment
               <Zap className="ml-2 h-5 w-5" />

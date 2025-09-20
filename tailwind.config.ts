@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        'grotesk': ['Space Grotesk', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', 'monospace'],
         'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
       },
       colors: {

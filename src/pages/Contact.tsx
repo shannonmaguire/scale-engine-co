@@ -31,10 +31,10 @@ const Contact = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">Contact</span>
+          <div className="console-line mx-auto mb-4 w-fit">
+            <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Contact</span>
           </div>
-          <h1 className="font-grotesk text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Book Your Assessment
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -45,51 +45,51 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="border-border">
+            <Card className="console-card border-border">
               <CardHeader>
-                <CardTitle className="font-grotesk text-2xl">Get Started</CardTitle>
+                <CardTitle className="font-mono text-2xl">Get Started</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Name *</Label>
+                      <Label htmlFor="name" className="font-mono text-sm">Name *</Label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => handleInputChange("name", e.target.value)}
                         required
-                        className="mt-2"
+                        className="mt-2 font-mono"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email">Email *</Label>
+                      <Label htmlFor="email" className="font-mono text-sm">Email *</Label>
                       <Input
                         id="email"
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange("email", e.target.value)}
                         required
-                        className="mt-2"
+                        className="mt-2 font-mono"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="company">Company *</Label>
+                    <Label htmlFor="company" className="font-mono text-sm">Company *</Label>
                     <Input
                       id="company"
                       value={formData.company}
                       onChange={(e) => handleInputChange("company", e.target.value)}
                       required
-                      className="mt-2"
+                      className="mt-2 font-mono"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="path">Choose Path *</Label>
+                    <Label htmlFor="path" className="font-mono text-sm">Choose Path *</Label>
                     <Select onValueChange={(value) => handleInputChange("path", value)}>
-                      <SelectTrigger className="mt-2">
+                      <SelectTrigger className="mt-2 font-mono">
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                       <SelectContent>
@@ -102,19 +102,19 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="objective">One sentence objective *</Label>
+                    <Label htmlFor="objective" className="font-mono text-sm">One sentence objective *</Label>
                     <Textarea
                       id="objective"
                       value={formData.objective}
                       onChange={(e) => handleInputChange("objective", e.target.value)}
                       placeholder="What's the main challenge you need help solving?"
                       required
-                      className="mt-2"
+                      className="mt-2 font-mono"
                       rows={3}
                     />
                   </div>
 
-                  <Button type="submit" className="w-full cta-primary">
+                  <Button type="submit" className="w-full btn-console">
                     Submit Request
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -124,30 +124,30 @@ const Contact = () => {
 
             {/* Auto Scheduler Placeholder */}
             <div className="mt-8">
-              <Card className="border-border">
+              <Card className="console-card border-border">
                 <CardHeader>
-                  <CardTitle className="font-grotesk text-xl flex items-center gap-2">
+                  <CardTitle className="font-mono text-xl flex items-center gap-2">
                     <Clock className="w-5 h-5 text-primary" />
                     Schedule a Call
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted/30 rounded-lg p-8 text-center">
-                    <p className="text-muted-foreground mb-4">
+                  <div className="bg-muted/10 p-8 text-center console-card">
+                    <p className="text-muted-foreground mb-4 font-mono text-sm">
                       Prefer to schedule directly? Choose a time that works for you.
                     </p>
                     <div className="space-y-3">
-                      <Button variant="outline" className="w-full">
+                      <Button variant="outline" className="w-full btn-console-secondary font-mono text-sm">
                         Tuesday, Dec 19 - 2:00 PM EST
                       </Button>
-                      <Button variant="outline" className="w-full">
+                      <Button variant="outline" className="w-full btn-console-secondary font-mono text-sm">
                         Wednesday, Dec 20 - 10:00 AM EST
                       </Button>
-                      <Button variant="outline" className="w-full">
+                      <Button variant="outline" className="w-full btn-console-secondary font-mono text-sm">
                         Thursday, Dec 21 - 3:00 PM EST
                       </Button>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-4">
+                    <p className="text-xs text-muted-foreground mt-4 font-mono">
                       30-minute discovery call
                     </p>
                   </div>
