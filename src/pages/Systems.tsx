@@ -45,7 +45,7 @@ const Systems = () => {
               <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Operator Engines</span>
             </div>
             <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Pre-built systems that ship working
+              Production-ready automation systems
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               Battle-tested automation engines installed during Revenue Sprints. No custom development. 
