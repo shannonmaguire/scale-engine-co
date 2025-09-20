@@ -83,175 +83,343 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-background via-background to-muted/20 border-b border-border">
-        <div className="container mx-auto px-6 py-24">
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-mono font-bold text-foreground mb-6">
-              Revenue Systems
-              <span className="text-primary block">Intelligence</span>
+      {/* Newspaper Masthead */}
+      <section className="bg-background border-b-4 border-primary">
+        <div className="container mx-auto px-6 py-8">
+          {/* Publication Header */}
+          <div className="text-center border-b border-border pb-6 mb-6">
+            <h1 className="text-5xl md:text-7xl font-mono font-black text-foreground tracking-tight">
+              CWT REVENUE INTELLIGENCE
             </h1>
-            <p className="text-xl text-foreground/90 font-mono mb-8 max-w-2xl">
-              Insights, strategies, and technical deep-dives into building scalable revenue operations and systems architecture.
+            <div className="flex items-center justify-center gap-8 mt-4 text-sm font-mono text-muted-foreground">
+              <span className="uppercase tracking-wide">Est. 2020</span>
+              <span>•</span>
+              <span className="uppercase tracking-wide">{new Date().toLocaleDateString('en-US', { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+              })}</span>
+              <span>•</span>
+              <span className="uppercase tracking-wide">Digital Edition</span>
+            </div>
+          </div>
+          
+          {/* Tagline */}
+          <div className="text-center">
+            <p className="text-lg text-foreground font-mono italic max-w-3xl mx-auto">
+              "Professional insights on revenue systems, business automation, and strategic operations for the modern enterprise"
             </p>
           </div>
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="border-b border-border bg-background/50">
-        <div className="container mx-auto px-6 py-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="text"
-                placeholder="Search articles..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 console-input"
-              />
+      {/* Editorial Controls */}
+      <section className="bg-muted/30 border-b border-border">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span className="font-mono text-sm font-bold text-foreground uppercase tracking-wide">Sections:</span>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-3 py-1 text-xs font-mono uppercase tracking-wide border-b-2 transition-colors ${
+                      selectedCategory === category 
+                        ? 'border-primary text-primary font-bold' 
+                        : 'border-transparent text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
             </div>
             
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCategory(category)}
-                  className="font-mono"
-                >
-                  {category}
-                </Button>
-              ))}
+            <div className="relative">
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Search archives..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 w-64 font-mono text-sm border-0 border-b border-border bg-transparent focus:border-primary"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Post */}
+      {/* Front Page Lead Story */}
       {featuredPost && selectedCategory === "All" && !searchTerm && (
-        <section className="container mx-auto px-6 py-12">
-          <div className="mb-8">
-            <Badge variant="secondary" className="system-badge mb-4">Featured Article</Badge>
-            <h2 className="text-2xl font-mono font-bold text-foreground mb-2">Latest Insights</h2>
+        <section className="container mx-auto px-6 py-12 border-b border-border">
+          <div className="mb-6">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="h-px bg-primary flex-1"></div>
+              <span className="font-mono text-xs uppercase tracking-wide text-primary font-bold bg-background px-4">
+                Lead Story
+              </span>
+              <div className="h-px bg-primary flex-1"></div>
+            </div>
           </div>
           
-          <Card className="console-card hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" className="font-mono text-xs">
-                  {featuredPost.category}
-                </Badge>
-                {featuredPost.tags.slice(0, 3).map((tag) => (
-                  <Badge key={tag} variant="secondary" className="font-mono text-xs">
-                    {tag}
-                  </Badge>
-                ))}
+          <article className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="md:col-span-2">
+                <header className="mb-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <Badge variant="outline" className="font-mono text-xs uppercase tracking-wide border-primary text-primary">
+                      {featuredPost.category}
+                    </Badge>
+                    <div className="h-px bg-border flex-1"></div>
+                  </div>
+                  
+                  <h2 className="text-4xl md:text-5xl font-mono font-black text-foreground leading-tight mb-4 hover:text-primary transition-colors">
+                    <Link to={`/blog/${featuredPost.slug}`} className="story-link">
+                      {featuredPost.title}
+                    </Link>
+                  </h2>
+                  
+                  <p className="text-lg text-foreground leading-relaxed mb-6 font-serif">
+                    {featuredPost.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center gap-1 text-sm font-mono text-muted-foreground">
+                    <span className="font-bold">By {featuredPost.author}</span>
+                    <span className="mx-2">|</span>
+                    <time>{new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { 
+                      month: 'long', 
+                      day: 'numeric', 
+                      year: 'numeric' 
+                    })}</time>
+                    <span className="mx-2">|</span>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3" />
+                      <span>{featuredPost.readTime}</span>
+                    </div>
+                  </div>
+                </header>
               </div>
-              <CardTitle className="text-2xl font-mono hover:text-primary transition-colors">
-                <Link to={`/blog/${featuredPost.slug}`}>
-                  {featuredPost.title}
-                </Link>
-              </CardTitle>
-              <CardDescription className="text-base text-foreground/80 mt-3">
-                {featuredPost.excerpt}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4 text-sm text-muted-foreground font-mono">
-                  <span>{featuredPost.author}</span>
-                  <span>•</span>
-                  <span>{new Date(featuredPost.publishedAt).toLocaleDateString()}</span>
-                  <span>•</span>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
-                    <span>{featuredPost.readTime}</span>
+              
+              <aside className="space-y-4">
+                <div className="border-l-4 border-primary pl-4">
+                  <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-wide mb-2">
+                    In This Issue
+                  </h3>
+                  <div className="space-y-2">
+                    {featuredPost.tags.map((tag) => (
+                      <span key={tag} className="block text-xs font-mono text-muted-foreground uppercase tracking-wide">
+                        • {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                <Button asChild variant="ghost" size="sm">
-                  <Link to={`/blog/${featuredPost.slug}`} className="flex items-center gap-2">
-                    Read Article <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+                
+                <div className="border border-border p-4 bg-muted/20">
+                  <Button asChild className="w-full font-mono text-sm">
+                    <Link to={`/blog/${featuredPost.slug}`} className="flex items-center justify-center gap-2">
+                      Read Full Article <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </aside>
+            </div>
+          </article>
         </section>
       )}
 
-      {/* Blog Posts Grid */}
+      {/* Editorial Sections */}
       <section className="container mx-auto px-6 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {regularPosts.map((post) => (
-            <Card key={post.id} className="console-card hover:shadow-lg transition-shadow group">
-              <CardHeader>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <Badge variant="outline" className="font-mono text-xs">
-                    {post.category}
-                  </Badge>
+        {/* Section Groups by Category */}
+        {categories.filter(cat => cat !== 'All').map(category => {
+          const categoryPosts = regularPosts.filter(post => 
+            selectedCategory === 'All' || selectedCategory === category
+          ).filter(post => post.category === category);
+          
+          if (categoryPosts.length === 0) return null;
+          
+          return (
+            <div key={category} className="mb-16 border-b border-border pb-12 last:border-b-0">
+              {/* Section Header */}
+              <div className="mb-8">
+                <div className="flex items-center gap-4">
+                  <h2 className="text-2xl font-mono font-black text-foreground uppercase tracking-wide">
+                    {category}
+                  </h2>
+                  <div className="h-px bg-border flex-1"></div>
                 </div>
-                <CardTitle className="text-lg font-mono group-hover:text-primary transition-colors">
-                  <Link to={`/blog/${post.slug}`}>
-                    {post.title}
-                  </Link>
-                </CardTitle>
-                <CardDescription className="text-foreground/80 line-clamp-3">
-                  {post.excerpt}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
-                    <Clock className="h-3 w-3" />
-                    <span>{post.readTime}</span>
-                  </div>
-                  <time className="text-xs text-muted-foreground font-mono">
-                    {new Date(post.publishedAt).toLocaleDateString()}
-                  </time>
-                </div>
-                <div className="flex flex-wrap gap-1 mt-3">
-                  {post.tags.slice(0, 2).map((tag) => (
-                    <Badge key={tag} variant="secondary" className="font-mono text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              </div>
+              
+              {/* Articles in Newspaper Column Layout */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {categoryPosts.map((post, index) => (
+                  <article key={post.id} className={`
+                    ${index === 0 && categoryPosts.length > 1 ? 'md:col-span-2 lg:col-span-1' : ''}
+                    border-b border-border pb-6 last:border-b-0
+                  `}>
+                    <header className="mb-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-xs font-mono uppercase tracking-wide text-primary font-bold">
+                          {post.category}
+                        </span>
+                        <span className="text-xs text-muted-foreground">|</span>
+                        <time className="text-xs font-mono text-muted-foreground">
+                          {new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                            month: 'short', 
+                            day: 'numeric' 
+                          })}
+                        </time>
+                      </div>
+                      
+                      <h3 className={`
+                        font-mono font-bold text-foreground leading-tight mb-3 hover:text-primary transition-colors
+                        ${index === 0 && categoryPosts.length > 1 ? 'text-xl md:text-2xl' : 'text-lg'}
+                      `}>
+                        <Link to={`/blog/${post.slug}`} className="story-link">
+                          {post.title}
+                        </Link>
+                      </h3>
+                      
+                      <p className={`
+                        text-foreground leading-relaxed
+                        ${index === 0 && categoryPosts.length > 1 ? 'text-base' : 'text-sm'}
+                      `}>
+                        {post.excerpt}
+                      </p>
+                    </header>
+                    
+                    <footer className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                        <span>By {post.author}</span>
+                        <span>•</span>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-1">
+                        {post.tags.slice(0, 2).map((tag) => (
+                          <span key={tag} className="text-xs font-mono text-muted-foreground uppercase tracking-wide">
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+                    </footer>
+                  </article>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+        
+        {/* Show all posts when filtering */}
+        {(selectedCategory !== 'All' || searchTerm) && (
+          <div className="mb-16">
+            <div className="mb-8">
+              <div className="flex items-center gap-4">
+                <h2 className="text-2xl font-mono font-black text-foreground uppercase tracking-wide">
+                  {searchTerm ? `Search Results for "${searchTerm}"` : selectedCategory}
+                </h2>
+                <div className="h-px bg-border flex-1"></div>
+              </div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularPosts.map((post) => (
+                <article key={post.id} className="border-b border-border pb-6">
+                  <header className="mb-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xs font-mono uppercase tracking-wide text-primary font-bold">
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-muted-foreground">|</span>
+                      <time className="text-xs font-mono text-muted-foreground">
+                        {new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                          month: 'short', 
+                          day: 'numeric' 
+                        })}
+                      </time>
+                    </div>
+                    
+                    <h3 className="text-lg font-mono font-bold text-foreground leading-tight mb-3 hover:text-primary transition-colors">
+                      <Link to={`/blog/${post.slug}`} className="story-link">
+                        {post.title}
+                      </Link>
+                    </h3>
+                    
+                    <p className="text-sm text-foreground leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                  </header>
+                  
+                  <footer className="flex items-center justify-between">
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                      <span>By {post.author}</span>
+                      <span>•</span>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3 w-3" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-1">
+                      {post.tags.slice(0, 2).map((tag) => (
+                        <span key={tag} className="text-xs font-mono text-muted-foreground uppercase tracking-wide">
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </footer>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
 
         {filteredPosts.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground font-mono">
-              No articles found matching your criteria.
+          <div className="text-center py-12 border-t border-border">
+            <p className="text-muted-foreground font-mono italic">
+              No articles found in our archives matching your search criteria.
             </p>
           </div>
         )}
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="bg-muted/30 border-t border-border">
-        <div className="container mx-auto px-6 py-16">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-mono font-bold text-foreground mb-4">
-              Stay Updated on Revenue Systems
-            </h3>
-            <p className="text-foreground/80 mb-8">
-              Get weekly insights on revenue operations, systems automation, and strategic business intelligence delivered to your inbox.
-            </p>
-            <div className="flex gap-4 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="console-input"
-              />
-              <Button className="btn-console">
-                Subscribe
-              </Button>
+      {/* Subscription Notice - Newspaper Style */}
+      <section className="bg-background border-t-4 border-primary">
+        <div className="container mx-auto px-6 py-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="border-2 border-border p-8 bg-muted/10">
+              <div className="text-center">
+                <h3 className="text-xl font-mono font-black text-foreground uppercase tracking-wide mb-2">
+                  INTELLIGENCE BRIEFINGS
+                </h3>
+                <p className="text-sm font-mono text-muted-foreground uppercase tracking-wide mb-6">
+                  WEEKLY SUBSCRIPTION AVAILABLE
+                </p>
+                
+                <p className="text-base text-foreground mb-8 max-w-2xl mx-auto">
+                  Receive our weekly digest of revenue operations insights, system automation strategies, 
+                  and business intelligence analysis delivered directly to your executive briefcase.
+                </p>
+                
+                <div className="flex gap-4 max-w-md mx-auto">
+                  <Input
+                    type="email"
+                    placeholder="Your business email"
+                    className="font-mono text-sm border-2 border-border bg-background"
+                  />
+                  <Button className="font-mono uppercase tracking-wide bg-primary hover:bg-primary/90">
+                    Subscribe
+                  </Button>
+                </div>
+                
+                <p className="text-xs font-mono text-muted-foreground mt-4 uppercase tracking-wide">
+                  Professional insights • No promotional content • Unsubscribe anytime
+                </p>
+              </div>
             </div>
           </div>
         </div>
