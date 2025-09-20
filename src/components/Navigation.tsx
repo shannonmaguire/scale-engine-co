@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import cwtLogoMark from "@/assets/cwt-logo-mark.png";
+import cwtLogoHorizontal from "@/assets/cwt-logo-horizontal.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,12 +23,14 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Console Logo - Monogram in square */}
+          {/* Console Logo - Real CWT Logo */}
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-primary flex items-center justify-center text-primary-foreground font-mono text-sm font-bold">
-              CWT
-            </div>
-            <span className="font-mono font-bold text-lg text-foreground">Studio</span>
+            <img 
+              src={cwtLogoMark} 
+              alt="CWT Studio"
+              className="h-8 w-8"
+            />
+            <span className="font-mono font-bold text-lg text-foreground hidden sm:block">Studio</span>
           </Link>
 
           {/* Desktop Navigation */}
