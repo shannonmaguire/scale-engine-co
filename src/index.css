@@ -100,12 +100,34 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   
+  /* Consistent Typography Scale */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.025em;
     font-feature-settings: "ss01", "ss02";
+  }
+  
+  /* Typography Classes - Consistent sizing */
+  .heading-page {
+    @apply font-mono text-4xl lg:text-5xl font-bold;
+  }
+  
+  .heading-section {
+    @apply font-mono text-3xl font-bold;
+  }
+  
+  .heading-subsection {
+    @apply font-mono text-xl font-bold;
+  }
+  
+  .text-description {
+    @apply text-xl text-muted-foreground leading-relaxed;
+  }
+  
+  .text-label {
+    @apply text-xs text-muted-foreground uppercase tracking-wider font-mono;
   }
   
   code, pre, .font-mono {

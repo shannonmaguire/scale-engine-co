@@ -48,11 +48,11 @@ const Home = () => {
             <div>
               
               
-              <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="heading-page mb-6 leading-tight">
                 Your business cannot scale on duct tape
               </h1>
               
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-description mb-8">
                 We install the systems that drive revenue. First we diagnose. Then we build.
               </p>
               
@@ -81,9 +81,9 @@ const Home = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">The System</span>
+              <span className="text-label">The System</span>
             </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold">How We Work</h2>
+            <h2 className="heading-section">How We Work</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -93,7 +93,7 @@ const Home = () => {
                     <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4">
                       <span className="text-primary font-mono font-bold text-lg">{index + 1}</span>
                     </div>
-                    <h3 className="font-mono text-xl font-bold mb-3">{service.title}</h3>
+                    <h3 className="heading-subsection mb-3">{service.title}</h3>
                     <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
                   </div>
                   
@@ -123,7 +123,7 @@ const Home = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-8">Before and After</h2>
+              <h2 className="heading-section mb-8">Before and After</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -157,7 +157,7 @@ const Home = () => {
             <div className="lg:pl-12">
               <div className="console-card bg-card border border-border p-8 text-center">
                 <BarChart3 className="w-16 h-16 text-primary mx-auto mb-4" />
-                <h3 className="font-mono text-xl font-bold mb-2">Revenue System</h3>
+                <h3 className="heading-subsection mb-2">Revenue System</h3>
                 <p className="text-muted-foreground font-mono text-sm">Transparent, predictable, scalable</p>
               </div>
             </div>
@@ -170,8 +170,8 @@ const Home = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-4">The Diagnostic</h2>
-              <p className="text-xl text-muted-foreground">What you get in an Assessment</p>
+              <h2 className="heading-section mb-4">The Diagnostic</h2>
+              <p className="text-description">What you get in an Assessment</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -217,9 +217,9 @@ const Home = () => {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
             <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Proof</span>
+              <span className="text-label">Proof</span>
             </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold">Results That Matter</h2>
+            <h2 className="heading-section">Results That Matter</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -241,10 +241,10 @@ const Home = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="heading-section mb-6">
               Salesforce without wasted motion
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-description mb-8">
               We run assessments and sprints that make Salesforce pay off. Delivery through CloudRoute. 
               You keep a single operator at the table from plan to production.
             </p>
@@ -264,7 +264,7 @@ const Home = () => {
       {/* Final CTA */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 max-w-7xl text-center">
-          <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="heading-section mb-6">
             Scale only works when the backend holds
           </h2>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md">

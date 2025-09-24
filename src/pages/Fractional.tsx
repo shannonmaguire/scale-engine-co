@@ -76,7 +76,7 @@ const Fractional = () => {
         <section className="mb-16">
           <div className="bg-muted/30 rounded-lg p-8 text-center">
             <RotateCcw className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="font-mono text-2xl font-bold mb-4">After the Sprint</h2>
+            <h2 className="heading-section mb-4">After the Sprint</h2>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Your revenue systems are installed and working. Now you need someone to keep them optimized, 
               iterate based on results, and guide strategic decisions as you scale.
@@ -86,7 +86,7 @@ const Fractional = () => {
 
         {/* Services */}
         <section className="mb-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">What's Included</h2>
+          <h2 className="heading-section mb-8">What's Included</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">

@@ -32,13 +32,13 @@ const About = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">About</span>
+          <div className="console-line mx-auto mb-4 w-fit">
+            <span className="text-label">About</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="heading-page mb-6">
             Built for Operators
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          <p className="text-description max-w-2xl mx-auto">
             CWT Studio exists because scaling businesses deserve revenue systems that work. 
             No endless decks. No random tools. No noise.
           </p>
@@ -59,7 +59,7 @@ const About = () => {
             </div>
             
             <div className="lg:col-span-2">
-              <h2 className="font-mono text-2xl font-bold mb-6">Leadership</h2>
+              <h2 className="heading-section mb-6">Leadership</h2>
               <div className="prose prose-gray max-w-none">
                 <p className="text-foreground/80 leading-relaxed mb-4">
                   <strong>Shannon Maguire</strong> builds revenue infrastructure for companies that can't afford to stall. 
@@ -98,7 +98,7 @@ const About = () => {
                       <value.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-mono text-xl font-bold mb-3">{value.title}</h3>
+                      <h3 className="heading-subsection mb-3">{value.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ const About = () => {
         {/* Philosophy */}
         <section className="mb-16">
           <div className="bg-muted/30 rounded-lg p-8">
-            <h2 className="font-mono text-2xl font-bold mb-6 text-center">Our Philosophy</h2>
+            <h2 className="heading-section mb-6 text-center">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
               <blockquote className="text-lg text-muted-foreground italic leading-relaxed mb-6">
                 "Revenue systems are like plumbing. When they work, nobody thinks about them. 
@@ -127,7 +127,7 @@ const About = () => {
 
         {/* Expertise Areas */}
         <section className="mb-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Expertise Areas</h2>
+          <h2 className="heading-section mb-8">Expertise Areas</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6 border border-border rounded-lg">
               <h3 className="font-mono font-bold mb-2">Revenue Operations</h3>
@@ -147,7 +147,7 @@ const About = () => {
         {/* Working with Us */}
         <section className="mb-16">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-mono text-2xl font-bold mb-4">Working with CWT Studio</h2>
+            <h2 className="heading-section mb-4">Working with CWT Studio</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-mono font-bold mb-3">What We Do</h3>
@@ -174,7 +174,7 @@ const About = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-mono text-2xl font-bold mb-4">
+            <h2 className="heading-section mb-4">
               Ready to build systems that scale?
             </h2>
             <p className="text-muted-foreground mb-6">

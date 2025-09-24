@@ -34,10 +34,10 @@ const Contact = () => {
           <div className="console-line mx-auto mb-4 w-fit">
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Contact</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="heading-page mb-6">
             Book Your Assessment
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+          <p className="text-description max-w-2xl mx-auto">
             Ready to diagnose your revenue system? Fill out the form below and we'll get back to you within 24 hours.
           </p>
         </div>
@@ -47,7 +47,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <Card className="console-card border-border">
               <CardHeader>
-                <CardTitle className="font-mono text-2xl">Get Started</CardTitle>
+                <CardTitle className="heading-subsection">Get Started</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">

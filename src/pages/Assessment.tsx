@@ -60,20 +60,20 @@ const Assessment = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">Assessment</span>
+          <div className="console-line mx-auto mb-4 w-fit">
+            <span className="text-label">Assessment</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
-            Infrastructure Assessment
+          <h1 className="heading-page mb-6">
+            Revenue Infrastructure Assessment
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-description">
             An MRI for your revenue system. Three to four weeks. Executive ready. Built to be acted on.
           </p>
         </div>
 
         {/* Deliverables */}
         <section className="mb-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">What You Get</h2>
+          <h2 className="heading-section mb-8">What You Get</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {deliverables.map((item, index) => (
               <Card key={index} className="border-border">
@@ -93,7 +93,7 @@ const Assessment = () => {
 
         {/* Process Timeline */}
         <section className="mb-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Process</h2>
+          <h2 className="heading-section mb-8">Process</h2>
           <div className="space-y-6">
             {process.map((item, index) => (
               <div key={index} className="flex items-start gap-4">
@@ -138,7 +138,7 @@ const Assessment = () => {
 
         {/* FAQ */}
         <section className="mb-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+          <h2 className="heading-section mb-8">Frequently Asked Questions</h2>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
@@ -160,7 +160,7 @@ const Assessment = () => {
         {/* CTA */}
         <div className="text-center">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-mono text-2xl font-bold mb-4">
+            <h2 className="heading-section mb-4">
               Ready to diagnose your revenue system?
             </h2>
             <p className="text-muted-foreground mb-6">

@@ -62,13 +62,13 @@ const Services = () => {
       <div className="container mx-auto px-6">
         {/* Hero */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">Services</span>
+          <div className="console-line mx-auto mb-4 w-fit">
+            <span className="text-label">Services</span>
           </div>
-          <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
+          <h1 className="heading-page mb-6">
             Revenue Systems That Scale
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-description">
             We diagnose. We install. We operate. Three services that transform how your business captures and converts revenue.
           </p>
         </div>
@@ -85,7 +85,7 @@ const Services = () => {
                         <service.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="font-mono text-2xl">{service.title}</CardTitle>
+                        <CardTitle className="heading-subsection">{service.title}</CardTitle>
                         <p className="text-muted-foreground italic">{service.tagline}</p>
                       </div>
                     </div>
@@ -146,8 +146,8 @@ const Services = () => {
         {/* Process Flow */}
         <section className="py-20">
           <div className="text-center mb-12">
-            <h2 className="font-mono text-3xl font-bold mb-4">The Complete System</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="heading-section mb-4">The Complete System</h2>
+            <p className="text-description">
               How our services work together to transform your revenue operations
             </p>
           </div>
@@ -189,7 +189,7 @@ const Services = () => {
 
         {/* CTA */}
         <div className="text-center bg-card border border-border rounded-lg p-8">
-          <h2 className="font-mono text-2xl font-bold mb-4">
+          <h2 className="heading-section mb-4">
             Ready to scale your revenue system?
           </h2>
           <p className="text-muted-foreground mb-6">
