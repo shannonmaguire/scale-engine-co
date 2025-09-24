@@ -18,7 +18,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 9%;
 
-    --primary: 321 69% 20%;            /* CWT Plum #681038 */
+    --primary: 334 65% 24%;            /* CWT Plum #681137 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 214 32% 64%;          /* Cool Gray #94A3B8 */
@@ -35,7 +35,7 @@
 
     --border: 214 32% 91%;             /* Very light cool gray */
     --input: 214 32% 91%;
-    --ring: 321 69% 20%;               /* CWT Plum for focus */
+    --ring: 334 65% 24%;               /* CWT Plum for focus */
     
     /* Status Colors - System Monitoring */
     --status-positive: 142 71% 45%;    /* Green */
@@ -69,7 +69,7 @@
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 321 69% 30%;            /* Lighter plum for dark mode */
+    --primary: 334 65% 30%;            /* Lighter version for dark mode */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 214 32% 40%;          /* Darker cool gray */
@@ -86,7 +86,7 @@
 
     --border: 214 32% 25%;             /* Dark borders */
     --input: 214 32% 25%;
-    --ring: 321 69% 30%;
+    --ring: 334 65% 30%;
   }
 }
 
