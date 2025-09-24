@@ -49,14 +49,23 @@ const Proof = () => {
     outcomes: ["First enterprise deals secured with clear positioning", "GTM risk removed from 'spray and pray' founder sales", "Repeatable SaaS revenue foundation established", "Revenue growth infrastructure operational"],
     status: "DEPLOYED"
   }];
-
-  const aggregateMetrics = [
-    { value: "$8.0M+", label: "Total ARR Impact", icon: DollarSign },
-    { value: "383%", label: "Avg Growth Rate", icon: TrendingUp },
-    { value: "135", label: "Avg Deploy Days", icon: Clock },
-    { value: "100%", label: "Success Rate", icon: Activity }
-  ];
-
+  const aggregateMetrics = [{
+    value: "$8.0M+",
+    label: "Total ARR Impact",
+    icon: DollarSign
+  }, {
+    value: "383%",
+    label: "Avg Growth Rate",
+    icon: TrendingUp
+  }, {
+    value: "135",
+    label: "Avg Deploy Days",
+    icon: Clock
+  }, {
+    value: "100%",
+    label: "Success Rate",
+    icon: Activity
+  }];
   const getStatusColor = (status: string) => {
     switch (status) {
       case "DEPLOYED":
@@ -69,18 +78,13 @@ const Proof = () => {
         return "bg-muted/20 text-muted-foreground border-muted/30";
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 console-grid opacity-5"></div>
         <div className="max-w-6xl mx-auto relative">
           <div className="mb-8">
-            <Badge className="system-badge bg-accent/20 text-accent border-accent/30 font-mono mb-6">
-              <Activity className="w-3 h-3 mr-2" />
-              SYSTEM OPERATIONAL
-            </Badge>
+            
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-mono font-bold mb-6 tracking-tight text-foreground">
@@ -92,16 +96,7 @@ const Proof = () => {
           
           {/* Key Metrics Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {aggregateMetrics.map((metric, index) => (
-              <div key={index} className="stat-block console-card rounded-lg">
-                <div className="flex items-center justify-between mb-3">
-                  <metric.icon className="w-5 h-5 text-primary" />
-                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
-                </div>
-                <div className="stat-number text-foreground">{metric.value}</div>
-                <div className="stat-label text-muted-foreground">{metric.label}</div>
-              </div>
-            ))}
+            {aggregateMetrics.map((metric, index) => {})}
           </div>
         </div>
       </section>
@@ -110,15 +105,12 @@ const Proof = () => {
       <section className="py-20 px-4 bg-muted/5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="blueprint-line mb-4">
-              <h2 className="text-3xl lg:text-4xl font-mono font-bold text-foreground">Case Studies</h2>
-            </div>
-            <p className="text-lg text-muted-foreground font-mono">4 Successful System Deployments</p>
+            
+            
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (
-              <Card key={study.id} className="console-card border-border bg-card hover:shadow-lg transition-all duration-300 h-full group">
+            {caseStudies.map((study, index) => <Card key={study.id} className="console-card border-border bg-card hover:shadow-lg transition-all duration-300 h-full group">
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-4">
                     <Badge className={`system-badge ${getStatusColor(study.status)} font-mono text-xs`}>
@@ -165,12 +157,10 @@ const Proof = () => {
                       Solution
                     </h4>
                     <ul className="space-y-2">
-                      {study.approach.map((item, idx) => (
-                        <li key={idx} className="text-sm text-foreground flex items-start gap-3 font-sans">
+                      {study.approach.map((item, idx) => <li key={idx} className="text-sm text-foreground flex items-start gap-3 font-sans">
                           <Target className="h-3 w-3 mt-1 flex-shrink-0 text-primary" />
                           {item}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
 
@@ -179,17 +169,14 @@ const Proof = () => {
                       Results
                     </h4>
                     <ul className="space-y-2">
-                      {study.outcomes.map((outcome, idx) => (
-                        <li key={idx} className="text-sm text-foreground flex items-start gap-3 font-sans">
+                      {study.outcomes.map((outcome, idx) => <li key={idx} className="text-sm text-foreground flex items-start gap-3 font-sans">
                           <CheckCircle className="h-3 w-3 mt-1 flex-shrink-0 text-accent" />
                           {outcome}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -248,10 +235,7 @@ const Proof = () => {
       <section className="py-20 px-4 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"></div>
         <div className="max-w-4xl mx-auto text-center relative">
-          <Badge className="system-badge bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30 font-mono mb-6">
-            <BarChart3 className="w-3 h-3 mr-2" />
-            SYSTEM READY
-          </Badge>
+          
           
           <h2 className="text-4xl lg:text-5xl font-mono font-bold mb-6 text-primary-foreground">
             Ready to Deploy Your System?
@@ -276,7 +260,6 @@ const Proof = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
 export default Proof;
