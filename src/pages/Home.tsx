@@ -3,70 +3,50 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import SystemDiagram from "@/components/SystemDiagram";
 import { ArrowRight, CheckCircle, BarChart3, Target, Zap } from "lucide-react";
-
 const Home = () => {
-  const services = [
-    {
-      title: "Infrastructure Assessment",
-      description: "Deep diagnostic of tech, ops, pipeline. Scorecard and benchmarks. 90 day roadmap. Executive readout.",
-      price: "Virtual from $7,500. In person from $12,500.",
-      note: "50% of your fee credits to a Sprint if you move forward",
-      cta: "Book Assessment",
-      link: "/assessment"
-    },
-    {
-      title: "Revenue Sprint", 
-      description: "Install the fixes. Outbound engine. Integrations. Dashboards. Governance.",
-      timeline: "6 to 8 weeks",
-      price: "$15,000 to $25,000",
-      cta: "Plan Your Sprint",
-      link: "/sprint"
-    },
-    {
-      title: "Fractional Ops",
-      description: "Monthly operating rhythm. Instrumentation. Iteration. Reviews with leadership.",
-      price: "From $5,000 per month", 
-      cta: "Explore Retainer",
-      link: "/fractional"
-    }
-  ];
-
-  const proofStats = [
-    { number: "60 → 30", label: "Cut cycle time days" },
-    { number: "4x", label: "Lifted outbound reply rate" },
-    { number: "100%", label: "Single source of truth adoption" }
-  ];
-
+  const services = [{
+    title: "Infrastructure Assessment",
+    description: "Deep diagnostic of tech, ops, pipeline. Scorecard and benchmarks. 90 day roadmap. Executive readout.",
+    price: "Virtual from $7,500. In person from $12,500.",
+    note: "50% of your fee credits to a Sprint if you move forward",
+    cta: "Book Assessment",
+    link: "/assessment"
+  }, {
+    title: "Revenue Sprint",
+    description: "Install the fixes. Outbound engine. Integrations. Dashboards. Governance.",
+    timeline: "6 to 8 weeks",
+    price: "$15,000 to $25,000",
+    cta: "Plan Your Sprint",
+    link: "/sprint"
+  }, {
+    title: "Fractional Ops",
+    description: "Monthly operating rhythm. Instrumentation. Iteration. Reviews with leadership.",
+    price: "From $5,000 per month",
+    cta: "Explore Retainer",
+    link: "/fractional"
+  }];
+  const proofStats = [{
+    number: "60 → 30",
+    label: "Cut cycle time days"
+  }, {
+    number: "4x",
+    label: "Lifted outbound reply rate"
+  }, {
+    number: "100%",
+    label: "Single source of truth adoption"
+  }];
   const beforeAfter = {
-    before: [
-      "Founder led sales",
-      "Stitched tools", 
-      "Leaking pipeline"
-    ],
-    after: [
-      "Operating system",
-      "Reliable pipeline",
-      "Forecast you can defend"
-    ]
+    before: ["Founder led sales", "Stitched tools", "Leaking pipeline"],
+    after: ["Operating system", "Reliable pipeline", "Forecast you can defend"]
   };
-
-  const diagnosticDeliverables = [
-    "Revenue Infrastructure Scorecard tech, ops, pipeline",
-    "Benchmarks against peers",
-    "90 day roadmap with priority fixes", 
-    "Executive readout with leadership"
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const diagnosticDeliverables = ["Revenue Infrastructure Scorecard tech, ops, pipeline", "Benchmarks against peers", "90 day roadmap with priority fixes", "Executive readout with leadership"];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="console-line mb-4">
-                <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">CWT Studio</span>
-              </div>
+              
               
               <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                 Your business cannot scale on duct tape
@@ -107,8 +87,7 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150 flex flex-col h-full">
+            {services.map((service, index) => <Card key={index} className="console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150 flex flex-col h-full">
                 <CardContent className="p-8 flex flex-col flex-1">
                   <div className="mb-6">
                     <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4">
@@ -119,27 +98,22 @@ const Home = () => {
                   </div>
                   
                   <div className="space-y-3 mb-6 flex-1">
-                    {service.timeline && (
-                      <div className="text-sm">
+                    {service.timeline && <div className="text-sm">
                         <span className="text-muted-foreground font-mono">Timeline: </span>
                         <span className="font-medium tabular-nums">{service.timeline}</span>
-                      </div>
-                    )}
+                      </div>}
                     <div className="text-sm">
                       <span className="text-muted-foreground font-mono">Price: </span>
                       <span className="font-medium text-primary tabular-nums">{service.price}</span>
                     </div>
-                    {service.note && (
-                      <p className="text-xs text-muted-foreground font-mono">{service.note}</p>
-                    )}
+                    {service.note && <p className="text-xs text-muted-foreground font-mono">{service.note}</p>}
                   </div>
                   
                   <Button asChild className="w-full btn-console mt-auto">
                     <Link to={service.link}>{service.cta}</Link>
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -155,24 +129,20 @@ const Home = () => {
                 <div>
                   <h3 className="font-mono text-lg font-bold mb-4 text-muted-foreground">Before</h3>
                   <ul className="space-y-3">
-                    {beforeAfter.before.map((item, index) => (
-                      <li key={index} className="flex items-center text-muted-foreground font-mono text-sm">
+                    {beforeAfter.before.map((item, index) => <li key={index} className="flex items-center text-muted-foreground font-mono text-sm">
                         <div className="w-1 h-1 bg-muted-foreground mr-3" />
                         {item}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
                 
                 <div>
                   <h3 className="font-mono text-lg font-bold mb-4 text-primary">After</h3>
                   <ul className="space-y-3">
-                    {beforeAfter.after.map((item, index) => (
-                      <li key={index} className="flex items-center font-mono text-sm">
+                    {beforeAfter.after.map((item, index) => <li key={index} className="flex items-center font-mono text-sm">
                         <CheckCircle className="w-3 h-3 text-primary mr-3" />
                         {item}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
               </div>
@@ -207,12 +177,10 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-4">
-                  {diagnosticDeliverables.map((item, index) => (
-                    <div key={index} className="flex items-start">
+                  {diagnosticDeliverables.map((item, index) => <div key={index} className="flex items-start">
                       <Target className="w-4 h-4 text-primary mt-1 mr-3 flex-shrink-0" />
                       <span className="text-foreground font-mono text-sm">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 
                 <div className="mt-8">
@@ -255,12 +223,10 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {proofStats.map((stat, index) => (
-              <div key={index} className="stat-block text-center">
+            {proofStats.map((stat, index) => <div key={index} className="stat-block text-center">
                 <div className="stat-number">{stat.number}</div>
                 <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="text-center">
@@ -309,8 +275,6 @@ const Home = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
