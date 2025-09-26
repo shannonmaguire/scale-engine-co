@@ -35,22 +35,12 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* CWT Studio Official Logo */}
-          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity group">
-            <div className="relative">
-              <img 
-                src={cwtLogoMark} 
-                alt="CWT Studio - Revenue Systems Consulting"
-                className="h-10 w-10 transition-transform group-hover:scale-105"
-              />
-            </div>
-            <div className="hidden sm:block">
-              <div className="font-mono font-bold text-xl text-foreground tracking-tight">
-                CWT
-              </div>
-              <div className="font-mono text-xs text-muted-foreground -mt-1 tracking-wider">
-                STUDIO
-              </div>
-            </div>
+          <Link to="/" className="hover:opacity-80 transition-opacity group">
+            <img 
+              src={cwtLogoHorizontal} 
+              alt="CWT Studio - Revenue Systems Consulting"
+              className="h-8 transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
