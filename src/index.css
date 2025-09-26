@@ -21,13 +21,13 @@
     --primary: 334 65% 24%;            /* CWT Plum #681137 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 64%;          /* Cool Gray #94A3B8 */
+    --secondary: 213 100% 70%;         /* Light Blue */
     --secondary-foreground: 0 0% 9%;
 
-    --muted: 214 32% 64%;              /* Cool Gray */
+    --muted: 214 32% 64%;              /* Cool Gray for muted elements */
     --muted-foreground: 0 0% 9%;
 
-    --accent: 213 100% 50%;            /* Electric Blue #007BFF */
+    --accent: 25 95% 60%;              /* Orange for interactive elements */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 65% 50%;          /* Status Red */
@@ -37,11 +37,11 @@
     --input: 214 32% 91%;
     --ring: 334 65% 24%;               /* CWT Plum for focus */
     
-    /* Status Colors - System Monitoring */
-    --status-positive: 142 71% 45%;    /* Green */
-    --status-negative: 0 65% 50%;      /* Red */
-    --status-neutral: 45 93% 47%;      /* Yellow */
-    --status-new: 214 32% 64%;         /* Gray */
+    /* Status Colors - Three-color system only */
+    --status-positive: 25 95% 60%;     /* Orange */
+    --status-negative: 334 65% 24%;    /* Burgundy */
+    --status-neutral: 213 100% 70%;    /* Light Blue */
+    --status-new: 25 95% 60%;          /* Orange */
 
     --radius: 0.25rem;                 /* Sharp corners for console aesthetic */
 
@@ -72,13 +72,13 @@
     --primary: 334 65% 30%;            /* Lighter version for dark mode */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 40%;          /* Darker cool gray */
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 213 100% 75%;         /* Light Blue for dark mode */
+    --secondary-foreground: 0 0% 9%;
 
     --muted: 214 32% 40%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 213 100% 60%;            /* Brighter blue for dark mode */
+    --accent: 25 95% 65%;              /* Orange for dark mode */
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 65% 50%;
@@ -171,21 +171,21 @@
     @apply shadow-sm hover:shadow-md;
   }
   
-  /* Status Indicators - System monitoring style */
+  /* Status Indicators - Three-color brand system */
   .status-positive {
-    @apply bg-green-500 text-white;
+    @apply bg-accent text-accent-foreground;
   }
   
   .status-negative {
-    @apply bg-red-500 text-white;
+    @apply bg-primary text-primary-foreground;
   }
   
   .status-neutral {
-    @apply bg-yellow-500 text-black;
+    @apply bg-secondary text-secondary-foreground;
   }
   
   .status-new {
-    @apply bg-gray-500 text-white;
+    @apply bg-accent text-accent-foreground;
   }
   
   /* Stat Block - Clean metrics display */
