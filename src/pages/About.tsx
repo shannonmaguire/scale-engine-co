@@ -2,33 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Target, Zap, Clock, Palette, ArrowRight } from "lucide-react";
-
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Precision",
-      description: "We diagnose before we prescribe. Every recommendation is backed by data and benchmarked against best practices."
-    },
-    {
-      icon: Zap,
-      title: "Ownership", 
-      description: "We take responsibility for outcomes, not just deliverables. Your success is our success."
-    },
-    {
-      icon: Clock,
-      title: "Speed",
-      description: "Revenue systems can't wait for perfect. We optimize for speed of implementation and time to value."
-    },
-    {
-      icon: Palette,
-      title: "Taste",
-      description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen py-20">
+  const values = [{
+    icon: Target,
+    title: "Precision",
+    description: "We diagnose before we prescribe. Every recommendation is backed by data and benchmarked against best practices."
+  }, {
+    icon: Zap,
+    title: "Ownership",
+    description: "We take responsibility for outcomes, not just deliverables. Your success is our success."
+  }, {
+    icon: Clock,
+    title: "Speed",
+    description: "Revenue systems can't wait for perfect. We optimize for speed of implementation and time to value."
+  }, {
+    icon: Palette,
+    title: "Taste",
+    description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
+  }];
+  return <div className="min-h-screen py-20">
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
         <div className="text-center mb-16">
@@ -46,38 +38,7 @@ const About = () => {
 
         {/* Founder Bio */}
         <section className="mb-16">
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
-            <div className="lg:col-span-1">
-              <div className="bg-muted/30 rounded-lg aspect-square flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">SM</span>
-                  </div>
-                  <p className="text-sm text-foreground/60">Shannon Maguire, Founder</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="lg:col-span-2">
-              <h2 className="heading-section mb-6">Leadership</h2>
-              <div className="prose prose-gray max-w-none">
-                <p className="text-foreground/80 leading-relaxed mb-4">
-                  <strong>Shannon Maguire</strong> builds revenue infrastructure for companies that can't afford to stall. 
-                  She started inside the Salesforce ecosystem, running enterprise GTM motions and witnessing firsthand how deals accelerate 
-                  when systems are dialed in and how quickly they collapse when they're not.
-                </p>
-                <p className="text-foreground/80 leading-relaxed mb-4">
-                  Since then, she's worked across SaaS, cybersecurity, compliance, and creator markets, designing the 
-                  revenue engines that power growth beyond the first milestone.
-                </p>
-                <p className="text-foreground/80 leading-relaxed">
-                  At CWT Studio, Shannon's mission is clear: transform operational complexity into efficient revenue systems. Whether 
-                  building outbound command centers, creating assessment frameworks, or integrating Salesforce across your entire stack, 
-                  she functions as both architect and operator, delivering the infrastructure companies need to scale with confidence.
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </section>
 
         {/* Values */}
@@ -90,8 +51,7 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+            {values.map((value, index) => <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -103,8 +63,7 @@ const About = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -214,8 +173,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
