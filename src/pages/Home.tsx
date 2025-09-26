@@ -9,8 +9,8 @@ const Home = () => {
     description: "Deep diagnostic of tech, ops, pipeline. Scorecard and benchmarks. 90 day roadmap. Executive readout.",
     price: "Virtual from $7,500. In person from $12,500.",
     note: "50% of your fee credits to a Sprint if you move forward",
-    cta: "Book Assessment",
-    link: "/assessment"
+    cta: "Get Started",
+    link: "/contact"
   }, {
     title: "Revenue Sprint",
     description: "Install the fixes. Outbound engine. Integrations. Dashboards. Governance.",
@@ -222,7 +222,7 @@ const Home = () => {
               No judgment. No assumptions. Just clear diagnosis and practical next steps.
             </p>
             <Button asChild className="btn-console">
-              <Link to="/assessment">Start With Assessment</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>

@@ -24,7 +24,6 @@ const Navigation = () => {
 
   const solutionsLinks = [
     { label: "Services", href: "/services" },
-    { label: "Assessment", href: "/assessment" },
     { label: "Salesforce", href: "/salesforce" },
   ];
 
@@ -96,7 +95,7 @@ const Navigation = () => {
           {/* Primary CTA - Console Button */}
           <div className="hidden md:block">
             <Button asChild className="btn-console">
-              <Link to="/contact">Book Assessment</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
 
@@ -146,7 +145,7 @@ const Navigation = () => {
               
               <div className="px-3 py-2">
                 <Button asChild className="btn-console w-full">
-                  <Link to="/contact">Book Assessment</Link>
+                  <Link to="/contact">Get Started</Link>
                 </Button>
               </div>
             </div>

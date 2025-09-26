@@ -262,9 +262,9 @@ const Proof = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="btn-console bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              <Link to="/assessment">
+              <Link to="/contact">
                 <LineChart className="w-4 h-4 mr-2" />
-                Run Assessment
+                Get Started
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="btn-console-secondary border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">

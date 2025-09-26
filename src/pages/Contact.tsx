@@ -35,10 +35,10 @@ const Contact = () => {
             <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Contact</span>
           </div>
           <h1 className="heading-page mb-6">
-            Book Your Assessment
+            Get Started
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            Ready to diagnose your revenue system? Fill out the form below and we'll get back to you within 24 hours.
+            Ready to optimize your revenue system? Fill out the form below and we'll get back to you within 24 hours.
           </p>
         </div>
 
@@ -96,7 +96,6 @@ const Contact = () => {
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="assessment">Infrastructure Assessment</SelectItem>
                         <SelectItem value="sprint">Revenue Sprint</SelectItem>
                         <SelectItem value="fractional">Fractional Ops</SelectItem>
                         <SelectItem value="salesforce">Salesforce Partnership</SelectItem>
@@ -223,21 +222,21 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Pricing Context */}
+            {/* Service Context */}
             <div className="bg-muted/30 rounded-lg p-6">
-              <h3 className="font-mono font-bold mb-3">Assessment Pricing</h3>
+              <h3 className="font-mono font-bold mb-3">Our Services</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Virtual</span>
-                  <span className="font-medium">From $7,500</span>
+                  <span className="text-muted-foreground">Revenue Sprint</span>
+                  <span className="font-medium">From $15K</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">In-person</span>
-                  <span className="font-medium">From $12,500</span>
+                  <span className="text-muted-foreground">Fractional Ops</span>
+                  <span className="font-medium">Monthly</span>
                 </div>
                 <div className="border-t border-border pt-2 mt-3">
                   <p className="text-xs text-muted-foreground">
-                    50% credit toward Sprint if you proceed within 45 days
+                    Custom pricing based on your needs
                   </p>
                 </div>
               </div>

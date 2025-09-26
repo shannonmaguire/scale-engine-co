@@ -83,8 +83,8 @@ const Salesforce = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/assessment">
-                  Take Self-Assessment
+                <Link to="/contact">
+                  Get Started
                 </Link>
               </Button>
             </div>

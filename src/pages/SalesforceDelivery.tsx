@@ -125,7 +125,7 @@ const SalesforceDelivery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link to="/assessment">Start Your Assessment</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link to="/contact">Discuss Your Project</Link>
@@ -266,7 +266,7 @@ const SalesforceDelivery = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link to="/assessment">Book Your Assessment</Link>
+              <Link to="/contact">Get Started</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link to="/salesforce/partners">Explore Partnerships</Link>

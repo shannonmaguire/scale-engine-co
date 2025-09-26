@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import LoadingScreen from "@/components/LoadingScreen";
 import Home from "@/pages/Home";
-import Assessment from "@/pages/Assessment";
 import Sprint from "@/pages/Sprint";
 import Contact from "@/pages/Contact";
 import About from "@/pages/About";
@@ -62,7 +61,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
               <Route path="/systems" element={<Navigate to="/services" replace />} />
-              <Route path="/assessment" element={<Assessment />} />
+              <Route path="/assessment" element={<Navigate to="/contact" replace />} />
               <Route path="/sprint" element={<Sprint />} />
               <Route path="/salesforce" element={<Salesforce />} />
               <Route path="/salesforce/partners" element={<SalesforcePartners />} />

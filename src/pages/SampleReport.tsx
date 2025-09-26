@@ -293,7 +293,7 @@ const SampleReport = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link to="/assessment">Learn More</Link>
+                <Link to="/services">Learn More</Link>
               </Button>
             </div>
           </div>

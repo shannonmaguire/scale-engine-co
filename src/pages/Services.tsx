@@ -18,8 +18,8 @@ const Services = () => {
       ],
       pricing: "Virtual from $7,500 • In-person from $12,500",
       timeline: "3-4 weeks",
-      cta: "Book Assessment",
-      link: "/assessment"
+      cta: "Get Started",
+      link: "/contact"
     },
     {
       icon: Zap,

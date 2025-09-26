@@ -831,7 +831,7 @@ const Systems = () => {
                     We audit your current systems and identify the optimal automation opportunities.
                   </p>
                   <Button variant="outline" className="w-full">
-                    <Link to="/assessment">Book Assessment</Link>
+                    <Link to="/contact">Get Started</Link>
                   </Button>
                 </CardContent>
               </Card>
