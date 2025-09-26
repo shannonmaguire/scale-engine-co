@@ -224,13 +224,13 @@ const SalesforcePartners = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-console">
-                <Link to="/contact">
+                <Link to="/ae-technical-support">
                   Request Technical Support
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline">
-                <Link to="/assessment">
+                <Link to="/assessment-tools">
                   Get Assessment Tools
                 </Link>
               </Button>

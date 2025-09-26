@@ -21,6 +21,8 @@ import SampleReport from "@/pages/SampleReport";
 import Proof from "@/pages/Proof";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
+import AETechnicalSupport from "@/pages/AETechnicalSupport";
+import AssessmentTools from "@/pages/AssessmentTools";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -72,6 +74,8 @@ const App = () => {
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/ae-technical-support" element={<AETechnicalSupport />} />
+              <Route path="/assessment-tools" element={<AssessmentTools />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
