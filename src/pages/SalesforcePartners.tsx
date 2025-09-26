@@ -1,212 +1,218 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Users, DollarSign, Target, CheckCircle, Clock, Handshake } from "lucide-react";
+import { CheckCircle, Download, MessageSquare, ArrowRight, Slack, Linkedin, Database, Settings } from "lucide-react";
 
 const SalesforcePartners = () => {
-  const partnerBenefits = [
+  const toolIntegrations = [
     {
-      icon: DollarSign,
-      title: "Revenue Share",
-      description: "Earn 15-25% commission on all closed deals you refer"
+      icon: MessageSquare,
+      name: "Quip",
+      description: "Documentation and collaboration workflows synced with Salesforce records"
     },
     {
-      icon: Target,
-      title: "Account Support",
-      description: "We co-sell with you to maximize close rates"
+      icon: Slack,
+      name: "Slack",
+      description: "Real-time notifications for pipeline changes and deal updates"
     },
     {
-      icon: Users,
-      title: "Client Retention",
-      description: "Our delivery model keeps your clients happy long-term"
+      icon: Linkedin,
+      name: "LinkedIn Sales Navigator",
+      description: "Contact enrichment and social selling data integration"
     },
     {
-      icon: CheckCircle,
-      title: "Proven Results",
-      description: "Track record of 40%+ conversion improvements"
+      icon: Database,
+      name: "Sales Hub",
+      description: "Bidirectional sync and unified reporting across platforms"
     }
   ];
 
-  const requirements = [
-    "Active Salesforce AE with enterprise accounts",
-    "Minimum 2 years experience in revenue operations",
-    "Accounts with 50+ users or $500K+ ARR",
-    "Commitment to joint sales activities"
+  const quickChecklist = [
+    "Data quality issues causing deal delays",
+    "Manual processes eating up selling time", 
+    "Inconsistent reporting across teams",
+    "Poor adoption of current Salesforce features",
+    "Integration gaps between tools",
+    "Unclear pipeline visibility for management"
   ];
 
-  const process = [
+  const resources = [
     {
-      step: "1",
-      title: "Initial Qualification",
-      description: "We review your account profile and opportunity sizing"
+      title: "Salesforce Health Check Template",
+      description: "Self-assessment checklist for your current setup",
+      type: "Checklist"
     },
     {
-      step: "2", 
-      title: "Joint Discovery",
-      description: "Co-present our revenue systems audit to your prospect"
+      title: "Integration Mapping Worksheet", 
+      description: "Map your current tools to Salesforce workflows",
+      type: "Template"
     },
     {
-      step: "3",
-      title: "Proposal & Close",
-      description: "We handle technical delivery, you maintain account relationship"
-    },
-    {
-      step: "4",
-      title: "Implementation",
-      description: "CloudRoute partnership ensures enterprise-grade delivery"
+      title: "ROI Calculator",
+      description: "Estimate time savings from automation improvements",
+      type: "Calculator"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="container mx-auto px-4 py-8">
-        {/* Navigation */}
-        <div className="mb-8">
-          <Link to="/salesforce" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="h-4 w-4" />
-            Back to Salesforce Solutions
-          </Link>
+      {/* Letter Header */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-8">
+              <p className="text-sm text-muted-foreground font-mono mb-2">Internal Resource</p>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-6">Hey Sales Team,</h1>
+              <div className="prose prose-lg max-w-none text-foreground">
+                <p className="text-lg leading-relaxed mb-4">
+                  I know you're juggling between Quip docs, Slack threads, LinkedIn Sales Navigator, and your Sales Hub — 
+                  and somehow Salesforce still feels like it's working against you instead of with you.
+                </p>
+                <p className="text-lg leading-relaxed mb-4">
+                  This isn't another "let's rebuild everything" pitch. This is about making your current stack actually work together. 
+                  We've done this for teams already using your exact setup, so we know what works and what doesn't.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Below are the practical details of how we approach Salesforce optimization for teams like yours.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Hero Section */}
-        <section className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-muted/50 px-4 py-2 rounded-full text-sm font-mono mb-6">
-            <Users className="h-4 w-4" />
-            PARTNER PROGRAM
+      {/* What We Do */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">What We Actually Do</h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="font-semibold mb-3">Week 1-2: Assessment</h3>
+                <p className="text-muted-foreground mb-4">
+                  We audit your current Salesforce setup and how it connects (or doesn't connect) with your existing tools. 
+                  No judgment on what you've built so far — we work with what you have.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-3">Week 3-8: Implementation</h3>
+                <p className="text-muted-foreground mb-4">
+                  Focused sprint to fix the biggest pain points. Our partner CloudRoute handles the technical build 
+                  while we manage the project and ensure it fits your workflow.
+                </p>
+              </div>
+            </div>
           </div>
-          <h1 className="font-mono text-4xl md:text-5xl font-bold mb-6">
-            Partner with CWT Studio
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Expand your Salesforce practice with revenue systems expertise. 
-            Joint-sell our specialized services to your enterprise accounts.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link to="/contact">Apply to Partner</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/assessment">See Sample Assessment</Link>
-            </Button>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Partner Benefits */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="font-mono text-3xl font-bold mb-4">Why Partner with Us</h2>
-            <p className="text-xl text-muted-foreground">
-              Proven revenue systems expertise that complements your Salesforce capabilities
+      {/* Tool Integration */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">How It Works with Your Current Stack</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {toolIntegrations.map((tool, index) => (
+                <Card key={index} className="bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <tool.icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h3 className="font-semibold mb-2">{tool.name}</h3>
+                        <p className="text-sm text-muted-foreground">{tool.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Assessment */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Quick Assessment Checklist</h2>
+            <p className="text-muted-foreground mb-6">
+              If you're experiencing any of these issues, we can probably help:
             </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              {quickChecklist.map((item, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {partnerBenefits.map((benefit, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <benefit.icon className="h-8 w-8 mx-auto mb-4 text-primary" />
-                  <CardTitle className="text-lg">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Partnership Process */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="font-mono text-3xl font-bold mb-4">How It Works</h2>
-            <p className="text-xl text-muted-foreground">
-              A streamlined process that maximizes success for both parties
-            </p>
+      {/* Resources */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Resources You Can Use Right Now</h2>
+            <div className="space-y-4 mb-8">
+              {resources.map((resource, index) => (
+                <Card key={index} className="bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-semibold mb-1">{resource.title}</h3>
+                        <p className="text-sm text-muted-foreground">{resource.description}</p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-mono">
+                          {resource.type}
+                        </span>
+                        <Button size="sm" variant="outline">
+                          <Download className="w-3 h-3 mr-1" />
+                          Get
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((step, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold mb-4">
-                    {step.step}
-                  </div>
-                  <CardTitle className="text-lg">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Requirements */}
-        <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8">
-            <div className="text-center mb-8">
-              <h2 className="font-mono text-3xl font-bold mb-4">Partner Requirements</h2>
-              <p className="text-xl text-muted-foreground">
-                We work with experienced AEs who serve enterprise accounts
+      {/* Next Steps */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Next Steps</h2>
+            <div className="prose prose-lg max-w-none text-foreground mb-8">
+              <p className="text-base leading-relaxed mb-4">
+                If this sounds like it could help your situation, the easiest next step is a 30-minute assessment call. 
+                We'll look at your current setup and give you honest feedback on what's worth fixing and what isn't.
+              </p>
+              <p className="text-base leading-relaxed mb-4">
+                No sales pitch, no commitment required. Just practical advice from someone who's seen your exact problems before.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                {requirements.map((req, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <p>{req}</p>
-                  </div>
-                ))}
-              </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Clock className="h-5 w-5" />
-                    Typical Timeline
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex justify-between">
-                    <span>Partner Approval</span>
-                    <span className="text-muted-foreground">1-2 weeks</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>First Joint Call</span>
-                    <span className="text-muted-foreground">Within 30 days</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Deal Close</span>
-                    <span className="text-muted-foreground">30-90 days</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Implementation</span>
-                    <span className="text-muted-foreground">4-12 weeks</span>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild className="btn-console">
+                <Link to="/contact">
+                  Schedule Assessment Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline">
+                <Link to="/assessment">
+                  Start with Self-Assessment
+                </Link>
+              </Button>
             </div>
           </div>
-        </section>
-
-        {/* CTA */}
-        <section className="text-center bg-card border border-border rounded-lg p-12">
-          <Handshake className="h-12 w-12 mx-auto mb-6 text-primary" />
-          <h2 className="font-mono text-3xl font-bold mb-4">Ready to Partner?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join our partner network and start earning revenue from your enterprise Salesforce accounts.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link to="/contact">Submit Partner Application</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/salesforce/delivery">View Our Delivery Model</Link>
-            </Button>
-          </div>
-        </section>
-      </main>
+        </div>
+      </section>
     </div>
   );
 };
