@@ -48,7 +48,9 @@ const SalesforcePartners = () => {
     description: "Clear commission structure and referral tracking process",
     type: "Reference"
   }];
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       {/* Letter Header */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
@@ -236,6 +238,8 @@ const SalesforcePartners = () => {
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default SalesforcePartners;
