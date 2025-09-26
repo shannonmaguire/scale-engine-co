@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import cwtLogoMark from "@/assets/cwt-logo-mark.svg";
+import cwtLogoComplete from "@/assets/cwt-logo-complete.svg";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -100,9 +100,9 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
         {/* CWT Studio Logo */}
         <div className="flex justify-center">
           <img 
-            src={cwtLogoMark} 
+            src={cwtLogoComplete} 
             alt="CWT Studio"
-            className="h-16 w-16 animate-pulse"
+            className="h-20 w-auto animate-pulse"
             style={{ 
               animationDuration: '2s',
               filter: 'hue-rotate(0deg)'
