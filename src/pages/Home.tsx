@@ -165,6 +165,69 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Meet You Where You Are Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
+            <p className="text-description max-w-3xl mx-auto">
+              Whether you're running on spreadsheets or have a complex system that's become unwieldy, 
+              we adapt our approach to your current reality and constraints.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="console-card bg-card border-border">
+              <CardContent className="p-8 text-center">
+                <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-orange-500 font-mono font-bold">START</span>
+                </div>
+                <h3 className="heading-subsection mb-3">Early Stage</h3>
+                <p className="text-muted-foreground text-sm">
+                  Founder-led sales with basic tools. We'll assess what you actually need to scale, 
+                  not over-engineer for problems you don't have yet.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="console-card bg-card border-border">
+              <CardContent className="p-8 text-center">
+                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-blue-500 font-mono font-bold">GROW</span>
+                </div>
+                <h3 className="heading-subsection mb-3">Scaling</h3>
+                <p className="text-muted-foreground text-sm">
+                  Growing fast with stitched-together systems. We'll work with your existing tools 
+                  and team to optimize what you have while planning smart upgrades.
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card className="console-card bg-card border-border">
+              <CardContent className="p-8 text-center">
+                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-green-500 font-mono font-bold">SCALE</span>
+                </div>
+                <h3 className="heading-subsection mb-3">Enterprise</h3>
+                <p className="text-muted-foreground text-sm">
+                  Complex operations with entrenched processes. We'll audit what's working, 
+                  identify what's blocking scale, and sequence changes realistically.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-muted-foreground font-mono text-sm mb-6">
+              No judgment. No assumptions. Just clear diagnosis and practical next steps.
+            </p>
+            <Button asChild className="btn-console">
+              <Link to="/assessment">Start With Assessment</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Assessment Details Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">

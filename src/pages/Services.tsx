@@ -107,14 +107,25 @@ const Services = () => {
                       </ul>
                     </div>
                     
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-1">Investment</p>
-                        <p className="font-medium text-primary">{service.pricing}</p>
+                    <div className="border-t border-border pt-4 space-y-4">
+                      <div className="bg-muted/30 rounded p-3">
+                        <h5 className="text-xs font-mono font-bold text-muted-foreground mb-1">ADAPTS TO YOUR STAGE</h5>
+                        <p className="text-xs text-muted-foreground">
+                          {index === 0 && "Works with any current system—from spreadsheets to enterprise platforms"}
+                          {index === 1 && "Integrates with existing tools. No rip-and-replace required"}  
+                          {index === 2 && "Scales with your growth. Monthly rhythm adapts to your pace"}
+                        </p>
                       </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-1">Timeline</p>
-                        <p className="font-medium">{service.timeline}</p>
+                      
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <p className="text-sm text-muted-foreground mb-1">Investment</p>
+                          <p className="font-medium text-primary">{service.pricing}</p>
+                        </div>
+                        <div>
+                          <p className="text-sm text-muted-foreground mb-1">Timeline</p>
+                          <p className="font-medium">{service.timeline}</p>
+                        </div>
                       </div>
                     </div>
                     

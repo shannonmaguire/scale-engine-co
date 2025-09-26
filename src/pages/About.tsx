@@ -147,13 +147,36 @@ const About = () => {
         {/* Working with Us */}
         <section className="mb-16">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="heading-section mb-4">Working with CWT Studio</h2>
+            <h2 className="heading-section mb-6">Working with CWT Studio</h2>
+            
+            {/* Meet You Where You Are */}
+            <div className="mb-8 p-6 bg-muted/50 rounded-lg">
+              <h3 className="font-mono font-bold mb-4 text-primary">We Meet You Where You Are</h3>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Every company is at a different stage with different constraints. We don't assume you should rip and replace everything. 
+                We work with your current systems, timeline, and team to create realistic improvements that stick.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-sm font-medium mb-2">Flexible Engagement</p>
+                  <p className="text-xs text-muted-foreground">Virtual or in-person. Sprint or assessment only. Your choice.</p>
+                </div>
+                <div>
+                  <p className="text-sm font-medium mb-2">Industry Agnostic</p>
+                  <p className="text-xs text-muted-foreground">SaaS, services, manufacturing—revenue systems have common patterns.</p>
+                </div>
+              </div>
+            </div>
+            
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-mono font-bold mb-3">What We Do</h3>
                 <ul className="space-y-2 text-muted-foreground">
+                  <li>• Meet you at your current operational state</li>
                   <li>• Deep diagnostic of your revenue infrastructure</li>
+                  <li>• Work with existing tools and integrations</li>
                   <li>• Fast implementation of priority fixes</li>
+                  <li>• Adapt methodology to your timeline</li>
                   <li>• Ongoing optimization and iteration</li>
                   <li>• Executive-level strategic guidance</li>
                 </ul>
@@ -161,10 +184,12 @@ const About = () => {
               <div>
                 <h3 className="font-mono font-bold mb-3">What We Don't Do</h3>
                 <ul className="space-y-2 text-muted-foreground">
+                  <li>• Assume you need to start over</li>
                   <li>• Long discovery phases without action</li>
-                  <li>• Generic solutions that don't fit</li>
+                  <li>• Generic solutions that don't fit your stage</li>
                   <li>• Hand over documentation and disappear</li>
                   <li>• Over-engineer simple problems</li>
+                  <li>• Judge your current setup</li>
                 </ul>
               </div>
             </div>

@@ -66,9 +66,16 @@ const Assessment = () => {
           <h1 className="heading-page mb-6">
             Revenue Infrastructure Assessment
           </h1>
-          <p className="text-description">
+          <p className="text-description mb-6">
             An MRI for your revenue system. Three to four weeks. Executive ready. Built to be acted on.
           </p>
+          <div className="bg-muted/30 rounded-lg p-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground font-mono text-sm">
+              <strong>No judgment approach:</strong> We assess your current state without assumptions. 
+              Whether you're on spreadsheets or enterprise platforms, we meet you where you are 
+              and recommend realistic next steps that fit your stage and constraints.
+            </p>
+          </div>
         </div>
 
         {/* Deliverables */}
