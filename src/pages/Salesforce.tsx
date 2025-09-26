@@ -1,307 +1,216 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Shield, Users, BarChart3, Target, Zap, Settings, Database, GitBranch } from "lucide-react";
+import { CheckCircle, Download, MessageSquare, Users, BarChart3, ArrowRight, Slack, Linkedin, Database, Settings } from "lucide-react";
 
 const Salesforce = () => {
-  const valueProps = [
+  const toolIntegrations = [
     {
-      icon: Shield,
-      title: "Single Point of Accountability",
-      description: "One operator from assessment through production. No handoffs, no confusion."
+      icon: MessageSquare,
+      name: "Quip",
+      description: "Documentation and collaboration workflows synced with Salesforce records"
     },
     {
-      icon: GitBranch,
-      title: "CloudRoute Partnership",
-      description: "Execution through our certified delivery partner. Proven methodology, reliable results."
+      icon: Slack,
+      name: "Slack",
+      description: "Real-time notifications for pipeline changes and deal updates"
     },
     {
-      icon: Target,
-      title: "Assessment-Driven Implementation",
-      description: "Every sprint starts with diagnostics. Fix what matters, ignore what doesn't."
+      icon: Linkedin,
+      name: "LinkedIn Sales Navigator",
+      description: "Contact enrichment and social selling data integration"
+    },
+    {
+      icon: Database,
+      name: "Sales Hub",
+      description: "Bidirectional sync and unified reporting across platforms"
     }
   ];
 
-  const processSteps = [
-    {
-      number: "01",
-      title: "Salesforce Health Check",
-      description: "Audit your current Salesforce setup. Identify bottlenecks, data issues, and workflow gaps.",
-      deliverables: ["System architecture review", "Data quality assessment", "User adoption analysis", "Integration audit"]
-    },
-    {
-      number: "02", 
-      title: "Sprint Planning",
-      description: "Prioritize fixes based on revenue impact. Create implementation roadmap with CloudRoute.",
-      deliverables: ["Priority fix roadmap", "Resource allocation plan", "Timeline and milestones", "Success metrics definition"]
-    },
-    {
-      number: "03",
-      title: "Implementation Sprint",
-      description: "6-8 week focused execution. CloudRoute handles the build while we manage the strategy.",
-      deliverables: ["Workflow automation", "Dashboard deployment", "Integration setup", "User training materials"]
-    }
+  const quickChecklist = [
+    "Data quality issues causing deal delays",
+    "Manual processes eating up selling time", 
+    "Inconsistent reporting across teams",
+    "Poor adoption of current Salesforce features",
+    "Integration gaps between tools",
+    "Unclear pipeline visibility for management"
   ];
 
-  const results = [
-    { metric: "90%", label: "Faster quote generation" },
-    { metric: "3x", label: "Pipeline visibility" },
-    { metric: "60%", label: "Reduced admin time" }
-  ];
-
-  const ctaOptions = [
+  const resources = [
     {
-      title: "For AEs",
-      description: "Partner programs and referral opportunities. Bring CWT to your accounts.",
-      cta: "Partner Programs",
-      link: "/salesforce/partners",
-      primary: true
+      title: "Salesforce Health Check Template",
+      description: "Self-assessment checklist for your current setup",
+      type: "Checklist"
     },
     {
-      title: "Delivery Model", 
-      description: "How we work with CloudRoute to deliver Salesforce transformations.",
-      cta: "See Delivery Model",
-      link: "/salesforce/delivery",
-      primary: false
+      title: "Integration Mapping Worksheet", 
+      description: "Map your current tools to Salesforce workflows",
+      type: "Template"
+    },
+    {
+      title: "ROI Calculator",
+      description: "Estimate time savings from automation improvements",
+      type: "Calculator"
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+    <div className="min-h-screen bg-background">
+      {/* Letter Header */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Salesforce Operations</span>
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-8">
+              <p className="text-sm text-muted-foreground font-mono mb-2">Internal Resource</p>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-6">Hey Sales Team,</h1>
+              <div className="prose prose-lg max-w-none text-foreground">
+                <p className="text-lg leading-relaxed mb-4">
+                  I know you're juggling between Quip docs, Slack threads, LinkedIn Sales Navigator, and your Sales Hub — 
+                  and somehow Salesforce still feels like it's working against you instead of with you.
+                </p>
+                <p className="text-lg leading-relaxed mb-4">
+                  This isn't another "let's rebuild everything" pitch. This is about making your current stack actually work together. 
+                  We've done this for teams already using your exact setup, so we know what works and what doesn't.
+                </p>
+                <p className="text-lg leading-relaxed">
+                  Below are the practical details of how we approach Salesforce optimization for teams like yours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">What We Actually Do</h2>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div>
+                <h3 className="font-semibold mb-3">Week 1-2: Assessment</h3>
+                <p className="text-muted-foreground mb-4">
+                  We audit your current Salesforce setup and how it connects (or doesn't connect) with your existing tools. 
+                  No judgment on what you've built so far — we work with what you have.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-3">Week 3-8: Implementation</h3>
+                <p className="text-muted-foreground mb-4">
+                  Focused sprint to fix the biggest pain points. Our partner CloudRoute handles the technical build 
+                  while we manage the project and ensure it fits your workflow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tool Integration */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">How It Works with Your Current Stack</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {toolIntegrations.map((tool, index) => (
+                <Card key={index} className="bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-4">
+                      <tool.icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h3 className="font-semibold mb-2">{tool.name}</h3>
+                        <p className="text-sm text-muted-foreground">{tool.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Assessment */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Quick Assessment Checklist</h2>
+            <p className="text-muted-foreground mb-6">
+              If you're experiencing any of these issues, we can probably help:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              {quickChecklist.map((item, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Resources You Can Use Right Now</h2>
+            <div className="space-y-4 mb-8">
+              {resources.map((resource, index) => (
+                <Card key={index} className="bg-card border-border">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-semibold mb-1">{resource.title}</h3>
+                        <p className="text-sm text-muted-foreground">{resource.description}</p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-xs bg-primary/10 text-primary px-2 py-1 rounded font-mono">
+                          {resource.type}
+                        </span>
+                        <Button size="sm" variant="outline">
+                          <Download className="w-3 h-3 mr-1" />
+                          Get
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Next Steps */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Next Steps</h2>
+            <div className="prose prose-lg max-w-none text-foreground mb-8">
+              <p className="text-base leading-relaxed mb-4">
+                If this sounds like it could help your situation, the easiest next step is a 30-minute assessment call. 
+                We'll look at your current setup and give you honest feedback on what's worth fixing and what isn't.
+              </p>
+              <p className="text-base leading-relaxed mb-4">
+                No sales pitch, no commitment required. Just practical advice from someone who's seen your exact problems before.
+              </p>
             </div>
             
-            <h1 className="font-mono text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Salesforce without wasted motion
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-              We run assessments and sprints that make Salesforce pay off. Delivery through CloudRoute. 
-              You keep a single operator at the table from plan to production.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-console">
                 <Link to="/contact">
-                  Book Salesforce Assessment
+                  Schedule Assessment Call
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild className="btn-console-secondary">
-                <Link to="#process">See the Process</Link>
+              <Button asChild variant="outline">
+                <Link to="/assessment">
+                  Start with Self-Assessment
+                </Link>
               </Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Value Proposition */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Why CWT</span>
-            </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold">Operator-Led Salesforce Transformation</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {valueProps.map((prop, index) => (
-              <Card key={index} className="console-card relative bg-card border-border">
-                <CardContent className="p-8 text-center">
-                  <prop.icon className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="font-mono text-lg font-bold mb-3">{prop.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{prop.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Two-Column Navigation */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {ctaOptions.map((option, index) => (
-              <Card key={index} className={`console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150 ${option.primary ? 'ring-1 ring-primary' : ''}`}>
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <h3 className="font-mono text-xl font-bold mb-3">{option.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{option.description}</p>
-                  </div>
-                  
-                  <Button asChild className={`w-full ${option.primary ? 'btn-console' : 'btn-console-secondary'}`}>
-                    <Link to={option.link}>
-                      {option.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Overview */}
-      <section id="process" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Process</span>
-            </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold">How We Transform Salesforce</h2>
-          </div>
-          
-          <div className="space-y-12 max-w-4xl mx-auto">
-            {processSteps.map((step, index) => (
-              <div key={index} className="grid md:grid-cols-3 gap-8 items-start">
-                <div className="text-center md:text-left">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 text-primary font-mono font-bold text-xl mb-4">
-                    {step.number}
-                  </div>
-                  <h3 className="font-mono text-xl font-bold mb-2">{step.title}</h3>
-                </div>
-                
-                <div className="md:col-span-2">
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{step.description}</p>
-                  <div className="space-y-2">
-                    {step.deliverables.map((deliverable, deliverableIndex) => (
-                      <div key={deliverableIndex} className="flex items-center text-sm">
-                        <CheckCircle className="w-3 h-3 text-primary mr-3 flex-shrink-0" />
-                        <span className="font-mono">{deliverable}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CloudRoute Partnership */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div>
-              <div className="console-line mb-4">
-                <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Partnership</span>
-              </div>
-              <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">CloudRoute Delivery Model</h2>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                We handle strategy and oversight. CloudRoute handles implementation. 
-                You get certified Salesforce expertise without vendor management complexity.
-              </p>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <Users className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <p className="font-mono font-bold text-sm">Certified Salesforce Consultants</p>
-                    <p className="text-muted-foreground text-sm">CloudRoute team with 100+ implementations</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Shield className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <p className="font-mono font-bold text-sm">Single Point of Contact</p>
-                    <p className="text-muted-foreground text-sm">CWT manages the entire relationship</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Target className="w-5 h-5 text-primary mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <p className="font-mono font-bold text-sm">Results Guarantee</p>
-                    <p className="text-muted-foreground text-sm">Measurable outcomes or we make it right</p>
-                  </div>
-                </div>
-              </div>
-              
-              <Button asChild className="btn-console">
-                <Link to="/salesforce/delivery">Learn More About Delivery</Link>
-              </Button>
-            </div>
-            
-            <div className="lg:pl-12">
-              <div className="console-card bg-card border border-border p-8">
-                <div className="text-center mb-6">
-                  <Database className="w-16 h-16 text-primary mx-auto mb-4" />
-                  <h3 className="font-mono text-xl font-bold">CWT → CloudRoute → Client</h3>
-                </div>
-                
-                <div className="space-y-4 text-sm">
-                  <div className="flex justify-between items-center py-2 border-b border-border/50">
-                    <span className="font-mono text-muted-foreground">Strategy & Oversight</span>
-                    <span className="text-primary font-mono">CWT</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-border/50">
-                    <span className="font-mono text-muted-foreground">Implementation</span>
-                    <span className="text-primary font-mono">CloudRoute</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-border/50">
-                    <span className="font-mono text-muted-foreground">Project Management</span>
-                    <span className="text-primary font-mono">CWT</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="font-mono text-muted-foreground">Results</span>
-                    <span className="text-primary font-mono">Guaranteed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Results</span>
-            </div>
-            <h2 className="font-mono text-3xl lg:text-4xl font-bold">Salesforce Performance</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
-            {results.map((result, index) => (
-              <div key={index} className="stat-block text-center">
-                <div className="stat-number">{result.metric}</div>
-                <div className="stat-label">{result.label}</div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Button asChild className="btn-console">
-              <Link to="/case-studies">See Salesforce Case Studies</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="font-mono text-3xl lg:text-4xl font-bold mb-6">
-            Stop fighting Salesforce. Start using it.
-          </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Assessment shows you what's broken. Sprint fixes it. CloudRoute builds it. 
-          </p>
-          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md">
-            <Link to="/contact">
-              Book Salesforce Assessment
-              <Zap className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
         </div>
       </section>
     </div>
