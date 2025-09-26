@@ -1,38 +1,52 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { CheckCircle, Download, MessageSquare, ArrowRight, Slack, Linkedin, Database, Settings } from "lucide-react";
+import { CheckCircle, Download, AlertTriangle, ArrowRight, TrendingUp, Clock, DollarSign, Users } from "lucide-react";
+
 const SalesforcePartners = () => {
-  const toolIntegrations = [{
-    icon: MessageSquare,
-    name: "Quip",
-    description: "Documentation and collaboration workflows synced with Salesforce records"
+  const objectionScenarios = [{
+    icon: AlertTriangle,
+    scenario: "Technical Debt Objections",
+    description: "When prospects say their org is a 'Frankenstein build' with too many customizations to fix"
   }, {
-    icon: Slack,
-    name: "Slack",
-    description: "Real-time notifications for pipeline changes and deal updates"
+    icon: Clock,
+    scenario: "Timeline Concerns", 
+    description: "IT says any changes will take 6+ months and they can't afford the downtime"
   }, {
-    icon: Linkedin,
-    name: "LinkedIn Sales Navigator",
-    description: "Contact enrichment and social selling data integration"
+    icon: DollarSign,
+    scenario: "ROI Skepticism",
+    description: "They've been burned before by consultants who promised automation but delivered complexity"
   }, {
-    icon: Database,
-    name: "Sales Hub",
-    description: "Bidirectional sync and unified reporting across platforms"
+    icon: Users,
+    scenario: "Adoption Resistance",
+    description: "Sales team pushes back on any workflow changes, even if they'll save time"
   }];
-  const quickChecklist = ["Data quality issues causing deal delays", "Manual processes eating up selling time", "Inconsistent reporting across teams", "Poor adoption of current Salesforce features", "Integration gaps between tools", "Unclear pipeline visibility for management"];
-  const resources = [{
-    title: "Salesforce Health Check Template",
-    description: "Self-assessment checklist for your current setup",
+
+  const dealKillers = [
+    "Inherited org with 15+ years of technical debt",
+    "Multiple instances that don't talk to each other", 
+    "Custom objects nobody remembers how to modify",
+    "Broken automations causing data quality issues",
+    "Reports that take 2+ hours to run",
+    "Integration failures between Marketing Cloud and Sales Cloud"
+  ];
+
+  const aeResources = [{
+    title: "Technical Objection Handling Guide",
+    description: "Scripts for common IT and technical stakeholder concerns",
+    type: "Playbook"
+  }, {
+    title: "ROI Calculator for Salesforce Cleanup",
+    description: "Show prospects time/cost savings from fixing their org",
+    type: "Tool"
+  }, {
+    title: "Discovery Questions for Technical Debt",
+    description: "Qualify prospects and identify quick wins",
     type: "Checklist"
   }, {
-    title: "Integration Mapping Worksheet",
-    description: "Map your current tools to Salesforce workflows",
-    type: "Template"
-  }, {
-    title: "ROI Calculator",
-    description: "Estimate time savings from automation improvements",
-    type: "Calculator"
+    title: "Partner Referral Commission Sheet",
+    description: "Clear commission structure and referral tracking process",
+    type: "Reference"
   }];
   return <div className="min-h-screen bg-background">
       {/* Letter Header */}
@@ -40,19 +54,19 @@ const SalesforcePartners = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              
-              <h1 className="text-3xl lg:text-4xl font-bold mb-6">Hey Sales Team,</h1>
+              <h1 className="text-3xl lg:text-4xl font-bold mb-6">Hey AEs,</h1>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="text-lg leading-relaxed mb-4">
-                  I know you're juggling between Quip docs, Slack threads, LinkedIn Sales Navigator, and your Sales Hub — 
-                  and somehow Salesforce still feels like it's working against you instead of with you.
+                  I know you're tired of hearing "Our Salesforce org is a mess" during discovery calls. 
+                  You know it's killing deal velocity, but you also know most consultants just make it worse.
                 </p>
                 <p className="text-lg leading-relaxed mb-4">
-                  This isn't another "let's rebuild everything" pitch. This is about making your current stack actually work together. 
-                  We've done this for teams already using your exact setup, so we know what works and what doesn't.
+                  We specialize in fixing the technical debt that's actually blocking your deals — without the 
+                  18-month "transformation" projects that kill momentum. We've cleaned up orgs with 15+ years 
+                  of legacy customizations, and we can usually get quick wins within the first sprint.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Below are the practical details of how we approach Salesforce optimization for teams like yours.
+                  Below is what we do, how it helps your numbers, and when to bring us into deals.
                 </p>
               </div>
             </div>
@@ -60,78 +74,108 @@ const SalesforcePartners = () => {
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* Common Objections */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">What We Actually Do</h2>
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              <div>
-                <h3 className="font-semibold mb-3">Week 1-2: Assessment</h3>
-                <p className="text-muted-foreground mb-4">
-                  We audit your current Salesforce setup and how it connects (or doesn't connect) with your existing tools. 
-                  No judgment on what you've built so far — we work with what you have.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-3">Week 3-8: Implementation</h3>
-                <p className="text-muted-foreground mb-4">
-                  Focused sprint to fix the biggest pain points. Our partner CloudRoute handles the technical build 
-                  while we manage the project and ensure it fits your workflow.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tool Integration */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">How It Works with Your Current Stack</h2>
+            <h2 className="text-2xl font-bold mb-6">Objections You're Probably Hearing</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {toolIntegrations.map((tool, index) => <Card key={index} className="bg-card border-border">
+              {objectionScenarios.map((objection, index) => (
+                <Card key={index} className="bg-card border-border">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <tool.icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                      <objection.icon className="w-6 h-6 text-destructive mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold mb-2">{tool.name}</h3>
-                        <p className="text-sm text-muted-foreground">{tool.description}</p>
+                        <h3 className="font-semibold mb-2">{objection.scenario}</h3>
+                        <p className="text-sm text-muted-foreground">{objection.description}</p>
                       </div>
                     </div>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
+            </div>
+            <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg">
+              <p className="text-sm text-foreground">
+                <strong>Reality:</strong> These are all fixable problems. The key is showing them quick wins 
+                first, then building momentum for bigger changes. We've handled orgs way messier than theirs.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Assessment */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Quick Assessment Checklist</h2>
-            <p className="text-muted-foreground mb-6">
-              If you're experiencing any of these issues, we can probably help:
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              {quickChecklist.map((item, index) => <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                  <span className="text-sm">{item}</span>
-                </div>)}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resources */}
+      {/* Deal Killers */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Resources You Can Use Right Now</h2>
+            <h2 className="text-2xl font-bold mb-6">When to Bring Us In</h2>
+            <p className="text-muted-foreground mb-6">
+              If you're hearing any of these during discovery, we can probably turn it into a differentiator:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
+              {dealKillers.map((killer, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <AlertTriangle className="w-4 h-4 text-destructive mt-1 flex-shrink-0" />
+                  <span className="text-sm">{killer}</span>
+                </div>
+              ))}
+            </div>
+            <div className="bg-primary text-primary-foreground p-6 rounded-lg">
+              <h3 className="font-semibold mb-2">How This Helps Your Numbers</h3>
+              <ul className="text-sm space-y-1">
+                <li>• <strong>Deal Velocity:</strong> Remove technical objections that stall deals in legal/IT review</li>
+                <li>• <strong>Win Rate:</strong> Turn their "messy org" into proof they need professional help</li>
+                <li>• <strong>Deal Size:</strong> Expand scope once they see quick wins from cleanup</li>
+                <li>• <strong>Renewal Rate:</strong> Happy implementations lead to expansion opportunities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Our Process (No 18-Month Projects)</h2>
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-lg flex items-center justify-center font-bold mb-4">1</div>
+                <h3 className="font-semibold mb-3">Week 1-2: Assessment</h3>
+                <p className="text-muted-foreground text-sm">
+                  We audit their current org and identify the 3-4 things that will have the biggest impact. 
+                  No judgment, just practical recommendations.
+                </p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-lg flex items-center justify-center font-bold mb-4">2</div>
+                <h3 className="font-semibold mb-3">Week 3-6: Quick Wins</h3>
+                <p className="text-muted-foreground text-sm">
+                  Fix the most painful stuff first. Usually data quality, broken automations, or 
+                  reports that actually work. Build trust before bigger changes.
+                </p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-lg flex items-center justify-center font-bold mb-4">3</div>
+                <h3 className="font-semibold mb-3">Week 7+: Scale</h3>
+                <p className="text-muted-foreground text-sm">
+                  Once they see results, expand scope to integration cleanup, workflow optimization, 
+                  and whatever else is on their wishlist.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AE Resources */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6">Resources for Your Deals</h2>
             <div className="space-y-4 mb-8">
-              {resources.map((resource, index) => <Card key={index} className="bg-card border-border">
+              {aeResources.map((resource, index) => (
+                <Card key={index} className="bg-card border-border">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div>
@@ -149,37 +193,43 @@ const SalesforcePartners = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Next Steps */}
+      {/* Referral Process */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">Next Steps</h2>
+            <h2 className="text-2xl font-bold mb-6">How Referrals Work</h2>
             <div className="prose prose-lg max-w-none text-foreground mb-8">
               <p className="text-base leading-relaxed mb-4">
-                If this sounds like it could help your situation, the easiest next step is a 30-minute assessment call. 
-                We'll look at your current setup and give you honest feedback on what's worth fixing and what isn't.
+                <strong>Simple process:</strong> Send us the prospect's contact info and a brief summary of their 
+                technical pain points. We'll schedule a technical assessment call within 48 hours.
               </p>
               <p className="text-base leading-relaxed mb-4">
-                No sales pitch, no commitment required. Just practical advice from someone who's seen your exact problems before.
+                <strong>Your commission:</strong> 10% of first-year contract value, paid within 30 days of project start. 
+                No clawbacks if they don't renew — you earned it by making the introduction.
+              </p>
+              <p className="text-base leading-relaxed mb-4">
+                <strong>Tracking:</strong> You'll get a partner dashboard to track referral status and commission payments. 
+                No black box, no surprises.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-console">
                 <Link to="/contact">
-                  Schedule Assessment Call
+                  Refer a Prospect
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline">
                 <Link to="/assessment">
-                  Start with Self-Assessment
+                  Get Assessment Tools
                 </Link>
               </Button>
             </div>
