@@ -2,66 +2,45 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Download, MessageSquare, ArrowRight, Slack, Linkedin, Database, Settings } from "lucide-react";
-
 const SalesforcePartners = () => {
-  const toolIntegrations = [
-    {
-      icon: MessageSquare,
-      name: "Quip",
-      description: "Documentation and collaboration workflows synced with Salesforce records"
-    },
-    {
-      icon: Slack,
-      name: "Slack",
-      description: "Real-time notifications for pipeline changes and deal updates"
-    },
-    {
-      icon: Linkedin,
-      name: "LinkedIn Sales Navigator",
-      description: "Contact enrichment and social selling data integration"
-    },
-    {
-      icon: Database,
-      name: "Sales Hub",
-      description: "Bidirectional sync and unified reporting across platforms"
-    }
-  ];
-
-  const quickChecklist = [
-    "Data quality issues causing deal delays",
-    "Manual processes eating up selling time", 
-    "Inconsistent reporting across teams",
-    "Poor adoption of current Salesforce features",
-    "Integration gaps between tools",
-    "Unclear pipeline visibility for management"
-  ];
-
-  const resources = [
-    {
-      title: "Salesforce Health Check Template",
-      description: "Self-assessment checklist for your current setup",
-      type: "Checklist"
-    },
-    {
-      title: "Integration Mapping Worksheet", 
-      description: "Map your current tools to Salesforce workflows",
-      type: "Template"
-    },
-    {
-      title: "ROI Calculator",
-      description: "Estimate time savings from automation improvements",
-      type: "Calculator"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const toolIntegrations = [{
+    icon: MessageSquare,
+    name: "Quip",
+    description: "Documentation and collaboration workflows synced with Salesforce records"
+  }, {
+    icon: Slack,
+    name: "Slack",
+    description: "Real-time notifications for pipeline changes and deal updates"
+  }, {
+    icon: Linkedin,
+    name: "LinkedIn Sales Navigator",
+    description: "Contact enrichment and social selling data integration"
+  }, {
+    icon: Database,
+    name: "Sales Hub",
+    description: "Bidirectional sync and unified reporting across platforms"
+  }];
+  const quickChecklist = ["Data quality issues causing deal delays", "Manual processes eating up selling time", "Inconsistent reporting across teams", "Poor adoption of current Salesforce features", "Integration gaps between tools", "Unclear pipeline visibility for management"];
+  const resources = [{
+    title: "Salesforce Health Check Template",
+    description: "Self-assessment checklist for your current setup",
+    type: "Checklist"
+  }, {
+    title: "Integration Mapping Worksheet",
+    description: "Map your current tools to Salesforce workflows",
+    type: "Template"
+  }, {
+    title: "ROI Calculator",
+    description: "Estimate time savings from automation improvements",
+    type: "Calculator"
+  }];
+  return <div className="min-h-screen bg-background">
       {/* Letter Header */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <p className="text-sm text-muted-foreground font-mono mb-2">Internal Resource</p>
+              
               <h1 className="text-3xl lg:text-4xl font-bold mb-6">Hey Sales Team,</h1>
               <div className="prose prose-lg max-w-none text-foreground">
                 <p className="text-lg leading-relaxed mb-4">
@@ -112,8 +91,7 @@ const SalesforcePartners = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">How It Works with Your Current Stack</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              {toolIntegrations.map((tool, index) => (
-                <Card key={index} className="bg-card border-border">
+              {toolIntegrations.map((tool, index) => <Card key={index} className="bg-card border-border">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <tool.icon className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
@@ -123,8 +101,7 @@ const SalesforcePartners = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -139,12 +116,10 @@ const SalesforcePartners = () => {
               If you're experiencing any of these issues, we can probably help:
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-8">
-              {quickChecklist.map((item, index) => (
-                <div key={index} className="flex items-start space-x-3">
+              {quickChecklist.map((item, index) => <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                   <span className="text-sm">{item}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -156,8 +131,7 @@ const SalesforcePartners = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Resources You Can Use Right Now</h2>
             <div className="space-y-4 mb-8">
-              {resources.map((resource, index) => (
-                <Card key={index} className="bg-card border-border">
+              {resources.map((resource, index) => <Card key={index} className="bg-card border-border">
                   <CardContent className="p-6">
                     <div className="flex items-center justify-between">
                       <div>
@@ -175,8 +149,7 @@ const SalesforcePartners = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
         </div>
@@ -213,8 +186,6 @@ const SalesforcePartners = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default SalesforcePartners;
