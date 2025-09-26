@@ -1,60 +1,56 @@
 const SystemDiagram = () => {
   return (
-    <div className="w-full card-premium p-8">
-      {/* Premium Header */}
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h3 className="text-2xl font-bold text-foreground mb-2">Revenue Impact Dashboard</h3>
-          <p className="text-muted-foreground">Client success metrics across our engagements</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-          <span className="text-sm font-medium text-success">Live Data</span>
+    <div className="w-full h-64 bg-card border border-border console-card font-mono">
+      {/* Console Header */}
+      <div className="border-b border-border p-3 bg-muted/5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span className="text-xs font-mono text-muted-foreground">SYSTEM STATUS</span>
+          </div>
+          <span className="text-xs font-mono text-muted-foreground">ONLINE</span>
         </div>
       </div>
       
-      {/* Key Metrics Grid */}
-      <div className="grid grid-cols-3 gap-6 mb-8">
-        <div className="text-center">
-          <div className="stat-number mb-2">$2.4M</div>
-          <div className="stat-label">Avg Revenue Increase</div>
-        </div>
-        
-        <div className="text-center">
-          <div className="stat-number mb-2">73%</div>
-          <div className="stat-label">Process Efficiency Gain</div>
-        </div>
-        
-        <div className="text-center">
-          <div className="stat-number mb-2">18</div>
-          <div className="stat-label">Days to First Value</div>
-        </div>
-      </div>
-      
-      {/* Service Impact Breakdown */}
-      <div className="space-y-4">
-        <div className="flex items-center justify-between py-3 border-b border-border/50">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
-            <span className="font-semibold">Salesforce Optimization</span>
+      {/* Console Content */}
+      <div className="p-4 space-y-4">
+        {/* Process Flow */}
+        <div className="space-y-2">
+          <div className="text-xs text-muted-foreground mb-3">REVENUE.SYS PROCESS FLOW:</div>
+          
+          <div className="grid grid-cols-3 gap-4 text-xs">
+            <div className="space-y-1">
+              <div className="text-primary font-bold">01 ASSESS</div>
+              <div className="text-muted-foreground">Infrastructure audit</div>
+              <div className="text-muted-foreground">Diagnostic complete</div>
+            </div>
+            
+            <div className="space-y-1">
+              <div className="text-primary font-bold">02 BUILD</div>
+              <div className="text-muted-foreground">System implementation</div>
+              <div className="text-muted-foreground">Sprint execution</div>
+            </div>
+            
+            <div className="space-y-1">
+              <div className="text-primary font-bold">03 OPERATE</div>
+              <div className="text-muted-foreground">Ongoing maintenance</div>
+              <div className="text-muted-foreground">Performance monitoring</div>
+            </div>
           </div>
-          <span className="text-primary font-bold">+156% Pipeline Velocity</span>
         </div>
         
-        <div className="flex items-center justify-between py-3 border-b border-border/50">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-accent rounded-full"></div>
-            <span className="font-semibold">Revenue Operations</span>
+        {/* Status Indicators */}
+        <div className="border-t border-border pt-3 mt-4">
+          <div className="grid grid-cols-2 gap-4 text-xs">
+            <div className="space-y-1">
+              <div className="text-muted-foreground">UPTIME:</div>
+              <div className="tabular-nums">99.97%</div>
+            </div>
+            <div className="space-y-1">
+              <div className="text-muted-foreground">PIPELINE.HEALTH:</div>
+              <div className="text-green-500 tabular-nums">OPTIMAL</div>
+            </div>
           </div>
-          <span className="text-primary font-bold">+89% Process Automation</span>
-        </div>
-        
-        <div className="flex items-center justify-between py-3">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-success rounded-full"></div>
-            <span className="font-semibold">System Integration</span>
-          </div>
-          <span className="text-primary font-bold">+203% Data Accuracy</span>
         </div>
       </div>
     </div>
