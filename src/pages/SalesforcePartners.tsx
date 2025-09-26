@@ -32,20 +32,20 @@ const SalesforcePartners = () => {
   ];
 
   const aeResources = [{
-    title: "Technical Objection Handling Guide",
-    description: "Scripts for common IT and technical stakeholder concerns",
-    type: "Playbook"
+    title: "Technical Assessment Framework",
+    description: "Systematic approach to evaluating Salesforce technical debt",
+    type: "Methodology"
   }, {
     title: "ROI Calculator for Salesforce Cleanup",
     description: "Show prospects time/cost savings from fixing their org",
     type: "Tool"
   }, {
     title: "Discovery Questions for Technical Debt",
-    description: "Qualify prospects and identify quick wins",
+    description: "Identify technical requirements and complexity factors",
     type: "Checklist"
   }, {
-    title: "Partner Referral Commission Sheet",
-    description: "Clear commission structure and referral tracking process",
+    title: "Implementation Readiness Guide",
+    description: "Technical prerequisites and preparation checklist",
     type: "Reference"
   }];
 
@@ -68,7 +68,7 @@ const SalesforcePartners = () => {
                   of legacy customizations, and we can usually get quick wins within the first sprint.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Below is what we do, how it helps your numbers, and when to bring us into deals.
+                  Below is what we do, the technical expertise we provide, and when to bring us into deals.
                 </p>
               </div>
             </div>
@@ -123,12 +123,12 @@ const SalesforcePartners = () => {
               ))}
             </div>
             <div className="bg-primary text-primary-foreground p-6 rounded-lg">
-              <h3 className="font-semibold mb-2">How This Helps Your Numbers</h3>
+              <h3 className="font-semibold mb-2">Technical Benefits We Provide</h3>
               <ul className="text-sm space-y-1">
-                <li>• <strong>Deal Velocity:</strong> Remove technical objections that stall deals in legal/IT review</li>
-                <li>• <strong>Win Rate:</strong> Turn their "messy org" into proof they need professional help</li>
-                <li>• <strong>Deal Size:</strong> Expand scope once they see quick wins from cleanup</li>
-                <li>• <strong>Renewal Rate:</strong> Happy implementations lead to expansion opportunities</li>
+                <li>• <strong>Expert Assessment:</strong> Rapid technical evaluation and recommendations</li>
+                <li>• <strong>Implementation Support:</strong> Hands-on technical expertise during complex deals</li>
+                <li>• <strong>Risk Mitigation:</strong> Identify and address technical challenges early</li>
+                <li>• <strong>Industry Expertise:</strong> Deep knowledge of sector-specific Salesforce requirements</li>
               </ul>
             </div>
           </div>
@@ -202,30 +202,30 @@ const SalesforcePartners = () => {
         </div>
       </section>
 
-      {/* Referral Process */}
+      {/* Technical Collaboration Process */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6">How Referrals Work</h2>
+            <h2 className="text-2xl font-bold mb-6">Technical Collaboration Process</h2>
             <div className="prose prose-lg max-w-none text-foreground mb-8">
               <p className="text-base leading-relaxed mb-4">
-                <strong>Simple process:</strong> Send us the prospect's contact info and a brief summary of their 
-                technical pain points. We'll schedule a technical assessment call within 48 hours.
+                <strong>Initial Consultation:</strong> When you encounter complex technical requirements during a deal, 
+                reach out and we'll provide a technical assessment within 48 hours.
               </p>
               <p className="text-base leading-relaxed mb-4">
-                <strong>Your commission:</strong> 10% of first-year contract value, paid within 30 days of project start. 
-                No clawbacks if they don't renew — you earned it by making the introduction.
+                <strong>Technical Support:</strong> We can join calls to address technical questions, provide 
+                architectural guidance, and help scope implementation requirements.
               </p>
               <p className="text-base leading-relaxed mb-4">
-                <strong>Tracking:</strong> You'll get a partner dashboard to track referral status and commission payments. 
-                No black box, no surprises.
+                <strong>Implementation Partnership:</strong> If the deal moves forward, we work directly with 
+                your client to deliver the technical solution while keeping you informed of progress.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="btn-console">
                 <Link to="/contact">
-                  Refer a Prospect
+                  Request Technical Support
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
