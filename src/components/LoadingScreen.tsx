@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import cwtLogoMark from "@/assets/cwt-logo-mark.svg";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -95,7 +96,21 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       role="dialog"
       aria-label="Loading screen"
     >
-      <div className="text-center">
+      <div className="text-center space-y-8">
+        {/* CWT Studio Logo */}
+        <div className="flex justify-center">
+          <img 
+            src={cwtLogoMark} 
+            alt="CWT Studio"
+            className="h-16 w-16 animate-pulse"
+            style={{ 
+              animationDuration: '2s',
+              filter: 'hue-rotate(0deg)'
+            }}
+          />
+        </div>
+        
+        {/* Typewriter Text */}
         <h1 
           className="font-mono font-bold text-primary uppercase tracking-tight leading-none select-none"
           style={{ 
@@ -114,6 +129,13 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             </span>
           )}
         </h1>
+        
+        {/* Subtle tagline */}
+        <div className="opacity-60">
+          <p className="font-mono text-sm text-muted-foreground tracking-wide">
+            Revenue Systems That Scale
+          </p>
+        </div>
       </div>
       
       <button
