@@ -24,7 +24,7 @@ const Navigation = () => {
 
   const solutionsLinks = [
     { label: "Services", href: "/services" },
-    { label: "Systems", href: "/systems" },
+    { label: "Assessment", href: "/assessment" },
     { label: "Salesforce", href: "/salesforce" },
   ];
 

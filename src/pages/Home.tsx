@@ -294,7 +294,7 @@ const Home = () => {
           
           <div className="text-center">
             <Button asChild className="btn-console">
-              <Link to="/systems">See Systems</Link>
+              <Link to="/services">See Services</Link>
             </Button>
           </div>
         </div>

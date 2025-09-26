@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import LoadingScreen from "@/components/LoadingScreen";
@@ -12,7 +12,7 @@ import Sprint from "@/pages/Sprint";
 import Contact from "@/pages/Contact";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
-import Systems from "@/pages/Systems";
+
 import Salesforce from "@/pages/Salesforce";
 import SalesforcePartners from "@/pages/SalesforcePartners";
 import SalesforceDelivery from "@/pages/SalesforceDelivery";
@@ -61,7 +61,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/systems" element={<Systems />} />
+              <Route path="/systems" element={<Navigate to="/services" replace />} />
               <Route path="/assessment" element={<Assessment />} />
               <Route path="/sprint" element={<Sprint />} />
               <Route path="/salesforce" element={<Salesforce />} />
