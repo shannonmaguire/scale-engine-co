@@ -8,40 +8,40 @@
 
 @layer base {
   :root {
-    /* Operator Console Palette - Industrial Minimalism */
-    --background: 0 0% 100%;           /* pure white */
-    --foreground: 0 0% 9%;             /* near-black #171717 */
+    /* Operator Palette (CWT Studio) */
+    --background: 37 75% 95%;          /* Linen #FEF5E9 */
+    --foreground: 57 9% 9%;            /* Deep black #161613 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 9%;
+    --card: 37 75% 95%;                /* Linen for card backgrounds */
+    --card-foreground: 57 9% 9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 9%;
+    --popover: 37 75% 95%;
+    --popover-foreground: 57 9% 9%;
 
-    --primary: 334 65% 24%;            /* CWT Plum #681137 */
+    --primary: 329 65% 25%;            /* Tyrian Purple #681038 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 213 100% 70%;         /* Light Blue */
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 207 68% 21%;          /* Berkeley Blue #12355B */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 214 32% 64%;              /* Cool Gray for muted elements */
-    --muted-foreground: 0 0% 9%;
+    --muted: 57 9% 47%;                /* Battleship Gray #82816D */
+    --muted-foreground: 57 9% 9%;
 
-    --accent: 25 95% 60%;              /* Orange for interactive elements */
+    --accent: 20 100% 52%;             /* Pantone Orange #FF570A */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 65% 50%;          /* Status Red */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;             /* Very light cool gray */
-    --input: 214 32% 91%;
-    --ring: 334 65% 24%;               /* CWT Plum for focus */
+    --border: 57 9% 47%;               /* Battleship Gray for borders */
+    --input: 37 75% 95%;               /* Linen for inputs */
+    --ring: 329 65% 25%;               /* Tyrian Purple for focus */
     
-    /* Status Colors - Three-color system only */
-    --status-positive: 25 95% 60%;     /* Orange */
-    --status-negative: 334 65% 24%;    /* Burgundy */
-    --status-neutral: 213 100% 70%;    /* Light Blue */
-    --status-new: 25 95% 60%;          /* Orange */
+    /* Status Colors - Operator brand system */
+    --status-positive: 20 100% 52%;    /* Pantone Orange */
+    --status-negative: 329 65% 25%;    /* Tyrian Purple */
+    --status-neutral: 207 68% 21%;     /* Berkeley Blue */
+    --status-new: 20 100% 52%;         /* Pantone Orange */
 
     --radius: 0.25rem;                 /* Sharp corners for console aesthetic */
 
@@ -60,33 +60,33 @@
   }
 
   .dark {
-    --background: 0 0% 9%;             /* Dark console background */
-    --foreground: 0 0% 95%;            /* Light text */
+    --background: 57 9% 9%;            /* Dark background */
+    --foreground: 37 75% 95%;          /* Light linen for text */
 
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 95%;
+    --card: 57 9% 15%;                 /* Slightly lighter dark cards */
+    --card-foreground: 37 75% 95%;
 
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 57 9% 15%;
+    --popover-foreground: 37 75% 95%;
 
-    --primary: 334 65% 30%;            /* Lighter version for dark mode */
+    --primary: 329 65% 35%;            /* Lighter Tyrian Purple for dark mode */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 213 100% 75%;         /* Light Blue for dark mode */
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 207 68% 35%;          /* Lighter Berkeley Blue for dark mode */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 214 32% 40%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 57 9% 30%;                /* Darker Battleship Gray */
+    --muted-foreground: 37 75% 80%;
 
-    --accent: 25 95% 65%;              /* Orange for dark mode */
+    --accent: 20 100% 60%;             /* Brighter Pantone Orange for dark mode */
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 25%;             /* Dark borders */
-    --input: 214 32% 25%;
-    --ring: 334 65% 30%;
+    --border: 57 9% 25%;               /* Dark Battleship Gray for borders */
+    --input: 57 9% 15%;                /* Dark input backgrounds */
+    --ring: 329 65% 35%;               /* Tyrian Purple for focus */
   }
 }
 
