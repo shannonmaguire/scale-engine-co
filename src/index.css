@@ -8,50 +8,51 @@
 
 @layer base {
   :root {
-    /* OPERATOR PROFESSIONAL Design System - 5-Color Precision */
-    /* Night | UCLA Blue | Pearl | Alice Blue | Tyrian Purple */
+    /* MUTED OPERATOR Design System - 5-Color Precision */
+    /* Tyrian Purple | Muted Gray | Light Gray | Very Light Gray | Dark Forest Green */
     
     /* Core Palette - Strategic 5-Color System */
-    --night: 160 100% 2%;              /* #000F08 - Dark foundation */
-    --ucla-blue: 202 65% 39%;          /* #2274A5 - Primary actions */
-    --pearl: 45 37% 84%;               /* #E7DFC6 - Warm accents */
-    --alice-blue: 205 47% 94%;         /* #E9F1F7 - Light foundation */
-    --tyrian-purple: 327 82% 31%;      /* #681038 - Brand moments */
+    --tyrian-purple: 327 82% 31%;      /* #681038 - Primary actions, brand */
+    --muted-gray: 240 5% 62%;          /* #9999A1 - Borders, labels */
+    --light-gray: 240 8% 91%;          /* #E6E6E9 - Main background */
+    --very-light-gray: 240 13% 96%;    /* #F4F4F6 - Cards, elevated surfaces */
+    --forest-green: 144 27% 15%;       /* #1B3022 - Hero sections, headers */
     
     /* Extended Palette - Status & Utility */
-    --pure-white: 0 0% 100%;           /* #FFFFFF - High contrast text */
+    --pure-white: 0 0% 100%;           /* #FFFFFF - High contrast elements */
+    --pure-black: 0 0% 0%;             /* #000000 - ALL TEXT */
     --success-green: 158 64% 52%;      /* #10B981 - Success states */
     --warning-amber: 38 92% 50%;       /* #F59E0B - Warnings, pending */
     --error-red: 0 84% 60%;            /* #EF4444 - Errors, destructive */
     
-    /* Semantic Mapping - Operator Professional */
-    --background: var(--alice-blue);
-    --foreground: var(--night);
+    /* Semantic Mapping - Muted Operator */
+    --background: var(--light-gray);
+    --foreground: var(--pure-black);
 
-    --card: var(--pure-white);
-    --card-foreground: var(--night);
+    --card: var(--very-light-gray);
+    --card-foreground: var(--pure-black);
 
-    --popover: var(--pure-white);
-    --popover-foreground: var(--night);
+    --popover: var(--very-light-gray);
+    --popover-foreground: var(--pure-black);
 
-    --primary: var(--ucla-blue);       /* Primary actions */
+    --primary: var(--tyrian-purple);
     --primary-foreground: var(--pure-white);
 
-    --secondary: var(--pearl);         /* Secondary backgrounds */
-    --secondary-foreground: var(--night);
+    --secondary: var(--muted-gray);
+    --secondary-foreground: var(--pure-black);
 
-    --muted: var(--pearl);
-    --muted-foreground: 160 100% 20%;  /* Darker night variant */
+    --muted: var(--muted-gray);
+    --muted-foreground: var(--pure-black);
 
-    --accent: var(--ucla-blue);        /* Interactive states */
+    --accent: var(--tyrian-purple);
     --accent-foreground: var(--pure-white);
 
     --destructive: var(--error-red);
     --destructive-foreground: var(--pure-white);
 
-    --border: 202 65% 39% / 0.15;      /* UCLA Blue @ 15% */
-    --input: 202 65% 39% / 0.15;
-    --ring: var(--ucla-blue);
+    --border: var(--muted-gray);
+    --input: var(--muted-gray);
+    --ring: var(--tyrian-purple);
     
     /* Status System - Operator UI */
     --status-positive: var(--success-green);
@@ -76,34 +77,34 @@
   }
 
   .dark {
-    /* Dark mode - Night-based theme */
-    --background: var(--night);
-    --foreground: var(--alice-blue);
+    /* Dark mode - Forest Green theme */
+    --background: var(--forest-green);
+    --foreground: var(--pure-white);
 
-    --card: var(--pearl);
-    --card-foreground: var(--night);
+    --card: var(--very-light-gray);
+    --card-foreground: var(--pure-black);
 
-    --popover: var(--pearl);
-    --popover-foreground: var(--night);
+    --popover: var(--very-light-gray);
+    --popover-foreground: var(--pure-black);
 
-    --primary: var(--ucla-blue);
+    --primary: var(--tyrian-purple);
     --primary-foreground: var(--pure-white);
 
-    --secondary: 160 100% 10%;         /* Lighter night variant */
-    --secondary-foreground: var(--alice-blue);
+    --secondary: var(--muted-gray);
+    --secondary-foreground: var(--pure-white);
 
-    --muted: 160 100% 10%;
-    --muted-foreground: var(--pearl);
+    --muted: var(--muted-gray);
+    --muted-foreground: var(--pure-white);
 
-    --accent: var(--ucla-blue);
+    --accent: var(--tyrian-purple);
     --accent-foreground: var(--pure-white);
 
     --destructive: var(--error-red);
     --destructive-foreground: var(--pure-white);
 
-    --border: 202 65% 39% / 0.2;       /* UCLA Blue @ 20% */
-    --input: 202 65% 39% / 0.2;
-    --ring: var(--ucla-blue);
+    --border: var(--muted-gray);
+    --input: var(--muted-gray);
+    --ring: var(--tyrian-purple);
   }
 }
 
@@ -113,17 +114,29 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background font-sans;
+    color: #000000;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   
-  /* Consistent Typography Scale */
+  /* Consistent Typography Scale - ALL BLACK TEXT */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-mono);
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: -0.025em;
     font-feature-settings: "ss01", "ss02";
+    color: #000000;
+  }
+  
+  p, span, div, a, li, label, input, textarea, select {
+    color: #000000;
+  }
+  
+  /* Exception: White text on dark backgrounds */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6,
+  .dark p, .dark span, .dark div, .dark a, .dark li, .dark label {
+    color: #FFFFFF;
   }
   
   /* Typography Classes - Consistent sizing */
@@ -140,11 +153,13 @@
   }
   
   .text-description {
-    @apply text-xl text-muted-foreground leading-relaxed;
+    @apply text-xl leading-relaxed;
+    color: #000000;
   }
   
   .text-label {
-    @apply text-xs text-secondary uppercase tracking-wider font-mono;
+    @apply text-xs uppercase tracking-wider font-mono;
+    color: #000000;
   }
   
   code, pre, .font-mono {
