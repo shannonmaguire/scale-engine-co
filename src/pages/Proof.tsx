@@ -3,148 +3,105 @@ import { Button } from "@/components/ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, ArrowRight, TrendingUp, CheckCircle, Building2, Target, Zap, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Proof = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start"
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const caseStudies = [
-    {
-      id: 1,
-      industry: "Gov Contractor",
-      vertical: "Federal Compliance",
-      size: "12-person team",
-      timeline: "90 Days",
-      
-      // Context
-      challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes",
-      pullQuote: "We went from fighting fires to running plays",
-      
-      // System Installed
-      system: [
-        "Fixed-scope service packages ($25K-$50K)",
-        "Compliance-aligned documentation system",
-        "GTM sprint targeting SaaS/GovTech",
-        "CRM + RevOps pipeline tracking"
-      ],
-      
-      // Outcome
-      beforeMetric: { label: "Project-based chaos", value: "Ad-hoc" },
-      afterMetric: { label: "ARR", value: "$2.5M" },
-      growth: "250%",
-      outcomes: [
-        "Standardized service productization",
-        "Clear sales motion for SaaS compliance",
-        "Founder extracted from delivery",
-        "Recurring revenue operational"
-      ]
+  const caseStudies = [{
+    id: 1,
+    industry: "Gov Contractor",
+    vertical: "Federal Compliance",
+    size: "12-person team",
+    timeline: "90 Days",
+    // Context
+    challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes",
+    pullQuote: "We went from fighting fires to running plays",
+    // System Installed
+    system: ["Fixed-scope service packages ($25K-$50K)", "Compliance-aligned documentation system", "GTM sprint targeting SaaS/GovTech", "CRM + RevOps pipeline tracking"],
+    // Outcome
+    beforeMetric: {
+      label: "Project-based chaos",
+      value: "Ad-hoc"
     },
-    {
-      id: 2,
-      industry: "Professional Services",
-      vertical: "Legal Advisory",
-      size: "6 partners",
-      timeline: "120 Days",
-      
-      challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue",
-      pullQuote: "Finally, we could see what was coming",
-      
-      system: [
-        "Subscription architecture (tiers, deliverables, billing)",
-        "Client journey: funnels → onboarding → retention",
-        "Revenue dashboard + partner reporting",
-        "90-day repositioning sprint"
-      ],
-      
-      beforeMetric: { label: "Unpredictable one-offs", value: "$0 MRR" },
-      afterMetric: { label: "Monthly recurring", value: "$480K" },
-      growth: "340%",
-      outcomes: [
-        "Subscription model with predictable MRR",
-        "Category-defining market position",
-        "Pipeline visibility for all partners",
-        "Revenue predictability achieved"
-      ]
+    afterMetric: {
+      label: "ARR",
+      value: "$2.5M"
     },
-    {
-      id: 3,
-      industry: "Creator Economy",
-      vertical: "Media + Education",
-      size: "Solo operator + team",
-      timeline: "150 Days",
-      
-      challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers",
-      pullQuote: "The audience was there. The money wasn't",
-      
-      system: [
-        "Funnel audit: pricing, community mechanics",
-        "Revenue Sprint: growth roadmap + affiliate program",
-        "Automation backbone: CRM, billing, analytics",
-        "Internal team training on GTM ops"
-      ],
-      
-      beforeMetric: { label: "Followers without revenue", value: "0 systems" },
-      afterMetric: { label: "ARR", value: "$1.8M" },
-      growth: "520%",
-      outcomes: [
-        "LTV increased via upsell flows",
-        "Audience converted to paying members",
-        "Operational system matches creative output",
-        "Founder bottleneck eliminated"
-      ]
+    growth: "250%",
+    outcomes: ["Standardized service productization", "Clear sales motion for SaaS compliance", "Founder extracted from delivery", "Recurring revenue operational"]
+  }, {
+    id: 2,
+    industry: "Professional Services",
+    vertical: "Legal Advisory",
+    size: "6 partners",
+    timeline: "120 Days",
+    challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue",
+    pullQuote: "Finally, we could see what was coming",
+    system: ["Subscription architecture (tiers, deliverables, billing)", "Client journey: funnels → onboarding → retention", "Revenue dashboard + partner reporting", "90-day repositioning sprint"],
+    beforeMetric: {
+      label: "Unpredictable one-offs",
+      value: "$0 MRR"
     },
-    {
-      id: 4,
-      industry: "SaaS Startup",
-      vertical: "Enterprise Software",
-      size: "8-person team",
-      timeline: "180 Days",
-      
-      challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity",
-      pullQuote: "We built software. They built the go-to-market",
-      
-      system: [
-        "ICP + GTM framework for enterprise/SMB",
-        "Outbound/inbound motion via ecosystem",
-        "RevOps pipeline + customer success loops",
-        "Pricing architecture + packaging strategy"
-      ],
-      
-      beforeMetric: { label: "Spray and pray", value: "No process" },
-      afterMetric: { label: "ARR", value: "$3.2M" },
-      growth: "420%",
-      outcomes: [
-        "First enterprise deals secured",
-        "GTM risk eliminated",
-        "Repeatable SaaS revenue foundation",
-        "Revenue growth infrastructure live"
-      ]
-    }
-  ];
-
+    afterMetric: {
+      label: "Monthly recurring",
+      value: "$480K"
+    },
+    growth: "340%",
+    outcomes: ["Subscription model with predictable MRR", "Category-defining market position", "Pipeline visibility for all partners", "Revenue predictability achieved"]
+  }, {
+    id: 3,
+    industry: "Creator Economy",
+    vertical: "Media + Education",
+    size: "Solo operator + team",
+    timeline: "150 Days",
+    challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers",
+    pullQuote: "The audience was there. The money wasn't",
+    system: ["Funnel audit: pricing, community mechanics", "Revenue Sprint: growth roadmap + affiliate program", "Automation backbone: CRM, billing, analytics", "Internal team training on GTM ops"],
+    beforeMetric: {
+      label: "Followers without revenue",
+      value: "0 systems"
+    },
+    afterMetric: {
+      label: "ARR",
+      value: "$1.8M"
+    },
+    growth: "520%",
+    outcomes: ["LTV increased via upsell flows", "Audience converted to paying members", "Operational system matches creative output", "Founder bottleneck eliminated"]
+  }, {
+    id: 4,
+    industry: "SaaS Startup",
+    vertical: "Enterprise Software",
+    size: "8-person team",
+    timeline: "180 Days",
+    challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity",
+    pullQuote: "We built software. They built the go-to-market",
+    system: ["ICP + GTM framework for enterprise/SMB", "Outbound/inbound motion via ecosystem", "RevOps pipeline + customer success loops", "Pricing architecture + packaging strategy"],
+    beforeMetric: {
+      label: "Spray and pray",
+      value: "No process"
+    },
+    afterMetric: {
+      label: "ARR",
+      value: "$3.2M"
+    },
+    growth: "420%",
+    outcomes: ["First enterprise deals secured", "GTM risk eliminated", "Repeatable SaaS revenue foundation", "Revenue growth infrastructure live"]
+  }];
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
-
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
-
-  const scrollTo = useCallback(
-    (index: number) => {
-      if (emblaApi) emblaApi.scrollTo(index);
-    },
-    [emblaApi]
-  );
-
+  const scrollTo = useCallback((index: number) => {
+    if (emblaApi) emblaApi.scrollTo(index);
+  }, [emblaApi]);
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
   }, [emblaApi]);
-
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
@@ -153,22 +110,18 @@ const Proof = () => {
       emblaApi.off("select", onSelect);
     };
   }, [emblaApi, onSelect]);
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Header */}
       <section className="py-16 px-6 border-b-2 border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div>
-              <div className="text-xs font-mono text-secondary uppercase tracking-wider mb-2">
-                Case Studies
-              </div>
+              
               <h1 className="heading-page text-primary">Proof of Execution</h1>
             </div>
             <div className="hidden md:flex items-center gap-3 text-sm font-mono">
-              <span className="text-secondary">4 Deployments</span>
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              
+              
             </div>
           </div>
         </div>
@@ -178,8 +131,7 @@ const Proof = () => {
       <section className="relative py-20 bg-card">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {caseStudies.map((study) => (
-              <div key={study.id} className="flex-[0_0_100%] min-w-0">
+            {caseStudies.map(study => <div key={study.id} className="flex-[0_0_100%] min-w-0">
                 <div className="px-8 lg:px-20 py-16">
                   <div className="max-w-6xl mx-auto border-4 border-primary rounded-lg p-10 lg:p-16 bg-white shadow-xl">
                     {/* Header Meta */}
@@ -228,12 +180,10 @@ const Proof = () => {
                             <h3 className="heading-subsection text-secondary">System Installed</h3>
                           </div>
                           <div className="space-y-3">
-                            {study.system.map((item, idx) => (
-                              <div key={idx} className="flex items-start gap-3">
+                            {study.system.map((item, idx) => <div key={idx} className="flex items-start gap-3">
                                 <Target className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
                                 <span className="text-foreground">{item}</span>
-                              </div>
-                            ))}
+                              </div>)}
                           </div>
                         </div>
 
@@ -246,12 +196,10 @@ const Proof = () => {
                             <h3 className="heading-subsection text-accent">Outcome</h3>
                           </div>
                           <div className="space-y-3">
-                            {study.outcomes.map((outcome, idx) => (
-                              <div key={idx} className="flex items-start gap-3">
+                            {study.outcomes.map((outcome, idx) => <div key={idx} className="flex items-start gap-3">
                                 <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
                                 <span className="text-foreground">{outcome}</span>
-                              </div>
-                            ))}
+                              </div>)}
                           </div>
                         </div>
                       </div>
@@ -350,26 +298,17 @@ const Proof = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
         {/* Navigation Controls */}
         <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 pointer-events-none">
           <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <Button
-              onClick={scrollPrev}
-              size="icon"
-              className="pointer-events-auto w-12 h-12 rounded-full bg-white border-4 border-primary hover:bg-primary text-primary hover:text-white shadow-xl transition-all"
-            >
+            <Button onClick={scrollPrev} size="icon" className="pointer-events-auto w-12 h-12 rounded-full bg-white border-4 border-primary hover:bg-primary text-primary hover:text-white shadow-xl transition-all">
               <ChevronLeft className="w-6 h-6" />
             </Button>
-            <Button
-              onClick={scrollNext}
-              size="icon"
-              className="pointer-events-auto w-12 h-12 rounded-full bg-white border-4 border-primary hover:bg-primary text-primary hover:text-white shadow-xl transition-all"
-            >
+            <Button onClick={scrollNext} size="icon" className="pointer-events-auto w-12 h-12 rounded-full bg-white border-4 border-primary hover:bg-primary text-primary hover:text-white shadow-xl transition-all">
               <ChevronRight className="w-6 h-6" />
             </Button>
           </div>
@@ -377,18 +316,7 @@ const Proof = () => {
 
         {/* Dot Navigation */}
         <div className="flex items-center justify-center gap-3 py-8">
-          {caseStudies.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={`transition-all duration-300 ${
-                index === selectedIndex
-                  ? "w-8 h-2 bg-primary rounded-full"
-                  : "w-2 h-2 bg-border rounded-full hover:bg-muted-foreground"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          {caseStudies.map((_, index) => <button key={index} onClick={() => scrollTo(index)} className={`transition-all duration-300 ${index === selectedIndex ? "w-8 h-2 bg-primary rounded-full" : "w-2 h-2 bg-border rounded-full hover:bg-muted-foreground"}`} aria-label={`Go to slide ${index + 1}`} />)}
         </div>
       </section>
 
@@ -406,8 +334,6 @@ const Proof = () => {
           </Button>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Proof;
