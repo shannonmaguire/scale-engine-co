@@ -1,282 +1,413 @@
+import { useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp, Target, Zap, DollarSign, Clock, Users, BarChart3, LineChart, Activity } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight, ArrowRight, TrendingUp, CheckCircle, Building2, Target, Zap, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-const Proof = () => {
-  const caseStudies = [{
-    id: "CS001",
-    industry: "Gov Contractor",
-    vertical: "Federal Compliance",
-    impact: "$2.5M ARR",
-    metric: "250% Growth",
-    timeline: "90 Days",
-    challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes.",
-    approach: ["Deployed fixed-scope service packages ($25K-$50K range)", "Architected compliance-aligned documentation system", "Installed GTM sprint targeting SaaS/GovTech segments", "Implemented CRM + RevOps pipeline tracking"],
-    outcomes: ["Standardized service productization achieved", "Clear sales motion established for SaaS compliance market", "Founder extracted from delivery bottleneck", "Recurring revenue model operational"],
-    status: "DEPLOYED"
-  }, {
-    id: "CS002",
-    industry: "Professional Services",
-    vertical: "Legal Advisory",
-    impact: "$480K MRR",
-    metric: "340% Growth",
-    timeline: "120 Days",
-    challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue.",
-    approach: ["Designed subscription architecture (tiers, deliverables, billing)", "Rebuilt client journey: funnels → onboarding → retention", "Installed revenue dashboard + partner reporting cadence", "Executed 90-day repositioning sprint"],
-    outcomes: ["Subscription model deployed with predictable MRR", "Category-defining market position established", "Partners gained pipeline/profitability visibility", "Revenue predictability achieved"],
-    status: "OPTIMIZED"
-  }, {
-    id: "CS003",
-    industry: "Creator Economy",
-    vertical: "Media + Education",
-    impact: "$1.8M ARR",
-    metric: "520% Growth",
-    timeline: "150 Days",
-    challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers.",
-    approach: ["Audited existing funnels, pricing, community mechanics", "Designed Revenue Sprint: growth roadmap + affiliate program", "Installed automation backbone: CRM, billing, analytics", "Trained internal team on GTM operations"],
-    outcomes: ["LTV increased via upsell flows + affiliate acquisition", "Audience converted from followers to paying members", "Operational system deployed to match creative output", "Founder bottleneck eliminated"],
-    status: "SCALED"
-  }, {
-    id: "CS004",
-    industry: "SaaS Startup",
-    vertical: "Enterprise Software",
-    impact: "$3.2M ARR",
-    metric: "420% Growth",
-    timeline: "180 Days",
-    challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity.",
-    approach: ["Built ICP + GTM framework for enterprise/SMB segments", "Created outbound/inbound motion via Salesforce ecosystem", "Installed RevOps pipeline + early customer success loops", "Partnered on pricing architecture + packaging strategy"],
-    outcomes: ["First enterprise deals secured with clear positioning", "GTM risk removed from 'spray and pray' founder sales", "Repeatable SaaS revenue foundation established", "Revenue growth infrastructure operational"],
-    status: "DEPLOYED"
-  }];
 
-  const aggregateMetrics = [
-    { value: "$8.0M+", label: "Total ARR Impact", icon: DollarSign },
-    { value: "383%", label: "Avg Growth Rate", icon: TrendingUp },
-    { value: "135", label: "Avg Deploy Days", icon: Clock },
-    { value: "100%", label: "Success Rate", icon: Activity }
+const Proof = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: "start"
+  });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const caseStudies = [
+    {
+      id: 1,
+      industry: "Gov Contractor",
+      vertical: "Federal Compliance",
+      size: "12-person team",
+      timeline: "90 Days",
+      
+      // Context
+      challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes",
+      pullQuote: "We went from fighting fires to running plays",
+      
+      // System Installed
+      system: [
+        "Fixed-scope service packages ($25K-$50K)",
+        "Compliance-aligned documentation system",
+        "GTM sprint targeting SaaS/GovTech",
+        "CRM + RevOps pipeline tracking"
+      ],
+      
+      // Outcome
+      beforeMetric: { label: "Project-based chaos", value: "Ad-hoc" },
+      afterMetric: { label: "ARR", value: "$2.5M" },
+      growth: "250%",
+      outcomes: [
+        "Standardized service productization",
+        "Clear sales motion for SaaS compliance",
+        "Founder extracted from delivery",
+        "Recurring revenue operational"
+      ]
+    },
+    {
+      id: 2,
+      industry: "Professional Services",
+      vertical: "Legal Advisory",
+      size: "6 partners",
+      timeline: "120 Days",
+      
+      challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue",
+      pullQuote: "Finally, we could see what was coming",
+      
+      system: [
+        "Subscription architecture (tiers, deliverables, billing)",
+        "Client journey: funnels → onboarding → retention",
+        "Revenue dashboard + partner reporting",
+        "90-day repositioning sprint"
+      ],
+      
+      beforeMetric: { label: "Unpredictable one-offs", value: "$0 MRR" },
+      afterMetric: { label: "Monthly recurring", value: "$480K" },
+      growth: "340%",
+      outcomes: [
+        "Subscription model with predictable MRR",
+        "Category-defining market position",
+        "Pipeline visibility for all partners",
+        "Revenue predictability achieved"
+      ]
+    },
+    {
+      id: 3,
+      industry: "Creator Economy",
+      vertical: "Media + Education",
+      size: "Solo operator + team",
+      timeline: "150 Days",
+      
+      challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers",
+      pullQuote: "The audience was there. The money wasn't",
+      
+      system: [
+        "Funnel audit: pricing, community mechanics",
+        "Revenue Sprint: growth roadmap + affiliate program",
+        "Automation backbone: CRM, billing, analytics",
+        "Internal team training on GTM ops"
+      ],
+      
+      beforeMetric: { label: "Followers without revenue", value: "0 systems" },
+      afterMetric: { label: "ARR", value: "$1.8M" },
+      growth: "520%",
+      outcomes: [
+        "LTV increased via upsell flows",
+        "Audience converted to paying members",
+        "Operational system matches creative output",
+        "Founder bottleneck eliminated"
+      ]
+    },
+    {
+      id: 4,
+      industry: "SaaS Startup",
+      vertical: "Enterprise Software",
+      size: "8-person team",
+      timeline: "180 Days",
+      
+      challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity",
+      pullQuote: "We built software. They built the go-to-market",
+      
+      system: [
+        "ICP + GTM framework for enterprise/SMB",
+        "Outbound/inbound motion via ecosystem",
+        "RevOps pipeline + customer success loops",
+        "Pricing architecture + packaging strategy"
+      ],
+      
+      beforeMetric: { label: "Spray and pray", value: "No process" },
+      afterMetric: { label: "ARR", value: "$3.2M" },
+      growth: "420%",
+      outcomes: [
+        "First enterprise deals secured",
+        "GTM risk eliminated",
+        "Repeatable SaaS revenue foundation",
+        "Revenue growth infrastructure live"
+      ]
+    }
   ];
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "DEPLOYED":
-        return "bg-accent/20 text-accent border-accent/30";
-      case "OPTIMIZED":
-        return "bg-yellow-500/20 text-yellow-600 border-yellow-500/30";
-      case "SCALED":
-        return "bg-primary/20 text-primary border-primary/30";
-      default:
-        return "bg-muted/20 text-muted-foreground border-muted/30";
-    }
-  };
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (emblaApi) emblaApi.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="py-20 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 console-grid opacity-5"></div>
-        <div className="max-w-6xl mx-auto relative">
-          <div className="mb-8">
-            <Badge className="system-badge bg-accent/20 text-accent border-accent/30 font-mono mb-6">
-              <Activity className="w-3 h-3 mr-2" />
-              SYSTEM OPERATIONAL
-            </Badge>
+      {/* Header */}
+      <section className="py-12 px-6 border-b border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-2">
+                Case Studies
+              </div>
+              <h1 className="heading-page">Proof of Execution</h1>
+            </div>
+            <div className="hidden md:flex items-center gap-3 text-sm font-mono">
+              <span className="text-muted-foreground">4 Deployments</span>
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            </div>
           </div>
-          
-          <h1 className="text-5xl lg:text-6xl font-mono font-bold mb-6 tracking-tight text-foreground">
-            Operational Proof Points
-          </h1>
-          <p className="text-xl text-muted-foreground mb-12 max-w-3xl font-sans">
-            Real system deployments delivering quantified revenue impact and operational excellence across multiple verticals.
-          </p>
-          
-          {/* Key Metrics Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {aggregateMetrics.map((metric, index) => (
-              <div key={index} className="stat-block console-card rounded-lg">
-                <div className="flex items-center justify-between mb-3">
-                  <metric.icon className="w-5 h-5 text-primary" />
-                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+        </div>
+      </section>
+
+      {/* Carousel */}
+      <section className="relative">
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {caseStudies.map((study) => (
+              <div key={study.id} className="flex-[0_0_100%] min-w-0">
+                <div className="px-6 py-20 min-h-[80vh]">
+                  <div className="max-w-7xl mx-auto">
+                    {/* Header Meta */}
+                    <div className="flex flex-wrap items-center gap-4 mb-12">
+                      <div className="flex items-center gap-2">
+                        <Building2 className="w-4 h-4 text-primary" />
+                        <span className="font-mono text-sm text-foreground">{study.industry}</span>
+                      </div>
+                      <div className="h-4 w-px bg-border" />
+                      <span className="font-mono text-sm text-muted-foreground">{study.vertical}</span>
+                      <div className="h-4 w-px bg-border" />
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-3 h-3 text-muted-foreground" />
+                        <span className="font-mono text-xs text-muted-foreground uppercase">{study.timeline}</span>
+                      </div>
+                    </div>
+
+                    {/* Main Grid */}
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                      {/* Left Column - Story */}
+                      <div className="space-y-12">
+                        {/* 1. Context */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                              <span className="text-primary font-mono text-sm font-bold">1</span>
+                            </div>
+                            <h3 className="heading-subsection text-primary">Context</h3>
+                          </div>
+                          <p className="text-lg text-foreground leading-relaxed mb-6">
+                            {study.challenge}
+                          </p>
+                          <blockquote className="border-l-4 border-primary pl-6 py-2">
+                            <p className="text-xl lg:text-2xl font-mono italic text-foreground">
+                              "{study.pullQuote}"
+                            </p>
+                          </blockquote>
+                        </div>
+
+                        {/* 2. System Installed */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center">
+                              <span className="text-secondary font-mono text-sm font-bold">2</span>
+                            </div>
+                            <h3 className="heading-subsection text-secondary">System Installed</h3>
+                          </div>
+                          <div className="space-y-3">
+                            {study.system.map((item, idx) => (
+                              <div key={idx} className="flex items-start gap-3">
+                                <Target className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
+                                <span className="text-foreground">{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* 3. Outcome */}
+                        <div>
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
+                              <span className="text-accent font-mono text-sm font-bold">3</span>
+                            </div>
+                            <h3 className="heading-subsection text-accent">Outcome</h3>
+                          </div>
+                          <div className="space-y-3">
+                            {study.outcomes.map((outcome, idx) => (
+                              <div key={idx} className="flex items-start gap-3">
+                                <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
+                                <span className="text-foreground">{outcome}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Right Column - Data Visualization */}
+                      <div className="lg:sticky lg:top-24 space-y-8">
+                        {/* Before/After Visual */}
+                        <div className="console-card bg-card border border-border p-8 rounded-lg">
+                          <div className="text-center mb-8">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-muted/20 rounded-full">
+                              <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                                Before
+                              </span>
+                              <ArrowRight className="w-4 h-4 text-muted-foreground" />
+                              <span className="text-xs font-mono text-primary uppercase tracking-wider font-bold">
+                                After
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="grid grid-cols-2 gap-6 mb-8">
+                            <div className="text-center p-6 bg-muted/10 rounded-lg">
+                              <div className="text-xs font-mono text-muted-foreground uppercase mb-2">
+                                {study.beforeMetric.label}
+                              </div>
+                              <div className="text-2xl font-mono text-muted-foreground">
+                                {study.beforeMetric.value}
+                              </div>
+                            </div>
+                            <div className="text-center p-6 bg-primary/5 rounded-lg border-2 border-primary">
+                              <div className="text-xs font-mono text-primary uppercase mb-2">
+                                {study.afterMetric.label}
+                              </div>
+                              <div className="text-3xl font-mono font-bold text-primary tabular-nums">
+                                {study.afterMetric.value}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="text-center py-6 bg-accent/5 rounded-lg border border-accent/20">
+                            <div className="flex items-center justify-center gap-2 mb-2">
+                              <TrendingUp className="w-5 h-5 text-accent" />
+                              <span className="text-4xl font-mono font-bold text-accent tabular-nums">
+                                {study.growth}
+                              </span>
+                            </div>
+                            <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
+                              Growth Rate
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Visual Flow Diagram */}
+                        <div className="console-card bg-card border border-border p-8 rounded-lg">
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-col items-center gap-2 flex-1">
+                              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                <Zap className="w-6 h-6 text-primary" />
+                              </div>
+                              <span className="text-xs font-mono text-muted-foreground uppercase text-center">
+                                Challenge
+                              </span>
+                            </div>
+                            
+                            <ArrowRight className="w-6 h-6 text-muted-foreground flex-shrink-0 mx-2" />
+                            
+                            <div className="flex flex-col items-center gap-2 flex-1">
+                              <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                                <Target className="w-6 h-6 text-secondary" />
+                              </div>
+                              <span className="text-xs font-mono text-muted-foreground uppercase text-center">
+                                System
+                              </span>
+                            </div>
+                            
+                            <ArrowRight className="w-6 h-6 text-muted-foreground flex-shrink-0 mx-2" />
+                            
+                            <div className="flex flex-col items-center gap-2 flex-1">
+                              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                                <CheckCircle className="w-6 h-6 text-accent" />
+                              </div>
+                              <span className="text-xs font-mono text-muted-foreground uppercase text-center">
+                                Result
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="text-center">
+                          <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-2">
+                            Client Size
+                          </div>
+                          <div className="text-sm font-mono text-foreground">{study.size}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="stat-number text-foreground">{metric.value}</div>
-                <div className="stat-label text-muted-foreground">{metric.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Case Studies Grid */}
-      <section className="py-20 px-4 bg-muted/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="blueprint-line mb-4">
-              <h2 className="text-3xl lg:text-4xl font-mono font-bold text-foreground">Case Studies</h2>
-            </div>
-            <p className="text-lg text-muted-foreground font-mono">4 Successful System Deployments</p>
+        {/* Navigation Controls */}
+        <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 pointer-events-none">
+          <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <Button
+              onClick={scrollPrev}
+              size="icon"
+              className="pointer-events-auto w-12 h-12 rounded-full bg-card border-2 border-border hover:border-primary text-foreground hover:text-primary shadow-lg"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </Button>
+            <Button
+              onClick={scrollNext}
+              size="icon"
+              className="pointer-events-auto w-12 h-12 rounded-full bg-card border-2 border-border hover:border-primary text-foreground hover:text-primary shadow-lg"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </Button>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (
-              <Card key={study.id} className="console-card border-border bg-card hover:shadow-lg transition-all duration-300 h-full group">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge className={`system-badge ${getStatusColor(study.status)} font-mono text-xs`}>
-                      {study.status}
-                    </Badge>
-                    <div className="flex items-center gap-2">
-                      <Clock className="w-3 h-3 text-muted-foreground" />
-                      <span className="text-sm text-muted-foreground font-mono">{study.timeline}</span>
-                    </div>
-                  </div>
-                  
-                  {/* Impact Metrics */}
-                  <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-muted/10 rounded-lg border border-border/50">
-                    <div className="text-center">
-                      <div className="text-xl font-mono font-bold text-foreground tabular-nums">{study.impact}</div>
-                      <div className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Revenue Impact</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-xl font-mono font-bold text-primary tabular-nums">{study.metric}</div>
-                      <div className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Growth Rate</div>
-                    </div>
-                  </div>
-                  
-                  <CardTitle className="text-xl font-mono text-foreground group-hover:text-primary transition-colors">
-                    {study.industry}
-                  </CardTitle>
-                  <CardDescription className="text-muted-foreground font-mono text-sm">
-                    {study.vertical}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-6">
-                  <div>
-                    <h4 className="font-mono font-semibold text-sm text-destructive mb-3 uppercase tracking-wider blueprint-line">
-                      Challenge
-                    </h4>
-                    <p className="text-sm text-foreground leading-relaxed font-sans">
-                      {study.challenge}
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-mono font-semibold text-sm text-primary mb-3 uppercase tracking-wider blueprint-line">
-                      Solution
-                    </h4>
-                    <ul className="space-y-2">
-                      {study.approach.map((item, idx) => (
-                        <li key={idx} className="text-sm text-foreground flex items-start gap-3 font-sans">
-                          <Target className="h-3 w-3 mt-1 flex-shrink-0 text-primary" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="font-mono font-semibold text-sm text-accent mb-3 uppercase tracking-wider blueprint-line">
-                      Results
-                    </h4>
-                    <ul className="space-y-2">
-                      {study.outcomes.map((outcome, idx) => (
-                        <li key={idx} className="text-sm text-foreground flex items-start gap-3 font-sans">
-                          <CheckCircle className="h-3 w-3 mt-1 flex-shrink-0 text-accent" />
-                          {outcome}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Dot Navigation */}
+        <div className="flex items-center justify-center gap-3 py-8">
+          {caseStudies.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={`transition-all duration-300 ${
+                index === selectedIndex
+                  ? "w-8 h-2 bg-primary rounded-full"
+                  : "w-2 h-2 bg-border rounded-full hover:bg-muted-foreground"
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
-      {/* Process Methodology */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="blueprint-line mb-4">
-              <h2 className="text-3xl lg:text-4xl font-mono font-bold text-foreground">Deployment Methodology</h2>
-            </div>
-            <p className="text-lg text-muted-foreground font-mono">Proven 3-Phase System</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="console-card bg-card border border-border rounded-lg p-8 text-center hover:shadow-lg transition-all duration-300 group">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
-                <TrendingUp className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-mono font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                01. Assessment
-              </h3>
-              <p className="text-muted-foreground leading-relaxed font-sans">
-                System audit, revenue analysis, and operational bottleneck identification
-              </p>
-            </div>
-            
-            <div className="console-card bg-card border border-border rounded-lg p-8 text-center hover:shadow-lg transition-all duration-300 group">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-lg bg-accent/10 flex items-center justify-center border border-accent/20">
-                <Zap className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-mono font-bold mb-4 text-foreground group-hover:text-accent transition-colors">
-                02. Sprint
-              </h3>
-              <p className="text-muted-foreground leading-relaxed font-sans">
-                Rapid deployment, system installation, and process optimization
-              </p>
-            </div>
-            
-            <div className="console-card bg-card border border-border rounded-lg p-8 text-center hover:shadow-lg transition-all duration-300 group">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-lg bg-destructive/10 flex items-center justify-center border border-destructive/20">
-                <CheckCircle className="h-8 w-8 text-destructive" />
-              </div>
-              <h3 className="text-xl font-mono font-bold mb-4 text-foreground group-hover:text-destructive transition-colors">
-                03. Results
-              </h3>
-              <p className="text-muted-foreground leading-relaxed font-sans">
-                Measurable impact, operational stability, and sustained revenue growth
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10"></div>
-        <div className="max-w-4xl mx-auto text-center relative">
-          <Badge className="system-badge bg-primary-foreground/20 text-primary-foreground border-primary-foreground/30 font-mono mb-6">
-            <BarChart3 className="w-3 h-3 mr-2" />
-            SYSTEM READY
-          </Badge>
-          
-          <h2 className="text-4xl lg:text-5xl font-mono font-bold mb-6 text-primary-foreground">
-            Ready to Deploy Your System?
+      {/* CTA */}
+      <section className="py-20 px-6 bg-primary text-primary-foreground">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="heading-section mb-6">
+            Clean data. Clear ownership. Feedback loops that close.
           </h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto font-sans">
-            Run a comprehensive assessment of your current operations and discover your growth potential.
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Four deployments. Zero failures. Let's build yours.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="btn-console bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-              <Link to="/contact">
-                <LineChart className="w-4 h-4 mr-2" />
-                Get Started
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="btn-console-secondary border-primary-foreground bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              <Link to="/contact">
-                <Users className="w-4 h-4 mr-2" />
-                Discuss Requirements
-              </Link>
-            </Button>
-          </div>
+          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-mono font-bold uppercase">
+            <Link to="/contact">Book Assessment</Link>
+          </Button>
         </div>
       </section>
     </div>
   );
 };
+
 export default Proof;
