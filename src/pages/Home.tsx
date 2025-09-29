@@ -49,11 +49,11 @@ const Home = () => {
               
               
               <h1 className="heading-page mb-6 leading-tight">
-                Your business cannot scale on duct tape
+                The Competitive Advantage Is the Backend
               </h1>
               
               <p className="text-description mb-8">
-                We install the systems that drive revenue. First we diagnose. Then we build.
+                In an era of fractured attention and tool overload, the real advantage belongs to operators who install systems that are simple, resilient, and actually adopted. We turn complexity into seamless flow.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -171,8 +171,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
             <p className="text-description max-w-3xl mx-auto">
-              Whether you're running on spreadsheets or have a complex system that's become unwieldy, 
-              we adapt our approach to your current reality and constraints.
+              Strong backends make resilience visible. Whether you're early stage or enterprise, we install the infrastructure that lets execution beat volume every time.
             </p>
           </div>
           
@@ -300,24 +299,23 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Salesforce Block */}
+      {/* Infrastructure for High-Trust Industries */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-section mb-6">
-              Salesforce without wasted motion
+              Revenue Infrastructure for High-Trust Industries
             </h2>
             <p className="text-description mb-8">
-              We run assessments and sprints that make Salesforce pay off. Delivery through CloudRoute. 
-              You keep a single operator at the table from plan to production.
+              Healthcare, cybersecurity, law, compliance—industries where relationships matter and buying cycles are complex. We build the backend that compounds success, not friction.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="btn-console">
-                <Link to="/salesforce/partners">For AEs</Link>
+                <Link to="/services">Our Services</Link>
               </Button>
               <Button asChild className="btn-console-secondary">
-                <Link to="/salesforce/delivery">Delivery Model</Link>
+                <Link to="/proof">See Proof</Link>
               </Button>
             </div>
           </div>
@@ -328,7 +326,7 @@ const Home = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 max-w-7xl text-center">
           <h2 className="heading-section mb-6">
-            Scale only works when the backend holds
+            Clean data. Clear ownership. Feedback loops that close.
           </h2>
           <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md">
             <Link to="/contact">
