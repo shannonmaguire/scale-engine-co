@@ -30,7 +30,7 @@
     --accent: 235 93% 76%;             /* Accent Blue #8390FA */
     --accent-foreground: 207 100% 9%;  /* Navy text on blue */
 
-    --destructive: 0 65% 50%;          /* Status Red */
+    --destructive: 329 65% 25%;        /* Burgundy for destructive actions */
     --destructive-foreground: 0 0% 100%;
 
     --border: 207 100% 20%;            /* Navy border */
@@ -81,7 +81,7 @@
     --accent: 235 93% 80%;             /* Brighter Accent Blue for dark mode */
     --accent-foreground: 207 100% 9%;
 
-    --destructive: 0 65% 50%;
+    --destructive: 329 65% 35%;        /* Lighter Burgundy for dark mode */
     --destructive-foreground: 0 0% 100%;
 
     --border: 207 100% 20%;            /* Navy border */

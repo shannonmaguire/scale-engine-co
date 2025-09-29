@@ -64,25 +64,25 @@ const AssessmentTools = () => {
 
   const getIconColor = (type: string) => {
     switch (type) {
-      case "Methodology": return "text-blue-500";
-      case "Tool": return "text-green-500";
-      case "Checklist": return "text-purple-500";
-      case "Reference": return "text-orange-500";
-      case "Playbook": return "text-red-500";
-      case "Template": return "text-teal-500";
-      default: return "text-gray-500";
+      case "Methodology": return "text-accent";
+      case "Tool": return "text-secondary";
+      case "Checklist": return "text-primary";
+      case "Reference": return "text-accent";
+      case "Playbook": return "text-primary";
+      case "Template": return "text-secondary";
+      default: return "text-muted-foreground";
     }
   };
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case "Methodology": return "bg-blue-100 text-blue-800 border-blue-200";
-      case "Tool": return "bg-green-100 text-green-800 border-green-200";
-      case "Checklist": return "bg-purple-100 text-purple-800 border-purple-200";
-      case "Reference": return "bg-orange-100 text-orange-800 border-orange-200";
-      case "Playbook": return "bg-red-100 text-red-800 border-red-200";
-      case "Template": return "bg-teal-100 text-teal-800 border-teal-200";
-      default: return "bg-gray-100 text-gray-800 border-gray-200";
+      case "Methodology": return "bg-accent/20 text-accent border-accent/30";
+      case "Tool": return "bg-secondary/20 text-secondary border-secondary/30";
+      case "Checklist": return "bg-primary/20 text-primary border-primary/30";
+      case "Reference": return "bg-accent/20 text-accent border-accent/30";
+      case "Playbook": return "bg-primary/20 text-primary border-primary/30";
+      case "Template": return "bg-secondary/20 text-secondary border-secondary/30";
+      default: return "bg-muted/20 text-muted-foreground border-border";
     }
   };
 

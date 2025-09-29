@@ -5,7 +5,7 @@ const SystemDiagram = () => {
       <div className="border-b border-border p-3 bg-muted/5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+            <div className="w-2 h-2 bg-secondary rounded-full"></div>
             <span className="text-xs font-mono text-muted-foreground">SYSTEM STATUS</span>
           </div>
           <span className="text-xs font-mono text-muted-foreground">ONLINE</span>
@@ -48,7 +48,7 @@ const SystemDiagram = () => {
             </div>
             <div className="space-y-1">
               <div className="text-muted-foreground">PIPELINE.HEALTH:</div>
-              <div className="text-green-500 tabular-nums">OPTIMAL</div>
+              <div className="text-secondary tabular-nums">OPTIMAL</div>
             </div>
           </div>
         </div>

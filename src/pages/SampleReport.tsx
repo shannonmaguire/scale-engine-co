@@ -49,25 +49,25 @@ const SampleReport = () => {
   ];
 
   const getScoreColor = (score: number) => {
-    if (score >= 7) return "text-green-500";
-    if (score >= 5) return "text-yellow-500";
-    return "text-red-500";
+    if (score >= 7) return "text-secondary";
+    if (score >= 5) return "text-accent";
+    return "text-primary";
   };
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case "good": return "bg-green-500/20 text-green-400";
-      case "warning": return "bg-yellow-500/20 text-yellow-400";
-      case "critical": return "bg-red-500/20 text-red-400";
+      case "good": return "bg-secondary/20 text-secondary";
+      case "warning": return "bg-accent/20 text-accent";
+      case "critical": return "bg-primary/20 text-primary";
       default: return "bg-muted text-muted-foreground";
     }
   };
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case "High": return "text-red-500";
-      case "Medium": return "text-yellow-500"; 
-      case "Low": return "text-green-500";
+      case "High": return "text-primary";
+      case "Medium": return "text-accent";
+      case "Low": return "text-secondary";
       default: return "text-muted-foreground";
     }
   };
@@ -106,11 +106,11 @@ const SampleReport = () => {
             <CardContent>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-500 mb-1">5.7</div>
+                  <div className="text-3xl font-bold text-accent mb-1">5.7</div>
                   <p className="text-sm text-muted-foreground">Overall Score</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-red-500 mb-1">19</div>
+                  <div className="text-3xl font-bold text-primary mb-1">19</div>
                   <p className="text-sm text-muted-foreground">Issues Identified</p>
                 </div>
                 <div className="text-center">
@@ -150,8 +150,8 @@ const SampleReport = () => {
                       <div className="w-16 h-2 bg-muted rounded-full overflow-hidden">
                         <div 
                           className={`h-full rounded-full ${
-                            item.score >= 7 ? 'bg-green-500' : 
-                            item.score >= 5 ? 'bg-yellow-500' : 'bg-red-500'
+                            item.score >= 7 ? 'bg-secondary' : 
+                            item.score >= 5 ? 'bg-accent' : 'bg-primary'
                           }`}
                           style={{ width: `${(item.score / 10) * 100}%` }}
                         />
@@ -205,22 +205,22 @@ const SampleReport = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-border">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-red-500">
+                <CardTitle className="flex items-center gap-2 text-primary">
                   <AlertTriangle className="w-5 h-5" />
                   Critical Issues
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <p className="text-sm">47% of leads lack proper attribution data</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <p className="text-sm">No automated lead scoring or qualification</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2" />
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <p className="text-sm">Pipeline stages lack clear exit criteria</p>
                 </div>
               </CardContent>
@@ -228,22 +228,22 @@ const SampleReport = () => {
 
             <Card className="border-border">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-green-500">
+                <CardTitle className="flex items-center gap-2 text-secondary">
                   <CheckCircle className="w-5 h-5" />
                   Strengths
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2" />
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <p className="text-sm">Strong technology stack foundation</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2" />
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <p className="text-sm">Good process documentation in place</p>
                 </div>
                 <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2" />
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <p className="text-sm">Team aligned on revenue goals</p>
                 </div>
               </CardContent>

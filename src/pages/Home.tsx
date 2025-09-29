@@ -178,8 +178,8 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="console-card bg-card border-border">
               <CardContent className="p-8 text-center">
-                <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-orange-500 font-mono font-bold">START</span>
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-accent font-mono font-bold">START</span>
                 </div>
                 <h3 className="heading-subsection mb-3">Early Stage</h3>
                 <p className="text-muted-foreground text-sm">
@@ -191,8 +191,8 @@ const Home = () => {
             
             <Card className="console-card bg-card border-border">
               <CardContent className="p-8 text-center">
-                <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-blue-500 font-mono font-bold">GROW</span>
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-primary font-mono font-bold">GROW</span>
                 </div>
                 <h3 className="heading-subsection mb-3">Scaling</h3>
                 <p className="text-muted-foreground text-sm">
@@ -204,8 +204,8 @@ const Home = () => {
             
             <Card className="console-card bg-card border-border">
               <CardContent className="p-8 text-center">
-                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-green-500 font-mono font-bold">SCALE</span>
+                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <span className="text-secondary font-mono font-bold">SCALE</span>
                 </div>
                 <h3 className="heading-subsection mb-3">Enterprise</h3>
                 <p className="text-muted-foreground text-sm">
