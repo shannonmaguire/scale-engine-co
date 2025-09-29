@@ -438,30 +438,33 @@
   }
   
   .inline-graph {
-    @apply h-16 w-full bg-gradient-to-r from-accent-data/20 to-accent-data/5;
-    @apply border-l-2 border-accent-data relative;
+    @apply h-16 w-full relative border-l-2 border-accent-data;
+    background: linear-gradient(to right, hsl(var(--accent-data) / 0.2), hsl(var(--accent-data) / 0.05));
   }
   
   .terminal-prompt {
     @apply font-mono text-sm;
-    @apply text-accent-data;
+    color: hsl(var(--accent-data));
   }
   
   .terminal-prompt::before {
     content: '> ';
-    @apply text-accent-data;
+    color: hsl(var(--accent-data));
   }
   
   /* System Status Badge */
   .system-status {
     @apply inline-flex items-center gap-2 px-3 py-1;
-    @apply bg-accent-data/10 border border-accent-data/20 rounded;
+    @apply border rounded;
     @apply font-mono text-xs uppercase tracking-wider;
+    background-color: hsl(var(--accent-data) / 0.1);
+    border-color: hsl(var(--accent-data) / 0.2);
   }
   
   .system-status::before {
     content: '';
-    @apply w-2 h-2 bg-[hsl(var(--yellow-green))] rounded-full;
+    @apply w-2 h-2 rounded-full;
+    background-color: hsl(var(--yellow-green));
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
   
