@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Top Section - Brand + CTA */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12 pb-16 border-b border-white/10">
             <div className="max-w-xl">
-              <img src={cwtLogoWhite} alt="CWT Studio" className="h-10 w-auto mb-6" />
+              <img src={cwtLogoWhite} alt="CWT Studio" className="h-14 w-auto mb-6" />
               <p className="text-xl font-mono font-bold leading-tight mb-3">
                 Revenue Infrastructure That Compounds
               </p>
