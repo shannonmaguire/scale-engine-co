@@ -155,19 +155,19 @@ const Proof = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="py-12 px-6 border-b border-border">
+      <section className="py-16 px-6 border-b-2 border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div>
-              <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-2">
+              <div className="text-xs font-mono text-secondary uppercase tracking-wider mb-2">
                 Case Studies
               </div>
-              <h1 className="heading-page">Proof of Execution</h1>
+              <h1 className="heading-page text-primary">Proof of Execution</h1>
             </div>
             <div className="hidden md:flex items-center gap-3 text-sm font-mono">
-              <span className="text-muted-foreground">4 Deployments</span>
+              <span className="text-secondary">4 Deployments</span>
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             </div>
           </div>
@@ -175,25 +175,25 @@ const Proof = () => {
       </section>
 
       {/* Carousel */}
-      <section className="relative py-16">
+      <section className="relative py-20 bg-card">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {caseStudies.map((study) => (
               <div key={study.id} className="flex-[0_0_100%] min-w-0">
-                <div className="px-8 lg:px-16 py-12">
-                  <div className="max-w-6xl mx-auto border-2 border-border rounded-lg p-8 lg:p-12 bg-card shadow-lg">
+                <div className="px-8 lg:px-20 py-16">
+                  <div className="max-w-6xl mx-auto border-4 border-primary rounded-lg p-10 lg:p-16 bg-white shadow-xl">
                     {/* Header Meta */}
-                    <div className="flex flex-wrap items-center gap-4 mb-12 pb-6 border-b border-border">
+                    <div className="flex flex-wrap items-center gap-4 mb-12 pb-6 border-b-2 border-border">
                       <div className="flex items-center gap-2">
                         <Building2 className="w-4 h-4 text-primary" />
-                        <span className="font-mono text-sm text-foreground">{study.industry}</span>
+                        <span className="font-mono text-sm text-primary font-bold">{study.industry}</span>
                       </div>
                       <div className="h-4 w-px bg-border" />
-                      <span className="font-mono text-sm text-muted-foreground">{study.vertical}</span>
+                      <span className="font-mono text-sm text-secondary">{study.vertical}</span>
                       <div className="h-4 w-px bg-border" />
                       <div className="flex items-center gap-2">
-                        <Clock className="w-3 h-3 text-muted-foreground" />
-                        <span className="font-mono text-xs text-muted-foreground uppercase">{study.timeline}</span>
+                        <Clock className="w-3 h-3 text-secondary" />
+                        <span className="font-mono text-xs text-secondary uppercase">{study.timeline}</span>
                       </div>
                     </div>
 
@@ -212,8 +212,8 @@ const Proof = () => {
                           <p className="text-lg text-foreground leading-relaxed mb-6">
                             {study.challenge}
                           </p>
-                          <blockquote className="border-l-4 border-primary pl-6 py-2">
-                            <p className="text-xl lg:text-2xl font-mono italic text-foreground">
+                          <blockquote className="border-l-4 border-primary pl-6 py-4 bg-primary/5">
+                            <p className="text-xl lg:text-2xl font-mono italic text-primary">
                               "{study.pullQuote}"
                             </p>
                           </blockquote>
@@ -256,97 +256,97 @@ const Proof = () => {
                         </div>
                       </div>
 
-                      {/* Right Column - Data Visualization */}
-                      <div className="lg:sticky lg:top-24 space-y-8">
-                        {/* Before/After Visual */}
-                        <div className="console-card bg-card border border-border p-8 rounded-lg">
-                          <div className="text-center mb-8">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
-                              <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
-                                Before
-                              </span>
-                              <ArrowRight className="w-4 h-4 text-muted-foreground" />
-                              <span className="text-xs font-mono text-primary uppercase tracking-wider font-bold">
-                                After
-                              </span>
+                        {/* Right Column - Data Visualization */}
+                        <div className="lg:sticky lg:top-24 space-y-8">
+                          {/* Before/After Visual */}
+                          <div className="console-card bg-card border-2 border-border p-8 rounded-lg">
+                            <div className="text-center mb-8">
+                              <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border-2 border-accent/20 rounded-full">
+                                <span className="text-xs font-mono text-secondary uppercase tracking-wider">
+                                  Before
+                                </span>
+                                <ArrowRight className="w-4 h-4 text-secondary" />
+                                <span className="text-xs font-mono text-primary uppercase tracking-wider font-bold">
+                                  After
+                                </span>
+                              </div>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-6 mb-8">
+                              <div className="text-center p-6 bg-white border-2 border-border rounded-lg">
+                                <div className="text-xs font-mono text-secondary uppercase mb-2">
+                                  {study.beforeMetric.label}
+                                </div>
+                                <div className="text-2xl font-mono text-secondary">
+                                  {study.beforeMetric.value}
+                                </div>
+                              </div>
+                              <div className="text-center p-6 bg-primary/10 rounded-lg border-2 border-primary">
+                                <div className="text-xs font-mono text-primary uppercase mb-2">
+                                  {study.afterMetric.label}
+                                </div>
+                                <div className="text-3xl font-mono font-bold text-primary tabular-nums">
+                                  {study.afterMetric.value}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="text-center py-6 bg-accent/10 rounded-lg border-2 border-accent/20">
+                              <div className="flex items-center justify-center gap-2 mb-2">
+                                <TrendingUp className="w-5 h-5 text-accent" />
+                                <span className="text-4xl font-mono font-bold text-accent tabular-nums">
+                                  {study.growth}
+                                </span>
+                              </div>
+                              <div className="text-xs font-mono text-secondary uppercase tracking-wider">
+                                Growth Rate
+                              </div>
                             </div>
                           </div>
 
-                          <div className="grid grid-cols-2 gap-6 mb-8">
-                            <div className="text-center p-6 bg-background border border-border rounded-lg">
-                              <div className="text-xs font-mono text-muted-foreground uppercase mb-2">
-                                {study.beforeMetric.label}
+                          {/* Visual Flow Diagram */}
+                          <div className="console-card bg-card border-2 border-border p-8 rounded-lg">
+                            <div className="flex items-center justify-between">
+                              <div className="flex flex-col items-center gap-2 flex-1">
+                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                                  <Zap className="w-6 h-6 text-primary" />
+                                </div>
+                                <span className="text-xs font-mono text-secondary uppercase text-center">
+                                  Challenge
+                                </span>
                               </div>
-                              <div className="text-2xl font-mono text-muted-foreground">
-                                {study.beforeMetric.value}
+                              
+                              <ArrowRight className="w-6 h-6 text-secondary flex-shrink-0 mx-2" />
+                              
+                              <div className="flex flex-col items-center gap-2 flex-1">
+                                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                                  <Target className="w-6 h-6 text-secondary" />
+                                </div>
+                                <span className="text-xs font-mono text-secondary uppercase text-center">
+                                  System
+                                </span>
                               </div>
-                            </div>
-                            <div className="text-center p-6 bg-primary/5 rounded-lg border-2 border-primary">
-                              <div className="text-xs font-mono text-primary uppercase mb-2">
-                                {study.afterMetric.label}
-                              </div>
-                              <div className="text-3xl font-mono font-bold text-primary tabular-nums">
-                                {study.afterMetric.value}
+                              
+                              <ArrowRight className="w-6 h-6 text-secondary flex-shrink-0 mx-2" />
+                              
+                              <div className="flex flex-col items-center gap-2 flex-1">
+                                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                                  <CheckCircle className="w-6 h-6 text-accent" />
+                                </div>
+                                <span className="text-xs font-mono text-secondary uppercase text-center">
+                                  Result
+                                </span>
                               </div>
                             </div>
                           </div>
 
-                          <div className="text-center py-6 bg-accent/5 rounded-lg border border-accent/20">
-                            <div className="flex items-center justify-center gap-2 mb-2">
-                              <TrendingUp className="w-5 h-5 text-accent" />
-                              <span className="text-4xl font-mono font-bold text-accent tabular-nums">
-                                {study.growth}
-                              </span>
+                          <div className="text-center">
+                            <div className="text-xs font-mono text-secondary uppercase tracking-wider mb-2">
+                              Client Size
                             </div>
-                            <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
-                              Growth Rate
-                            </div>
+                            <div className="text-sm font-mono text-foreground">{study.size}</div>
                           </div>
                         </div>
-
-                        {/* Visual Flow Diagram */}
-                        <div className="console-card bg-card border border-border p-8 rounded-lg">
-                          <div className="flex items-center justify-between">
-                            <div className="flex flex-col items-center gap-2 flex-1">
-                              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                                <Zap className="w-6 h-6 text-primary" />
-                              </div>
-                              <span className="text-xs font-mono text-muted-foreground uppercase text-center">
-                                Challenge
-                              </span>
-                            </div>
-                            
-                            <ArrowRight className="w-6 h-6 text-muted-foreground flex-shrink-0 mx-2" />
-                            
-                            <div className="flex flex-col items-center gap-2 flex-1">
-                              <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                                <Target className="w-6 h-6 text-secondary" />
-                              </div>
-                              <span className="text-xs font-mono text-muted-foreground uppercase text-center">
-                                System
-                              </span>
-                            </div>
-                            
-                            <ArrowRight className="w-6 h-6 text-muted-foreground flex-shrink-0 mx-2" />
-                            
-                            <div className="flex flex-col items-center gap-2 flex-1">
-                              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                                <CheckCircle className="w-6 h-6 text-accent" />
-                              </div>
-                              <span className="text-xs font-mono text-muted-foreground uppercase text-center">
-                                Result
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="text-center">
-                          <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-2">
-                            Client Size
-                          </div>
-                          <div className="text-sm font-mono text-foreground">{study.size}</div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -361,14 +361,14 @@ const Proof = () => {
             <Button
               onClick={scrollPrev}
               size="icon"
-              className="pointer-events-auto w-12 h-12 rounded-full bg-card border-2 border-border hover:border-primary text-foreground hover:text-primary shadow-lg"
+              className="pointer-events-auto w-12 h-12 rounded-full bg-white border-4 border-primary hover:bg-primary text-primary hover:text-white shadow-xl transition-all"
             >
               <ChevronLeft className="w-6 h-6" />
             </Button>
             <Button
               onClick={scrollNext}
               size="icon"
-              className="pointer-events-auto w-12 h-12 rounded-full bg-card border-2 border-border hover:border-primary text-foreground hover:text-primary shadow-lg"
+              className="pointer-events-auto w-12 h-12 rounded-full bg-white border-4 border-primary hover:bg-primary text-primary hover:text-white shadow-xl transition-all"
             >
               <ChevronRight className="w-6 h-6" />
             </Button>
@@ -393,15 +393,15 @@ const Proof = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-primary text-primary-foreground">
+      <section className="py-20 px-6 bg-primary text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading-section mb-6">
+          <h2 className="heading-section mb-6 text-white">
             Clean data. Clear ownership. Feedback loops that close.
           </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Four deployments. Zero failures. Let's build yours.
           </p>
-          <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-mono font-bold uppercase">
+          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-mono font-bold uppercase">
             <Link to="/contact">Book Assessment</Link>
           </Button>
         </div>

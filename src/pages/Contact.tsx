@@ -45,9 +45,9 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="console-card border-border">
+            <Card className="console-card bg-white border-2 border-border">
               <CardHeader>
-                <CardTitle className="heading-subsection">Get Started</CardTitle>
+                <CardTitle className="heading-subsection text-primary">Get Started</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -127,16 +127,16 @@ const Contact = () => {
 
             {/* Auto Scheduler Placeholder */}
             <div className="mt-8">
-              <Card className="console-card border-border">
+              <Card className="console-card bg-white border-2 border-border">
                 <CardHeader>
-                  <CardTitle className="font-mono text-xl flex items-center gap-2">
+                  <CardTitle className="font-mono text-xl flex items-center gap-2 text-primary">
                     <Clock className="w-5 h-5 text-primary" />
                     Schedule a Call
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="bg-card border border-border p-8 text-center console-card">
-                    <p className="text-muted-foreground mb-4 font-mono text-sm">
+                    <p className="text-secondary mb-4 font-mono text-sm">
                       Prefer to schedule directly? Choose a time that works for you.
                     </p>
                     <div className="space-y-3">
@@ -162,32 +162,32 @@ const Contact = () => {
           {/* Contact Info & Process */}
           <div className="space-y-8">
             {/* Contact Details */}
-            <Card className="border-border">
+            <Card className="bg-white border-2 border-border">
               <CardHeader>
-                <CardTitle className="font-mono text-xl">Get in Touch</CardTitle>
+                <CardTitle className="font-mono text-xl text-primary">Get in Touch</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">hello@cwtstudio.com</p>
+                    <p className="font-medium text-foreground">Email</p>
+                    <p className="text-sm text-secondary">hello@cwtstudio.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-medium">Response Time</p>
-                    <p className="text-sm text-muted-foreground">Within 24 hours</p>
+                    <p className="font-medium text-foreground">Response Time</p>
+                    <p className="text-sm text-secondary">Within 24 hours</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* What Happens Next */}
-            <Card className="border-border">
+            <Card className="bg-white border-2 border-border">
               <CardHeader>
-                <CardTitle className="font-mono text-xl">What Happens Next</CardTitle>
+                <CardTitle className="font-mono text-xl text-primary">What Happens Next</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -196,8 +196,8 @@ const Contact = () => {
                       1
                     </div>
                     <div>
-                      <p className="font-medium">Quick Review</p>
-                      <p className="text-sm text-muted-foreground">We review your submission and company background</p>
+                      <p className="font-medium text-foreground">Quick Review</p>
+                      <p className="text-sm text-secondary">We review your submission and company background</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -205,8 +205,8 @@ const Contact = () => {
                       2
                     </div>
                     <div>
-                      <p className="font-medium">Discovery Call</p>
-                      <p className="text-sm text-muted-foreground">30-minute call to understand your challenges</p>
+                      <p className="font-medium text-foreground">Discovery Call</p>
+                      <p className="text-sm text-secondary">30-minute call to understand your challenges</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -214,8 +214,8 @@ const Contact = () => {
                       3
                     </div>
                     <div>
-                      <p className="font-medium">Proposal</p>
-                      <p className="text-sm text-muted-foreground">Custom assessment plan and timeline</p>
+                      <p className="font-medium text-foreground">Proposal</p>
+                      <p className="text-sm text-secondary">Custom assessment plan and timeline</p>
                     </div>
                   </div>
                 </div>

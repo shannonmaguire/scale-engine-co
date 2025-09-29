@@ -81,9 +81,9 @@ const Sprint = () => {
           <h2 className="font-mono text-2xl font-bold mb-8">What We Build</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {workstreams.map((stream, index) => (
-              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+              <Card key={index} className="bg-white border-2 border-border hover:border-accent hover:shadow-md transition-all">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
+                  <CardTitle className="flex items-center gap-3 text-primary">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <stream.icon className="w-5 h-5 text-primary" />
                     </div>
@@ -91,7 +91,7 @@ const Sprint = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{stream.description}</p>
+                  <p className="text-secondary">{stream.description}</p>
                 </CardContent>
               </Card>
             ))}

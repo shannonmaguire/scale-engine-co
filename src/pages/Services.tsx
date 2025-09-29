@@ -78,39 +78,39 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <Card className="border-border h-full">
+                <Card className="bg-white border-2 border-border hover:border-primary transition-colors h-full">
                   <CardHeader className="pb-6">
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                         <service.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="heading-subsection">{service.title}</CardTitle>
-                        <p className="text-muted-foreground italic">{service.tagline}</p>
+                        <CardTitle className="heading-subsection text-primary">{service.title}</CardTitle>
+                        <p className="text-secondary italic">{service.tagline}</p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-foreground leading-relaxed">
                       {service.description}
                     </p>
                     
                     <div>
-                      <h4 className="font-mono font-bold mb-3">What's Included</h4>
+                      <h4 className="font-mono font-bold mb-3 text-primary">What's Included</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                            <span className="text-muted-foreground">{feature}</span>
+                            <span className="text-secondary">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                     
                     <div className="border-t border-border pt-4 space-y-4">
-                      <div className="bg-card border border-border rounded p-3">
-                        <h5 className="text-xs font-mono font-bold text-muted-foreground mb-1">ADAPTS TO YOUR STAGE</h5>
-                        <p className="text-xs text-muted-foreground">
+                      <div className="bg-accent/10 border border-accent/20 rounded p-3">
+                        <h5 className="text-xs font-mono font-bold text-accent mb-1">ADAPTS TO YOUR STAGE</h5>
+                        <p className="text-xs text-secondary">
                           {index === 0 && "Works with any current system—from spreadsheets to enterprise platforms"}
                           {index === 1 && "Integrates with existing tools. No rip-and-replace required"}  
                           {index === 2 && "Scales with your growth. Monthly rhythm adapts to your pace"}
@@ -119,12 +119,12 @@ const Services = () => {
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <p className="text-sm text-muted-foreground mb-1">Investment</p>
+                          <p className="text-sm text-secondary mb-1">Investment</p>
                           <p className="font-medium text-primary">{service.pricing}</p>
                         </div>
                         <div>
-                          <p className="text-sm text-muted-foreground mb-1">Timeline</p>
-                          <p className="font-medium">{service.timeline}</p>
+                          <p className="text-sm text-secondary mb-1">Timeline</p>
+                          <p className="font-medium text-foreground">{service.timeline}</p>
                         </div>
                       </div>
                     </div>
@@ -140,12 +140,12 @@ const Services = () => {
               </div>
               
               <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="bg-card border border-border rounded-lg p-8 text-center">
+                <div className="bg-card border-2 border-primary rounded-lg p-8 text-center">
                   <service.icon className="w-16 h-16 text-primary mx-auto mb-4" />
-                  <h3 className="font-mono text-xl font-bold mb-2">
+                  <h3 className="font-mono text-xl font-bold mb-2 text-primary">
                     Step {index + 1}: {service.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-secondary">
                     {service.tagline}
                   </p>
                 </div>
@@ -169,8 +169,8 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   1
                 </div>
-                <h3 className="font-mono font-bold text-lg mb-2">Assess</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-mono font-bold text-lg mb-2 text-primary">Assess</h3>
+                <p className="text-secondary text-sm">
                   Comprehensive diagnostic reveals what's blocking your scale
                 </p>
               </div>
@@ -179,8 +179,8 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   2
                 </div>
-                <h3 className="font-mono font-bold text-lg mb-2">Build</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-mono font-bold text-lg mb-2 text-primary">Build</h3>
+                <p className="text-secondary text-sm">
                   Fast implementation of the systems that drive results
                 </p>
               </div>
@@ -189,8 +189,8 @@ const Services = () => {
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                   3
                 </div>
-                <h3 className="font-mono font-bold text-lg mb-2">Operate</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="font-mono font-bold text-lg mb-2 text-primary">Operate</h3>
+                <p className="text-secondary text-sm">
                   Ongoing optimization keeps your system ahead of growth
                 </p>
               </div>

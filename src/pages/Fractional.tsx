@@ -89,9 +89,9 @@ const Fractional = () => {
           <h2 className="heading-section mb-8">What's Included</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+              <Card key={index} className="bg-white border-2 border-border hover:border-secondary hover:shadow-md transition-all">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
+                  <CardTitle className="flex items-center gap-3 text-primary">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <service.icon className="w-5 h-5 text-primary" />
                     </div>
@@ -99,7 +99,7 @@ const Fractional = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <p className="text-secondary">{service.description}</p>
                 </CardContent>
               </Card>
             ))}

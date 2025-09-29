@@ -51,15 +51,15 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => <Card key={index} className="border-border hover:shadow-md transition-shadow">
+            {values.map((value, index) => <Card key={index} className="bg-white border-2 border-border hover:border-primary hover:shadow-md transition-all">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <value.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="heading-subsection mb-3">{value.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                      <h3 className="heading-subsection mb-3 text-primary">{value.title}</h3>
+                      <p className="text-secondary leading-relaxed">{value.description}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -69,10 +69,10 @@ const About = () => {
 
         {/* Philosophy */}
         <section className="mb-16">
-          <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="heading-section mb-6 text-center">Our Philosophy</h2>
+          <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-8">
+            <h2 className="heading-section mb-6 text-center text-primary">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
-              <blockquote className="text-lg text-foreground italic leading-relaxed mb-6 border-l-4 border-primary pl-6">
+              <blockquote className="text-lg text-primary italic leading-relaxed mb-6 pl-6">
                 "Revenue systems are like plumbing. When they work, nobody thinks about them. 
                 When they break, they break everything else."
               </blockquote>
@@ -86,19 +86,19 @@ const About = () => {
 
         {/* Expertise Areas */}
         <section className="mb-16">
-          <h2 className="heading-section mb-8">Expertise Areas</h2>
+          <h2 className="heading-section mb-8 text-primary">Expertise Areas</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 border border-border rounded-lg">
-              <h3 className="font-mono font-bold mb-2">Revenue Operations</h3>
-              <p className="text-sm text-muted-foreground">Process, governance, and optimization</p>
+            <div className="text-center p-6 bg-white border-2 border-border rounded-lg hover:border-accent transition-colors">
+              <h3 className="font-mono font-bold mb-2 text-primary">Revenue Operations</h3>
+              <p className="text-sm text-secondary">Process, governance, and optimization</p>
             </div>
-            <div className="text-center p-6 border border-border rounded-lg">
-              <h3 className="font-mono font-bold mb-2">Salesforce Architecture</h3>
-              <p className="text-sm text-muted-foreground">Platform design and integration</p>
+            <div className="text-center p-6 bg-white border-2 border-border rounded-lg hover:border-accent transition-colors">
+              <h3 className="font-mono font-bold mb-2 text-primary">Salesforce Architecture</h3>
+              <p className="text-sm text-secondary">Platform design and integration</p>
             </div>
-            <div className="text-center p-6 border border-border rounded-lg">
-              <h3 className="font-mono font-bold mb-2">Marketing Technology</h3>
-              <p className="text-sm text-muted-foreground">Automation and attribution</p>
+            <div className="text-center p-6 bg-white border-2 border-border rounded-lg hover:border-accent transition-colors">
+              <h3 className="font-mono font-bold mb-2 text-primary">Marketing Technology</h3>
+              <p className="text-sm text-secondary">Automation and attribution</p>
             </div>
           </div>
         </section>
@@ -109,7 +109,7 @@ const About = () => {
             <h2 className="heading-section mb-6">Working with CWT Studio</h2>
             
             {/* Meet You Where You Are */}
-            <div className="mb-8 p-6 bg-accent/5 border border-accent/20 rounded-lg">
+            <div className="mb-8 p-6 bg-accent/10 border-2 border-accent/20 rounded-lg">
               <h3 className="font-mono font-bold mb-4 text-primary">We Meet You Where You Are</h3>
               <p className="text-foreground leading-relaxed mb-4">
                 Every company is at a different stage with different constraints. We don't assume you should rip and replace everything. 
@@ -118,11 +118,11 @@ const About = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm font-medium mb-2 text-foreground">Flexible Engagement</p>
-                  <p className="text-xs text-muted-foreground">Virtual or in-person. Sprint or assessment only. Your choice.</p>
+                  <p className="text-xs text-secondary">Virtual or in-person. Sprint or assessment only. Your choice.</p>
                 </div>
                 <div>
                   <p className="text-sm font-medium mb-2 text-foreground">Industry Agnostic</p>
-                  <p className="text-xs text-muted-foreground">SaaS, services, manufacturing—revenue systems have common patterns.</p>
+                  <p className="text-xs text-secondary">SaaS, services, manufacturing—revenue systems have common patterns.</p>
                 </div>
               </div>
             </div>

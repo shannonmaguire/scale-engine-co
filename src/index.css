@@ -8,40 +8,45 @@
 
 @layer base {
   :root {
-    /* CWT Studio Primary Palette */
-    --background: 37 75% 96%;          /* Cream #FEF5E9 */
-    --foreground: 207 100% 9%;         /* Navy #0D1F2D */
+    /* CWT Studio Design System - Clean, Branded, No Ugly Grays */
+    
+    /* Base Surfaces - Pure white canvas, cream elevation */
+    --background: 0 0% 100%;           /* Pure white - clean canvas */
+    --foreground: 207 100% 9%;         /* Navy #0D1F2D - body text */
 
-    --card: 37 75% 96%;                /* Cream for card backgrounds */
+    --card: 39 100% 97%;               /* Cream #FEF5E9 - elevated surfaces */
     --card-foreground: 207 100% 9%;    /* Navy text */
 
-    --popover: 37 75% 96%;
+    --popover: 0 0% 100%;              /* White */
     --popover-foreground: 207 100% 9%;
 
-    --primary: 329 65% 25%;            /* Burgundy #681038 */
-    --primary-foreground: 0 0% 100%;   /* White text on burgundy */
+    /* Brand Colors - Strategic use */
+    --primary: 327 82% 31%;            /* Burgundy #681038 - headers, CTAs */
+    --primary-foreground: 0 0% 100%;   /* White text */
 
-    --secondary: 146 26% 44%;          /* Deep Green #558564 */
-    --secondary-foreground: 0 0% 100%; /* White text on green */
+    --secondary: 148 25% 44%;          /* Deep Green #558564 - secondary text */
+    --secondary-foreground: 0 0% 100%; /* White text */
 
-    --muted: 207 100% 9%;              /* Navy for muted elements */
-    --muted-foreground: 207 100% 30%;  /* Lighter navy for muted text */
+    /* Muted = Cream backgrounds + Deep Green text (NOT gray!) */
+    --muted: 39 100% 97%;              /* Cream for muted backgrounds */
+    --muted-foreground: 148 25% 44%;   /* Deep Green instead of ugly gray */
 
-    --accent: 235 93% 76%;             /* Accent Blue #8390FA */
-    --accent-foreground: 207 100% 9%;  /* Navy text on blue */
+    --accent: 235 94% 76%;             /* Accent Blue #8390FA - interactive */
+    --accent-foreground: 0 0% 100%;    /* White text */
 
-    --destructive: 329 65% 25%;        /* Burgundy for destructive actions */
+    --destructive: 0 84% 60%;          /* Red for destructive */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 207 100% 20%;            /* Navy border */
-    --input: 37 75% 96%;               /* Cream for inputs */
-    --ring: 329 65% 25%;               /* Burgundy for focus */
+    /* Borders - Cream-based, not navy! */
+    --border: 39 38% 88%;              /* Cream border #E8D4BE - subtle */
+    --input: 39 25% 78%;               /* Darker cream #D4C4B0 for definition */
+    --ring: 327 82% 31%;               /* Burgundy focus rings */
     
-    /* Status Colors - CWT Studio brand system */
-    --status-positive: 235 93% 76%;    /* Accent Blue */
-    --status-negative: 329 65% 25%;    /* Burgundy */
-    --status-neutral: 146 26% 44%;     /* Deep Green */
-    --status-new: 235 93% 76%;         /* Accent Blue */
+    /* Status Colors */
+    --status-positive: 142 76% 36%;    /* Green */
+    --status-negative: 0 84% 60%;      /* Red */
+    --status-neutral: 207 100% 9%;     /* Navy */
+    --status-new: 235 94% 76%;         /* Blue */
 
     --radius: 0.25rem;                 /* Sharp corners for console aesthetic */
 
@@ -60,33 +65,34 @@
   }
 
   .dark {
-    --background: 207 100% 9%;         /* Navy #0D1F2D for dark mode */
-    --foreground: 37 75% 96%;          /* Cream for text */
+    /* Dark mode - Navy background, cream text, branded accents */
+    --background: 207 100% 9%;         /* Navy #0D1F2D */
+    --foreground: 39 100% 97%;         /* Cream */
 
-    --card: 207 100% 12%;              /* Slightly lighter navy for cards */
-    --card-foreground: 37 75% 96%;
+    --card: 207 90% 12%;               /* Lighter navy for elevation */
+    --card-foreground: 39 100% 97%;
 
-    --popover: 207 100% 12%;
-    --popover-foreground: 37 75% 96%;
+    --popover: 207 100% 9%;
+    --popover-foreground: 39 100% 97%;
 
-    --primary: 329 65% 35%;            /* Lighter Burgundy for dark mode */
+    --primary: 327 82% 41%;            /* Lighter Burgundy for visibility */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 146 26% 54%;          /* Lighter Deep Green for dark mode */
+    --secondary: 148 25% 54%;          /* Lighter Deep Green */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 207 100% 20%;             /* Lighter navy for muted */
-    --muted-foreground: 37 75% 80%;    /* Light cream for muted text */
+    --muted: 207 90% 12%;              /* Lighter navy backgrounds */
+    --muted-foreground: 148 25% 64%;   /* Lighter green - NO GRAY */
 
-    --accent: 235 93% 80%;             /* Brighter Accent Blue for dark mode */
+    --accent: 235 94% 80%;             /* Brighter blue */
     --accent-foreground: 207 100% 9%;
 
-    --destructive: 329 65% 35%;        /* Lighter Burgundy for dark mode */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 207 100% 20%;            /* Navy border */
-    --input: 207 100% 12%;             /* Dark navy for inputs */
-    --ring: 329 65% 35%;               /* Burgundy for focus */
+    --border: 39 38% 88%;              /* Light cream border */
+    --input: 39 25% 78%;
+    --ring: 327 82% 41%;
   }
 }
 
@@ -123,11 +129,11 @@
   }
   
   .text-description {
-    @apply text-xl text-muted-foreground leading-relaxed;
+    @apply text-xl text-secondary leading-relaxed;
   }
   
   .text-label {
-    @apply text-xs text-muted-foreground uppercase tracking-wider font-mono;
+    @apply text-xs text-secondary uppercase tracking-wider font-mono;
   }
   
   code, pre, .font-mono {
