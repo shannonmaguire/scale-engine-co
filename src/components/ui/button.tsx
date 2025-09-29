@@ -18,10 +18,11 @@ const buttonVariants = cva(
         warm: "border-2 border-warm bg-transparent text-foreground hover:bg-warm/20 hover:border-warm",
       },
       size: {
-        default: "h-11 px-6 py-3",
-        sm: "h-9 rounded-md px-4 text-xs",
-        lg: "h-12 rounded-md px-10 text-base",
-        icon: "h-11 w-11",
+        // Standard: 32px padding horizontal, 16px vertical
+        default: "px-8 py-4",
+        sm: "px-6 py-3 text-xs",
+        lg: "px-10 py-5 text-base",
+        icon: "w-11 h-11 p-0",
       },
     },
     defaultVariants: {
