@@ -175,15 +175,15 @@ const Proof = () => {
       </section>
 
       {/* Carousel */}
-      <section className="relative">
+      <section className="relative py-16">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {caseStudies.map((study) => (
               <div key={study.id} className="flex-[0_0_100%] min-w-0">
-                <div className="px-6 py-20 min-h-[80vh]">
-                  <div className="max-w-7xl mx-auto">
+                <div className="px-8 lg:px-16 py-12">
+                  <div className="max-w-6xl mx-auto border-2 border-border rounded-lg p-8 lg:p-12 bg-card shadow-lg">
                     {/* Header Meta */}
-                    <div className="flex flex-wrap items-center gap-4 mb-12">
+                    <div className="flex flex-wrap items-center gap-4 mb-12 pb-6 border-b border-border">
                       <div className="flex items-center gap-2">
                         <Building2 className="w-4 h-4 text-primary" />
                         <span className="font-mono text-sm text-foreground">{study.industry}</span>
@@ -261,7 +261,7 @@ const Proof = () => {
                         {/* Before/After Visual */}
                         <div className="console-card bg-card border border-border p-8 rounded-lg">
                           <div className="text-center mb-8">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-muted/20 rounded-full">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
                               <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
                                 Before
                               </span>
@@ -273,7 +273,7 @@ const Proof = () => {
                           </div>
 
                           <div className="grid grid-cols-2 gap-6 mb-8">
-                            <div className="text-center p-6 bg-muted/10 rounded-lg">
+                            <div className="text-center p-6 bg-background border border-border rounded-lg">
                               <div className="text-xs font-mono text-muted-foreground uppercase mb-2">
                                 {study.beforeMetric.label}
                               </div>

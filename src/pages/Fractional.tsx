@@ -74,7 +74,7 @@ const Fractional = () => {
 
         {/* Value Proposition */}
         <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8 text-center">
+          <div className="bg-card border border-border rounded-lg p-8 text-center">
             <RotateCcw className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="heading-section mb-4">After the Sprint</h2>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -151,7 +151,7 @@ const Fractional = () => {
 
         {/* Pricing */}
         <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8 text-center">
+          <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="font-mono text-2xl font-bold mb-2">Monthly Retainer</h2>
             <p className="text-3xl font-bold text-primary mb-2">From $5,000</p>

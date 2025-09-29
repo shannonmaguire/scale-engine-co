@@ -135,7 +135,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-muted/10 p-8 text-center console-card">
+                  <div className="bg-card border border-border p-8 text-center console-card">
                     <p className="text-muted-foreground mb-4 font-mono text-sm">
                       Prefer to schedule directly? Choose a time that works for you.
                     </p>
@@ -223,7 +223,7 @@ const Contact = () => {
             </Card>
 
             {/* Service Context */}
-            <div className="bg-muted/30 rounded-lg p-6">
+            <div className="bg-card border border-border rounded-lg p-6">
               <h3 className="font-mono font-bold mb-3">Our Services</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">

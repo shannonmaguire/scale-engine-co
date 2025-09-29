@@ -130,7 +130,7 @@ const Sprint = () => {
 
         {/* Pricing */}
         <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8 text-center">
+          <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="font-mono text-2xl font-bold mb-2">Sprint Investment</h2>
             <p className="text-3xl font-bold text-primary mb-2">$15,000 - $25,000</p>

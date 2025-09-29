@@ -69,14 +69,14 @@ const About = () => {
 
         {/* Philosophy */}
         <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <h2 className="heading-section mb-6 text-center">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
-              <blockquote className="text-lg text-muted-foreground italic leading-relaxed mb-6">
+              <blockquote className="text-lg text-foreground italic leading-relaxed mb-6 border-l-4 border-primary pl-6">
                 "Revenue systems are like plumbing. When they work, nobody thinks about them. 
                 When they break, they break everything else."
               </blockquote>
-              <p className="text-muted-foreground">
+              <p className="text-foreground">
                 We build systems that work so well, you forget they're there. Until you need to scale. 
                 Then you're grateful they can handle whatever growth throws at them.
               </p>
@@ -109,19 +109,19 @@ const About = () => {
             <h2 className="heading-section mb-6">Working with CWT Studio</h2>
             
             {/* Meet You Where You Are */}
-            <div className="mb-8 p-6 bg-muted/50 rounded-lg">
+            <div className="mb-8 p-6 bg-accent/5 border border-accent/20 rounded-lg">
               <h3 className="font-mono font-bold mb-4 text-primary">We Meet You Where You Are</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-foreground leading-relaxed mb-4">
                 Every company is at a different stage with different constraints. We don't assume you should rip and replace everything. 
                 We work with your current systems, timeline, and team to create realistic improvements that stick.
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm font-medium mb-2">Flexible Engagement</p>
+                  <p className="text-sm font-medium mb-2 text-foreground">Flexible Engagement</p>
                   <p className="text-xs text-muted-foreground">Virtual or in-person. Sprint or assessment only. Your choice.</p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium mb-2">Industry Agnostic</p>
+                  <p className="text-sm font-medium mb-2 text-foreground">Industry Agnostic</p>
                   <p className="text-xs text-muted-foreground">SaaS, services, manufacturing—revenue systems have common patterns.</p>
                 </div>
               </div>
@@ -129,8 +129,8 @@ const About = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-mono font-bold mb-3">What We Do</h3>
-                <ul className="space-y-2 text-muted-foreground">
+                <h3 className="font-mono font-bold mb-3 text-foreground">What We Do</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• Meet you at your current operational state</li>
                   <li>• Deep diagnostic of your revenue infrastructure</li>
                   <li>• Work with existing tools and integrations</li>
@@ -141,8 +141,8 @@ const About = () => {
                 </ul>
               </div>
               <div>
-                <h3 className="font-mono font-bold mb-3">What We Don't Do</h3>
-                <ul className="space-y-2 text-muted-foreground">
+                <h3 className="font-mono font-bold mb-3 text-foreground">What We Don't Do</h3>
+                <ul className="space-y-2 text-foreground">
                   <li>• Assume you need to start over</li>
                   <li>• Long discovery phases without action</li>
                   <li>• Generic solutions that don't fit your stage</li>

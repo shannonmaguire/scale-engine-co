@@ -327,7 +327,7 @@ const Systems = () => {
                     
                     <div className="overflow-x-auto">
                       <table className="w-full">
-                        <thead className="bg-muted/50">
+                        <thead className="bg-card border-b-2 border-border">
                           <tr className="text-left border-b border-border">
                             <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Name</th>
                             <th className="px-6 py-3 text-xs font-mono font-bold text-muted-foreground">Title</th>
@@ -338,7 +338,7 @@ const Systems = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                          <tr className="border-b border-border hover:bg-accent/5 transition-colors">
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center">
@@ -351,14 +351,14 @@ const Systems = () => {
                             <td className="px-6 py-4 text-sm font-medium">TelecomOne Ltd</td>
                             <td className="px-6 py-4 text-sm text-muted-foreground font-mono">jane.doe@telecomone.com</td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-blue-500/10 text-blue-600 text-xs rounded font-mono">Apollo</div>
+                              <div className="px-2 py-1 bg-accent/10 text-accent border border-accent/20 text-xs rounded font-mono">Apollo</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">New</div>
+                              <div className="px-2 py-1 bg-secondary/10 text-secondary border border-secondary/20 text-xs rounded font-mono">New</div>
                             </td>
                           </tr>
                           
-                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                          <tr className="border-b border-border hover:bg-accent/5 transition-colors">
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-gradient-to-br from-violet-500/20 to-violet-500/10 rounded-full flex items-center justify-center">
@@ -371,14 +371,14 @@ const Systems = () => {
                             <td className="px-6 py-4 text-sm font-medium">UtilityCorp Inc</td>
                             <td className="px-6 py-4 text-sm text-muted-foreground font-mono">john.smith@utilitycorp.com</td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-indigo-500/10 text-indigo-600 text-xs rounded font-mono">Sales Navigator</div>
+                              <div className="px-2 py-1 bg-accent/10 text-accent border border-accent/20 text-xs rounded font-mono">Sales Navigator</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-amber-500/10 text-amber-600 text-xs rounded font-mono">Queued</div>
+                              <div className="px-2 py-1 bg-accent/10 text-accent border border-accent/20 text-xs rounded font-mono">Queued</div>
                             </td>
                           </tr>
 
-                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                          <tr className="border-b border-border hover:bg-accent/5 transition-colors">
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-gradient-to-br from-emerald-500/20 to-emerald-500/10 rounded-full flex items-center justify-center">
@@ -391,14 +391,14 @@ const Systems = () => {
                             <td className="px-6 py-4 text-sm font-medium">FiberNorth Networks</td>
                             <td className="px-6 py-4 text-sm text-muted-foreground font-mono">marco@fibernorth.ca</td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-indigo-500/10 text-indigo-600 text-xs rounded font-mono">Sales Navigator</div>
+                              <div className="px-2 py-1 bg-accent/10 text-accent border border-accent/20 text-xs rounded font-mono">Sales Navigator</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-emerald-500/10 text-emerald-600 text-xs rounded font-mono">Positive Reply</div>
+                              <div className="px-2 py-1 bg-secondary/10 text-secondary border border-secondary/20 text-xs rounded font-mono">Positive Reply</div>
                             </td>
                           </tr>
 
-                          <tr className="border-b border-border hover:bg-muted/30 transition-colors">
+                          <tr className="border-b border-border hover:bg-accent/5 transition-colors">
                             <td className="px-6 py-4">
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 bg-gradient-to-br from-red-500/20 to-red-500/10 rounded-full flex items-center justify-center">
@@ -411,10 +411,10 @@ const Systems = () => {
                             <td className="px-6 py-4 text-sm font-medium">PowerGrid Solutions</td>
                             <td className="px-6 py-4 text-sm text-muted-foreground font-mono">s.chen@powergrid.com</td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-blue-500/10 text-blue-600 text-xs rounded font-mono">Apollo</div>
+                              <div className="px-2 py-1 bg-accent/10 text-accent border border-accent/20 text-xs rounded font-mono">Apollo</div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="px-2 py-1 bg-red-500/10 text-red-600 text-xs rounded font-mono">Not Interested</div>
+                              <div className="px-2 py-1 bg-primary/10 text-primary border border-primary/20 text-xs rounded font-mono">Not Interested</div>
                             </td>
                           </tr>
                         </tbody>
@@ -436,10 +436,10 @@ const Systems = () => {
                       {/* Filter Tabs */}
                       <div className="flex gap-2 mb-6">
                         <div className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-mono">All (23)</div>
-                        <div className="px-4 py-2 bg-emerald-500/10 text-emerald-600 rounded-lg text-sm font-mono hover:bg-emerald-500/20 cursor-pointer transition-colors">Positive (8)</div>
-                        <div className="px-4 py-2 bg-muted hover:bg-muted/70 rounded-lg text-sm font-mono cursor-pointer transition-colors">Neutral (7)</div>
-                        <div className="px-4 py-2 bg-muted hover:bg-muted/70 rounded-lg text-sm font-mono cursor-pointer transition-colors">Not Interested (5)</div>
-                        <div className="px-4 py-2 bg-red-500/10 text-red-600 rounded-lg text-sm font-mono hover:bg-red-500/20 cursor-pointer transition-colors">Unsubscribed (2)</div>
+                        <div className="px-4 py-2 bg-secondary/10 text-secondary border border-secondary/20 rounded-lg text-sm font-mono hover:bg-secondary/20 cursor-pointer transition-colors">Positive (8)</div>
+                        <div className="px-4 py-2 bg-card border border-border hover:bg-accent/10 rounded-lg text-sm font-mono cursor-pointer transition-colors">Neutral (7)</div>
+                        <div className="px-4 py-2 bg-card border border-border hover:bg-accent/10 rounded-lg text-sm font-mono cursor-pointer transition-colors">Not Interested (5)</div>
+                        <div className="px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-mono hover:bg-primary/20 cursor-pointer transition-colors">Unsubscribed (2)</div>
                       </div>
 
                       {/* Reply Cards */}

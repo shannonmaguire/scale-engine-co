@@ -112,7 +112,7 @@ const SalesforceDelivery = () => {
 
         {/* Hero Section */}
         <section className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-muted/50 px-4 py-2 rounded-full text-sm font-mono mb-6">
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full text-sm font-mono mb-6">
             <Settings className="h-4 w-4" />
             DELIVERY MODEL
           </div>
@@ -229,7 +229,7 @@ const SalesforceDelivery = () => {
 
         {/* Quality Assurance */}
         <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <div className="text-center mb-8">
               <h2 className="font-mono text-3xl font-bold mb-4">Quality Assurance</h2>
               <p className="text-xl text-muted-foreground">

@@ -253,7 +253,7 @@ const SampleReport = () => {
 
         {/* Executive Summary */}
         <section className="mb-16">
-          <div className="bg-muted/30 rounded-lg p-8">
+          <div className="bg-card border border-border rounded-lg p-8">
             <h2 className="font-mono text-2xl font-bold mb-6">Executive Summary</h2>
             <div className="prose prose-gray max-w-none">
               <p className="text-muted-foreground leading-relaxed mb-4">

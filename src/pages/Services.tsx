@@ -108,7 +108,7 @@ const Services = () => {
                     </div>
                     
                     <div className="border-t border-border pt-4 space-y-4">
-                      <div className="bg-muted/30 rounded p-3">
+                      <div className="bg-card border border-border rounded p-3">
                         <h5 className="text-xs font-mono font-bold text-muted-foreground mb-1">ADAPTS TO YOUR STAGE</h5>
                         <p className="text-xs text-muted-foreground">
                           {index === 0 && "Works with any current system—from spreadsheets to enterprise platforms"}
@@ -140,7 +140,7 @@ const Services = () => {
               </div>
               
               <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="bg-muted/30 rounded-lg p-8 text-center">
+                <div className="bg-card border border-border rounded-lg p-8 text-center">
                   <service.icon className="w-16 h-16 text-primary mx-auto mb-4" />
                   <h3 className="font-mono text-xl font-bold mb-2">
                     Step {index + 1}: {service.title}
