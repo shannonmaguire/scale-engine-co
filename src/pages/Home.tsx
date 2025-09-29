@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
+import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import SystemDiagram from "@/components/SystemDiagram";
-import { ArrowRight, CheckCircle, BarChart3, Target, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, BarChart3, Target } from "lucide-react";
 const Home = () => {
   const services = [{
     title: "Infrastructure Assessment",
@@ -42,9 +43,8 @@ const Home = () => {
   const diagnosticDeliverables = ["Revenue Infrastructure Scorecard tech, ops, pipeline", "Benchmarks against peers", "90 day roadmap with priority fixes", "Executive readout with leadership"];
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative section-spacing overflow-hidden">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <Section className="relative overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               
               
@@ -73,13 +73,11 @@ const Home = () => {
               <SystemDiagram />
             </div>
           </div>
-        </div>
-      </section>
+      </Section>
 
       {/* The System Section */}
-      <section id="system" className="section-spacing bg-muted/30">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-16">
+      <Section id="system" variant="muted">
+        <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-6">
               <div className="system-status">
                 System Modules
@@ -89,8 +87,8 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => <Card key={index} className="console-card relative bg-card border-border hover:shadow-lg transition-shadow duration-150 flex flex-col h-full">
-                <CardContent className="p-8 flex flex-col flex-1">
+            {services.map((service, index) => <StandardCard key={index} equalHeight>
+                <div className="flex flex-col flex-1">
                   <div className="mb-6">
                     <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4">
                       <span className="text-primary font-mono font-bold text-lg">{index + 1}</span>
@@ -111,19 +109,17 @@ const Home = () => {
                     {service.note && <p className="text-xs text-muted-foreground font-mono">{service.note}</p>}
                   </div>
                   
-                  <Button asChild className="w-full btn-console mt-auto">
+                  <Button asChild className="w-full mt-auto">
                     <Link to={service.link}>{service.cta}</Link>
                   </Button>
-                </CardContent>
-              </Card>)}
+                </div>
+              </StandardCard>)}
           </div>
-        </div>
-      </section>
+      </Section>
 
       {/* Before and After Section */}
-      <section className="section-spacing">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <Section>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="heading-section mb-8">Before and After</h2>
               
@@ -150,7 +146,7 @@ const Home = () => {
               </div>
               
               <div className="mt-8">
-                <Button asChild className="btn-console-accent">
+                <Button asChild variant="warm">
                   <Link to="/contact">Book Assessment</Link>
                 </Button>
               </div>
@@ -187,14 +183,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
-      </section>
+      </Section>
 
       {/* Meet You Where You Are Section */}
-      <section className="section-spacing bg-muted/30">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-16">
+      <Section variant="muted">
+        <div className="text-center mb-16">
             <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
             <p className="text-description max-w-3xl mx-auto">
               Strong backends make resilience visible. Whether you're early stage or enterprise, we install the infrastructure that lets execution beat volume every time.
@@ -202,8 +196,8 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="console-card bg-card border-border">
-              <CardContent className="p-8 text-center">
+            <StandardCard>
+              <div className="text-center">
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-accent font-mono font-bold">START</span>
                 </div>
@@ -212,11 +206,11 @@ const Home = () => {
                   Founder-led sales with basic tools. We'll assess what you actually need to scale, 
                   not over-engineer for problems you don't have yet.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </StandardCard>
             
-            <Card className="console-card bg-card border-border">
-              <CardContent className="p-8 text-center">
+            <StandardCard>
+              <div className="text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-primary font-mono font-bold">GROW</span>
                 </div>
@@ -225,11 +219,11 @@ const Home = () => {
                   Growing fast with stitched-together systems. We'll work with your existing tools 
                   and team to optimize what you have while planning smart upgrades.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </StandardCard>
             
-            <Card className="console-card bg-card border-border">
-              <CardContent className="p-8 text-center">
+            <StandardCard>
+              <div className="text-center">
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-secondary font-mono font-bold">SCALE</span>
                 </div>
@@ -238,25 +232,23 @@ const Home = () => {
                   Complex operations with entrenched processes. We'll audit what's working, 
                   identify what's blocking scale, and sequence changes realistically.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </StandardCard>
           </div>
           
           <div className="text-center mt-12">
             <p className="text-muted-foreground font-mono text-sm mb-6">
               No judgment. No assumptions. Just clear diagnosis and practical next steps.
             </p>
-            <Button asChild className="btn-console">
+            <Button asChild>
               <Link to="/contact">Get Started</Link>
             </Button>
           </div>
-        </div>
-      </section>
+      </Section>
 
       {/* Assessment Details Section */}
-      <section className="section-spacing">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="max-w-4xl mx-auto">
+      <Section>
+        <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="heading-section mb-4">The Diagnostic</h2>
               <p className="text-description">What you get in an Assessment</p>
@@ -272,7 +264,7 @@ const Home = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <Button asChild className="btn-console">
+                  <Button asChild>
                     <Link to="/sample-report">View Sample Report</Link>
                   </Button>
                 </div>
@@ -306,14 +298,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
         </div>
-      </section>
+      </Section>
 
       {/* Proof Section */}
-      <section className="section-spacing bg-muted/30">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="text-center mb-12">
+      <Section variant="muted">
+        <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-6">
               <div className="system-status">
                 Performance Metrics
@@ -330,17 +320,15 @@ const Home = () => {
           </div>
           
           <div className="text-center">
-            <Button asChild className="btn-console">
+            <Button asChild>
               <Link to="/services">See Services</Link>
             </Button>
           </div>
-        </div>
-      </section>
+      </Section>
 
       {/* Infrastructure for High-Trust Industries */}
-      <section className="section-spacing">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="max-w-4xl mx-auto text-center">
+      <Section>
+        <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-section mb-6">
               Revenue Infrastructure for Complex Industries
             </h2>
@@ -349,16 +337,15 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="btn-console">
+              <Button asChild>
                 <Link to="/services">Our Services</Link>
               </Button>
-              <Button asChild className="btn-console-secondary">
+              <Button asChild variant="outline">
                 <Link to="/proof">See Proof</Link>
               </Button>
             </div>
-          </div>
         </div>
-      </section>
+      </Section>
 
       {/* Final CTA - Removed in favor of Footer CTA */}
     </div>;

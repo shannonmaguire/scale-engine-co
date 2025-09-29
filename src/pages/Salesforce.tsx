@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
+import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
-import { CheckCircle, ArrowRight, Users, BarChart3, Clock, Zap, Target, Shield } from "lucide-react";
+import { CheckCircle, ArrowRight, BarChart3, Clock, Zap, Target, Shield } from "lucide-react";
 
 const Salesforce = () => {
   const services = [
@@ -65,9 +66,8 @@ const Salesforce = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="section-spacing bg-card border-b border-border">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+      <Section className="bg-card border-b border-border">
+        <div className="max-w-4xl mx-auto text-center">
             <div className="system-status mb-6">
               PLATFORM OPTIMIZATION
             </div>
@@ -91,14 +91,12 @@ const Salesforce = () => {
                 </Link>
               </Button>
             </div>
-          </div>
         </div>
-      </section>
+      </Section>
 
       {/* Services */}
-      <section className="section-spacing-half">
-        <div className="container mx-auto px-6">
-          <div className="text-center section-spacing-quarter">
+      <Section>
+        <div className="text-center mb-12">
             <h2 className="heading-section mb-4">Revenue Systems for Salesforce</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Diagnostic-driven implementations that make Salesforce work harder for your revenue team
@@ -107,16 +105,16 @@ const Salesforce = () => {
           
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <Card key={index} className="bg-card border-border hover:border-accent-data transition-colors">
-                <CardHeader>
+              <StandardCard key={index} variant="bordered" equalHeight>
+                <StandardCardHeader>
                   <service.icon className="w-10 h-10 accent-data mb-4" />
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <StandardCardTitle className="text-xl">{service.title}</StandardCardTitle>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Clock className="w-4 h-4 accent-data" />
                     {service.duration}
                   </div>
-                </CardHeader>
-                <CardContent>
+                </StandardCardHeader>
+                <StandardCardContent>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
                   <div className="space-y-2">
                     <p className="font-semibold text-sm">Key Deliverables:</p>
@@ -127,17 +125,15 @@ const Salesforce = () => {
                       </div>
                     ))}
                   </div>
-                </CardContent>
-              </Card>
+                </StandardCardContent>
+              </StandardCard>
             ))}
           </div>
-        </div>
-      </section>
+      </Section>
 
       {/* Benefits */}
-      <section className="section-spacing-half bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+      <Section variant="muted">
+        <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Proven Results</h2>
               <p className="text-xl text-muted-foreground">
@@ -154,13 +150,11 @@ const Salesforce = () => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
+      </Section>
 
       {/* Process */}
-      <section className="section-spacing-half">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
+      <Section>
+        <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">How We Work</h2>
             <p className="text-xl text-muted-foreground">
               A proven process that minimizes disruption while maximizing results
@@ -169,22 +163,21 @@ const Salesforce = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {process.map((step, index) => (
-              <Card key={index}>
-                <CardHeader>
+              <StandardCard key={index} equalHeight>
+                <StandardCardHeader>
                   <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg mb-4">
                     {step.step}
                   </div>
-                  <CardTitle className="text-lg">{step.title}</CardTitle>
+                  <StandardCardTitle className="text-lg">{step.title}</StandardCardTitle>
                   <p className="text-sm text-muted-foreground">{step.timeline}</p>
-                </CardHeader>
-                <CardContent>
+                </StandardCardHeader>
+                <StandardCardContent>
                   <p className="text-muted-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
+                </StandardCardContent>
+              </StandardCard>
             ))}
           </div>
-        </div>
-      </section>
+      </Section>
 
     </div>
   );

@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { StandardCard } from "@/components/ui/standard-card";
+import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
-import { Target, Zap, Clock, Palette, ArrowRight } from "lucide-react";
+import { Target, Zap, Clock, Palette } from "lucide-react";
 const About = () => {
   const values = [{
     icon: Target,
@@ -20,10 +21,10 @@ const About = () => {
     title: "Taste",
     description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
   }];
-  return <div className="min-h-screen section-spacing">
-      <div className="container mx-auto px-6 max-w-4xl">
+  return <div className="min-h-screen">
+      <Section>
         {/* Hero */}
-        <div className="text-center section-spacing-half">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
           <div className="system-status mb-6">
             OPERATOR FOCUS
           </div>
@@ -38,7 +39,7 @@ const About = () => {
         </div>
 
         {/* Values */}
-        <section className="section-spacing-half">
+        <div className="mt-16">
           <div className="text-center mb-12">
             <h2 className="font-mono text-3xl font-bold mb-4">How We Operate</h2>
             <p className="text-xl text-muted-foreground">
@@ -47,8 +48,8 @@ const About = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => <Card key={index} className="bg-white border-2 border-border hover:border-primary hover:shadow-md transition-all">
-                <CardContent className="p-8">
+            {values.map((value, index) => <StandardCard key={index}>
+                <div>
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <value.icon className="w-6 h-6 text-primary" />
@@ -58,13 +59,15 @@ const About = () => {
                       <p className="text-secondary leading-relaxed">{value.description}</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>)}
+                </div>
+              </StandardCard>)}
           </div>
-        </section>
+        </div>
+      </Section>
 
+      <Section variant="muted">
         {/* Philosophy */}
-        <section className="mb-16">
+        <div className="mb-16">
           <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-8">
             <h2 className="heading-section mb-6 text-center text-primary">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
@@ -78,13 +81,10 @@ const About = () => {
               </p>
             </div>
           </div>
-        </section>
-
-        {/* Expertise Areas */}
-        
+        </div>
 
         {/* Working with Us */}
-        <section className="mb-16">
+        <div>
           <div className="bg-card border border-border rounded-lg p-8">
             <h2 className="heading-section mb-6">Working with CWT Studio</h2>
             
@@ -133,9 +133,8 @@ const About = () => {
               </div>
             </div>
           </div>
-        </section>
-
-      </div>
+        </div>
+      </Section>
     </div>;
 };
 export default About;

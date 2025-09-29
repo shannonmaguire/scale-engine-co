@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
+import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { FileText, Target, AlertTriangle, CheckCircle, TrendingUp, ArrowRight, BarChart3 } from "lucide-react";
+import { AlertTriangle, CheckCircle } from "lucide-react";
 const SampleReport = () => {
   const scorecard = [{
     category: "Technology Stack",
@@ -88,10 +89,10 @@ const SampleReport = () => {
         return "text-muted-foreground";
     }
   };
-  return <div className="min-h-screen section-spacing">
-      <div className="container mx-auto px-6 max-w-6xl">
+  return <div className="min-h-screen">
+      <Section>
         {/* Hero */}
-        <div className="text-center section-spacing-half">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
           <div className="system-status mb-6">
             ASSESSMENT COMPLETE
           </div>
@@ -106,20 +107,20 @@ const SampleReport = () => {
         </div>
 
         {/* Report Header */}
-        <section className="mb-16">
-          <Card className="border-border">
-            <CardHeader>
+        <div className="mt-16">
+          <StandardCard>
+            <StandardCardHeader>
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="font-mono text-2xl mb-2">TechCorp SaaS - Assessment Results</CardTitle>
+                  <StandardCardTitle className="font-mono text-2xl mb-2">TechCorp SaaS - Assessment Results</StandardCardTitle>
                   <p className="text-muted-foreground">Series B • $15M ARR • 85 employees</p>
                 </div>
                 <Badge className="bg-primary/20 text-primary font-mono">
                   COMPLETED
                 </Badge>
               </div>
-            </CardHeader>
-            <CardContent>
+            </StandardCardHeader>
+            <StandardCardContent>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-accent mb-1">5.7</div>
@@ -134,17 +135,16 @@ const SampleReport = () => {
                   <p className="text-sm text-muted-foreground">Day Roadmap</p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </section>
+            </StandardCardContent>
+          </StandardCard>
+        </div>
 
         {/* Scorecard */}
-        <section className="mb-16">
+        <div className="mt-16">
           <h2 className="font-mono text-2xl font-bold mb-8">Infrastructure Scorecard</h2>
           <div className="space-y-4">
-            {scorecard.map((item, index) => <Card key={index} className="border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between">
+            {scorecard.map((item, index) => <StandardCard key={index}>
+                <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-2">
                         <h3 className="font-mono font-bold">{item.category}</h3>
@@ -168,57 +168,54 @@ const SampleReport = () => {
                     }} />
                       </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>)}
+                </div>
+              </StandardCard>)}
           </div>
-        </section>
+        </div>
 
         {/* Priority Roadmap */}
-        <section className="mb-16">
+        <div className="mt-16">
           <h2 className="font-mono text-2xl font-bold mb-8">90-Day Priority Roadmap</h2>
           <div className="space-y-6">
-            {priorities.map((item, index) => <Card key={index} className="border-border">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
-                      {item.priority}
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
-                        <h3 className="font-mono font-bold text-lg">{item.title}</h3>
-                        <div className="flex gap-2">
-                          <Badge className={`text-xs ${getImpactColor(item.impact)}`}>
-                            {item.impact} Impact
-                          </Badge>
-                          <Badge className="text-xs bg-muted text-muted-foreground">
-                            {item.effort} Effort
-                          </Badge>
-                          <Badge className="text-xs bg-primary/20 text-primary">
-                            {item.timeline}
-                          </Badge>
-                        </div>
-                      </div>
-                      <p className="text-muted-foreground">{item.description}</p>
-                    </div>
+            {priorities.map((item, index) => <StandardCard key={index}>
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
+                    {item.priority}
                   </div>
-                </CardContent>
-              </Card>)}
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
+                      <h3 className="font-mono font-bold text-lg">{item.title}</h3>
+                      <div className="flex gap-2">
+                        <Badge className={`text-xs ${getImpactColor(item.impact)}`}>
+                          {item.impact} Impact
+                        </Badge>
+                        <Badge className="text-xs bg-muted text-muted-foreground">
+                          {item.effort} Effort
+                        </Badge>
+                        <Badge className="text-xs bg-primary/20 text-primary">
+                          {item.timeline}
+                        </Badge>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
+                </div>
+              </StandardCard>)}
           </div>
-        </section>
+        </div>
 
         {/* Key Findings */}
-        <section className="mb-16">
+        <div className="mt-16">
           <h2 className="font-mono text-2xl font-bold mb-8">Key Findings</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-primary">
+            <StandardCard>
+              <StandardCardHeader>
+                <StandardCardTitle className="flex items-center gap-2 text-primary">
                   <AlertTriangle className="w-5 h-5" />
                   Critical Issues
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
+                </StandardCardTitle>
+              </StandardCardHeader>
+              <StandardCardContent className="space-y-3">
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <p className="text-sm">47% of leads lack proper attribution data</p>
@@ -231,17 +228,17 @@ const SampleReport = () => {
                   <div className="w-2 h-2 bg-primary rounded-full mt-2" />
                   <p className="text-sm">Pipeline stages lack clear exit criteria</p>
                 </div>
-              </CardContent>
-            </Card>
+              </StandardCardContent>
+            </StandardCard>
 
-            <Card className="border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-secondary">
+            <StandardCard>
+              <StandardCardHeader>
+                <StandardCardTitle className="flex items-center gap-2 text-secondary">
                   <CheckCircle className="w-5 h-5" />
                   Strengths
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
+                </StandardCardTitle>
+              </StandardCardHeader>
+              <StandardCardContent className="space-y-3">
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <p className="text-sm">Strong technology stack foundation</p>
@@ -254,13 +251,13 @@ const SampleReport = () => {
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2" />
                   <p className="text-sm">Team aligned on revenue goals</p>
                 </div>
-              </CardContent>
-            </Card>
+              </StandardCardContent>
+            </StandardCard>
           </div>
-        </section>
+        </div>
 
         {/* Executive Summary */}
-        <section className="mb-16">
+        <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8">
             <h2 className="font-mono text-2xl font-bold mb-6">Executive Summary</h2>
             <div className="prose prose-gray max-w-none">
@@ -280,9 +277,8 @@ const SampleReport = () => {
               </p>
             </div>
           </div>
-        </section>
-
-      </div>
+        </div>
+      </Section>
     </div>;
 };
 export default SampleReport;

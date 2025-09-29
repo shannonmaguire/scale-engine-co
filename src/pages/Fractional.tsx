@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
+import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { RotateCcw, Target, BarChart3, Settings, Users, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { RotateCcw, Target, BarChart3, Settings, Users, Clock, CheckCircle } from "lucide-react";
 
 const Fractional = () => {
   const services = [
@@ -56,10 +57,10 @@ const Fractional = () => {
   ];
 
   return (
-    <div className="min-h-screen section-spacing">
-      <div className="container mx-auto px-6 max-w-4xl">
+    <div className="min-h-screen">
+      <Section>
         {/* Hero */}
-        <div className="text-center section-spacing-half">
+        <div className="text-center mb-12 max-w-2xl mx-auto">
           <div className="system-status mb-6">
             CONTINUOUS OPTIMIZATION
           </div>
@@ -73,7 +74,7 @@ const Fractional = () => {
         </div>
 
         {/* Value Proposition */}
-        <section className="mb-16">
+        <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <RotateCcw className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="heading-section mb-4">After the Sprint</h2>
@@ -82,32 +83,32 @@ const Fractional = () => {
               iterate based on results, and guide strategic decisions as you scale.
             </p>
           </div>
-        </section>
+        </div>
 
         {/* Services */}
-        <section className="mb-16">
+        <div className="mt-16">
           <h2 className="heading-section mb-8">What's Included</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="bg-white border-2 border-border hover:border-secondary hover:shadow-md transition-all">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-primary">
+              <StandardCard key={index} variant="bordered" equalHeight>
+                <StandardCardHeader>
+                  <StandardCardTitle className="flex items-center gap-3 text-primary">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <service.icon className="w-5 h-5 text-primary" />
                     </div>
                     {service.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
+                  </StandardCardTitle>
+                </StandardCardHeader>
+                <StandardCardContent>
                   <p className="text-secondary">{service.description}</p>
-                </CardContent>
-              </Card>
+                </StandardCardContent>
+              </StandardCard>
             ))}
           </div>
-        </section>
+        </div>
 
         {/* Deliverables */}
-        <section className="mb-16">
+        <div className="mt-16">
           <h2 className="font-mono text-2xl font-bold mb-8">Monthly Deliverables</h2>
           <div className="space-y-3">
             {deliverables.map((item, index) => (
@@ -117,10 +118,10 @@ const Fractional = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
         {/* Timeline */}
-        <section className="mb-16">
+        <div className="mt-16">
           <h2 className="font-mono text-2xl font-bold mb-8">How It Works</h2>
           <div className="space-y-6">
             {timeline.map((phase, index) => (
@@ -147,20 +148,20 @@ const Fractional = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
         {/* Pricing */}
-        <section className="mb-16">
+        <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="font-mono text-2xl font-bold mb-2">Monthly Retainer</h2>
             <p className="text-3xl font-bold text-primary mb-2">From $5,000</p>
             <p className="text-muted-foreground">Depends on scope and complexity</p>
           </div>
-        </section>
+        </div>
 
         {/* Prerequisites */}
-        <section className="mb-16">
+        <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8">
             <h2 className="font-mono text-xl font-bold mb-4">Requirements</h2>
             <ul className="space-y-2 text-muted-foreground">
@@ -182,9 +183,8 @@ const Fractional = () => {
               </li>
             </ul>
           </div>
-        </section>
-
-      </div>
+        </div>
+      </Section>
     </div>
   );
 };

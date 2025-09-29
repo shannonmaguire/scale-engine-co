@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
+import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import { Search, Zap, RotateCcw, ArrowRight } from "lucide-react";
 const Services = () => {
@@ -34,10 +35,10 @@ const Services = () => {
     cta: "Explore Retainer",
     link: "/fractional"
   }];
-  return <div className="min-h-screen section-spacing">
-      <div className="container mx-auto px-6">
+  return <div className="min-h-screen">
+      <Section>
         {/* Hero */}
-        <div className="text-center section-spacing-half max-w-3xl mx-auto">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="system-status mb-6">
             SYSTEM READY
           </div>
@@ -54,19 +55,19 @@ const Services = () => {
         <div className="space-y-16">
           {services.map((service, index) => <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                <Card className="bg-white border-2 border-border hover:border-primary transition-colors h-full">
-                  <CardHeader className="pb-6">
+                <StandardCard equalHeight>
+                  <StandardCardHeader>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                         <service.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="heading-subsection text-primary">{service.title}</CardTitle>
+                        <StandardCardTitle className="text-primary">{service.title}</StandardCardTitle>
                         <p className="text-secondary italic">{service.tagline}</p>
                       </div>
                     </div>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
+                  </StandardCardHeader>
+                  <StandardCardContent className="space-y-6">
                     <p className="text-foreground leading-relaxed">
                       {service.description}
                     </p>
@@ -103,14 +104,14 @@ const Services = () => {
                       </div>
                     </div>
                     
-                    <Button asChild className="w-full btn-console">
+                    <Button asChild className="w-full">
                       <Link to={service.link}>
                         {service.cta}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
-                  </CardContent>
-                </Card>
+                  </StandardCardContent>
+                </StandardCard>
               </div>
               
               <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
@@ -126,17 +127,18 @@ const Services = () => {
               </div>
             </div>)}
         </div>
+      </Section>
 
+      <Section>
         {/* Process Flow */}
-        <section className="section-spacing">
-          <div className="text-center section-spacing-half">
-            <h2 className="heading-section mb-4">The Complete System</h2>
-            <p className="text-description">
-              How our services work together to transform your revenue operations
-            </p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="heading-section mb-4">The Complete System</h2>
+          <p className="text-description">
+            How our services work together to transform your revenue operations
+          </p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto mb-4 text-xl font-bold">
@@ -168,10 +170,8 @@ const Services = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
-
-      </div>
+        </div>
+      </Section>
     </div>;
 };
 export default Services;
