@@ -112,23 +112,32 @@ const Proof = () => {
   }, [emblaApi, onSelect]);
   return <div className="min-h-screen bg-white">
       {/* Header */}
-      <section className="py-16 px-6 border-b-2 border-border">
+      <section className="section-spacing-half px-6 border-b-2 border-border">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div>
-              
+              <div className="inline-flex items-center gap-3 mb-6">
+                <div className="system-status">
+                  Case Studies
+                </div>
+              </div>
               <h1 className="heading-page text-primary">Proof of Execution</h1>
             </div>
-            <div className="hidden md:flex items-center gap-3 text-sm font-mono">
-              
-              
+            <div className="hidden md:flex items-center gap-3">
+              <div className="system-monitor">
+                <span>4 Deployments</span>
+              </div>
+              <div className="h-6 w-px bg-border" />
+              <div className="system-monitor">
+                <span>100% Success</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Carousel */}
-      <section className="relative py-20 bg-card">
+      <section className="relative section-spacing bg-card">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {caseStudies.map(study => <div key={study.id} className="flex-[0_0_100%] min-w-0">
@@ -320,20 +329,7 @@ const Proof = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-primary text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading-section mb-6 text-white">
-            Clean data. Clear ownership. Feedback loops that close.
-          </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Four deployments. Zero failures. Let's build yours.
-          </p>
-          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-mono font-bold uppercase">
-            <Link to="/contact">Book Assessment</Link>
-          </Button>
-        </div>
-      </section>
+      {/* CTA - Removed in favor of Footer CTA */}
     </div>;
 };
 export default Proof;

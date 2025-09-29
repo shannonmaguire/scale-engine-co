@@ -42,7 +42,7 @@ const Home = () => {
   const diagnosticDeliverables = ["Revenue Infrastructure Scorecard tech, ops, pipeline", "Benchmarks against peers", "90 day roadmap with priority fixes", "Executive readout with leadership"];
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative section-spacing overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -77,10 +77,14 @@ const Home = () => {
       </section>
 
       {/* The System Section */}
-      <section id="system" className="py-20 bg-muted/30">
+      <section id="system" className="section-spacing bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="system-status">
+                System Modules
+              </div>
+            </div>
             <h2 className="heading-section">How We Work</h2>
           </div>
           
@@ -117,7 +121,7 @@ const Home = () => {
       </section>
 
       {/* Before and After Section */}
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -153,10 +157,34 @@ const Home = () => {
             </div>
             
             <div className="lg:pl-12">
-              <div className="console-card bg-card border-2 border-accent-data p-8 text-center">
-                <BarChart3 className="w-16 h-16 accent-data mx-auto mb-4" />
-                <h3 className="heading-subsection mb-2">Revenue System</h3>
-                <p className="text-muted-foreground font-mono text-sm">Transparent, predictable, scalable</p>
+              <div className="diagnostic-panel">
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-2 mb-6">
+                    <div className="w-3 h-3 bg-accent-data rounded-full animate-pulse" />
+                    <span className="font-mono text-xs uppercase tracking-wider text-accent-data">
+                      System Health
+                    </span>
+                  </div>
+                  <BarChart3 className="w-16 h-16 accent-data mx-auto mb-4" />
+                  <h3 className="heading-subsection mb-2">Revenue System</h3>
+                  <p className="text-muted-foreground font-mono text-sm mb-6">Transparent, predictable, scalable</p>
+                  
+                  {/* Inline metrics */}
+                  <div className="grid grid-cols-3 gap-4 mt-6">
+                    <div className="metric-display">
+                      <div className="text-2xl font-bold accent-data">98%</div>
+                      <div className="text-xs text-muted-foreground">UPTIME</div>
+                    </div>
+                    <div className="metric-display">
+                      <div className="text-2xl font-bold accent-data">4x</div>
+                      <div className="text-xs text-muted-foreground">EFFICIENCY</div>
+                    </div>
+                    <div className="metric-display">
+                      <div className="text-2xl font-bold accent-data">100%</div>
+                      <div className="text-xs text-muted-foreground">ADOPTION</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -164,7 +192,7 @@ const Home = () => {
       </section>
 
       {/* Meet You Where You Are Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="section-spacing bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
@@ -226,7 +254,7 @@ const Home = () => {
       </section>
 
       {/* Assessment Details Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="section-spacing">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -251,15 +279,25 @@ const Home = () => {
               </div>
               
               <div className="relative">
-                <div className="console-card bg-card border border-border p-8 shadow-lg">
+                <div className="diagnostic-panel">
                   <div className="space-y-4">
-                    <div className="h-3 bg-muted w-3/4" />
-                    <div className="h-3 bg-muted w-1/2" />
-                    <div className="h-16 bg-muted" />
-                    <div className="grid grid-cols-3 gap-2">
-                      <div className="h-8 bg-primary/20" />
-                      <div className="h-8 bg-primary/20" />
-                      <div className="h-8 bg-primary/20" />
+                    <div className="terminal-prompt">Diagnostic Output</div>
+                    <div className="h-3 bg-muted w-3/4 rounded" />
+                    <div className="h-3 bg-muted w-1/2 rounded" />
+                    <div className="inline-graph my-4" />
+                    <div className="grid grid-cols-3 gap-2 mt-4">
+                      <div className="metric-display">
+                        <div className="text-lg font-bold accent-data">87</div>
+                        <div className="text-xs">SCORE</div>
+                      </div>
+                      <div className="metric-display">
+                        <div className="text-lg font-bold accent-data">12</div>
+                        <div className="text-xs">GAPS</div>
+                      </div>
+                      <div className="metric-display">
+                        <div className="text-lg font-bold accent-data">90d</div>
+                        <div className="text-xs">ROADMAP</div>
+                      </div>
                     </div>
                   </div>
                   <div className="absolute -top-2 -right-2 system-badge bg-primary text-primary-foreground">
@@ -273,10 +311,14 @@ const Home = () => {
       </section>
 
       {/* Proof Section */}
-      <section className="py-20">
+      <section className="section-spacing bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
-            
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="system-status">
+                Performance Metrics
+              </div>
+            </div>
             <h2 className="heading-section">Results That Matter</h2>
           </div>
           
@@ -296,14 +338,14 @@ const Home = () => {
       </section>
 
       {/* Infrastructure for High-Trust Industries */}
-      <section className="py-20 bg-muted/30">
+      <section className="section-spacing">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="heading-section mb-6">
-              Revenue Infrastructure for High-Trust Industries
+              Revenue Infrastructure for Complex Industries
             </h2>
             <p className="text-description mb-8">
-              Healthcare, cybersecurity, law, compliance—industries where relationships matter and buying cycles are complex. We build the backend that compounds success, not friction.
+              Healthcare, cybersecurity, law, compliance—industries where relationships matter and buying cycles are long. We build the backend that compounds success, not friction.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -318,20 +360,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 max-w-7xl text-center">
-          <h2 className="heading-section mb-6">
-            Clean data. Clear ownership. Feedback loops that close.
-          </h2>
-          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 px-8 py-4 font-mono text-sm font-bold uppercase tracking-wider transition-all duration-150 shadow-sm hover:shadow-md">
-            <Link to="/contact">
-              Book Assessment
-              <Zap className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+      {/* Final CTA - Removed in favor of Footer CTA */}
     </div>;
 };
 export default Home;

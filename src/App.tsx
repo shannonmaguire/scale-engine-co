@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import LoadingScreen from "@/components/LoadingScreen";
+import Footer from "@/components/Footer";
 import Home from "@/pages/Home";
 import Sprint from "@/pages/Sprint";
 import Contact from "@/pages/Contact";
@@ -79,6 +80,7 @@ const App = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
+          <Footer />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
