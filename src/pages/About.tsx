@@ -24,9 +24,7 @@ const About = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="console-line mx-auto mb-4 w-fit">
-            <span className="text-label">About</span>
-          </div>
+          
           <h1 className="heading-page mb-6">
             Built for Operators
           </h1>
