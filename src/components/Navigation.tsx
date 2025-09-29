@@ -3,8 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, X, ChevronDown } from "lucide-react";
-import cwtLogoMark from "@/assets/cwt-logo-mark.svg";
-import cwtLogoHorizontal from "@/assets/cwt-logo-horizontal.svg";
+import cwtLogo from "@/assets/cwt-logo-new.png";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -36,11 +35,7 @@ const Navigation = () => {
           {/* CWT Studio Official Logo */}
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity group">
             <div className="relative">
-              <img src={cwtLogoMark} alt="CWT Studio - Revenue Systems Consulting" className="h-12 w-12 transition-transform group-hover:scale-105" />
-            </div>
-            <div className="hidden sm:block">
-              
-              
+              <img src={cwtLogo} alt="CWT Studio - Revenue Systems Consulting" className="h-10 w-auto transition-transform group-hover:scale-105" />
             </div>
           </Link>
 
