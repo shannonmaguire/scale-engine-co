@@ -8,91 +8,100 @@
 
 @layer base {
   :root {
-    /* CWT Studio Design System - Operator Console Aesthetic */
+    /* CWT Studio Brand Design System - B2B Operator Aesthetic */
+    /* STRICT COLOR DISCIPLINE: Only brand palette colors allowed */
     
-    /* Base Surfaces - Pure white canvas, cool technical elevation */
-    --background: 0 0% 100%;           /* Pure white - clean canvas */
-    --foreground: 207 100% 9%;         /* Navy #0D1F2D - body text */
-
-    --card: 214 32% 97%;               /* Cool Off-White #F5F7FA - elevated surfaces */
-    --card-foreground: 207 100% 9%;    /* Navy text */
-
-    --popover: 0 0% 100%;              /* White */
-    --popover-foreground: 207 100% 9%;
-
-    /* Brand Colors - Strategic use */
-    --primary: 327 82% 31%;            /* Burgundy #681038 - headers, CTAs */
-    --primary-foreground: 0 0% 100%;   /* White text */
-
-    --secondary: 200 15% 45%;          /* Slate Blue #546E7A - technical secondary */
-    --secondary-foreground: 0 0% 100%; /* White text */
-
-    /* Muted = Cool off-white backgrounds + Slate Blue text */
-    --muted: 214 32% 97%;              /* Cool off-white for muted backgrounds */
-    --muted-foreground: 200 15% 45%;   /* Slate Blue - industrial, technical */
-
-    --accent: 235 94% 76%;             /* Accent Blue #8390FA - interactive */
-    --accent-foreground: 0 0% 100%;    /* White text */
-
-    --destructive: 0 84% 60%;          /* Red for destructive */
-    --destructive-foreground: 0 0% 100%;
-
-    /* Borders - Charcoal-based, industrial */
-    --border: 200 10% 35%;             /* Charcoal #37474F - sharp, technical */
-    --input: 200 12% 50%;              /* Lighter charcoal for inputs */
-    --ring: 327 82% 31%;               /* Burgundy focus rings */
+    /* Brand Palette - Core Colors */
+    --tyrian-purple: 327 82% 31%;      /* #681038 - Primary brand, authority */
+    --navy: 207 100% 9%;               /* #0D1F2D - Foundation, text */
+    --berkeley-blue: 208 55% 26%;      /* #12355B - Secondary actions, depth */
+    --deep-green: 145 21% 43%;         /* #558564 - Success, validation */
+    --periwinkle: 235 94% 76%;         /* #8390FA - Interactive, links */
+    --orange-accent: 19 100% 52%;      /* #FF570A - Urgent actions, alerts */
+    --battleship-gray: 50 5% 51%;      /* #82816D - Neutral, secondary text */
+    --linen: 39 100% 97%;              /* #FEF5E9 - Elevated surfaces */
+    --white: 0 0% 100%;                /* #FFFFFF - Base canvas */
     
-    /* Status Colors */
-    --status-positive: 142 76% 36%;    /* Green */
-    --status-negative: 0 84% 60%;      /* Red */
-    --status-neutral: 207 100% 9%;     /* Navy */
-    --status-new: 235 94% 76%;         /* Blue */
+    /* Semantic Token Mapping - Using ONLY brand palette */
+    --background: var(--white);
+    --foreground: var(--navy);
 
-    --radius: 0.25rem;                 /* Sharp corners for console aesthetic */
+    --card: var(--linen);              /* Linen for elevated surfaces */
+    --card-foreground: var(--navy);
 
-    /* Console Design Elements - No blueprint, pure functional */
-    --console-grid: linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px),
-                    linear-gradient(hsl(var(--border)) 1px, transparent 1px);
+    --popover: var(--white);
+    --popover-foreground: var(--navy);
+
+    --primary: var(--tyrian-purple);   /* Authority, main CTAs */
+    --primary-foreground: var(--white);
+
+    --secondary: var(--berkeley-blue);  /* Secondary actions, headers */
+    --secondary-foreground: var(--white);
+
+    --muted: var(--linen);             /* Muted backgrounds */
+    --muted-foreground: var(--battleship-gray); /* Secondary text */
+
+    --accent: var(--periwinkle);       /* Interactive elements */
+    --accent-foreground: var(--navy);
+
+    --destructive: var(--orange-accent); /* Destructive/urgent actions */
+    --destructive-foreground: var(--white);
+
+    --border: 50 5% 51% / 0.3;         /* Battleship Gray at 30% opacity */
+    --input: var(--battleship-gray);
+    --ring: var(--tyrian-purple);
+    
+    /* Status Colors - Brand palette only */
+    --status-positive: var(--deep-green);    /* Success */
+    --status-negative: var(--orange-accent); /* Error/urgent */
+    --status-neutral: var(--berkeley-blue);  /* Info */
+    --status-new: var(--periwinkle);         /* New/highlight */
+
+    --radius: 0.25rem;
+
+    /* Console Design Elements */
+    --console-grid: linear-gradient(90deg, hsl(var(--battleship-gray) / 0.15) 1px, transparent 1px),
+                    linear-gradient(hsl(var(--battleship-gray) / 0.15) 1px, transparent 1px);
     --console-grid-size: 20px 20px;
     
-    /* Typography system - Terminal/Console */
+    /* Typography system */
     --font-mono: 'JetBrains Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     
-    /* Animation variables - Snappy, no bounce */
+    /* Animation variables */
     --transition-console: all 0.15s ease-out;
     --transition-slow: all 0.3s ease-out;
   }
 
   .dark {
-    /* Dark mode - Navy background, cool off-white text, operator aesthetic */
-    --background: 207 100% 9%;         /* Navy #0D1F2D */
-    --foreground: 214 32% 97%;         /* Cool off-white */
+    /* Dark mode - Navy background with brand palette */
+    --background: var(--navy);
+    --foreground: var(--linen);
 
-    --card: 207 90% 12%;               /* Lighter navy for elevation */
-    --card-foreground: 214 32% 97%;
+    --card: 207 90% 12%;               /* Slightly lighter navy for elevation */
+    --card-foreground: var(--linen);
 
-    --popover: 207 100% 9%;
-    --popover-foreground: 214 32% 97%;
+    --popover: var(--navy);
+    --popover-foreground: var(--linen);
 
-    --primary: 327 82% 41%;            /* Lighter Burgundy for visibility */
-    --primary-foreground: 0 0% 100%;
+    --primary: 327 82% 45%;            /* Slightly lighter Tyrian Purple */
+    --primary-foreground: var(--white);
 
-    --secondary: 200 15% 55%;          /* Lighter Slate Blue */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 208 55% 35%;          /* Lighter Berkeley Blue */
+    --secondary-foreground: var(--white);
 
-    --muted: 207 90% 12%;              /* Lighter navy backgrounds */
-    --muted-foreground: 200 15% 65%;   /* Lighter slate blue - technical */
+    --muted: 207 90% 12%;
+    --muted-foreground: 50 5% 65%;     /* Lighter Battleship Gray */
 
-    --accent: 235 94% 80%;             /* Brighter blue */
-    --accent-foreground: 207 100% 9%;
+    --accent: 235 94% 80%;             /* Brighter Periwinkle */
+    --accent-foreground: var(--navy);
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 19 100% 60%;        /* Slightly lighter Orange */
+    --destructive-foreground: var(--white);
 
-    --border: 200 10% 45%;             /* Lighter charcoal border */
-    --input: 200 12% 55%;
-    --ring: 327 82% 41%;
+    --border: 50 5% 51% / 0.4;         /* Battleship Gray at 40% opacity */
+    --input: 50 5% 65%;
+    --ring: 327 82% 45%;
   }
 }
 
