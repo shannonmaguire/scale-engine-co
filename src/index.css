@@ -8,62 +8,76 @@
 
 @layer base {
   :root {
-    /* MUTED OPERATOR Design System - 5-Color Precision */
-    /* Tyrian Purple | Muted Gray | Light Gray | Very Light Gray | Dark Forest Green */
+    /* ===== 9-COLOR PROFESSIONAL SYSTEM ===== */
+    /* Every color has a strategic purpose */
     
-    /* Core Palette - Strategic 5-Color System */
-    --tyrian-purple: 327 82% 31%;      /* #681038 - Primary actions, brand */
-    --muted-gray: 240 5% 62%;          /* #9999A1 - Borders, labels */
-    --light-gray: 240 8% 91%;          /* #E6E6E9 - Main background */
-    --very-light-gray: 240 13% 96%;    /* #F4F4F6 - Cards, elevated surfaces */
-    --forest-green: 144 27% 15%;       /* #1B3022 - Hero sections, headers */
+    /* Core Brand Colors */
+    --burgundy: 327 82% 31%;             /* #681038 - Primary/Conversion CTAs */
+    --forest: 135 27% 15%;               /* #1B3022 - Authority/Navigation */
+    --deep-black: 0 0% 0%;               /* #010400 - All Text */
     
-    /* Extended Palette - Status & Utility */
-    --pure-white: 0 0% 100%;           /* #FFFFFF - High contrast elements */
-    --pure-black: 0 0% 0%;             /* #000000 - ALL TEXT */
-    --teal-accent: 184 26% 41%;        /* #548687 - Data visualization, insights */
-    --success-green: 158 64% 52%;      /* #10B981 - Success states */
-    --warning-amber: 38 92% 50%;       /* #F59E0B - Warnings, pending */
-    --error-red: 0 84% 60%;            /* #EF4444 - Errors, destructive */
+    /* Data & Intelligence Colors */
+    --teal: 184 23% 42%;                 /* #548687 - Data/Analyst/Charts */
+    --yellow-green: 75 100% 90%;         /* #F0FFCE - Spotlight/Success */
     
-    /* Semantic Mapping - Muted Operator */
-    --background: var(--light-gray);
-    --foreground: var(--pure-black);
+    /* Warm & Supporting Colors */
+    --warm-tan: 47 27% 71%;              /* #CCC9A1 - Differentiator/Warmth */
+    --muted-gray: 240 3% 61%;            /* #9999A1 - Supporting/Secondary */
+    
+    /* Surface Colors */
+    --gray-very-light: 240 20% 96%;      /* #F4F4F6 - Elevation/Cards */
+    --gray-light: 240 9% 90%;            /* #E6E6E9 - Foundation/Background */
+    
+    /* ===== SEMANTIC TOKEN MAPPINGS ===== */
+    
+    /* Backgrounds & Surfaces */
+    --background: var(--gray-light);
+    --foreground: var(--deep-black);
 
-    --card: var(--very-light-gray);
-    --card-foreground: var(--pure-black);
+    --card: var(--gray-very-light);
+    --card-foreground: var(--deep-black);
 
-    --popover: var(--very-light-gray);
-    --popover-foreground: var(--pure-black);
+    --popover: var(--gray-very-light);
+    --popover-foreground: var(--deep-black);
 
-    --primary: var(--tyrian-purple);
-    --primary-foreground: var(--pure-white);
+    /* Primary Actions - Burgundy for conversion */
+    --primary: var(--burgundy);
+    --primary-foreground: 0 0% 100%;
 
+    /* Secondary Actions - Muted Gray for supporting */
     --secondary: var(--muted-gray);
-    --secondary-foreground: var(--pure-black);
+    --secondary-foreground: 0 0% 100%;
 
+    /* Muted Elements */
     --muted: var(--muted-gray);
-    --muted-foreground: var(--pure-black);
+    --muted-foreground: var(--deep-black);
 
-    --accent: var(--tyrian-purple);
-    --accent-foreground: var(--pure-white);
+    /* Accent - Teal for data/interaction */
+    --accent: var(--teal);
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: var(--error-red);
-    --destructive-foreground: var(--pure-white);
+    /* Success/Highlight - Yellow-Green */
+    --success: var(--yellow-green);
+    --success-foreground: var(--deep-black);
+
+    /* Warmth - Tan for alternating sections */
+    --warm: var(--warm-tan);
+    --warm-foreground: var(--deep-black);
+
+    /* Authority - Forest Green for navigation */
+    --authority: var(--forest);
+    --authority-foreground: 0 0% 100%;
+
+    /* Data Accent - Teal for charts/metrics */
+    --accent-data: var(--teal);
+    --accent-data-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: var(--muted-gray);
-    --input: var(--muted-gray);
-    --ring: var(--tyrian-purple);
-    
-    /* Status System - Operator UI */
-    --status-positive: var(--success-green);
-    --status-negative: var(--error-red);
-    --status-neutral: var(--teal-accent);
-    --status-warning: var(--warning-amber);
-    
-    /* Data Visualization Accent */
-    --accent-data: var(--teal-accent);
-    --accent-data-foreground: var(--pure-white);
+    --input: var(--gray-very-light);
+    --ring: var(--burgundy);
 
     --radius: 0.375rem;
 
@@ -82,34 +96,43 @@
   }
 
   .dark {
-    /* Dark mode - Forest Green theme */
-    --background: var(--forest-green);
-    --foreground: var(--pure-white);
+    /* Dark mode using all 9 colors */
+    --background: var(--forest);
+    --foreground: 0 0% 100%;
 
-    --card: var(--very-light-gray);
-    --card-foreground: var(--pure-black);
+    --card: var(--forest);
+    --card-foreground: 0 0% 100%;
 
-    --popover: var(--very-light-gray);
-    --popover-foreground: var(--pure-black);
+    --popover: var(--forest);
+    --popover-foreground: 0 0% 100%;
 
-    --primary: var(--tyrian-purple);
-    --primary-foreground: var(--pure-white);
+    --primary: var(--burgundy);
+    --primary-foreground: 0 0% 100%;
 
     --secondary: var(--muted-gray);
-    --secondary-foreground: var(--pure-white);
+    --secondary-foreground: 0 0% 100%;
 
     --muted: var(--muted-gray);
-    --muted-foreground: var(--pure-white);
+    --muted-foreground: 0 0% 80%;
 
-    --accent: var(--tyrian-purple);
-    --accent-foreground: var(--pure-white);
+    --accent: var(--teal);
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: var(--error-red);
-    --destructive-foreground: var(--pure-white);
+    --success: var(--yellow-green);
+    --success-foreground: var(--deep-black);
+
+    --warm: var(--warm-tan);
+    --warm-foreground: var(--deep-black);
+
+    --authority: var(--forest);
+    --authority-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: var(--muted-gray);
-    --input: var(--muted-gray);
-    --ring: var(--tyrian-purple);
+    --input: var(--forest);
+    --ring: var(--burgundy);
   }
 }
 
@@ -281,7 +304,9 @@
     font-variant-numeric: tabular-nums;
   }
   
-  /* Data Accent Utilities - Teal for metrics/insights only */
+  /* ===== UTILITY CLASSES - ALL 9 COLORS ===== */
+
+  /* Teal - Data/Analyst */
   .accent-data {
     @apply text-[hsl(var(--accent-data))];
   }
@@ -298,12 +323,71 @@
     background-color: hsl(var(--accent-data) / 0.1);
   }
   
-  /* Stat block with data accent */
+  /* Yellow-Green - Success/Spotlight */
+  .text-success {
+    @apply text-[hsl(var(--success-foreground))];
+  }
+  
+  .bg-success {
+    @apply bg-[hsl(var(--success))];
+  }
+  
+  .bg-success\/10 {
+    background-color: hsl(var(--success) / 0.1);
+  }
+  
+  .border-success {
+    @apply border-[hsl(var(--success))];
+  }
+  
+  /* Warm Tan - Differentiator */
+  .text-warm {
+    @apply text-[hsl(var(--warm-foreground))];
+  }
+  
+  .bg-warm {
+    @apply bg-[hsl(var(--warm))];
+  }
+  
+  .bg-warm\/10 {
+    background-color: hsl(var(--warm) / 0.1);
+  }
+  
+  .border-warm {
+    @apply border-[hsl(var(--warm))];
+  }
+  
+  /* Forest Green - Authority */
+  .text-authority {
+    @apply text-[hsl(var(--authority-foreground))];
+  }
+  
+  .bg-authority {
+    @apply bg-[hsl(var(--authority))];
+  }
+  
+  .bg-authority\/90 {
+    background-color: hsl(var(--authority) / 0.9);
+  }
+  
+  .border-authority {
+    @apply border-[hsl(var(--authority))];
+  }
+  
+  /* Stat block variants with new colors */
   .stat-block-data {
     @apply stat-block border-l-4 border-accent-data;
   }
   
   .stat-number-data {
     @apply stat-number accent-data;
+  }
+  
+  .stat-block-success {
+    @apply stat-block border-l-4 border-success;
+  }
+  
+  .stat-block-warm {
+    @apply stat-block border-l-4 border-warm;
   }
 }
