@@ -39,7 +39,7 @@ const Systems = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32">
+      <section className="section-spacing">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <div className="console-line mx-auto mb-4 w-fit">
@@ -57,7 +57,7 @@ const Systems = () => {
       </section>
 
       {/* Outbound Automation v1 */}
-      <section className="py-20 bg-muted/30">
+      <section className="section-spacing bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -160,7 +160,7 @@ const Systems = () => {
       </section>
 
       {/* System Demo */}
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="heading-section mb-4">See It In Action</h2>

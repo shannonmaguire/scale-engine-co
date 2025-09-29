@@ -20,10 +20,13 @@ const About = () => {
     title: "Taste",
     description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
   }];
-  return <div className="min-h-screen py-20">
+  return <div className="min-h-screen section-spacing">
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
-        <div className="text-center mb-16">
+        <div className="text-center section-spacing-half">
+          <div className="system-status mb-6">
+            OPERATOR FOCUS
+          </div>
           
           <h1 className="heading-page mb-6">
             Built for Operators
@@ -34,13 +37,8 @@ const About = () => {
           </p>
         </div>
 
-        {/* Founder Bio */}
-        <section className="mb-16">
-          
-        </section>
-
         {/* Values */}
-        <section className="mb-16">
+        <section className="section-spacing-half">
           <div className="text-center mb-12">
             <h2 className="font-mono text-3xl font-bold mb-4">How We Operate</h2>
             <p className="text-xl text-muted-foreground">
@@ -153,23 +151,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="text-center">
-          <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="heading-section mb-4">
-              Ready to build systems that scale?
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Let's diagnose what's slowing down your growth.
-            </p>
-            <Button asChild size="lg" className="btn-console">
-              <Link to="/contact">
-                Book Assessment
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
       </div>
     </div>;
 };

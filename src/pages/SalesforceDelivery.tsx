@@ -101,7 +101,7 @@ const SalesforceDelivery = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 section-spacing">
         {/* Navigation */}
         <div className="mb-8">
           <Link to="/salesforce" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
@@ -111,9 +111,8 @@ const SalesforceDelivery = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="mb-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-4 py-2 rounded-full text-sm font-mono mb-6">
-            <Settings className="h-4 w-4" />
+        <section className="section-spacing-half text-center">
+          <div className="system-status mb-6">
             DELIVERY MODEL
           </div>
           <h1 className="font-mono text-4xl md:text-5xl font-bold mb-6">
@@ -257,22 +256,6 @@ const SalesforceDelivery = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="text-center bg-card border border-border rounded-lg p-12">
-          <Settings className="h-12 w-12 mx-auto mb-6 text-primary" />
-          <h2 className="font-mono text-3xl font-bold mb-4">Ready to Transform Your Salesforce?</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Experience the difference of revenue-focused Salesforce optimization with enterprise-grade delivery.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link to="/contact">Get Started</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/salesforce/partners">Explore Partnerships</Link>
-            </Button>
-          </div>
-        </section>
       </main>
     </div>
   );

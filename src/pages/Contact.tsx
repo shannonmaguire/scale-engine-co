@@ -27,12 +27,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen section-spacing">
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
-        <div className="text-center mb-16">
-          <div className="console-line mx-auto mb-4 w-fit">
-            <span className="text-xs text-muted-foreground uppercase tracking-wider font-mono">Contact</span>
+        <div className="text-center section-spacing-half">
+          <div className="system-status mb-6">
+            INTAKE READY
           </div>
           <h1 className="heading-page mb-6">
             Get Started
@@ -45,7 +45,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card className="console-card bg-white border-2 border-border">
+            <Card className="diagnostic-panel bg-white border-2 border-border">
               <CardHeader>
                 <CardTitle className="heading-subsection text-primary">Get Started</CardTitle>
               </CardHeader>
@@ -127,7 +127,7 @@ const Contact = () => {
 
             {/* Auto Scheduler Placeholder */}
             <div className="mt-8">
-              <Card className="console-card bg-white border-2 border-border">
+              <Card className="diagnostic-panel bg-white border-2 border-border">
                 <CardHeader>
                   <CardTitle className="font-mono text-xl flex items-center gap-2 text-primary">
                     <Clock className="w-5 h-5 text-primary" />

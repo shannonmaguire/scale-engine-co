@@ -88,10 +88,13 @@ const SampleReport = () => {
         return "text-muted-foreground";
     }
   };
-  return <div className="min-h-screen py-20">
+  return <div className="min-h-screen section-spacing">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Hero */}
-        <div className="text-center mb-16">
+        <div className="text-center section-spacing-half">
+          <div className="system-status mb-6">
+            ASSESSMENT COMPLETE
+          </div>
           
           <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Revenue Infrastructure Assessment
@@ -279,30 +282,6 @@ const SampleReport = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="text-center">
-          <div className="bg-card border border-border rounded-lg p-8">
-            <FileText className="w-12 w-12 mx-auto mb-6 text-primary" />
-            <h2 className="font-mono text-2xl font-bold mb-4">
-              Get Your Own Assessment
-            </h2>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              This is what clarity looks like. See exactly where your revenue system 
-              needs attention and get a prioritized plan to fix it.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="btn-console">
-                <Link to="/contact">
-                  Book Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/services">Learn More</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>;
 };

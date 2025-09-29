@@ -52,7 +52,7 @@ const SalesforcePartners = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Letter Header */}
-      <section className="py-16 bg-muted/30">
+      <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
@@ -77,7 +77,7 @@ const SalesforcePartners = () => {
       </section>
 
       {/* Common Objections */}
-      <section className="py-16">
+      <section className="section-spacing-half">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Objections You're Probably Hearing</h2>
@@ -107,7 +107,7 @@ const SalesforcePartners = () => {
       </section>
 
       {/* Deal Killers */}
-      <section className="py-16 bg-muted/30">
+      <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">When to Bring Us In</h2>
@@ -136,7 +136,7 @@ const SalesforcePartners = () => {
       </section>
 
       {/* How We Work */}
-      <section className="py-16">
+      <section className="section-spacing-half">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Our Process (No 18-Month Projects)</h2>
@@ -171,7 +171,7 @@ const SalesforcePartners = () => {
       </section>
 
       {/* AE Resources */}
-      <section className="py-16 bg-muted/30">
+      <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Resources for Your Deals</h2>
@@ -203,7 +203,7 @@ const SalesforcePartners = () => {
       </section>
 
       {/* Technical Collaboration Process */}
-      <section className="py-16">
+      <section className="section-spacing-half">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Technical Collaboration Process</h2>

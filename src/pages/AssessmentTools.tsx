@@ -89,7 +89,7 @@ const AssessmentTools = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <section className="py-16 bg-muted/30">
+      <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
@@ -135,7 +135,7 @@ const AssessmentTools = () => {
       </section>
 
       {/* Tools Grid */}
-      <section className="py-16">
+      <section className="section-spacing-half">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">

@@ -65,10 +65,13 @@ const Salesforce = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-muted/30">
+      <section className="section-spacing bg-card border-b border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+            <div className="system-status mb-6">
+              PLATFORM OPTIMIZATION
+            </div>
+            <h1 className="heading-page mb-6">
               Salesforce Revenue Systems
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -93,10 +96,10 @@ const Salesforce = () => {
       </section>
 
       {/* Services */}
-      <section className="py-16">
+      <section className="section-spacing-half">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Revenue Systems for Salesforce</h2>
+          <div className="text-center section-spacing-quarter">
+            <h2 className="heading-section mb-4">Revenue Systems for Salesforce</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Diagnostic-driven implementations that make Salesforce work harder for your revenue team
             </p>
@@ -132,7 +135,7 @@ const Salesforce = () => {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-muted/30">
+      <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -155,7 +158,7 @@ const Salesforce = () => {
       </section>
 
       {/* Process */}
-      <section className="py-16">
+      <section className="section-spacing-half">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">How We Work</h2>
@@ -183,30 +186,6 @@ const Salesforce = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Salesforce?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Start with a free assessment to identify your biggest opportunities for improvement
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Schedule Free Assessment
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link to="/salesforce/partners">
-                  For Salesforce AEs
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

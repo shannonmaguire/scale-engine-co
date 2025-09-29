@@ -384,7 +384,7 @@ const BlogPost = () => {
       </header>
 
       {/* Article */}
-      <article className="container mx-auto px-6 py-12 max-w-4xl">
+      <article className="container mx-auto px-6 section-spacing-half max-w-4xl">
         {/* Article Header */}
         <header className="mb-12">
           <div className="flex flex-wrap gap-2 mb-6">
@@ -456,7 +456,7 @@ const BlogPost = () => {
 
       {/* Related Articles CTA */}
       <section className="bg-muted/30 border-t border-border">
-        <div className="container mx-auto px-6 py-16">
+        <div className="container mx-auto px-6 section-spacing-half">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-mono font-bold text-foreground mb-4">
               More Revenue Systems Insights

@@ -84,7 +84,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Streamlined Masthead */}
-      <section className="bg-background border-b-2 border-primary/30">
+      <section className="bg-background border-b-2 border-primary/30 section-spacing-quarter">
         <div className="container mx-auto px-6 py-10">
           <div className="text-center border-b border-border/50 pb-6 mb-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black text-foreground tracking-tight">
@@ -150,7 +150,7 @@ const Blog = () => {
 
       {/* Featured Article */}
       {featuredPost && selectedCategory === "All" && !searchTerm && (
-        <section className="container mx-auto px-6 py-16 border-b border-border">
+        <section className="container mx-auto px-6 section-spacing-half border-b border-border">
           <div className="mb-8">
             <div className="flex items-center gap-4 mb-4">
               <div className="h-px bg-primary/50 flex-1"></div>
@@ -238,7 +238,7 @@ const Blog = () => {
       )}
 
       {/* Editorial Sections */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-6 section-spacing-half">
         {/* Section Groups by Category */}
         {categories.filter(cat => cat !== 'All').map(category => {
           const categoryPosts = regularPosts.filter(post => 

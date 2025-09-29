@@ -61,12 +61,12 @@ const Sprint = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen section-spacing">
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Hero */}
-        <div className="text-center mb-16">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">Sprint</span>
+        <div className="text-center section-spacing-half">
+          <div className="system-status mb-6">
+            SPRINT READY
           </div>
           <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Revenue Sprint
@@ -182,23 +182,6 @@ const Sprint = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="text-center">
-          <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-mono text-2xl font-bold mb-4">
-              Ready to install your revenue system?
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              Let's build the infrastructure that scales with your growth.
-            </p>
-            <Button asChild size="lg" className="btn-console">
-              <Link to="/contact">
-                Plan Your Sprint
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );

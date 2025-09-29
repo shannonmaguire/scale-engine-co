@@ -34,10 +34,13 @@ const Services = () => {
     cta: "Explore Retainer",
     link: "/fractional"
   }];
-  return <div className="min-h-screen py-20">
+  return <div className="min-h-screen section-spacing">
       <div className="container mx-auto px-6">
         {/* Hero */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="text-center section-spacing-half max-w-3xl mx-auto">
+          <div className="system-status mb-6">
+            SYSTEM READY
+          </div>
           
           <h1 className="heading-page mb-6">
             Revenue Systems That Scale
@@ -125,8 +128,8 @@ const Services = () => {
         </div>
 
         {/* Process Flow */}
-        <section className="py-20">
-          <div className="text-center mb-12">
+        <section className="section-spacing">
+          <div className="text-center section-spacing-half">
             <h2 className="heading-section mb-4">The Complete System</h2>
             <p className="text-description">
               How our services work together to transform your revenue operations
@@ -168,21 +171,6 @@ const Services = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <div className="text-center bg-card border border-border rounded-lg p-8">
-          <h2 className="heading-section mb-4">
-            Ready to scale your revenue system?
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Start with an assessment. See exactly what needs to change.
-          </p>
-          <Button asChild size="lg" className="btn-console">
-            <Link to="/contact">
-              Book Assessment
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
       </div>
     </div>;
 };
