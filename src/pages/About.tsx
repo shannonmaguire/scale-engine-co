@@ -81,23 +81,7 @@ const About = () => {
         </section>
 
         {/* Expertise Areas */}
-        <section className="mb-16">
-          <h2 className="heading-section mb-8 text-primary">Expertise Areas</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 bg-white border-2 border-border rounded-lg hover:border-accent transition-colors">
-              <h3 className="font-mono font-bold mb-2 text-primary">Revenue Operations</h3>
-              <p className="text-sm text-secondary">Process, governance, and optimization</p>
-            </div>
-            <div className="text-center p-6 bg-white border-2 border-border rounded-lg hover:border-accent transition-colors">
-              <h3 className="font-mono font-bold mb-2 text-primary">Salesforce Architecture</h3>
-              <p className="text-sm text-secondary">Platform design and integration</p>
-            </div>
-            <div className="text-center p-6 bg-white border-2 border-border rounded-lg hover:border-accent transition-colors">
-              <h3 className="font-mono font-bold mb-2 text-primary">Marketing Technology</h3>
-              <p className="text-sm text-secondary">Automation and attribution</p>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Working with Us */}
         <section className="mb-16">
