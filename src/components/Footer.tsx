@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         {/* Logo + Tagline */}
         <div className="mb-12">
-          <img src={cwtLogo} alt="CWT Studio" className="h-24 w-auto mb-4 brightness-0 invert" />
+          
           <p className="text-white/60 font-mono text-sm max-w-md">
             Revenue infrastructure that compounds
           </p>
