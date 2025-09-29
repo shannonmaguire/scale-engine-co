@@ -8,13 +8,13 @@
 
 @layer base {
   :root {
-    /* CWT Studio Design System - Clean, Branded, No Ugly Grays */
+    /* CWT Studio Design System - Operator Console Aesthetic */
     
-    /* Base Surfaces - Pure white canvas, cream elevation */
+    /* Base Surfaces - Pure white canvas, cool technical elevation */
     --background: 0 0% 100%;           /* Pure white - clean canvas */
     --foreground: 207 100% 9%;         /* Navy #0D1F2D - body text */
 
-    --card: 39 100% 97%;               /* Cream #FEF5E9 - elevated surfaces */
+    --card: 214 32% 97%;               /* Cool Off-White #F5F7FA - elevated surfaces */
     --card-foreground: 207 100% 9%;    /* Navy text */
 
     --popover: 0 0% 100%;              /* White */
@@ -24,12 +24,12 @@
     --primary: 327 82% 31%;            /* Burgundy #681038 - headers, CTAs */
     --primary-foreground: 0 0% 100%;   /* White text */
 
-    --secondary: 148 25% 44%;          /* Deep Green #558564 - secondary text */
+    --secondary: 200 15% 45%;          /* Slate Blue #546E7A - technical secondary */
     --secondary-foreground: 0 0% 100%; /* White text */
 
-    /* Muted = Cream backgrounds + Deep Green text (NOT gray!) */
-    --muted: 39 100% 97%;              /* Cream for muted backgrounds */
-    --muted-foreground: 148 25% 44%;   /* Deep Green instead of ugly gray */
+    /* Muted = Cool off-white backgrounds + Slate Blue text */
+    --muted: 214 32% 97%;              /* Cool off-white for muted backgrounds */
+    --muted-foreground: 200 15% 45%;   /* Slate Blue - industrial, technical */
 
     --accent: 235 94% 76%;             /* Accent Blue #8390FA - interactive */
     --accent-foreground: 0 0% 100%;    /* White text */
@@ -37,9 +37,9 @@
     --destructive: 0 84% 60%;          /* Red for destructive */
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders - Cream-based, not navy! */
-    --border: 39 38% 88%;              /* Cream border #E8D4BE - subtle */
-    --input: 39 25% 78%;               /* Darker cream #D4C4B0 for definition */
+    /* Borders - Charcoal-based, industrial */
+    --border: 200 10% 35%;             /* Charcoal #37474F - sharp, technical */
+    --input: 200 12% 50%;              /* Lighter charcoal for inputs */
     --ring: 327 82% 31%;               /* Burgundy focus rings */
     
     /* Status Colors */
@@ -65,24 +65,24 @@
   }
 
   .dark {
-    /* Dark mode - Navy background, cream text, branded accents */
+    /* Dark mode - Navy background, cool off-white text, operator aesthetic */
     --background: 207 100% 9%;         /* Navy #0D1F2D */
-    --foreground: 39 100% 97%;         /* Cream */
+    --foreground: 214 32% 97%;         /* Cool off-white */
 
     --card: 207 90% 12%;               /* Lighter navy for elevation */
-    --card-foreground: 39 100% 97%;
+    --card-foreground: 214 32% 97%;
 
     --popover: 207 100% 9%;
-    --popover-foreground: 39 100% 97%;
+    --popover-foreground: 214 32% 97%;
 
     --primary: 327 82% 41%;            /* Lighter Burgundy for visibility */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 148 25% 54%;          /* Lighter Deep Green */
+    --secondary: 200 15% 55%;          /* Lighter Slate Blue */
     --secondary-foreground: 0 0% 100%;
 
     --muted: 207 90% 12%;              /* Lighter navy backgrounds */
-    --muted-foreground: 148 25% 64%;   /* Lighter green - NO GRAY */
+    --muted-foreground: 200 15% 65%;   /* Lighter slate blue - technical */
 
     --accent: 235 94% 80%;             /* Brighter blue */
     --accent-foreground: 207 100% 9%;
@@ -90,8 +90,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 39 38% 88%;              /* Light cream border */
-    --input: 39 25% 78%;
+    --border: 200 10% 45%;             /* Lighter charcoal border */
+    --input: 200 12% 55%;
     --ring: 327 82% 41%;
   }
 }
@@ -129,7 +129,7 @@
   }
   
   .text-description {
-    @apply text-xl text-secondary leading-relaxed;
+    @apply text-xl text-muted-foreground leading-relaxed;
   }
   
   .text-label {
