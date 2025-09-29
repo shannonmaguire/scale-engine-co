@@ -3,83 +3,96 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { FileText, Target, AlertTriangle, CheckCircle, TrendingUp, ArrowRight, BarChart3 } from "lucide-react";
-
 const SampleReport = () => {
-  const scorecard = [
-    { category: "Technology Stack", score: 6.2, status: "warning", issues: 3 },
-    { category: "Data Quality", score: 4.1, status: "critical", issues: 5 },
-    { category: "Process Governance", score: 7.8, status: "good", issues: 1 },
-    { category: "Pipeline Management", score: 5.5, status: "warning", issues: 4 },
-    { category: "Reporting & Analytics", score: 3.9, status: "critical", issues: 6 }
-  ];
-
-  const priorities = [
-    {
-      priority: 1,
-      title: "Data Hygiene & Deduplication",
-      impact: "High",
-      effort: "Medium",
-      timeline: "2-3 weeks",
-      description: "Clean and standardize lead data, implement deduplication rules"
-    },
-    {
-      priority: 2,
-      title: "Lead Scoring Implementation", 
-      impact: "High",
-      effort: "Low",
-      timeline: "1 week",
-      description: "Deploy automated lead scoring to prioritize sales efforts"
-    },
-    {
-      priority: 3,
-      title: "Pipeline Stage Definitions",
-      impact: "Medium",
-      effort: "Low", 
-      timeline: "1 week",
-      description: "Standardize stage criteria and exit requirements"
-    },
-    {
-      priority: 4,
-      title: "Revenue Dashboard",
-      impact: "Medium",
-      effort: "Medium",
-      timeline: "2 weeks",
-      description: "Real-time visibility into pipeline health and forecasting"
-    }
-  ];
-
+  const scorecard = [{
+    category: "Technology Stack",
+    score: 6.2,
+    status: "warning",
+    issues: 3
+  }, {
+    category: "Data Quality",
+    score: 4.1,
+    status: "critical",
+    issues: 5
+  }, {
+    category: "Process Governance",
+    score: 7.8,
+    status: "good",
+    issues: 1
+  }, {
+    category: "Pipeline Management",
+    score: 5.5,
+    status: "warning",
+    issues: 4
+  }, {
+    category: "Reporting & Analytics",
+    score: 3.9,
+    status: "critical",
+    issues: 6
+  }];
+  const priorities = [{
+    priority: 1,
+    title: "Data Hygiene & Deduplication",
+    impact: "High",
+    effort: "Medium",
+    timeline: "2-3 weeks",
+    description: "Clean and standardize lead data, implement deduplication rules"
+  }, {
+    priority: 2,
+    title: "Lead Scoring Implementation",
+    impact: "High",
+    effort: "Low",
+    timeline: "1 week",
+    description: "Deploy automated lead scoring to prioritize sales efforts"
+  }, {
+    priority: 3,
+    title: "Pipeline Stage Definitions",
+    impact: "Medium",
+    effort: "Low",
+    timeline: "1 week",
+    description: "Standardize stage criteria and exit requirements"
+  }, {
+    priority: 4,
+    title: "Revenue Dashboard",
+    impact: "Medium",
+    effort: "Medium",
+    timeline: "2 weeks",
+    description: "Real-time visibility into pipeline health and forecasting"
+  }];
   const getScoreColor = (score: number) => {
     if (score >= 7) return "text-secondary";
     if (score >= 5) return "text-accent";
     return "text-primary";
   };
-
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case "good": return "bg-secondary/20 text-secondary";
-      case "warning": return "bg-accent/20 text-accent";
-      case "critical": return "bg-primary/20 text-primary";
-      default: return "bg-muted text-muted-foreground";
+      case "good":
+        return "bg-secondary/20 text-secondary";
+      case "warning":
+        return "bg-accent/20 text-accent";
+      case "critical":
+        return "bg-primary/20 text-primary";
+      default:
+        return "bg-muted text-muted-foreground";
     }
   };
-
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case "High": return "text-primary";
-      case "Medium": return "text-accent";
-      case "Low": return "text-secondary";
-      default: return "text-muted-foreground";
+      case "High":
+        return "text-primary";
+      case "Medium":
+        return "text-accent";
+      case "Low":
+        return "text-secondary";
+      default:
+        return "text-muted-foreground";
     }
   };
-
-  return (
-    <div className="min-h-screen py-20">
+  return <div className="min-h-screen py-20">
       <div className="container mx-auto px-6 max-w-6xl">
         {/* Hero */}
         <div className="text-center mb-16">
-          <div className="blueprint-line mx-auto mb-4 w-fit">
-            <span className="text-sm text-muted-foreground uppercase tracking-wide">Sample Report</span>
-          </div>
+          
           <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
             Revenue Infrastructure Assessment
           </h1>
@@ -126,8 +139,7 @@ const SampleReport = () => {
         <section className="mb-16">
           <h2 className="font-mono text-2xl font-bold mb-8">Infrastructure Scorecard</h2>
           <div className="space-y-4">
-            {scorecard.map((item, index) => (
-              <Card key={index} className="border-border">
+            {scorecard.map((item, index) => <Card key={index} className="border-border">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -148,19 +160,14 @@ const SampleReport = () => {
                         </p>
                       </div>
                       <div className="w-16 h-2 bg-muted rounded-full overflow-hidden">
-                        <div 
-                          className={`h-full rounded-full ${
-                            item.score >= 7 ? 'bg-secondary' : 
-                            item.score >= 5 ? 'bg-accent' : 'bg-primary'
-                          }`}
-                          style={{ width: `${(item.score / 10) * 100}%` }}
-                        />
+                        <div className={`h-full rounded-full ${item.score >= 7 ? 'bg-secondary' : item.score >= 5 ? 'bg-accent' : 'bg-primary'}`} style={{
+                      width: `${item.score / 10 * 100}%`
+                    }} />
                       </div>
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -168,8 +175,7 @@ const SampleReport = () => {
         <section className="mb-16">
           <h2 className="font-mono text-2xl font-bold mb-8">90-Day Priority Roadmap</h2>
           <div className="space-y-6">
-            {priorities.map((item, index) => (
-              <Card key={index} className="border-border">
+            {priorities.map((item, index) => <Card key={index} className="border-border">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
@@ -194,8 +200,7 @@ const SampleReport = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </section>
 
@@ -299,8 +304,6 @@ const SampleReport = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default SampleReport;
