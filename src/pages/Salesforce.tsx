@@ -104,12 +104,12 @@ const Salesforce = () => {
           
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <Card key={index} className="bg-card border-border">
+              <Card key={index} className="bg-card border-border hover:border-accent-data transition-colors">
                 <CardHeader>
-                  <service.icon className="w-10 h-10 text-primary mb-4" />
+                  <service.icon className="w-10 h-10 accent-data mb-4" />
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4 accent-data" />
                     {service.duration}
                   </div>
                 </CardHeader>
@@ -144,8 +144,8 @@ const Salesforce = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3 bg-card p-6 rounded-lg border">
-                  <Shield className="w-6 h-6 text-primary flex-shrink-0" />
+                <div key={index} className="flex items-center gap-3 bg-card p-6 rounded-lg border-l-4 border-accent-data">
+                  <Shield className="w-6 h-6 accent-data flex-shrink-0" />
                   <span className="text-lg">{benefit}</span>
                 </div>
               ))}

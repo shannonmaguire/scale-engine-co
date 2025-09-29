@@ -153,8 +153,8 @@ const Home = () => {
             </div>
             
             <div className="lg:pl-12">
-              <div className="console-card bg-card border border-border p-8 text-center">
-                <BarChart3 className="w-16 h-16 text-primary mx-auto mb-4" />
+              <div className="console-card bg-card border-2 border-accent-data p-8 text-center">
+                <BarChart3 className="w-16 h-16 accent-data mx-auto mb-4" />
                 <h3 className="heading-subsection mb-2">Revenue System</h3>
                 <p className="text-muted-foreground font-mono text-sm">Transparent, predictable, scalable</p>
               </div>
@@ -281,8 +281,8 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {proofStats.map((stat, index) => <div key={index} className="stat-block text-center">
-                <div className="stat-number">{stat.number}</div>
+            {proofStats.map((stat, index) => <div key={index} className="stat-block-data text-center">
+                <div className="stat-number-data">{stat.number}</div>
                 <div className="stat-label">{stat.label}</div>
               </div>)}
           </div>

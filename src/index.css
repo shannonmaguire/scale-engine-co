@@ -21,6 +21,7 @@
     /* Extended Palette - Status & Utility */
     --pure-white: 0 0% 100%;           /* #FFFFFF - High contrast elements */
     --pure-black: 0 0% 0%;             /* #000000 - ALL TEXT */
+    --teal-accent: 184 26% 41%;        /* #548687 - Data visualization, insights */
     --success-green: 158 64% 52%;      /* #10B981 - Success states */
     --warning-amber: 38 92% 50%;       /* #F59E0B - Warnings, pending */
     --error-red: 0 84% 60%;            /* #EF4444 - Errors, destructive */
@@ -57,8 +58,12 @@
     /* Status System - Operator UI */
     --status-positive: var(--success-green);
     --status-negative: var(--error-red);
-    --status-neutral: var(--cyber-blue);
+    --status-neutral: var(--teal-accent);
     --status-warning: var(--warning-amber);
+    
+    /* Data Visualization Accent */
+    --accent-data: var(--teal-accent);
+    --accent-data-foreground: var(--pure-white);
 
     --radius: 0.375rem;
 
@@ -274,5 +279,31 @@
   /* Monospace Numbers - Tabular alignment */
   .tabular-nums {
     font-variant-numeric: tabular-nums;
+  }
+  
+  /* Data Accent Utilities - Teal for metrics/insights only */
+  .accent-data {
+    @apply text-[hsl(var(--accent-data))];
+  }
+  
+  .bg-accent-data {
+    @apply bg-[hsl(var(--accent-data))];
+  }
+  
+  .border-accent-data {
+    @apply border-[hsl(var(--accent-data))];
+  }
+  
+  .bg-accent-data\/10 {
+    background-color: hsl(var(--accent-data) / 0.1);
+  }
+  
+  /* Stat block with data accent */
+  .stat-block-data {
+    @apply stat-block border-l-4 border-accent-data;
+  }
+  
+  .stat-number-data {
+    @apply stat-number accent-data;
   }
 }

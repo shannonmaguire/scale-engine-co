@@ -229,20 +229,20 @@ const Proof = () => {
                                   {study.beforeMetric.value}
                                 </div>
                               </div>
-                              <div className="text-center p-6 bg-primary/10 rounded-lg border-2 border-primary">
-                                <div className="text-xs font-mono text-primary uppercase mb-2">
+                              <div className="text-center p-6 bg-accent-data/10 rounded-lg border-2 border-accent-data">
+                                <div className="text-xs font-mono accent-data uppercase mb-2">
                                   {study.afterMetric.label}
                                 </div>
-                                <div className="text-3xl font-mono font-bold text-primary tabular-nums">
+                                <div className="text-3xl font-mono font-bold accent-data tabular-nums">
                                   {study.afterMetric.value}
                                 </div>
                               </div>
                             </div>
 
-                            <div className="text-center py-6 bg-accent/10 rounded-lg border-2 border-accent/20">
+                            <div className="text-center py-6 bg-accent-data/10 rounded-lg border-2 border-accent-data">
                               <div className="flex items-center justify-center gap-2 mb-2">
-                                <TrendingUp className="w-5 h-5 text-accent" />
-                                <span className="text-4xl font-mono font-bold text-accent tabular-nums">
+                                <TrendingUp className="w-5 h-5 accent-data" />
+                                <span className="text-4xl font-mono font-bold accent-data tabular-nums">
                                   {study.growth}
                                 </span>
                               </div>
