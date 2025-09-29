@@ -80,9 +80,7 @@ const Home = () => {
       <section id="system" className="py-20 bg-muted/30">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-16">
-            <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-label">The System</span>
-            </div>
+            
             <h2 className="heading-section">How We Work</h2>
           </div>
           
@@ -278,9 +276,7 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="text-center mb-12">
-            <div className="console-line mx-auto mb-4 w-fit">
-              <span className="text-label">Proof</span>
-            </div>
+            
             <h2 className="heading-section">Results That Matter</h2>
           </div>
           
