@@ -35,7 +35,7 @@ const Navigation = () => {
           {/* CWT Studio Official Logo */}
           <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity group">
             <div className="relative">
-              <img src={cwtLogo} alt="CWT Studio - Revenue Systems Consulting" className="h-10 w-auto transition-transform group-hover:scale-105 brightness-0 invert" />
+              <img src={cwtLogo} alt="CWT Studio - Revenue Systems Consulting" className="h-16 w-auto transition-transform group-hover:scale-105 brightness-0 invert" />
             </div>
           </Link>
 
