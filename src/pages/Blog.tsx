@@ -85,12 +85,12 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       {/* Streamlined Masthead */}
       <section className="bg-background border-b-2 border-primary/30">
-        <div className="container mx-auto px-6 py-6">
-          <div className="text-center border-b border-border/50 pb-4 mb-4">
-            <h1 className="text-3xl md:text-4xl font-mono font-black text-foreground tracking-tight">
+        <div className="container mx-auto px-6 py-10">
+          <div className="text-center border-b border-border/50 pb-6 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-black text-foreground tracking-tight">
               THE CWT STANDARD
             </h1>
-            <div className="flex items-center justify-center gap-4 mt-3 text-xs font-mono text-muted-foreground">
+            <div className="flex items-center justify-center gap-4 mt-4 text-sm font-mono text-muted-foreground">
               <time className="uppercase tracking-wide">{new Date().toLocaleDateString('en-US', { 
                 month: 'short', 
                 day: 'numeric', 
@@ -102,7 +102,7 @@ const Blog = () => {
           </div>
           
           <div className="text-center">
-            <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground italic max-w-2xl mx-auto">
               Setting the standard for revenue operations excellence
             </p>
           </div>
@@ -111,10 +111,10 @@ const Blog = () => {
 
       {/* Improved Navigation */}
       <section className="bg-muted/20 border-b border-border">
-        <div className="container mx-auto px-6 py-6">
+        <div className="container mx-auto px-6 py-8">
           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
             <div className="flex items-center gap-4 flex-wrap">
-              <span className="font-mono text-sm font-semibold text-foreground">Browse:</span>
+              <span className="font-mono text-base font-semibold text-foreground">Browse:</span>
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
                   <Button
@@ -150,27 +150,27 @@ const Blog = () => {
 
       {/* Featured Article */}
       {featuredPost && selectedCategory === "All" && !searchTerm && (
-        <section className="container mx-auto px-6 py-10 border-b border-border">
-          <div className="mb-6">
+        <section className="container mx-auto px-6 py-16 border-b border-border">
+          <div className="mb-8">
             <div className="flex items-center gap-4 mb-4">
               <div className="h-px bg-primary/50 flex-1"></div>
-              <Badge variant="outline" className="font-mono text-xs uppercase tracking-wide bg-primary text-primary-foreground border-primary">
+              <Badge variant="outline" className="font-mono text-sm uppercase tracking-wide bg-primary text-primary-foreground border-primary px-4 py-1">
                 Featured
               </Badge>
               <div className="h-px bg-primary/50 flex-1"></div>
             </div>
           </div>
           
-          <article className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-4 gap-8">
+          <article className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-4 gap-10">
               <div className="lg:col-span-3">
-                <header className="mb-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <Badge variant="secondary" className="font-mono text-xs uppercase tracking-wide">
+                <header className="mb-8">
+                  <div className="flex items-center gap-3 mb-5">
+                    <Badge variant="secondary" className="font-mono text-sm uppercase tracking-wide px-3 py-1">
                       {featuredPost.category}
                     </Badge>
-                    <span className="text-xs text-muted-foreground">•</span>
-                    <time className="text-xs font-mono text-muted-foreground">
+                    <span className="text-sm text-muted-foreground">•</span>
+                    <time className="text-sm font-mono text-muted-foreground">
                       {new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { 
                         month: 'long', 
                         day: 'numeric', 
@@ -179,37 +179,37 @@ const Blog = () => {
                     </time>
                   </div>
                   
-                  <h2 className="text-3xl md:text-4xl font-mono font-bold text-foreground leading-tight mb-4 hover:text-primary transition-colors cursor-pointer">
+                  <h2 className="text-4xl md:text-5xl font-mono font-bold text-foreground leading-tight mb-6 hover:text-primary transition-colors cursor-pointer">
                     <Link to={`/blog/${featuredPost.slug}`}>
                       {featuredPost.title}
                     </Link>
                   </h2>
                   
-                  <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                     {featuredPost.excerpt}
                   </p>
                   
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                  <div className="flex items-center gap-4 text-base text-muted-foreground mb-8">
                     <span className="font-semibold">By {featuredPost.author}</span>
                     <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
+                      <Clock className="h-5 w-5" />
                       <span>{featuredPost.readTime}</span>
                     </div>
                   </div>
                   
-                  <Button asChild size="lg" className="font-mono">
+                  <Button asChild size="lg" className="font-mono text-base px-8 py-6">
                     <Link to={`/blog/${featuredPost.slug}`} className="flex items-center gap-2">
-                      Read Article <ArrowRight className="h-4 w-4" />
+                      Read Article <ArrowRight className="h-5 w-5" />
                     </Link>
                   </Button>
                 </header>
               </div>
               
               <aside className="space-y-6">
-                <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-1 h-6 bg-primary rounded-full"></div>
-                    <h3 className="font-mono text-base font-bold text-foreground">
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl border border-primary/20 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-2 mb-5">
+                    <div className="w-1 h-8 bg-primary rounded-full"></div>
+                    <h3 className="font-mono text-lg font-bold text-foreground">
                       Article Topics
                     </h3>
                   </div>
@@ -218,15 +218,15 @@ const Blog = () => {
                       <Badge 
                         key={tag} 
                         variant="secondary" 
-                        className="text-xs font-medium px-3 py-1.5 bg-background/80 hover:bg-primary/10 transition-colors cursor-pointer border border-primary/20"
+                        className="text-sm font-medium px-4 py-2 bg-background/80 hover:bg-primary/10 transition-colors cursor-pointer border border-primary/20"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
                         #{tag}
                       </Badge>
                     ))}
                   </div>
-                  <div className="mt-4 pt-4 border-t border-primary/20">
-                    <p className="text-xs text-muted-foreground italic">
+                  <div className="mt-5 pt-5 border-t border-primary/20">
+                    <p className="text-sm text-muted-foreground italic">
                       Deep dive into these key areas
                     </p>
                   </div>
@@ -238,7 +238,7 @@ const Blog = () => {
       )}
 
       {/* Editorial Sections */}
-      <section className="container mx-auto px-6 py-12">
+      <section className="container mx-auto px-6 py-16">
         {/* Section Groups by Category */}
         {categories.filter(cat => cat !== 'All').map(category => {
           const categoryPosts = regularPosts.filter(post => 
@@ -248,11 +248,11 @@ const Blog = () => {
           if (categoryPosts.length === 0) return null;
           
           return (
-            <div key={category} className="mb-16 border-b border-border pb-12 last:border-b-0">
+            <div key={category} className="mb-20 border-b border-border pb-16 last:border-b-0">
               {/* Section Header */}
-              <div className="mb-8">
+              <div className="mb-10">
                 <div className="flex items-center gap-4">
-                  <h2 className="text-2xl font-mono font-black text-foreground uppercase tracking-wide">
+                  <h2 className="text-3xl font-mono font-black text-foreground uppercase tracking-wide">
                     {category}
                   </h2>
                   <div className="h-px bg-border flex-1"></div>
@@ -260,19 +260,19 @@ const Blog = () => {
               </div>
               
               {/* Articles in Newspaper Column Layout */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {categoryPosts.map((post, index) => (
                   <article key={post.id} className={`
                     ${index === 0 && categoryPosts.length > 1 ? 'md:col-span-2 lg:col-span-1' : ''}
-                    border-b border-border pb-6 last:border-b-0
+                    border-b border-border pb-8 last:border-b-0
                   `}>
-                    <header className="mb-4">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xs font-mono uppercase tracking-wide text-primary font-bold">
+                    <header className="mb-5">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="text-sm font-mono uppercase tracking-wide text-primary font-bold">
                           {post.category}
                         </span>
-                        <span className="text-xs text-muted-foreground">|</span>
-                        <time className="text-xs font-mono text-muted-foreground">
+                        <span className="text-sm text-muted-foreground">|</span>
+                        <time className="text-sm font-mono text-muted-foreground">
                           {new Date(post.publishedAt).toLocaleDateString('en-US', { 
                             month: 'short', 
                             day: 'numeric' 
@@ -281,8 +281,8 @@ const Blog = () => {
                       </div>
                       
                       <h3 className={`
-                        font-mono font-semibold text-foreground leading-tight mb-3 hover:text-primary transition-colors cursor-pointer
-                        ${index === 0 && categoryPosts.length > 1 ? 'text-xl md:text-2xl' : 'text-lg'}
+                        font-mono font-semibold text-foreground leading-tight mb-4 hover:text-primary transition-colors cursor-pointer
+                        ${index === 0 && categoryPosts.length > 1 ? 'text-2xl md:text-3xl' : 'text-xl'}
                       `}>
                         <Link to={`/blog/${post.slug}`}>
                           {post.title}
@@ -291,25 +291,25 @@ const Blog = () => {
                       
                       <p className={`
                         text-foreground leading-relaxed
-                        ${index === 0 && categoryPosts.length > 1 ? 'text-base' : 'text-sm'}
+                        ${index === 0 && categoryPosts.length > 1 ? 'text-lg' : 'text-base'}
                       `}>
                         {post.excerpt}
                       </p>
                     </header>
                     
                     <footer className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
                         <span>By {post.author}</span>
                         <span>•</span>
                         <div className="flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
+                          <Clock className="h-4 w-4" />
                           <span>{post.readTime}</span>
                         </div>
                       </div>
                       
-                      <div className="flex flex-wrap gap-1">
+                      <div className="flex flex-wrap gap-2">
                         {post.tags.slice(0, 2).map((tag) => (
-                          <span key={tag} className="text-xs font-mono text-muted-foreground uppercase tracking-wide">
+                          <span key={tag} className="text-sm font-mono text-muted-foreground uppercase tracking-wide">
                             #{tag}
                           </span>
                         ))}
@@ -324,26 +324,26 @@ const Blog = () => {
         
         {/* Show all posts when filtering */}
         {(selectedCategory !== 'All' || searchTerm) && (
-          <div className="mb-16">
-            <div className="mb-8">
+          <div className="mb-20">
+            <div className="mb-10">
               <div className="flex items-center gap-4">
-                <h2 className="text-2xl font-mono font-black text-foreground uppercase tracking-wide">
+                <h2 className="text-3xl font-mono font-black text-foreground uppercase tracking-wide">
                   {searchTerm ? `Search Results for "${searchTerm}"` : selectedCategory}
                 </h2>
                 <div className="h-px bg-border flex-1"></div>
               </div>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {regularPosts.map((post) => (
-                <article key={post.id} className="border-b border-border pb-6">
-                  <header className="mb-4">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-mono uppercase tracking-wide text-primary font-bold">
+                <article key={post.id} className="border-b border-border pb-8">
+                  <header className="mb-5">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-sm font-mono uppercase tracking-wide text-primary font-bold">
                         {post.category}
                       </span>
-                      <span className="text-xs text-muted-foreground">|</span>
-                      <time className="text-xs font-mono text-muted-foreground">
+                      <span className="text-sm text-muted-foreground">|</span>
+                      <time className="text-sm font-mono text-muted-foreground">
                         {new Date(post.publishedAt).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric' 
@@ -351,30 +351,30 @@ const Blog = () => {
                       </time>
                     </div>
                     
-                    <h3 className="text-lg font-mono font-bold text-foreground leading-tight mb-3 hover:text-primary transition-colors">
+                    <h3 className="text-xl font-mono font-bold text-foreground leading-tight mb-4 hover:text-primary transition-colors">
                       <Link to={`/blog/${post.slug}`} className="story-link">
                         {post.title}
                       </Link>
                     </h3>
                     
-                    <p className="text-sm text-foreground leading-relaxed">
+                    <p className="text-base text-foreground leading-relaxed">
                       {post.excerpt}
                     </p>
                   </header>
                   
                   <footer className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
                       <span>By {post.author}</span>
                       <span>•</span>
                       <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
+                        <Clock className="h-4 w-4" />
                         <span>{post.readTime}</span>
                       </div>
                     </div>
                     
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-2">
                       {post.tags.slice(0, 2).map((tag) => (
-                        <span key={tag} className="text-xs font-mono text-muted-foreground uppercase tracking-wide">
+                        <span key={tag} className="text-sm font-mono text-muted-foreground uppercase tracking-wide">
                           #{tag}
                         </span>
                       ))}
