@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import cwtLogoWhite from "@/assets/cwt-logo-horizontal-white.svg";
+import cwtLogo from "@/assets/cwt-logo-horizontal-black.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-[hsl(var(--burgundy))] text-white border-t border-white/10">
       <div className="container mx-auto px-6 py-16">
         {/* Logo + Tagline */}
         <div className="mb-12">
-          
+          <img src={cwtLogo} alt="CWT Studio" className="h-12 w-auto mb-4 brightness-0 invert" />
           <p className="text-white/60 font-mono text-sm max-w-md">
             Revenue infrastructure that compounds
           </p>
