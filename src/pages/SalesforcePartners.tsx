@@ -51,6 +51,39 @@ const SalesforcePartners = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Breadcrumb Navigation */}
+      <section className="bg-muted/30 border-b border-border py-3">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+              <span>/</span>
+              <Link to="/salesforce" className="hover:text-foreground transition-colors">Salesforce</Link>
+              <span>/</span>
+              <span className="text-foreground">Partners</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Access CTA */}
+      <section className="bg-primary text-primary-foreground py-8">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <h2 className="text-2xl font-bold mb-2">Need Technical Support Now?</h2>
+              <p className="text-primary-foreground/90">Get expert help for your Salesforce deals within 48 hours</p>
+            </div>
+            <Button size="lg" variant="secondary" asChild className="shrink-0">
+              <Link to="/ae-technical-support">
+                Request Support
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Letter Header */}
       <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">
