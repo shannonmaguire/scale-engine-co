@@ -120,7 +120,7 @@ const Footer = () => {
             © {currentYear} CWT Studio
           </p>
           <span className="text-white/30 font-mono text-xs uppercase tracking-wider">
-            Built for Operators
+            Revenue Infrastructure • Systematized Growth • Operational Excellence
           </span>
         </div>
       </div>
