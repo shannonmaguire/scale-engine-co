@@ -219,10 +219,12 @@ const Blog = () => {
                       <Badge 
                         key={tag} 
                         variant="secondary" 
-                        className="text-sm font-medium px-4 py-2 bg-secondary text-foreground hover:bg-secondary/80 transition-colors cursor-pointer"
+                        className="text-sm font-medium px-4 py-2.5 bg-card border-2 border-primary/20 text-foreground hover:border-primary hover:bg-primary/5 hover-lift transition-all cursor-pointer group"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
-                        #{tag}
+                        <span className="group-hover:text-primary transition-colors">
+                          #{tag}
+                        </span>
                       </Badge>
                     ))}
                   </div>
