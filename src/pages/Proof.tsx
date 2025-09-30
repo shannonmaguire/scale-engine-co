@@ -141,10 +141,10 @@ const Proof = () => {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {caseStudies.map(study => <div key={study.id} className="flex-[0_0_100%] min-w-0">
-                <div className="px-8 lg:px-20 py-16">
-                  <div className="max-w-6xl mx-auto border-4 border-primary rounded-lg p-10 lg:p-16 bg-white shadow-xl">
+                <div className="px-8 lg:px-20 py-8">
+                  <div className="max-w-6xl mx-auto border-4 border-primary rounded-lg p-6 lg:p-10 bg-white shadow-xl">
                     {/* Header Meta */}
-                    <div className="flex flex-wrap items-center gap-4 mb-12 pb-6 border-b-2 border-border">
+                    <div className="flex flex-wrap items-center gap-3 mb-6 pb-4 border-b-2 border-border">
                       <div className="flex items-center gap-2">
                         <Building2 className="w-4 h-4 text-primary" />
                         <span className="font-mono text-sm text-primary font-bold">{study.industry}</span>
@@ -159,22 +159,22 @@ const Proof = () => {
                     </div>
 
                     {/* Main Grid */}
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid lg:grid-cols-2 gap-8 items-start">
                       {/* Left Column - Story */}
-                      <div className="space-y-12">
+                      <div className="space-y-6">
                         {/* 1. Context */}
                         <div>
-                          <div className="flex items-center gap-3 mb-4">
-                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                              <span className="text-primary font-mono text-sm font-bold">1</span>
+                          <div className="flex items-center gap-2 mb-3">
+                            <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                              <span className="text-primary font-mono text-xs font-bold">1</span>
                             </div>
-                            <h3 className="heading-subsection text-primary">Context</h3>
+                            <h3 className="text-lg font-bold text-primary">Context</h3>
                           </div>
-                          <p className="text-lg text-foreground leading-relaxed mb-6">
+                          <p className="text-sm text-foreground leading-relaxed mb-3">
                             {study.challenge}
                           </p>
-                          <blockquote className="border-l-4 border-primary pl-6 py-4 bg-primary/5">
-                            <p className="text-xl lg:text-2xl font-mono italic text-primary">
+                          <blockquote className="border-l-3 border-primary pl-4 py-2 bg-primary/5">
+                            <p className="text-base font-mono italic text-primary">
                               "{study.pullQuote}"
                             </p>
                           </blockquote>
@@ -182,43 +182,43 @@ const Proof = () => {
 
                         {/* 2. System Installed */}
                         <div>
-                          <div className="flex items-center gap-3 mb-4">
-                            <div className="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center">
-                              <span className="text-secondary font-mono text-sm font-bold">2</span>
+                          <div className="flex items-center gap-2 mb-3">
+                            <div className="w-6 h-6 rounded-full bg-secondary/10 flex items-center justify-center">
+                              <span className="text-secondary font-mono text-xs font-bold">2</span>
                             </div>
-                            <h3 className="heading-subsection text-secondary">System Installed</h3>
+                            <h3 className="text-lg font-bold text-secondary">System Installed</h3>
                           </div>
-                          <div className="space-y-3">
-                            {study.system.map((item, idx) => <div key={idx} className="flex items-start gap-3">
-                                <Target className="w-4 h-4 text-secondary mt-1 flex-shrink-0" />
-                                <span className="text-foreground">{item}</span>
+                          <div className="space-y-2">
+                            {study.system.map((item, idx) => <div key={idx} className="flex items-start gap-2">
+                                <Target className="w-3 h-3 text-secondary mt-1 flex-shrink-0" />
+                                <span className="text-sm text-foreground">{item}</span>
                               </div>)}
                           </div>
                         </div>
 
                         {/* 3. Outcome */}
                         <div>
-                          <div className="flex items-center gap-3 mb-4">
-                            <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-                              <span className="text-accent font-mono text-sm font-bold">3</span>
+                          <div className="flex items-center gap-2 mb-3">
+                            <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center">
+                              <span className="text-accent font-mono text-xs font-bold">3</span>
                             </div>
-                            <h3 className="heading-subsection text-accent">Outcome</h3>
+                            <h3 className="text-lg font-bold text-accent">Outcome</h3>
                           </div>
-                          <div className="space-y-3">
-                            {study.outcomes.map((outcome, idx) => <div key={idx} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                                <span className="text-foreground">{outcome}</span>
+                          <div className="space-y-2">
+                            {study.outcomes.map((outcome, idx) => <div key={idx} className="flex items-start gap-2">
+                                <CheckCircle className="w-3 h-3 text-accent mt-1 flex-shrink-0" />
+                                <span className="text-sm text-foreground">{outcome}</span>
                               </div>)}
                           </div>
                         </div>
                       </div>
 
                         {/* Right Column - Data Visualization */}
-                        <div className="lg:sticky lg:top-24 space-y-8">
+                        <div className="lg:sticky lg:top-24 space-y-4">
                           {/* Before/After Visual */}
-                          <div className="console-card bg-card border-2 border-border p-8 rounded-lg">
-                            <div className="text-center mb-8">
-                              <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border-2 border-accent/20 rounded-full">
+                          <div className="console-card bg-card border-2 border-border p-6 rounded-lg">
+                            <div className="text-center mb-4">
+                              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/10 border-2 border-accent/20 rounded-full">
                                 <span className="text-xs font-mono text-secondary uppercase tracking-wider">
                                   Before
                                 </span>
@@ -229,29 +229,29 @@ const Proof = () => {
                               </div>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-6 mb-8">
-                              <div className="text-center p-6 bg-white border-2 border-border rounded-lg">
-                                <div className="text-xs font-mono text-secondary uppercase mb-2">
+                            <div className="grid grid-cols-2 gap-4 mb-4">
+                              <div className="text-center p-4 bg-white border-2 border-border rounded-lg">
+                                <div className="text-xs font-mono text-secondary uppercase mb-1">
                                   {study.beforeMetric.label}
                                 </div>
-                                <div className="text-2xl font-mono text-secondary">
+                                <div className="text-xl font-mono text-secondary">
                                   {study.beforeMetric.value}
                                 </div>
                               </div>
-                              <div className="text-center p-6 bg-accent-data/10 rounded-lg border-2 border-accent-data">
-                                <div className="text-xs font-mono accent-data uppercase mb-2">
+                              <div className="text-center p-4 bg-accent-data/10 rounded-lg border-2 border-accent-data">
+                                <div className="text-xs font-mono accent-data uppercase mb-1">
                                   {study.afterMetric.label}
                                 </div>
-                                <div className="text-3xl font-mono font-bold accent-data tabular-nums">
+                                <div className="text-2xl font-mono font-bold accent-data tabular-nums">
                                   {study.afterMetric.value}
                                 </div>
                               </div>
                             </div>
 
-                            <div className="text-center py-6 bg-accent-data/10 rounded-lg border-2 border-accent-data">
-                              <div className="flex items-center justify-center gap-2 mb-2">
-                                <TrendingUp className="w-5 h-5 accent-data" />
-                                <span className="text-4xl font-mono font-bold accent-data tabular-nums">
+                            <div className="text-center py-4 bg-accent-data/10 rounded-lg border-2 border-accent-data">
+                              <div className="flex items-center justify-center gap-2 mb-1">
+                                <TrendingUp className="w-4 h-4 accent-data" />
+                                <span className="text-3xl font-mono font-bold accent-data tabular-nums">
                                   {study.growth}
                                 </span>
                               </div>
@@ -262,33 +262,33 @@ const Proof = () => {
                           </div>
 
                           {/* Visual Flow Diagram */}
-                          <div className="console-card bg-card border-2 border-border p-8 rounded-lg">
+                          <div className="console-card bg-card border-2 border-border p-4 rounded-lg">
                             <div className="flex items-center justify-between">
-                              <div className="flex flex-col items-center gap-2 flex-1">
-                                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                                  <Zap className="w-6 h-6 text-primary" />
+                              <div className="flex flex-col items-center gap-1.5 flex-1">
+                                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                  <Zap className="w-5 h-5 text-primary" />
                                 </div>
                                 <span className="text-xs font-mono text-secondary uppercase text-center">
                                   Challenge
                                 </span>
                               </div>
                               
-                              <ArrowRight className="w-6 h-6 text-secondary flex-shrink-0 mx-2" />
+                              <ArrowRight className="w-5 h-5 text-secondary flex-shrink-0 mx-1" />
                               
-                              <div className="flex flex-col items-center gap-2 flex-1">
-                                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
-                                  <Target className="w-6 h-6 text-secondary" />
+                              <div className="flex flex-col items-center gap-1.5 flex-1">
+                                <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
+                                  <Target className="w-5 h-5 text-secondary" />
                                 </div>
                                 <span className="text-xs font-mono text-secondary uppercase text-center">
                                   System
                                 </span>
                               </div>
                               
-                              <ArrowRight className="w-6 h-6 text-secondary flex-shrink-0 mx-2" />
+                              <ArrowRight className="w-5 h-5 text-secondary flex-shrink-0 mx-1" />
                               
-                              <div className="flex flex-col items-center gap-2 flex-1">
-                                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                                  <CheckCircle className="w-6 h-6 text-accent" />
+                              <div className="flex flex-col items-center gap-1.5 flex-1">
+                                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                                  <CheckCircle className="w-5 h-5 text-accent" />
                                 </div>
                                 <span className="text-xs font-mono text-secondary uppercase text-center">
                                   Result
@@ -298,7 +298,7 @@ const Proof = () => {
                           </div>
 
                           <div className="text-center">
-                            <div className="text-xs font-mono text-secondary uppercase tracking-wider mb-2">
+                            <div className="text-xs font-mono text-secondary uppercase tracking-wider mb-1">
                               Client Size
                             </div>
                             <div className="text-sm font-mono text-foreground">{study.size}</div>
