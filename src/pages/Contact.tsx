@@ -137,7 +137,7 @@ const Contact = () => {
                 </StandardCardHeader>
                 <StandardCardContent>
                   <div className="bg-card border border-border p-8 text-center console-card">
-                    <p className="text-secondary mb-4 font-mono text-sm">
+                    <p className="text-muted-foreground mb-4 font-mono text-sm">
                       Prefer to schedule directly? Choose a time that works for you.
                     </p>
                     <div className="space-y-3">
@@ -172,14 +172,14 @@ const Contact = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-sm text-secondary">hello@cwtstudio.com</p>
+                    <p className="text-sm text-muted-foreground">hello@cwtstudio.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium text-foreground">Response Time</p>
-                    <p className="text-sm text-secondary">Within 24 hours</p>
+                    <p className="text-sm text-muted-foreground">Within 24 hours</p>
                   </div>
                 </div>
               </StandardCardContent>
@@ -198,7 +198,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Quick Review</p>
-                      <p className="text-sm text-secondary">We review your submission and company background</p>
+                      <p className="text-sm text-muted-foreground">We review your submission and company background</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -207,7 +207,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Discovery Call</p>
-                      <p className="text-sm text-secondary">30-minute call to understand your challenges</p>
+                      <p className="text-sm text-muted-foreground">30-minute call to understand your challenges</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -216,7 +216,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Proposal</p>
-                      <p className="text-sm text-secondary">Custom assessment plan and timeline</p>
+                      <p className="text-sm text-muted-foreground">Custom assessment plan and timeline</p>
                     </div>
                   </div>
                 </div>

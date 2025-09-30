@@ -63,7 +63,7 @@ const Services = () => {
                       </div>
                       <div>
                         <StandardCardTitle className="text-primary">{service.title}</StandardCardTitle>
-                        <p className="text-secondary italic">{service.tagline}</p>
+                        <p className="text-muted-foreground italic">{service.tagline}</p>
                       </div>
                     </div>
                   </StandardCardHeader>
@@ -77,28 +77,29 @@ const Services = () => {
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => <li key={featureIndex} className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
-                            <span className="text-secondary">{feature}</span>
+                            <span className="text-muted-foreground">{feature}</span>
                           </li>)}
                       </ul>
                     </div>
                     
                     <div className="border-t border-border pt-4 space-y-4">
-                      <div className="bg-accent/10 border border-accent/20 rounded p-3">
-                        <h5 className="text-xs font-mono font-bold text-accent mb-1">ADAPTS TO YOUR STAGE</h5>
-                        <p className="text-xs text-secondary">
-                          {index === 0 && "Works with any current system—from spreadsheets to enterprise platforms"}
-                          {index === 1 && "Integrates with existing tools. No rip-and-replace required"}  
-                          {index === 2 && "Scales with your growth. Monthly rhythm adapts to your pace"}
-                        </p>
-                      </div>
+                        <div className="bg-accent/10 border border-accent/20 rounded p-3">
+                          <h5 className="text-xs font-mono font-bold text-accent mb-1">ADAPTS TO YOUR STAGE</h5>
+                          <p className="text-xs text-muted-foreground">
+                            {index === 0 && "Works with any current system—from spreadsheets to enterprise platforms"}
+                            {index === 1 && "Integrates with existing tools. No rip-and-replace required"}  
+                            {index === 2 && "Scales with your growth. Monthly rhythm adapts to your pace"}
+                          </p>
+                        </div>
+                      
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <p className="text-sm text-secondary mb-1">Investment</p>
+                          <p className="text-sm text-muted-foreground mb-1">Investment</p>
                           <p className="font-medium text-primary">{service.pricing}</p>
                         </div>
                         <div>
-                          <p className="text-sm text-secondary mb-1">Timeline</p>
+                          <p className="text-sm text-muted-foreground mb-1">Timeline</p>
                           <p className="font-medium text-foreground">{service.timeline}</p>
                         </div>
                       </div>
@@ -120,7 +121,7 @@ const Services = () => {
                   <h3 className="font-mono text-xl font-bold mb-2 text-primary">
                     Step {index + 1}: {service.title}
                   </h3>
-                  <p className="text-secondary">
+                  <p className="text-muted-foreground">
                     {service.tagline}
                   </p>
                 </div>
@@ -145,7 +146,7 @@ const Services = () => {
                   1
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Assess</h3>
-                <p className="text-secondary text-sm">
+                <p className="text-muted-foreground text-sm">
                   Comprehensive diagnostic reveals what's blocking your scale
                 </p>
               </div>
@@ -155,7 +156,7 @@ const Services = () => {
                   2
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Build</h3>
-                <p className="text-secondary text-sm">
+                <p className="text-muted-foreground text-sm">
                   Fast implementation of the systems that drive results
                 </p>
               </div>
@@ -165,7 +166,7 @@ const Services = () => {
                   3
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Operate</h3>
-                <p className="text-secondary text-sm">
+                <p className="text-muted-foreground text-sm">
                   Ongoing optimization keeps your system ahead of growth
                 </p>
               </div>

@@ -92,7 +92,7 @@ const Sprint = () => {
                   </StandardCardTitle>
                 </StandardCardHeader>
                 <StandardCardContent>
-                  <p className="text-secondary">{stream.description}</p>
+                  <p className="text-muted-foreground">{stream.description}</p>
                 </StandardCardContent>
               </StandardCard>
             ))}

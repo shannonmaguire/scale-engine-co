@@ -56,7 +56,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="heading-subsection mb-3 text-primary">{value.title}</h3>
-                      <p className="text-secondary leading-relaxed">{value.description}</p>
+                      <p className="text-muted-foreground leading-relaxed">{value.description}</p>
                     </div>
                   </div>
                 </div>
@@ -98,11 +98,11 @@ const About = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm font-medium mb-2 text-foreground">Flexible Engagement</p>
-                  <p className="text-xs text-secondary">Virtual or in-person. Sprint or assessment only. Your choice.</p>
+                  <p className="text-xs text-muted-foreground">Virtual or in-person. Sprint or assessment only. Your choice.</p>
                 </div>
                 <div>
                   <p className="text-sm font-medium mb-2 text-foreground">Industry Agnostic</p>
-                  <p className="text-xs text-secondary">SaaS, services, manufacturing—revenue systems have common patterns.</p>
+                  <p className="text-xs text-muted-foreground">SaaS, services, manufacturing—revenue systems have common patterns.</p>
                 </div>
               </div>
             </div>

@@ -150,11 +150,11 @@ const Proof = () => {
                         <span className="font-mono text-sm text-primary font-bold">{study.industry}</span>
                       </div>
                       <div className="h-4 w-px bg-border" />
-                      <span className="font-mono text-sm text-secondary">{study.vertical}</span>
+                      <span className="font-mono text-sm text-muted-foreground">{study.vertical}</span>
                       <div className="h-4 w-px bg-border" />
                       <div className="flex items-center gap-2">
-                        <Clock className="w-3 h-3 text-secondary" />
-                        <span className="font-mono text-xs text-secondary uppercase">{study.timeline}</span>
+                        <Clock className="w-3 h-3 text-muted-foreground" />
+                        <span className="font-mono text-xs text-muted-foreground uppercase">{study.timeline}</span>
                       </div>
                     </div>
 
@@ -219,10 +219,10 @@ const Proof = () => {
                           <div className="console-card bg-card border-2 border-border p-6 rounded-lg">
                             <div className="text-center mb-4">
                               <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/10 border-2 border-accent/20 rounded-full">
-                                <span className="text-xs font-mono text-secondary uppercase tracking-wider">
+                                <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
                                   Before
                                 </span>
-                                <ArrowRight className="w-4 h-4 text-secondary" />
+                                <ArrowRight className="w-4 h-4 text-muted-foreground" />
                                 <span className="text-xs font-mono text-primary uppercase tracking-wider font-bold">
                                   After
                                 </span>
@@ -231,10 +231,10 @@ const Proof = () => {
 
                             <div className="grid grid-cols-2 gap-4 mb-4">
                               <div className="text-center p-4 bg-white border-2 border-border rounded-lg">
-                                <div className="text-xs font-mono text-secondary uppercase mb-1">
+                                <div className="text-xs font-mono text-muted-foreground uppercase mb-1">
                                   {study.beforeMetric.label}
                                 </div>
-                                <div className="text-xl font-mono text-secondary">
+                                <div className="text-xl font-mono text-muted-foreground">
                                   {study.beforeMetric.value}
                                 </div>
                               </div>
@@ -255,7 +255,7 @@ const Proof = () => {
                                   {study.growth}
                                 </span>
                               </div>
-                              <div className="text-xs font-mono text-secondary uppercase tracking-wider">
+                              <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">
                                 Growth Rate
                               </div>
                             </div>
@@ -268,29 +268,29 @@ const Proof = () => {
                                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                                   <Zap className="w-5 h-5 text-primary" />
                                 </div>
-                                <span className="text-xs font-mono text-secondary uppercase text-center">
+                                <span className="text-xs font-mono text-muted-foreground uppercase text-center">
                                   Challenge
                                 </span>
                               </div>
                               
-                              <ArrowRight className="w-5 h-5 text-secondary flex-shrink-0 mx-1" />
+                              <ArrowRight className="w-5 h-5 text-muted-foreground flex-shrink-0 mx-1" />
                               
                               <div className="flex flex-col items-center gap-1.5 flex-1">
                                 <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center">
                                   <Target className="w-5 h-5 text-secondary" />
                                 </div>
-                                <span className="text-xs font-mono text-secondary uppercase text-center">
+                                <span className="text-xs font-mono text-muted-foreground uppercase text-center">
                                   System
                                 </span>
                               </div>
                               
-                              <ArrowRight className="w-5 h-5 text-secondary flex-shrink-0 mx-1" />
+                              <ArrowRight className="w-5 h-5 text-muted-foreground flex-shrink-0 mx-1" />
                               
                               <div className="flex flex-col items-center gap-1.5 flex-1">
                                 <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
                                   <CheckCircle className="w-5 h-5 text-accent" />
                                 </div>
-                                <span className="text-xs font-mono text-secondary uppercase text-center">
+                                <span className="text-xs font-mono text-muted-foreground uppercase text-center">
                                   Result
                                 </span>
                               </div>
@@ -298,7 +298,7 @@ const Proof = () => {
                           </div>
 
                           <div className="text-center">
-                            <div className="text-xs font-mono text-secondary uppercase tracking-wider mb-1">
+                            <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider mb-1">
                               Client Size
                             </div>
                             <div className="text-sm font-mono text-foreground">{study.size}</div>

@@ -100,7 +100,7 @@ const Fractional = () => {
                   </StandardCardTitle>
                 </StandardCardHeader>
                 <StandardCardContent>
-                  <p className="text-secondary">{service.description}</p>
+                  <p className="text-muted-foreground">{service.description}</p>
                 </StandardCardContent>
               </StandardCard>
             ))}
