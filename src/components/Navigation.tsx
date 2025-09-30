@@ -40,8 +40,13 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map(link => <Link key={link.href} to={link.href} className={`text-sm font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "text-white font-semibold" : "text-white/80"}`}>
+          <div className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
+            {navLinks.map(link => <Link 
+                key={link.href} 
+                to={link.href} 
+                className={`text-sm font-mono font-medium transition-colors hover:text-success focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded px-2 py-1 ${isActive(link.href) ? "text-white font-semibold" : "text-white/80"}`}
+                aria-current={isActive(link.href) ? "page" : undefined}
+              >
                 {link.label}
               </Link>)}
             
@@ -69,14 +74,20 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button className="md:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button 
+            className="md:hidden p-2 text-white focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded" 
+            onClick={() => setIsOpen(!isOpen)} 
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && <div className="md:hidden border-t border-white/20 bg-authority">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          {/* Mobile Navigation */}
+        {isOpen && <div id="mobile-navigation" className="md:hidden border-t border-white/20 bg-authority">
+            <div className="px-2 pt-2 pb-3 space-y-1" role="navigation" aria-label="Mobile navigation">
               {navLinks.map(link => <Link key={link.href} to={link.href} className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "text-white font-semibold" : "text-white/80"}`} onClick={() => setIsOpen(false)}>
                   {link.label}
                 </Link>)}

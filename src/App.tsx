@@ -56,8 +56,12 @@ const App = () => {
         <Sonner />
         {showLoadingScreen && <LoadingScreen onComplete={handleLoadingComplete} />}
         <BrowserRouter>
+          {/* Skip to main content link for accessibility */}
+          <a href="#main-content" className="skip-to-main">
+            Skip to main content
+          </a>
           <Navigation />
-          <main id="main" tabIndex={-1}>
+          <main id="main-content" tabIndex={-1}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<Services />} />

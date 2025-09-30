@@ -60,7 +60,7 @@ const Home = () => {
                 <Button asChild className="btn-console-accent">
                   <Link to="/contact">
                     Book Assessment
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
                 <Button asChild className="btn-console-secondary">

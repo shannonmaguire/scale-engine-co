@@ -135,13 +135,14 @@ const Blog = () => {
             </div>
             
             <div className="relative w-full sm:w-auto">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
               <Input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 w-full sm:w-72 font-mono text-sm bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary rounded-md"
+                aria-label="Search blog articles"
               />
             </div>
           </div>
