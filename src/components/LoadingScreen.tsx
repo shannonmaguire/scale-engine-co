@@ -75,20 +75,12 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] overflow-hidden"
+      className="fixed inset-0 z-[9999] overflow-hidden bg-background"
       role="dialog"
       aria-label="Loading screen"
-      style={{
-        background: 'linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)'
-      }}
     >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" 
-             style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" 
-             style={{ animationDuration: '6s', animationDelay: '1s' }} />
-      </div>
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
 
       {/* Main content */}
       <div className={`relative h-full flex flex-col items-center justify-center transition-all duration-700 ${
@@ -96,9 +88,9 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
       }`}>
         
         {/* Logo with entrance animation */}
-        <div className="mb-12 transform transition-all duration-1000" 
+        <div className="mb-16 transform transition-all duration-1000 ease-out" 
              style={{
-               transform: showContent ? 'scale(1)' : 'scale(0.8)',
+               transform: showContent ? 'scale(1) translateY(0)' : 'scale(0.9) translateY(20px)',
                opacity: showContent ? 1 : 0
              }}>
           <img 
@@ -108,20 +100,25 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             height="107"
             loading="eager"
             decoding="async"
-            className="h-24 w-auto drop-shadow-2xl"
+            className="h-24 w-auto"
           />
         </div>
 
-        {/* Animated phrases with stagger effect */}
-        <div className="relative h-24 flex items-center justify-center mb-8">
+        {/* Animated phrases with elegant transitions */}
+        <div className="relative h-32 flex items-center justify-center mb-12">
           {phrases.map((phrase, index) => (
             <h1
               key={index}
-              className="absolute font-mono font-bold text-foreground uppercase tracking-tight leading-none select-none transition-all duration-500"
+              className="absolute font-mono font-bold text-foreground uppercase tracking-[0.2em] leading-none select-none transition-all duration-700 ease-out"
               style={{
-                fontSize: 'clamp(24px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 5vw, 56px)',
                 opacity: currentPhrase === index ? 1 : 0,
-                transform: currentPhrase === index ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.9)',
+                transform: currentPhrase === index 
+                  ? 'translateY(0) scale(1)' 
+                  : currentPhrase > index 
+                    ? 'translateY(-30px) scale(0.95)' 
+                    : 'translateY(30px) scale(0.95)',
+                filter: currentPhrase === index ? 'blur(0)' : 'blur(8px)',
               }}
               aria-live={currentPhrase === index ? "polite" : "off"}
             >
@@ -130,36 +127,26 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           ))}
         </div>
 
-        {/* Progress bar */}
-        <div className="w-64 h-1 bg-muted rounded-full overflow-hidden">
+        {/* Progress bar with shimmer effect */}
+        <div className="relative w-80 h-1 bg-muted/30 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-primary transition-all duration-300 ease-out"
+            className="h-full bg-primary relative transition-all duration-300 ease-out"
             style={{ width: `${progress}%` }}
-          />
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/20 to-transparent animate-shimmer" 
+                 style={{
+                   backgroundSize: '200% 100%',
+                   animation: 'shimmer 2s infinite linear'
+                 }} />
+          </div>
         </div>
 
         {/* Tagline */}
-        <p className={`mt-8 font-mono text-sm text-muted-foreground tracking-wide transition-all duration-700 delay-300 ${
+        <p className={`mt-12 font-mono text-base text-muted-foreground tracking-[0.3em] uppercase transition-all duration-700 delay-500 ${
           showContent ? 'opacity-60' : 'opacity-0'
         }`}>
           Revenue Systems That Scale
         </p>
-
-        {/* Floating particles */}
-        <div className="absolute inset-0 pointer-events-none">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-primary/30 rounded-full animate-pulse"
-              style={{
-                left: `${20 + i * 15}%`,
-                top: `${30 + (i % 3) * 20}%`,
-                animationDelay: `${i * 0.3}s`,
-                animationDuration: `${2 + i * 0.5}s`,
-              }}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Skip button */}
