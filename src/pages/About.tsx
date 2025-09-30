@@ -2,8 +2,13 @@ import { Button } from "@/components/ui/button";
 import { StandardCard } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
+import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
+import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { Target, Zap, Clock, Palette } from "lucide-react";
+
 const About = () => {
+  useScrollDepth();
   const values = [{
     icon: Target,
     title: "Precision",
@@ -22,6 +27,12 @@ const About = () => {
     description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
   }];
   return <div className="min-h-screen">
+      <SEOHead 
+        title="About CWT Studio | Revenue Operations Leadership & Expertise"
+        description="Built for revenue leaders who need systems that scale. We diagnose, build, and operate revenue infrastructure with precision, ownership, and speed."
+        keywords="revenue operations consulting, revenue leadership, systems consulting, operational excellence, fractional revenue operations, CRM implementation"
+      />
+      
       <Section>
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">

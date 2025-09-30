@@ -2,8 +2,13 @@ import { Button } from "@/components/ui/button";
 import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
+import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
+import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { Search, Zap, RotateCcw, ArrowRight } from "lucide-react";
+
 const Services = () => {
+  useScrollDepth();
   const services = [{
     icon: Search,
     title: "Infrastructure Assessment",
@@ -36,6 +41,12 @@ const Services = () => {
     link: "/fractional"
   }];
   return <div className="min-h-screen">
+      <SEOHead 
+        title="Revenue Operations Services | Infrastructure Assessment, Sprints & Fractional Ops"
+        description="Complete revenue systems services: diagnostic assessments, 6-8 week implementation sprints, and ongoing fractional operations. Transform your sales infrastructure."
+        keywords="revenue operations services, infrastructure assessment, revenue sprint, fractional COO, sales system implementation, CRM consulting, operational excellence"
+      />
+      
       <Section>
         {/* Hero */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
@@ -105,7 +116,7 @@ const Services = () => {
                       </div>
                     </div>
                     
-                    <Button asChild className="w-full">
+                    <Button asChild className="w-full hover-lift">
                       <Link to={service.link}>
                         {service.cta}
                         <ArrowRight className="ml-2 h-4 w-4" />

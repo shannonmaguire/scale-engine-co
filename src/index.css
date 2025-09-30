@@ -732,4 +732,42 @@ img {
   .focus-visible-accent:focus-visible {
     @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
   }
+  
+  /* Additional utility animations */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+  
+  .animate-shake {
+    animation: shake 0.3s ease-in-out;
+  }
+  
+  @keyframes scale-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+  
+  /* Progress bar animation */
+  @keyframes progress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .animate-progress {
+    animation: progress 2s ease-out;
+  }
 }
