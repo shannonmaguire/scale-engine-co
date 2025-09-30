@@ -3,7 +3,9 @@ import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitl
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import SystemDiagram from "@/components/SystemDiagram";
+import SEOHead from "@/components/SEOHead";
 import { ArrowRight, CheckCircle, BarChart3, Target } from "lucide-react";
+
 const Home = () => {
   const services = [{
     title: "Infrastructure Assessment",
@@ -42,6 +44,12 @@ const Home = () => {
   };
   const diagnosticDeliverables = ["Revenue Infrastructure Scorecard tech, ops, pipeline", "Benchmarks against peers", "90 day roadmap with priority fixes", "Executive readout with leadership"];
   return <div className="min-h-screen">
+      <SEOHead 
+        title="CWT Studio - Revenue System Infrastructure | B2B Sales Operations"
+        description="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops for scaling B2B businesses. Turn complexity into seamless flow."
+        keywords="revenue infrastructure, B2B sales operations, revenue sprint, fractional ops, sales system optimization, CRM consulting, outbound automation"
+      />
+      
       {/* Hero Section */}
       <Section className="relative overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

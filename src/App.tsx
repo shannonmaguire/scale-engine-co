@@ -7,6 +7,9 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import LoadingScreen from "@/components/LoadingScreen";
 import Footer from "@/components/Footer";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import { usePageTracking } from "@/hooks/usePageTracking";
+import { usePerformanceMonitoring, reportWebVitals } from "@/hooks/usePerformanceMonitoring";
 
 // Lazy load route components for better performance
 const Home = lazy(() => import("@/pages/Home"));
@@ -28,6 +31,48 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
+// Inner component to use hooks after Router is mounted
+const AppContent = () => {
+  usePageTracking();
+  usePerformanceMonitoring();
+
+  return (
+    <>
+      <Navigation />
+      <main id="main-content" tabIndex={-1}>
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center">
+            <div className="animate-pulse text-muted-foreground font-mono">Loading...</div>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/systems" element={<Navigate to="/services" replace />} />
+            <Route path="/assessment" element={<Navigate to="/contact" replace />} />
+            <Route path="/sprint" element={<Sprint />} />
+            <Route path="/salesforce" element={<Salesforce />} />
+            <Route path="/salesforce/partners" element={<SalesforcePartners />} />
+            <Route path="/salesforce/delivery" element={<SalesforceDelivery />} />
+            <Route path="/fractional" element={<Fractional />} />
+            <Route path="/sample-report" element={<SampleReport />} />
+            <Route path="/proof" element={<Proof />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/ae-technical-support" element={<AETechnicalSupport />} />
+            <Route path="/assessment-tools" element={<AssessmentTools />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
 const App = () => {
   const [showLoadingScreen, setShowLoadingScreen] = useState(false);
 
@@ -37,6 +82,9 @@ const App = () => {
     if (!introSeen) {
       setShowLoadingScreen(true);
     }
+
+    // Report web vitals
+    reportWebVitals();
   }, []);
 
   const handleLoadingComplete = () => {
@@ -53,46 +101,18 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        {showLoadingScreen && <LoadingScreen onComplete={handleLoadingComplete} />}
-        <BrowserRouter>
-          {/* Skip to main content link for accessibility */}
-          <a href="#main-content" className="skip-to-main">
-            Skip to main content
-          </a>
-          <Navigation />
-          <main id="main-content" tabIndex={-1}>
-            <Suspense fallback={
-              <div className="min-h-screen flex items-center justify-center">
-                <div className="animate-pulse text-muted-foreground font-mono">Loading...</div>
-              </div>
-            }>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/systems" element={<Navigate to="/services" replace />} />
-                <Route path="/assessment" element={<Navigate to="/contact" replace />} />
-                <Route path="/sprint" element={<Sprint />} />
-                <Route path="/salesforce" element={<Salesforce />} />
-                <Route path="/salesforce/partners" element={<SalesforcePartners />} />
-                <Route path="/salesforce/delivery" element={<SalesforceDelivery />} />
-                <Route path="/fractional" element={<Fractional />} />
-                <Route path="/sample-report" element={<SampleReport />} />
-                <Route path="/proof" element={<Proof />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/ae-technical-support" element={<AETechnicalSupport />} />
-                <Route path="/assessment-tools" element={<AssessmentTools />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-        </BrowserRouter>
+        <ErrorBoundary>
+          <Toaster />
+          <Sonner />
+          {showLoadingScreen && <LoadingScreen onComplete={handleLoadingComplete} />}
+          <BrowserRouter>
+            {/* Skip to main content link for accessibility */}
+            <a href="#main-content" className="skip-to-main">
+              Skip to main content
+            </a>
+            <AppContent />
+          </BrowserRouter>
+        </ErrorBoundary>
       </TooltipProvider>
     </QueryClientProvider>
   );

@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
+import SEOHead from "@/components/SEOHead";
+import { trackEvent } from "@/hooks/usePageTracking";
 import { Mail, Phone, Clock, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 
 const Contact = () => {
@@ -53,6 +55,12 @@ const Contact = () => {
       return;
     }
     
+    // Track form submission
+    trackEvent('Contact Form Submitted', {
+      path: formData.path,
+      company: formData.company,
+    });
+    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
     console.log("Form submitted:", formData);
@@ -77,6 +85,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead 
+        title="Contact CWT Studio | Get Started with Revenue Infrastructure Assessment"
+        description="Book your revenue infrastructure assessment. Get expert analysis of your sales systems, ops, and pipeline. 24-hour response time guaranteed."
+        keywords="contact revenue consultant, sales operations assessment, book consultation, revenue infrastructure audit"
+      />
+      
       <Section>
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">
