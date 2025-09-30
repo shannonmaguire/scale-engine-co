@@ -60,7 +60,7 @@ const SalesforcePartners = () => {
               <span>/</span>
               <Link to="/salesforce" className="hover:text-foreground transition-colors">Salesforce</Link>
               <span>/</span>
-              <span className="text-foreground">Partners</span>
+              <span className="text-foreground">For AEs</span>
             </div>
           </div>
         </div>
