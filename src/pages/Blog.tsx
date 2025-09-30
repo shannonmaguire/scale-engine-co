@@ -413,7 +413,7 @@ const Blog = () => {
                   placeholder="Your email address" 
                   className="flex-1 border-border focus:border-primary focus:ring-1 focus:ring-primary"
                 />
-                <Button size="lg" className="font-semibold">
+                <Button className="font-semibold">
                   Subscribe
                 </Button>
               </div>
