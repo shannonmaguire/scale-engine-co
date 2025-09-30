@@ -183,9 +183,12 @@ const Contact = () => {
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                       <SelectContent className="bg-card border-border z-50">
+                        <SelectItem value="assessment">Infrastructure Assessment</SelectItem>
                         <SelectItem value="sprint">Revenue Sprint</SelectItem>
                         <SelectItem value="fractional">Fractional Ops</SelectItem>
                         <SelectItem value="salesforce">Salesforce Partnership</SelectItem>
+                        <SelectItem value="ae-support">AE Technical Support</SelectItem>
+                        <SelectItem value="assessment-tools">Assessment Tools</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -343,12 +346,28 @@ const Contact = () => {
               <h3 className="font-mono font-bold mb-3">Our Services</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
+                  <span className="text-muted-foreground">Infrastructure Assessment</span>
+                  <span className="font-medium">From $7.5K</span>
+                </div>
+                <div className="flex justify-between">
                   <span className="text-muted-foreground">Revenue Sprint</span>
                   <span className="font-medium">From $15K</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Fractional Ops</span>
-                  <span className="font-medium">Monthly</span>
+                  <span className="font-medium">From $5K/mo</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Salesforce Partnership</span>
+                  <span className="font-medium">Custom</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">AE Technical Support</span>
+                  <span className="font-medium">Custom</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Assessment Tools</span>
+                  <span className="font-medium">Custom</span>
                 </div>
                 <div className="border-t border-border pt-2 mt-3">
                   <p className="text-xs text-muted-foreground">
