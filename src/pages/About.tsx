@@ -26,11 +26,11 @@ const About = () => {
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <div className="system-status mb-6">
-            OPERATOR FOCUS
+            REVENUE LEADERSHIP
           </div>
           
           <h1 className="heading-page mb-6">
-            Built for Operators
+            Built for Revenue Leaders
           </h1>
           <p className="text-description max-w-2xl mx-auto">
             CWT Studio exists because scaling businesses deserve revenue systems that work. 
