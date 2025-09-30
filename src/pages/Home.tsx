@@ -10,10 +10,16 @@ import { useExitIntent } from "@/hooks/useExitIntent";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { SocialProof } from "@/components/SocialProof";
 import { ChatWidget } from "@/components/ChatWidget";
+import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
+import { EngagementTracker } from "@/components/EngagementTracker";
+import CookieBanner from "@/components/CookieBanner";
 import { ArrowRight, CheckCircle, BarChart3, Target, Award, TrendingUp, Shield } from "lucide-react";
 import { useState } from "react";
 
 const Home = () => {
+  // Performance monitoring
+  usePerformanceMonitoring();
+  
   // Track scroll depth for engagement
   useScrollDepth();
   
@@ -68,7 +74,9 @@ const Home = () => {
   };
   const diagnosticDeliverables = ["Revenue Infrastructure Scorecard tech, ops, pipeline", "Benchmarks against peers", "90 day roadmap with priority fixes", "Executive readout with leadership"];
   return <div className="min-h-screen">
-      <SEOHead 
+      <EngagementTracker />
+      <CookieBanner />
+      <SEOHead
         title="CWT Studio - Revenue System Infrastructure | B2B Sales Operations"
         description="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops for scaling B2B businesses. Turn complexity into seamless flow."
         keywords="revenue infrastructure, B2B sales operations, revenue sprint, fractional ops, sales system optimization, CRM consulting, outbound automation"

@@ -8,10 +8,15 @@ import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { TrustBar } from "@/components/TrustBar";
+import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
+import { EngagementTracker } from "@/components/EngagementTracker";
 import { Target, Zap, Clock, Palette } from "lucide-react";
 import { useState } from "react";
 
 const About = () => {
+  // Performance monitoring
+  usePerformanceMonitoring();
+  
   useScrollDepth();
   
   const [showExitPopup, setShowExitPopup] = useState(false);
@@ -42,7 +47,8 @@ const About = () => {
     description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
   }];
   return <div className="min-h-screen">
-      <SEOHead 
+      <EngagementTracker />
+      <SEOHead
         title="About CWT Studio | Revenue Operations Leadership & Expertise"
         description="Built for revenue leaders who need systems that scale. We diagnose, build, and operate revenue infrastructure with precision, ownership, and speed."
         keywords="revenue operations consulting, revenue leadership, systems consulting, operational excellence, fractional revenue operations, CRM implementation"

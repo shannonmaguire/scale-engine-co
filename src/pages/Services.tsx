@@ -8,10 +8,15 @@ import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { TrustBar } from "@/components/TrustBar";
+import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
+import { EngagementTracker } from "@/components/EngagementTracker";
 import { Search, Zap, RotateCcw, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const Services = () => {
+  // Performance monitoring
+  usePerformanceMonitoring();
+  
   useScrollDepth();
   
   const [showExitPopup, setShowExitPopup] = useState(false);
@@ -56,7 +61,8 @@ const Services = () => {
     link: "/fractional"
   }];
   return <div className="min-h-screen">
-      <SEOHead 
+      <EngagementTracker />
+      <SEOHead
         title="Revenue Operations Services | Infrastructure Assessment, Sprints & Fractional Ops"
         description="Complete revenue systems services: diagnostic assessments, 6-8 week implementation sprints, and ongoing fractional operations. Transform your sales infrastructure."
         keywords="revenue operations services, infrastructure assessment, revenue sprint, fractional COO, sales system implementation, CRM consulting, operational excellence"
