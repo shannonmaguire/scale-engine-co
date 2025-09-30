@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, X, ChevronDown } from "lucide-react";
 import cwtLogo from "@/assets/cwt-logo-horizontal-black.png";
+import { memo } from "react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -110,4 +111,5 @@ const Navigation = () => {
       </div>
     </nav>;
 };
-export default Navigation;
+
+export default memo(Navigation);

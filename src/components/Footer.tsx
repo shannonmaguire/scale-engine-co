@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import cwtLogo from "@/assets/cwt-logo-horizontal-black.png";
+import { memo } from "react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-[hsl(var(--burgundy))] text-white border-t border-white/10">
@@ -124,4 +126,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
-export default Footer;
+
+export default memo(Footer);

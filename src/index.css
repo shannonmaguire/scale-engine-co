@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance optimizations */
+img {
+  content-visibility: auto;
+}
+
 /* CWT Studio Design System - Operator Console Aesthetic */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');

@@ -7,8 +7,12 @@
     <meta name="description" content="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops for scaling businesses." />
     <meta name="author" content="CWT Studio" />
     <link rel="canonical" href="https://cwtstudio.com" />
+    
+    <!-- Performance optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <meta property="og:title" content="CWT Studio - Revenue System Infrastructure" />
@@ -24,5 +28,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Performance monitoring -->
+    <script>
+      // Set viewport height CSS variable for mobile
+      const setVh = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      };
+      setVh();
+      window.addEventListener('resize', setVh);
+    </script>
   </body>
 </html>

@@ -102,6 +102,10 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
           <img 
             src={cwtLogoHorizontal} 
             alt="CWT Studio"
+            width="240"
+            height="80"
+            loading="eager"
+            decoding="async"
             className="h-20 w-auto animate-pulse"
             style={{ 
               animationDuration: '2s',
