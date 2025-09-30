@@ -7,6 +7,7 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import Navigation from "@/components/Navigation";
 import LoadingScreen from "@/components/LoadingScreen";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { usePerformanceMonitoring, reportWebVitals } from "@/hooks/usePerformanceMonitoring";
@@ -27,6 +28,9 @@ const Blog = lazy(() => import("@/pages/Blog"));
 const BlogPost = lazy(() => import("@/pages/BlogPost"));
 const AETechnicalSupport = lazy(() => import("@/pages/AETechnicalSupport"));
 const AssessmentTools = lazy(() => import("@/pages/AssessmentTools"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("@/pages/TermsOfService"));
+const CookiePolicy = lazy(() => import("@/pages/CookiePolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -63,12 +67,16 @@ const AppContent = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/ae-technical-support" element={<AETechnicalSupport />} />
             <Route path="/assessment-tools" element={<AssessmentTools />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>
       <Footer />
+      <CookieBanner />
     </>
   );
 };

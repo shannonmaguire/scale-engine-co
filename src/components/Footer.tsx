@@ -16,8 +16,8 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Navigation Grid - 4 equal columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+        {/* Navigation Grid - 5 equal columns */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-white/10">
           {/* Services */}
           <div>
             <h4 className="font-mono font-semibold text-sm uppercase tracking-wider mb-4 text-white">
@@ -90,6 +90,30 @@ const Footer = () => {
               <li>
                 <Link to="/contact" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-mono font-semibold text-sm uppercase tracking-wider mb-4 text-white">
+              Legal
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/privacy-policy" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms-of-service" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookie-policy" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                  Cookie Policy
                 </Link>
               </li>
             </ul>

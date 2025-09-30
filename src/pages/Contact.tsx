@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
 import SEOHead from "@/components/SEOHead";
@@ -16,14 +17,19 @@ const Contact = () => {
     email: "",
     company: "",
     path: "",
-    objective: ""
+    objective: "",
+    privacyConsent: false
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
-  const validateField = (field: string, value: string) => {
+  const validateField = (field: string, value: string | boolean): string => {
+    if (typeof value === 'boolean') {
+      return value ? "" : "You must accept the privacy policy";
+    }
+    
     switch (field) {
       case "email":
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? "" : "Please enter a valid email";
@@ -45,7 +51,8 @@ const Contact = () => {
     // Validate all fields
     const newErrors: Record<string, string> = {};
     Object.keys(formData).forEach(key => {
-      const error = validateField(key, formData[key as keyof typeof formData]);
+      const value = formData[key as keyof typeof formData];
+      const error = validateField(key, typeof value === 'boolean' ? value : value);
       if (error) newErrors[key] = error;
     });
     
@@ -67,7 +74,7 @@ const Contact = () => {
     setIsSubmitting(false);
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
@@ -213,6 +220,30 @@ const Contact = () => {
                       </p>
                     )}
                   </div>
+
+                  <div className="flex items-start gap-2">
+                    <Checkbox
+                      id="privacyConsent"
+                      checked={formData.privacyConsent}
+                      onCheckedChange={(checked) => handleInputChange("privacyConsent", checked as boolean)}
+                      className={errors.privacyConsent && touched.privacyConsent ? 'border-destructive' : ''}
+                      aria-describedby="privacy-error"
+                      aria-invalid={!!(errors.privacyConsent && touched.privacyConsent)}
+                    />
+                    <Label htmlFor="privacyConsent" className="text-sm leading-relaxed cursor-pointer">
+                      I agree to the{" "}
+                      <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        Privacy Policy
+                      </a>{" "}
+                      and consent to the collection and use of my information *
+                    </Label>
+                  </div>
+                  {errors.privacyConsent && touched.privacyConsent && (
+                    <p id="privacy-error" className="text-xs text-destructive flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" />
+                      {errors.privacyConsent}
+                    </p>
+                  )}
 
                   <Button 
                     type="submit" 
