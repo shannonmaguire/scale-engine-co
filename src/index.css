@@ -314,6 +314,21 @@ img {
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
   
+  /* Form Group - Matching input and button heights */
+  .form-group-horizontal {
+    @apply flex flex-col sm:flex-row gap-3;
+  }
+  
+  .form-group-horizontal input,
+  .form-group-horizontal .input-matched {
+    @apply h-[44px];
+  }
+  
+  .form-group-horizontal button,
+  .form-group-horizontal .button-matched {
+    @apply h-[44px] px-6;
+  }
+  
   /* Status Indicators - Three-color brand system */
   .status-positive {
     @apply bg-accent text-accent-foreground;

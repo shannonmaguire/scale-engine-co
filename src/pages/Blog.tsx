@@ -408,13 +408,13 @@ const Blog = () => {
                 Get the latest revenue operations insights delivered weekly to your inbox.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
+              <div className="form-group-horizontal max-w-md mx-auto mb-4">
                 <Input 
                   type="email" 
                   placeholder="Your email address" 
                   className="flex-1 border-border focus:border-primary focus:ring-1 focus:ring-primary"
                 />
-                <Button className="font-semibold">
+                <Button className="font-semibold whitespace-nowrap">
                   Subscribe
                 </Button>
               </div>
