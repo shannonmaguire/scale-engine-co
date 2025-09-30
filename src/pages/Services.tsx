@@ -5,10 +5,25 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
+import { useExitIntent } from "@/hooks/useExitIntent";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { TrustBar } from "@/components/TrustBar";
 import { Search, Zap, RotateCcw, ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 const Services = () => {
   useScrollDepth();
+  
+  const [showExitPopup, setShowExitPopup] = useState(false);
+  
+  useExitIntent({
+    enabled: true,
+    onExitIntent: () => setShowExitPopup(true),
+  });
+
+  const handleExitPopupSubmit = async (email: string) => {
+    console.log("Exit intent email captured:", email);
+  };
   const services = [{
     icon: Search,
     title: "Infrastructure Assessment",
@@ -184,6 +199,18 @@ const Services = () => {
             </div>
         </div>
       </Section>
+      
+      {/* Trust Bar */}
+      <TrustBar />
+      
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup
+        isOpen={showExitPopup}
+        onClose={() => setShowExitPopup(false)}
+        title="Get Our Service Comparison Guide"
+        description="Download our detailed guide to choosing the right revenue operations engagement for your business stage."
+        onSubmit={handleExitPopupSubmit}
+      />
     </div>;
 };
 export default Services;

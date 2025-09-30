@@ -6,11 +6,29 @@ import SystemDiagram from "@/components/SystemDiagram";
 import SEOHead from "@/components/SEOHead";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
+import { useExitIntent } from "@/hooks/useExitIntent";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { SocialProof } from "@/components/SocialProof";
 import { ArrowRight, CheckCircle, BarChart3, Target, Award, TrendingUp, Shield } from "lucide-react";
+import { useState } from "react";
 
 const Home = () => {
   // Track scroll depth for engagement
   useScrollDepth();
+  
+  // Exit intent popup state
+  const [showExitPopup, setShowExitPopup] = useState(false);
+  
+  useExitIntent({
+    enabled: true,
+    onExitIntent: () => setShowExitPopup(true),
+  });
+
+  const handleExitPopupSubmit = async (email: string) => {
+    // In production, send to email service
+    console.log("Exit intent email captured:", email);
+    // TODO: Integrate with email service
+  };
   
   const services = [{
     title: "Infrastructure Assessment",
@@ -423,6 +441,19 @@ const Home = () => {
       </Section>
 
       {/* Final CTA - Removed in favor of Footer CTA */}
+      
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup
+        isOpen={showExitPopup}
+        onClose={() => setShowExitPopup(false)}
+        title="Wait! Get Our Free Guide"
+        description="Before you go, download our comprehensive revenue operations assessment framework—the same one we use with clients."
+        ctaText="Send Me The Guide"
+        onSubmit={handleExitPopupSubmit}
+      />
+      
+      {/* Social Proof Notifications */}
+      <SocialProof />
     </div>;
 };
 export default Home;
