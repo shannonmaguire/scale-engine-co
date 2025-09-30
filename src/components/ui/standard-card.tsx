@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { forwardRef } from "react";
 
 export interface StandardCardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: "default" | "muted" | "bordered";
@@ -22,8 +23,8 @@ const StandardCard = React.forwardRef<HTMLDivElement, StandardCardProps>(
           "p-8",
           // Standard border and radius
           "rounded-lg",
-          // Hover effects
-          "hover:border-primary hover:shadow-lg transition-all duration-300",
+          // Enhanced hover effects with micro-interactions
+          "hover:border-primary hover:shadow-lg hover-elevate transition-all duration-300",
           // Equal height support
           equalHeight && "h-full flex flex-col",
           // Variant styles

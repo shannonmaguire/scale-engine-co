@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import SEOHead from "@/components/SEOHead";
+import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { Search, Clock, ArrowRight } from "lucide-react";
 
 // Sample blog posts data
@@ -65,6 +66,8 @@ const blogPosts = [
 const categories = ["All", "Revenue Operations", "Salesforce", "Strategy", "Leadership"];
 
 const Blog = () => {
+  useScrollDepth();
+  
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -83,6 +86,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="CWT Studio Blog - Revenue Operations Insights & Best Practices"
+        description="Expert insights on revenue operations, Salesforce optimization, and business systems. Learn from proven strategies that drive growth and operational excellence."
+        keywords="revenue operations blog, Salesforce best practices, business systems, sales automation, fractional executive insights, B2B operations"
+      />
       {/* Streamlined Masthead */}
       <section className="bg-background border-b-2 border-primary/30 section-spacing-quarter">
         <div className="container mx-auto px-6 py-10">
@@ -219,8 +227,7 @@ const Blog = () => {
                       <Badge 
                         key={tag} 
                         variant="secondary" 
-                        className="text-sm font-medium px-4 py-2.5 bg-card border-2 border-primary/20 text-foreground hover:border-primary hover:bg-primary/5 hover-lift transition-all cursor-pointer group"
-                        style={{ animationDelay: `${index * 100}ms` }}
+                        className={`text-sm font-medium px-4 py-2.5 bg-card border-2 border-primary/20 text-foreground hover:border-primary hover:bg-primary/5 hover-lift transition-all cursor-pointer group fade-in-up stagger-${index + 1}`}
                       >
                         <span className="group-hover:text-primary transition-colors">
                           #{tag}
@@ -265,9 +272,10 @@ const Blog = () => {
               {/* Articles in Newspaper Column Layout */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {categoryPosts.map((post, index) => (
-                  <article key={post.id} className={`
+                <article key={post.id} className={`
                     ${index === 0 && categoryPosts.length > 1 ? 'md:col-span-2 lg:col-span-1' : ''}
                     border-b border-border pb-8 last:border-b-0
+                    hover-elevate fade-in-up stagger-${(index % 3) + 1}
                   `}>
                     <header className="mb-5">
                       <div className="flex items-center gap-2 mb-4">
