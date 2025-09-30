@@ -57,15 +57,33 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="btn-console-accent">
+                <Button asChild className="btn-console-accent hover-lift hover-glow group">
                   <Link to="/contact">
                     Book Assessment
-                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button asChild className="btn-console-secondary">
+                <Button asChild className="btn-console-secondary hover-lift">
                   <Link to="#system">See the System</Link>
                 </Button>
+              </div>
+              
+              {/* Trust signals */}
+              <div className="mt-8 pt-8 border-t border-border/50">
+                <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>14-day pilot available</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>50+ systems deployed</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>24hr response time</span>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -87,10 +105,10 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => <StandardCard key={index} equalHeight>
+            {services.map((service, index) => <StandardCard key={index} equalHeight className="hover-lift group">
                 <div className="flex flex-col flex-1">
                   <div className="mb-6">
-                    <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4">
+                    <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4 transition-all group-hover:bg-primary/20">
                       <span className="text-primary font-mono font-bold text-lg">{index + 1}</span>
                     </div>
                     <h3 className="heading-subsection mb-3">{service.title}</h3>
