@@ -36,18 +36,18 @@ const Navigation = () => {
   const isSolutionsActive = () => solutionsLinks.some(link => isActive(link.href));
   return <nav className="sticky top-0 z-50 bg-authority backdrop-blur border-b border-white/10">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* CWT Studio Official Logo */}
           <Link to="/" className="flex items-center hover:opacity-90 transition-opacity group">
             <img 
               src={cwtWordmarkWhite} 
               alt="CWT Studio" 
-              className="h-12 w-auto hidden md:block"
+              className="h-20 w-auto hidden md:block"
             />
             <img 
               src={cwtSymbolWhite} 
               alt="CWT Studio" 
-              className="h-10 w-auto md:hidden"
+              className="h-14 w-auto md:hidden"
             />
           </Link>
 
