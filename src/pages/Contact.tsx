@@ -187,7 +187,6 @@ const Contact = () => {
                         <SelectItem value="sprint">Revenue Sprint</SelectItem>
                         <SelectItem value="fractional">Fractional Ops</SelectItem>
                         <SelectItem value="salesforce">Salesforce Partnership</SelectItem>
-                        <SelectItem value="ae-support">AE Technical Support</SelectItem>
                         <SelectItem value="assessment-tools">Assessment Tools</SelectItem>
                       </SelectContent>
                     </Select>
@@ -359,10 +358,6 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Salesforce Partnership</span>
-                  <span className="font-medium">Custom</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">AE Technical Support</span>
                   <span className="font-medium">Custom</span>
                 </div>
                 <div className="flex justify-between">
