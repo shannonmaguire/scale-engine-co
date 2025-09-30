@@ -5,10 +5,25 @@ import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
+import { useExitIntent } from "@/hooks/useExitIntent";
+import { ExitIntentPopup } from "@/components/ExitIntentPopup";
+import { TrustBar } from "@/components/TrustBar";
 import { Target, Zap, Clock, Palette } from "lucide-react";
+import { useState } from "react";
 
 const About = () => {
   useScrollDepth();
+  
+  const [showExitPopup, setShowExitPopup] = useState(false);
+  
+  useExitIntent({
+    enabled: true,
+    onExitIntent: () => setShowExitPopup(true),
+  });
+
+  const handleExitPopupSubmit = async (email: string) => {
+    console.log("Exit intent email captured:", email);
+  };
   const values = [{
     icon: Target,
     title: "Precision",
@@ -146,6 +161,45 @@ const About = () => {
           </div>
         </div>
       </Section>
+      
+      {/* Trust Bar */}
+      <TrustBar />
+      
+      {/* CTA Section */}
+      <Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="heading-section mb-6">Ready to Transform Your Revenue Operations?</h2>
+          <p className="text-description mb-8">
+            Let's discuss how we can help you build a revenue system that scales.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <ConversionOptimizedButton
+              to="/contact"
+              ctaName="About - Book Assessment"
+              location="About CTA Section"
+            >
+              Book Assessment
+            </ConversionOptimizedButton>
+            <ConversionOptimizedButton
+              to="/sample-report"
+              ctaName="About - View Sample Report"
+              location="About CTA Section"
+              variant="outline"
+            >
+              View Sample Report
+            </ConversionOptimizedButton>
+          </div>
+        </div>
+      </Section>
+      
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup
+        isOpen={showExitPopup}
+        onClose={() => setShowExitPopup(false)}
+        title="Get Our Values in Action Guide"
+        description="See real examples of how we apply our principles of Precision, Ownership, Speed, and Taste in client engagements."
+        onSubmit={handleExitPopupSubmit}
+      />
     </div>;
 };
 export default About;

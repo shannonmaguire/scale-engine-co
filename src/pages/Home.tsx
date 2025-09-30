@@ -9,6 +9,7 @@ import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
 import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { SocialProof } from "@/components/SocialProof";
+import { ChatWidget } from "@/components/ChatWidget";
 import { ArrowRight, CheckCircle, BarChart3, Target, Award, TrendingUp, Shield } from "lucide-react";
 import { useState } from "react";
 
@@ -454,6 +455,9 @@ const Home = () => {
       
       {/* Social Proof Notifications */}
       <SocialProof />
+      
+      {/* Chat Widget */}
+      <ChatWidget />
     </div>;
 };
 export default Home;
