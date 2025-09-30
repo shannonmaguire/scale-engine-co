@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import cwtLogo from "@/assets/cwt-logo-horizontal-black.png";
+import cwtWordmarkWhite from "@/assets/cwt-wordmark-white.svg";
 import { memo } from "react";
 
 const Footer = () => {
@@ -10,7 +10,11 @@ const Footer = () => {
       <div className="container mx-auto px-6 py-16">
         {/* Logo + Tagline */}
         <div className="mb-12">
-          
+          <img 
+            src={cwtWordmarkWhite} 
+            alt="CWT Studio" 
+            className="h-10 w-auto mb-4"
+          />
           <p className="text-white/60 font-mono text-sm max-w-md">
             Revenue infrastructure that compounds
           </p>

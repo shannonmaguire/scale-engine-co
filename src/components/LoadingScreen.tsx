@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import cwtLogoHorizontal from "@/assets/cwt-logo-horizontal.svg";
+import cwtSymbolBurgundy from "@/assets/cwt-symbol-burgundy.svg";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -93,15 +93,18 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
                transform: showContent ? 'scale(1) translateY(0)' : 'scale(0.9) translateY(20px)',
                opacity: showContent ? 1 : 0
              }}>
-          <img 
-            src={cwtLogoHorizontal} 
-            alt="CWT Studio"
-            width="320"
-            height="107"
-            loading="eager"
-            decoding="async"
-            className="h-24 w-auto"
-          />
+          <div className="relative">
+            <div className="absolute inset-0 bg-[hsl(var(--burgundy))]/10 blur-3xl rounded-full animate-pulse" />
+            <img 
+              src={cwtSymbolBurgundy} 
+              alt="CWT Studio"
+              width="128"
+              height="128"
+              loading="eager"
+              decoding="async"
+              className="h-32 w-32 relative z-10 drop-shadow-2xl"
+            />
+          </div>
         </div>
 
         {/* Animated phrases with elegant transitions */}
