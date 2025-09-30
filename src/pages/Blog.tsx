@@ -197,7 +197,7 @@ const Blog = () => {
                     </div>
                   </div>
                   
-                  <Button asChild size="lg" className="font-mono text-base px-8 py-6">
+                  <Button asChild size="lg" className="font-mono">
                     <Link to={`/blog/${featuredPost.slug}`} className="flex items-center gap-2">
                       Read Article <ArrowRight className="h-5 w-5" />
                     </Link>
@@ -218,7 +218,7 @@ const Blog = () => {
                       <Badge 
                         key={tag} 
                         variant="secondary" 
-                        className="text-sm font-medium px-4 py-2 bg-background hover:bg-primary/10 transition-colors cursor-pointer border border-border"
+                        className="text-sm font-medium px-4 py-2 bg-background hover:bg-primary/10 hover:text-foreground transition-colors cursor-pointer border border-border"
                         style={{ animationDelay: `${index * 100}ms` }}
                       >
                         #{tag}
@@ -413,7 +413,7 @@ const Blog = () => {
                   placeholder="Your email address" 
                   className="flex-1 border-border focus:border-primary focus:ring-1 focus:ring-primary"
                 />
-                <Button size="lg" className="sm:px-8 font-semibold">
+                <Button size="lg" className="font-semibold">
                   Subscribe
                 </Button>
               </div>
