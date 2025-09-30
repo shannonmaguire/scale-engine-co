@@ -42,12 +42,12 @@ const Navigation = () => {
             <img 
               src={cwtWordmarkWhite} 
               alt="CWT Studio" 
-              className="h-8 w-auto hidden md:block"
+              className="h-12 w-auto hidden md:block"
             />
             <img 
               src={cwtSymbolWhite} 
               alt="CWT Studio" 
-              className="h-8 w-auto md:hidden"
+              className="h-10 w-auto md:hidden"
             />
           </Link>
 

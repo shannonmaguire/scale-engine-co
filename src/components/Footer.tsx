@@ -13,7 +13,7 @@ const Footer = () => {
           <img 
             src={cwtWordmarkWhite} 
             alt="CWT Studio" 
-            className="h-10 w-auto mb-4"
+            className="h-14 w-auto mb-4 hover:opacity-90 transition-opacity"
           />
           <p className="text-white/60 font-mono text-sm max-w-md">
             Revenue infrastructure that compounds
