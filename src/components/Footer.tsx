@@ -25,22 +25,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/services" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Assessment
                 </Link>
               </li>
               <li>
-                <Link to="/sprint" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/sprint" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Revenue Sprint
                 </Link>
               </li>
               <li>
-                <Link to="/fractional" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/fractional" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Fractional Ops
                 </Link>
               </li>
               <li>
-                <Link to="/salesforce" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/salesforce" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Salesforce
                 </Link>
               </li>
@@ -54,22 +54,22 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/proof" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/proof" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Proof
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/blog" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/sample-report" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/sample-report" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Sample Report
                 </Link>
               </li>
               <li>
-                <Link to="/assessment-tools" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/assessment-tools" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Tools
                 </Link>
               </li>
@@ -83,12 +83,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/about" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/contact" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Contact
                 </Link>
               </li>
@@ -102,17 +102,17 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/privacy-policy" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/privacy-policy" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/terms-of-service" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/cookie-policy" className="text-white/60 hover:text-white transition-colors font-mono text-sm">
+                <Link to="/cookie-policy" className="text-white/80 hover:text-white transition-colors font-mono text-sm">
                   Cookie Policy
                 </Link>
               </li>
@@ -125,7 +125,7 @@ const Footer = () => {
               Contact
             </h4>
             <div className="space-y-2">
-              <a href="mailto:hello@cwtstudio.com" className="flex items-center gap-2 text-white/60 hover:text-white transition-colors font-mono text-sm">
+              <a href="mailto:hello@cwtstudio.com" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors font-mono text-sm">
                 <Mail className="h-3.5 w-3.5" />
                 hello@cwtstudio.com
               </a>

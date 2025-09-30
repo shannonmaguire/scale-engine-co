@@ -4,9 +4,14 @@ import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import SystemDiagram from "@/components/SystemDiagram";
 import SEOHead from "@/components/SEOHead";
-import { ArrowRight, CheckCircle, BarChart3, Target } from "lucide-react";
+import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
+import { useScrollDepth } from "@/hooks/useScrollDepth";
+import { ArrowRight, CheckCircle, BarChart3, Target, Award, TrendingUp, Shield } from "lucide-react";
 
 const Home = () => {
+  // Track scroll depth for engagement
+  useScrollDepth();
+  
   const services = [{
     title: "Infrastructure Assessment",
     description: "Deep diagnostic of tech, ops, pipeline. Scorecard and benchmarks. 90 day roadmap. Executive readout.",
@@ -65,31 +70,49 @@ const Home = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="btn-console-accent hover-lift hover-glow group">
-                  <Link to="/contact">
-                    Book Assessment
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </Link>
-                </Button>
-                <Button asChild className="btn-console-secondary hover-lift">
-                  <Link to="#system">See the System</Link>
-                </Button>
+                <ConversionOptimizedButton
+                  to="/contact"
+                  ctaName="Hero - Book Assessment"
+                  location="Homepage Hero"
+                  className="btn-console-accent"
+                >
+                  Book Assessment
+                </ConversionOptimizedButton>
+                <ConversionOptimizedButton
+                  to="#system"
+                  ctaName="Hero - See System"
+                  location="Homepage Hero"
+                  variant="outline"
+                  className="btn-console-secondary"
+                  showArrow={false}
+                >
+                  See the System
+                </ConversionOptimizedButton>
               </div>
               
-              {/* Trust signals */}
+              {/* Enhanced Trust signals */}
               <div className="mt-8 pt-8 border-t border-border/50">
-                <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground font-mono">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>14-day pilot available</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
+                    <Award className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div>
+                      <div className="font-mono text-sm font-semibold text-foreground">50+ Systems</div>
+                      <div className="text-xs text-muted-foreground">Deployed & Scaled</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>50+ systems deployed</span>
+                  <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
+                    <TrendingUp className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div>
+                      <div className="font-mono text-sm font-semibold text-foreground">4x Average</div>
+                      <div className="text-xs text-muted-foreground">Efficiency Gain</div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>24hr response time</span>
+                  <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
+                    <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+                    <div>
+                      <div className="font-mono text-sm font-semibold text-foreground">24hr Response</div>
+                      <div className="text-xs text-muted-foreground">Guaranteed</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -172,9 +195,14 @@ const Home = () => {
               </div>
               
               <div className="mt-8">
-                <Button asChild variant="warm">
-                  <Link to="/contact">Book Assessment</Link>
-                </Button>
+                <ConversionOptimizedButton
+                  to="/contact"
+                  ctaName="Before After - Book Assessment"
+                  location="Before After Section"
+                  variant="warm"
+                >
+                  Book Assessment
+                </ConversionOptimizedButton>
               </div>
             </div>
             
@@ -266,9 +294,13 @@ const Home = () => {
             <p className="text-muted-foreground font-mono text-sm mb-6">
               No judgment. No assumptions. Just clear diagnosis and practical next steps.
             </p>
-            <Button asChild>
-              <Link to="/contact">Get Started</Link>
-            </Button>
+            <ConversionOptimizedButton
+              to="/contact"
+              ctaName="Meet You - Get Started"
+              location="Meet You Section"
+            >
+              Get Started
+            </ConversionOptimizedButton>
           </div>
       </Section>
 
@@ -290,9 +322,13 @@ const Home = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <Button asChild>
-                    <Link to="/sample-report">View Sample Report</Link>
-                  </Button>
+                  <ConversionOptimizedButton
+                    to="/sample-report"
+                    ctaName="Diagnostic - View Sample"
+                    location="Diagnostic Section"
+                  >
+                    View Sample Report
+                  </ConversionOptimizedButton>
                 </div>
               </div>
               
@@ -346,9 +382,13 @@ const Home = () => {
           </div>
           
           <div className="text-center">
-            <Button asChild>
-              <Link to="/services">See Services</Link>
-            </Button>
+            <ConversionOptimizedButton
+              to="/services"
+              ctaName="Proof - See Services"
+              location="Proof Section"
+            >
+              See Services
+            </ConversionOptimizedButton>
           </div>
       </Section>
 
@@ -363,12 +403,21 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild>
-                <Link to="/services">Our Services</Link>
-              </Button>
-              <Button asChild variant="outline">
-                <Link to="/proof">See Proof</Link>
-              </Button>
+              <ConversionOptimizedButton
+                to="/services"
+                ctaName="Complex Industries - Our Services"
+                location="Complex Industries Section"
+              >
+                Our Services
+              </ConversionOptimizedButton>
+              <ConversionOptimizedButton
+                to="/proof"
+                ctaName="Complex Industries - See Proof"
+                location="Complex Industries Section"
+                variant="outline"
+              >
+                See Proof
+              </ConversionOptimizedButton>
             </div>
         </div>
       </Section>

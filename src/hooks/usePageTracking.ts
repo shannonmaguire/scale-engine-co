@@ -30,12 +30,19 @@ export const usePageTracking = () => {
 };
 
 /**
- * Track custom events
+ * Track custom events with enhanced data
  */
 export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
   const event = {
     name: eventName,
-    properties,
+    properties: {
+      ...properties,
+      url: window.location.href,
+      path: window.location.pathname,
+      referrer: document.referrer,
+      userAgent: navigator.userAgent,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
+    },
     timestamp: new Date().toISOString(),
   };
 
@@ -44,6 +51,28 @@ export const trackEvent = (eventName: string, properties?: Record<string, any>) 
   }
 
   // TODO: Send to analytics service in production
-  // Example: window.gtag?.('event', eventName, properties);
-  // Example: window.mixpanel?.track(eventName, properties);
+  // Example: window.gtag?.('event', eventName, event.properties);
+  // Example: window.mixpanel?.track(eventName, event.properties);
+};
+
+/**
+ * Track CTA clicks for conversion optimization
+ */
+export const trackCTAClick = (ctaName: string, location: string, destination: string) => {
+  trackEvent('CTA Click', {
+    ctaName,
+    location,
+    destination,
+    category: 'conversion',
+  });
+};
+
+/**
+ * Track scroll depth for engagement analysis
+ */
+export const trackScrollDepth = (depth: number) => {
+  trackEvent('Scroll Depth', {
+    depth: `${depth}%`,
+    category: 'engagement',
+  });
 };
