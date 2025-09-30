@@ -174,7 +174,7 @@ const Proof = () => {
                             {study.challenge}
                           </p>
                           <blockquote className="border-l-3 border-primary pl-4 py-2 bg-primary/5">
-                            <p className="text-base font-mono italic text-primary">
+                            <p className="text-base font-mono italic text-foreground">
                               "{study.pullQuote}"
                             </p>
                           </blockquote>

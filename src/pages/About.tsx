@@ -71,7 +71,7 @@ const About = () => {
           <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-8">
             <h2 className="heading-section mb-6 text-center text-primary">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
-              <blockquote className="text-lg text-primary italic leading-relaxed mb-6 pl-6">
+              <blockquote className="text-lg text-foreground italic leading-relaxed mb-6 pl-6">
                 "Revenue systems are like plumbing. When they work, nobody thinks about them. 
                 When they break, they break everything else."
               </blockquote>

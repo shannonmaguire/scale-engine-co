@@ -196,7 +196,7 @@ const AssessmentTools = () => {
                         <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full text-xs flex items-center justify-center mr-2">1</span>
                         During Discovery
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-foreground">
                         Use the assessment framework and discovery questions to identify technical debt and qualify prospects.
                       </p>
                     </div>
@@ -205,7 +205,7 @@ const AssessmentTools = () => {
                         <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full text-xs flex items-center justify-center mr-2">2</span>
                         Building Business Case
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-foreground">
                         Leverage the ROI calculator and objection responses to justify investment and address concerns.
                       </p>
                     </div>
@@ -214,7 +214,7 @@ const AssessmentTools = () => {
                         <span className="w-6 h-6 bg-primary text-primary-foreground rounded-full text-xs flex items-center justify-center mr-2">3</span>
                         Implementation Planning
                       </h4>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-foreground">
                         Use readiness guides and stakeholder mapping to ensure smooth project kickoff.
                       </p>
                     </div>
