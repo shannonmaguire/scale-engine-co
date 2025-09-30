@@ -68,7 +68,7 @@ const About = () => {
       <Section variant="muted">
         {/* Philosophy */}
         <div className="mb-16">
-          <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-8">
+          <div className="bg-primary/3 border-l-4 border-primary rounded-lg p-8">
             <h2 className="heading-section mb-6 text-center text-primary">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
               <blockquote className="text-lg text-primary italic leading-relaxed mb-6 pl-6">
