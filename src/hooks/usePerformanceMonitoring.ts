@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
+import analytics from '@/lib/analytics';
 
 /**
  * Send performance metric to analytics
  */
 const sendMetric = (metricName: string, value: number, rating: 'good' | 'needs-improvement' | 'poor') => {
-  // In production, send to your analytics service
-  if (import.meta.env.DEV) {
-    console.log(`📊 ${metricName}:`, value.toFixed(2), `(${rating})`);
-  }
-  // TODO: Integrate with Google Analytics, Mixpanel, etc.
-  // Example: window.gtag?.('event', metricName, { value, rating });
+  analytics.trackPerformanceMetric(metricName, value, rating);
 };
 
 /**

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { trackEvent } from './usePageTracking';
+import analytics from '@/lib/analytics';
 
 export interface ErrorInfo {
   message: string;
@@ -59,14 +60,8 @@ const trackError = (error: ErrorInfo) => {
   }
 
   // Track to analytics
-  trackEvent('Error', {
-    message: error.message,
-    stack: error.stack,
-    componentStack: error.componentStack,
-    page: error.page,
-    severity: determineSeverity(error),
-    category: 'error',
-  });
+  const severity = determineSeverity(error);
+  analytics.trackError(error.message, error.stack, severity);
 
   // Store in localStorage for diagnostics
   const errors = getStoredErrors();

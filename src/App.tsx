@@ -14,6 +14,7 @@ import { usePerformanceMonitoring, reportWebVitals } from "@/hooks/usePerformanc
 import { useServiceWorker } from "@/hooks/useServiceWorker";
 import { useErrorTracking } from "@/hooks/useErrorTracking";
 import ChatWidget from "@/components/ChatWidget";
+import analytics from "@/lib/analytics";
 
 // Lazy load route components for better performance
 const Home = lazy(() => import("@/pages/Home"));
@@ -95,6 +96,9 @@ const App = () => {
   const [showLoadingScreen, setShowLoadingScreen] = useState(false);
 
   useEffect(() => {
+    // Initialize analytics
+    analytics.initialize();
+    
     // Check if intro has been seen this session
     const introSeen = sessionStorage.getItem('cwtIntroSeen');
     if (!introSeen) {

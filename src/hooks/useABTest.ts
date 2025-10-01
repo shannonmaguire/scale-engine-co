@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { trackEvent } from './usePageTracking';
+import analytics from '@/lib/analytics';
 
 interface ABTestVariant<T = any> {
   name: string;
@@ -68,11 +69,7 @@ export const useABTest = <T = any>({
     setSelectedVariant(selected);
 
     // Track variant assignment
-    trackEvent('AB Test Assigned', {
-      testName,
-      variant: selected.name,
-      timestamp: new Date().toISOString(),
-    });
+    analytics.trackABTestVariant(testName, selected.name);
 
     setIsLoading(false);
   }, [testName, variants, storageKey, enabled]);
