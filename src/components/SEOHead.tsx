@@ -78,7 +78,7 @@ const SEOHead = ({
       }
     }
 
-    // Structured data for Organization
+    // Enhanced structured data for Organization + Services
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
@@ -86,11 +86,24 @@ const SEOHead = ({
       "description": description,
       "url": baseUrl,
       "logo": `${baseUrl}/favicon.ico`,
+      "image": ogImage,
+      "priceRange": "$$$",
+      "areaServed": "US",
+      "serviceType": ["Revenue Operations", "Sales Infrastructure", "Salesforce Consulting", "Fractional Operations"],
+      "knowsAbout": ["Revenue Infrastructure", "Sales Operations", "B2B Systems", "CRM Optimization"],
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "hello@cwtstudio.com",
-        "contactType": "Sales"
-      }
+        "contactType": "Sales",
+        "availableLanguage": "English"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Chris Taylor"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/cwt-studio"
+      ]
     };
 
     let scriptTag = document.querySelector('script[type="application/ld+json"]');

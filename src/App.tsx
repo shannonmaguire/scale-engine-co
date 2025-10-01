@@ -31,6 +31,7 @@ const AssessmentTools = lazy(() => import("@/pages/AssessmentTools"));
 const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("@/pages/TermsOfService"));
 const CookiePolicy = lazy(() => import("@/pages/CookiePolicy"));
+const DesignSystem = lazy(() => import("@/pages/DesignSystem"));
 const Auth = lazy(() => import("@/pages/Auth"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -71,6 +72,7 @@ const AppContent = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/design-system" element={<DesignSystem />} />
             <Route path="/auth" element={<Auth />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

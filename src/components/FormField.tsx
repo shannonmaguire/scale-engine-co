@@ -69,11 +69,14 @@ export const FormField = ({
             required={required}
             rows={rows}
             className={cn(
-              "font-mono transition-all",
+              "font-mono transition-all duration-200",
               hasError && "border-destructive focus:ring-destructive",
               showSuccess && "border-primary focus:ring-primary"
             )}
-            aria-describedby={`${id}-error ${id}-help`}
+            aria-describedby={[
+              hasError && `${id}-error`,
+              helpText && `${id}-help`,
+            ].filter(Boolean).join(' ')}
             aria-invalid={hasError}
           />
         ) : (
@@ -86,11 +89,14 @@ export const FormField = ({
             placeholder={placeholder}
             required={required}
             className={cn(
-              "font-mono transition-all pr-10",
+              "font-mono transition-all duration-200 pr-10",
               hasError && "border-destructive focus:ring-destructive",
               showSuccess && "border-primary focus:ring-primary"
             )}
-            aria-describedby={`${id}-error ${id}-help`}
+            aria-describedby={[
+              hasError && `${id}-error`,
+              helpText && `${id}-help`,
+            ].filter(Boolean).join(' ')}
             aria-invalid={hasError}
           />
         )}
@@ -108,15 +114,30 @@ export const FormField = ({
         )}
       </div>
 
-      {/* Error message */}
+      {/* Error message with aria-live for screen readers */}
       {hasError && (
         <p
           id={`${id}-error`}
           className="text-xs text-destructive flex items-center gap-1 animate-fade-in-up"
           role="alert"
+          aria-live="polite"
+          aria-atomic="true"
         >
           <AlertCircle className="w-3 h-3" />
           {error}
+        </p>
+      )}
+      
+      {/* Success message */}
+      {showSuccess && (
+        <p
+          className="text-xs text-primary flex items-center gap-1 animate-fade-in-up"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <CheckCircle2 className="w-3 h-3" />
+          Valid
         </p>
       )}
 
