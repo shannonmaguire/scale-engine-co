@@ -77,8 +77,8 @@ const Home = () => {
       <EngagementTracker />
       <CookieBanner />
       <SEOHead
-        title="CWT Studio - Revenue System Infrastructure | B2B Sales Operations"
-        description="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops for scaling B2B businesses. Turn complexity into seamless flow."
+        title="CWT Studio - Revenue Infrastructure | $12M+ ARR Generated for B2B Clients"
+        description="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops. $12M+ ARR generated with 420% average growth rate."
         keywords="revenue infrastructure, B2B sales operations, revenue sprint, fractional ops, sales system optimization, CRM consulting, outbound automation"
       />
       
@@ -99,11 +99,11 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConversionOptimizedButton
                   to="/contact"
-                  ctaName="Hero - Book Assessment"
+                  ctaName="Hero - Get Revenue Diagnostic"
                   location="Homepage Hero"
                   className="btn-console-accent"
                 >
-                  Book Assessment
+                  Get Your Revenue Diagnostic
                 </ConversionOptimizedButton>
                 <ConversionOptimizedButton
                   to="/systems"
@@ -117,21 +117,21 @@ const Home = () => {
                 </ConversionOptimizedButton>
               </div>
               
-              {/* Enhanced Trust signals */}
+              {/* Enhanced Trust signals with quantified proof */}
               <div className="mt-8 pt-8 border-t border-border/50">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
                     <Award className="w-5 h-5 text-primary flex-shrink-0" />
                     <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">50+ Systems</div>
-                      <div className="text-xs text-muted-foreground">Deployed & Scaled</div>
+                      <div className="font-mono text-sm font-semibold text-foreground">$12M+ ARR</div>
+                      <div className="text-xs text-muted-foreground">Generated for Clients</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
                     <TrendingUp className="w-5 h-5 text-primary flex-shrink-0" />
                     <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">4x Average</div>
-                      <div className="text-xs text-muted-foreground">Efficiency Gain</div>
+                      <div className="font-mono text-sm font-semibold text-foreground">420% Growth</div>
+                      <div className="text-xs text-muted-foreground">Average Rate</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">

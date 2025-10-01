@@ -10,6 +10,7 @@ import { ExitIntentPopup } from "@/components/ExitIntentPopup";
 import { TrustBar } from "@/components/TrustBar";
 import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
 import { EngagementTracker } from "@/components/EngagementTracker";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Search, Zap, RotateCcw, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -67,6 +68,8 @@ const Services = () => {
         description="Complete revenue systems services: diagnostic assessments, 6-8 week implementation sprints, and ongoing fractional operations. Transform your sales infrastructure."
         keywords="revenue operations services, infrastructure assessment, revenue sprint, fractional COO, sales system implementation, CRM consulting, operational excellence"
       />
+      
+      <Breadcrumbs />
       
       <Section>
         {/* Hero */}

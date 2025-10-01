@@ -1,5 +1,8 @@
 import { useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, ArrowRight, TrendingUp, CheckCircle, Building2, Target, Zap, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -111,6 +114,14 @@ const Proof = () => {
     };
   }, [emblaApi, onSelect]);
   return <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Proof of Execution - Real Results | CWT Studio"
+        description="See how we've generated $12M+ in ARR for clients with 420% average growth. Real case studies from infrastructure assessments and revenue sprints."
+        keywords="case studies, revenue growth, sales operations results, B2B success stories, ROI proof"
+      />
+      
+      <Breadcrumbs />
+      
       {/* Header */}
       <section className="section-spacing-half px-6 border-b-2 border-border">
         <div className="max-w-7xl mx-auto">
@@ -326,6 +337,36 @@ const Proof = () => {
         {/* Dot Navigation */}
         <div className="flex items-center justify-center gap-3 py-8">
           {caseStudies.map((_, index) => <button key={index} onClick={() => scrollTo(index)} className={`transition-all duration-300 ${index === selectedIndex ? "w-8 h-2 bg-primary rounded-full" : "w-2 h-2 bg-border rounded-full hover:bg-muted-foreground"}`} aria-label={`Go to slide ${index + 1}`} />)}
+        </div>
+      </section>
+
+      {/* Strategic CTA Section */}
+      <section className="py-16 bg-card">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
+            <span className="font-mono text-xs uppercase tracking-wider text-primary">
+              Ready for Similar Results?
+            </span>
+          </div>
+          <h2 className="heading-section mb-6">
+            Let's Build Your System
+          </h2>
+          <p className="text-description mb-8 max-w-2xl mx-auto">
+            Every system we build starts with a deep diagnostic. We'll assess your current infrastructure, identify gaps, and create a 90-day roadmap to transform your revenue operations.
+          </p>
+          <ConversionOptimizedButton
+            to="/contact"
+            ctaName="Proof Page - Book Assessment"
+            location="Proof Page CTA"
+            size="lg"
+            className="hover-lift hover-glow"
+          >
+            Get Your Revenue Diagnostic
+          </ConversionOptimizedButton>
+          <p className="text-xs text-muted-foreground mt-4 font-mono">
+            24-hour response time · 50% of assessment fee credits to Sprint
+          </p>
         </div>
       </section>
 

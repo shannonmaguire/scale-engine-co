@@ -8,15 +8,14 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
 import SEOHead from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { trackEvent } from "@/hooks/usePageTracking";
 import { Mail, Phone, Clock, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     company: "",
-    path: "",
     objective: "",
     privacyConsent: false
   });
@@ -33,12 +32,10 @@ const Contact = () => {
     switch (field) {
       case "email":
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? "" : "Please enter a valid email";
-      case "name":
-        return value.trim().length > 1 ? "" : "Name is required";
       case "company":
         return value.trim().length > 0 ? "" : "Company name is required";
       case "objective":
-        return value.trim().length > 10 ? "" : "Please provide more detail (10+ characters)";
+        return ""; // Optional field
       default:
         return "";
     }
@@ -64,8 +61,8 @@ const Contact = () => {
     
     // Track form submission
     trackEvent('Contact Form Submitted', {
-      path: formData.path,
       company: formData.company,
+      hasObjective: !!formData.objective,
     });
     
     // Simulate form submission
@@ -93,10 +90,12 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Contact CWT Studio | Get Started with Revenue Infrastructure Assessment"
-        description="Book your revenue infrastructure assessment. Get expert analysis of your sales systems, ops, and pipeline. 24-hour response time guaranteed."
+        title="Contact CWT Studio | Get Your Revenue Diagnostic"
+        description="Book your revenue infrastructure assessment. Get expert analysis of your sales systems, ops, and pipeline. $12M+ ARR generated for clients. 24-hour response guaranteed."
         keywords="contact revenue consultant, sales operations assessment, book consultation, revenue infrastructure audit"
       />
+      
+      <Breadcrumbs />
       
       <Section>
         {/* Hero */}
@@ -121,46 +120,25 @@ const Contact = () => {
               </StandardCardHeader>
               <StandardCardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="name" className="font-mono text-sm font-medium">Name *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => handleInputChange("name", e.target.value)}
-                        onBlur={() => handleBlur("name")}
-                        required
-                        className={`mt-2 font-mono transition-all ${errors.name && touched.name ? 'border-destructive focus:ring-destructive' : ''}`}
-                        aria-describedby="name-error"
-                        aria-invalid={!!(errors.name && touched.name)}
-                      />
-                      {errors.name && touched.name && (
-                        <p id="name-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
-                          {errors.name}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <Label htmlFor="email" className="font-mono text-sm font-medium">Email *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
-                        onBlur={() => handleBlur("email")}
-                        required
-                        className={`mt-2 font-mono transition-all ${errors.email && touched.email ? 'border-destructive focus:ring-destructive' : ''}`}
-                        aria-describedby="email-error"
-                        aria-invalid={!!(errors.email && touched.email)}
-                      />
-                      {errors.email && touched.email && (
-                        <p id="email-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
-                          {errors.email}
-                        </p>
-                      )}
-                    </div>
+                  <div>
+                    <Label htmlFor="email" className="font-mono text-sm font-medium">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange("email", e.target.value)}
+                      onBlur={() => handleBlur("email")}
+                      required
+                      className={`mt-2 font-mono transition-all ${errors.email && touched.email ? 'border-destructive focus:ring-destructive' : ''}`}
+                      aria-describedby="email-error"
+                      aria-invalid={!!(errors.email && touched.email)}
+                    />
+                    {errors.email && touched.email && (
+                      <p id="email-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3" />
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -184,32 +162,15 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <Label htmlFor="path" className="font-mono text-sm font-medium">Choose Path *</Label>
-                    <Select onValueChange={(value) => handleInputChange("path", value)}>
-                      <SelectTrigger className="mt-2 font-mono" aria-describedby="path-error">
-                        <SelectValue placeholder="Select an option" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-card border-border z-50">
-                        <SelectItem value="assessment">Infrastructure Assessment</SelectItem>
-                        <SelectItem value="sprint">Revenue Sprint</SelectItem>
-                        <SelectItem value="fractional">Fractional Ops</SelectItem>
-                        <SelectItem value="salesforce">Salesforce Partnership</SelectItem>
-                        <SelectItem value="assessment-tools">Assessment Tools</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="objective" className="font-mono text-sm font-medium">One sentence objective *</Label>
+                    <Label htmlFor="objective" className="font-mono text-sm font-medium">Tell us about your challenge (optional)</Label>
                     <Textarea
                       id="objective"
                       value={formData.objective}
                       onChange={(e) => handleInputChange("objective", e.target.value)}
                       onBlur={() => handleBlur("objective")}
                       placeholder="What's the main challenge you need help solving?"
-                      required
                       className={`mt-2 font-mono transition-all ${errors.objective && touched.objective ? 'border-destructive focus:ring-destructive' : ''}`}
-                      rows={3}
+                      rows={4}
                       aria-describedby="objective-error"
                       aria-invalid={!!(errors.objective && touched.objective)}
                     />
