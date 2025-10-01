@@ -71,7 +71,7 @@ const SalesforcePartners = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-bold mb-2">Need Technical Support Now?</h2>
+              <h2 className="text-2xl font-bold mb-2 text-primary-foreground">Need Technical Support Now?</h2>
               <p className="text-primary-foreground/90">Get expert help for your Salesforce deals within 48 hours</p>
             </div>
             <Button size="lg" variant="secondary" asChild className="shrink-0">
@@ -155,9 +155,9 @@ const SalesforcePartners = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-primary text-white p-6 rounded-lg">
-              <h3 className="font-semibold mb-2">Technical Benefits We Provide</h3>
-              <ul className="text-sm space-y-1">
+            <div className="bg-primary text-primary-foreground p-6 rounded-lg">
+              <h3 className="font-semibold mb-2 text-primary-foreground">Technical Benefits We Provide</h3>
+              <ul className="text-sm space-y-1 text-primary-foreground">
                 <li>• <strong>Expert Assessment:</strong> Rapid technical evaluation and recommendations</li>
                 <li>• <strong>Implementation Support:</strong> Hands-on technical expertise during complex deals</li>
                 <li>• <strong>Risk Mitigation:</strong> Identify and address technical challenges early</li>
