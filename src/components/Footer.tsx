@@ -13,7 +13,7 @@ const Footer = () => {
           <img 
             src={cwtLogo} 
             alt="CWT Studio" 
-            className="h-[34px] sm:h-[38px] md:h-11 w-auto mb-4 hover:opacity-90 transition-opacity"
+            className="h-[38px] sm:h-[42px] md:h-12 w-auto mb-4 hover:opacity-90 transition-opacity"
             style={{ imageRendering: 'crisp-edges' }}
           />
           <p className="text-white/60 font-mono text-sm max-w-md">

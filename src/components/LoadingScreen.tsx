@@ -76,7 +76,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
               height="64"
               loading="eager"
               decoding="async"
-              className="h-12 md:h-16 w-auto relative z-10"
+              className="h-14 md:h-20 w-auto relative z-10"
               style={{ filter: 'drop-shadow(0 4px 24px rgba(104, 16, 56, 0.15))' }}
             />
           </div>

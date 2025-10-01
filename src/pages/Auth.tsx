@@ -72,7 +72,7 @@ const Auth = () => {
           <img 
             src={cwtLogoWhite} 
             alt="CWT Studio"
-            className="h-8 md:h-9 w-auto"
+            className="h-9 md:h-10 w-auto"
             style={{ filter: 'drop-shadow(0 2px 16px rgba(104, 16, 56, 0.1))' }}
           />
         </div>

@@ -41,7 +41,7 @@ const Navigation = () => {
             <img 
               src={cwtLogo} 
               alt="CWT Studio" 
-              className="h-[26px] sm:h-[30px] md:h-9 w-auto"
+              className="h-[30px] sm:h-[34px] md:h-10 w-auto"
               style={{ imageRendering: 'crisp-edges' }}
             />
           </Link>
