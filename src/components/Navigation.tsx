@@ -51,7 +51,7 @@ const Navigation = () => {
             {navLinks.map(link => <Link 
                 key={link.href} 
                 to={link.href} 
-                className={`text-sm font-mono font-medium transition-colors hover:text-success focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded px-2 py-1 ${isActive(link.href) ? "text-white font-semibold" : "text-white/80"}`}
+                className={`text-sm font-mono font-medium transition-colors hover:text-success focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded px-2 py-1 ${isActive(link.href) ? "!text-white font-semibold" : "!text-white/80"}`}
                 aria-current={isActive(link.href) ? "page" : undefined}
               >
                 {link.label}
@@ -59,13 +59,13 @@ const Navigation = () => {
             
             {/* Solutions Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className={`text-sm font-mono font-medium transition-colors hover:text-success flex items-center gap-1 ${isSolutionsActive() ? "text-white font-semibold" : "text-white/80"}`}>
+              <DropdownMenuTrigger className={`text-sm font-mono font-medium transition-colors hover:text-success flex items-center gap-1 ${isSolutionsActive() ? "!text-white font-semibold" : "!text-white/80"}`}>
                 Solutions
-                <ChevronDown size={14} />
+                <ChevronDown size={14} className="!text-white" />
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-48 bg-authority border-white/20">
                 {solutionsLinks.map(link => <DropdownMenuItem key={link.href} asChild>
-                    <Link to={link.href} className="w-full font-mono font-medium text-white hover:text-success">
+                    <Link to={link.href} className="w-full font-mono font-medium !text-white hover:!text-success">
                       {link.label}
                     </Link>
                   </DropdownMenuItem>)}
@@ -95,14 +95,14 @@ const Navigation = () => {
           {/* Mobile Navigation */}
         {isOpen && <div id="mobile-navigation" className="md:hidden border-t border-white/20 bg-authority">
             <div className="px-2 pt-2 pb-3 space-y-1" role="navigation" aria-label="Mobile navigation">
-              {navLinks.map(link => <Link key={link.href} to={link.href} className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "text-white font-semibold" : "text-white/80"}`} onClick={() => setIsOpen(false)}>
+              {navLinks.map(link => <Link key={link.href} to={link.href} className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "!text-white font-semibold" : "!text-white/80"}`} onClick={() => setIsOpen(false)}>
                   {link.label}
                 </Link>)}
               
               {/* Solutions section in mobile */}
               <div className="px-3 py-1">
-                <div className="text-sm font-mono font-semibold text-white/60 mb-2">Solutions</div>
-                {solutionsLinks.map(link => <Link key={link.href} to={link.href} className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "text-white font-semibold" : "text-white/80"}`} onClick={() => setIsOpen(false)}>
+                <div className="text-sm font-mono font-semibold !text-white/60 mb-2">Solutions</div>
+                {solutionsLinks.map(link => <Link key={link.href} to={link.href} className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "!text-white font-semibold" : "!text-white/80"}`} onClick={() => setIsOpen(false)}>
                     {link.label}
                   </Link>)}
               </div>
