@@ -3,7 +3,7 @@ import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitl
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
-import heroInfrastructure from "@/assets/hero-infrastructure-diagram.png";
+import BackendInfrastructureVisual from "@/components/BackendInfrastructureVisual";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
@@ -146,11 +146,7 @@ const Home = () => {
             </div>
             
             <div className="lg:pl-12 flex items-center justify-center">
-              <img 
-                src={heroInfrastructure} 
-                alt="Revenue System Infrastructure Diagram" 
-                className="w-full max-w-2xl h-auto rounded-lg shadow-2xl"
-              />
+              <BackendInfrastructureVisual />
             </div>
           </div>
       </Section>
