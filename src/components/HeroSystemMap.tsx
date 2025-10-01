@@ -124,23 +124,23 @@ const SystemMapDesktop = () => (
     <rect width="1200" height="600" fill="#0B0B0D" />
     <rect width="1200" height="600" fill="url(#grid)" />
     
-    <Connection points="250,300 400,300 600,300 800,300 950,300" />
-    <Connection points="600,300 600,180" />
-    <Connection points="600,300 600,420" />
+    <Connection points="150,300 380,300 600,300 820,300 1050,300" />
+    <Connection points="600,300 600,140" />
+    <Connection points="600,300 600,460" />
     
     <circle r="4" fill="#681038">
       <animateMotion
         dur="6s"
         repeatCount="indefinite"
-        path="M 250,300 L 400,300 L 600,300 L 800,300 L 950,300"
+        path="M 150,300 L 380,300 L 600,300 L 820,300 L 1050,300"
       />
     </circle>
     
-    <Node x={250} y={300} label="API" type="primary" />
+    <Node x={150} y={300} label="API" type="primary" />
     <Node x={600} y={300} label="Core Engine" type="core" />
-    <Node x={950} y={300} label="Storage" type="primary" />
-    <Node x={600} y={180} label="Database" type="secondary" />
-    <Node x={600} y={420} label="Cache" type="secondary" />
+    <Node x={1050} y={300} label="Storage" type="primary" />
+    <Node x={600} y={140} label="Database" type="secondary" />
+    <Node x={600} y={460} label="Cache" type="secondary" />
   </svg>
 );
 
@@ -152,23 +152,23 @@ const SystemMapTablet = () => (
     <rect width="1000" height="560" fill="#0B0B0D" />
     <rect width="1000" height="560" fill="url(#grid)" />
     
-    <Connection points="200,280 350,280 500,280 650,280 800,280" />
-    <Connection points="500,280 500,180" />
-    <Connection points="500,280 500,380" />
+    <Connection points="120,280 320,280 500,280 680,280 880,280" />
+    <Connection points="500,280 500,140" />
+    <Connection points="500,280 500,420" />
     
     <circle r="4" fill="#681038">
       <animateMotion
         dur="6s"
         repeatCount="indefinite"
-        path="M 200,280 L 350,280 L 500,280 L 650,280 L 800,280"
+        path="M 120,280 L 320,280 L 500,280 L 680,280 L 880,280"
       />
     </circle>
     
-    <Node x={200} y={280} label="API" type="primary" />
+    <Node x={120} y={280} label="API" type="primary" />
     <Node x={500} y={280} label="Core" type="core" />
-    <Node x={800} y={280} label="Storage" type="primary" />
-    <Node x={500} y={180} label="Database" type="secondary" />
-    <Node x={500} y={380} label="Cache" type="secondary" />
+    <Node x={880} y={280} label="Storage" type="primary" />
+    <Node x={500} y={140} label="Database" type="secondary" />
+    <Node x={500} y={420} label="Cache" type="secondary" />
   </svg>
 );
 
@@ -180,23 +180,23 @@ const SystemMapMobile = () => (
     <rect width="800" height="450" fill="#0B0B0D" />
     <rect width="800" height="450" fill="url(#grid)" />
     
-    <Connection points="150,225 300,225 400,225 500,225 650,225" />
-    <Connection points="400,225 400,150" />
-    <Connection points="400,225 400,300" />
+    <Connection points="100,225 280,225 400,225 520,225 700,225" />
+    <Connection points="400,225 400,120" />
+    <Connection points="400,225 400,330" />
     
     <circle r="3" fill="#681038">
       <animateMotion
         dur="6s"
         repeatCount="indefinite"
-        path="M 150,225 L 300,225 L 400,225 L 500,225 L 650,225"
+        path="M 100,225 L 280,225 L 400,225 L 520,225 L 700,225"
       />
     </circle>
     
-    <Node x={150} y={225} label="API" type="primary" />
+    <Node x={100} y={225} label="API" type="primary" />
     <Node x={400} y={225} label="Core" type="core" />
-    <Node x={650} y={225} label="Storage" type="primary" />
-    <Node x={400} y={150} label="DB" type="secondary" />
-    <Node x={400} y={300} label="Cache" type="secondary" />
+    <Node x={700} y={225} label="Storage" type="primary" />
+    <Node x={400} y={120} label="DB" type="secondary" />
+    <Node x={400} y={330} label="Cache" type="secondary" />
   </svg>
 );
 
