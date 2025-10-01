@@ -11,6 +11,9 @@ import CookieBanner from "@/components/CookieBanner";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import { usePerformanceMonitoring, reportWebVitals } from "@/hooks/usePerformanceMonitoring";
+import { useServiceWorker } from "@/hooks/useServiceWorker";
+import { useErrorTracking } from "@/hooks/useErrorTracking";
+import ChatWidget from "@/components/ChatWidget";
 
 // Lazy load route components for better performance
 const Home = lazy(() => import("@/pages/Home"));
@@ -41,6 +44,8 @@ const queryClient = new QueryClient();
 const AppContent = () => {
   usePageTracking();
   usePerformanceMonitoring();
+  useServiceWorker();
+  useErrorTracking();
 
   return (
     <>
@@ -81,6 +86,7 @@ const AppContent = () => {
       </main>
       <Footer />
       <CookieBanner />
+      <ChatWidget />
     </>
   );
 };

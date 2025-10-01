@@ -20,7 +20,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Resource hints for critical assets -->
+    <link rel="preload" href="/src/main.tsx" as="script">
+    <link rel="preload" href="/src/index.css" as="style">
+    <link rel="prefetch" href="/src/assets/cwt-logo-white.svg" as="image">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- PWA & Service Worker -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1B3022">
 
     <meta property="og:title" content="CWT Studio - Revenue System Infrastructure" />
     <meta property="og:description" content="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops for scaling businesses." />

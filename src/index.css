@@ -184,11 +184,30 @@ img {
     @apply outline-none ring-2 ring-primary ring-offset-2;
   }
   
-  /* Skip to main content link */
+  /* Skip to main content link - WCAG 2.1 AA requirement */
   .skip-to-main {
-    @apply absolute -top-10 left-4 bg-primary text-primary-foreground px-4 py-2 rounded;
+    @apply absolute left-4 bg-primary text-primary-foreground px-6 py-3 rounded;
     @apply font-mono font-bold uppercase tracking-wide;
-    @apply focus:top-4 transition-all z-50;
+    @apply transition-all z-[100];
+    @apply focus:ring-4 focus:ring-primary;
+    transform: translateY(-200%);
+  }
+  
+  .skip-to-main:focus {
+    transform: translateY(1rem);
+  }
+  
+  /* Screen reader only content */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
   
   /* Consistent Typography Scale - Using Semantic Tokens */

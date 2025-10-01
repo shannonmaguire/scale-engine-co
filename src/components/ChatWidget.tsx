@@ -256,3 +256,5 @@ function generateResponse(input: string): string {
 
   return "That's a great question! For detailed information, I'd recommend:\n\n• Browsing our Services page\n• Checking out our sample assessment report\n• Scheduling a 30-minute discovery call\n\nWhat would be most helpful for you?";
 }
+
+export default ChatWidget;
