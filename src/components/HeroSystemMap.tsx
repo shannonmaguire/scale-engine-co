@@ -75,7 +75,34 @@ const Connection = ({
     </defs>
     <polyline points={points} fill="none" stroke="url(#connection-grad)" strokeWidth="1" strokeDasharray="4 4" />
   </g>;
-const SystemMapDesktop = () => {};
+const SystemMapDesktop = () => (
+  <svg viewBox="0 0 1200 600" className="w-full h-full">
+    <defs>
+      <GridPattern />
+      <CoreGlow />
+    </defs>
+    <rect width="1200" height="600" fill="#000" />
+    <rect width="1200" height="600" fill="url(#grid)" />
+    
+    {/* Main horizontal connections */}
+    <Connection points="100,300 350,300 600,300 850,300 1100,300" />
+    {/* Vertical connections from core */}
+    <Connection points="600,300 600,150" />
+    <Connection points="600,300 600,450" />
+    
+    {/* Animated data flow */}
+    <circle r="3" fill="#681038" opacity="0.8">
+      <animateMotion dur="8s" repeatCount="indefinite" path="M 100,300 L 350,300 L 600,300 L 850,300 L 1100,300" />
+    </circle>
+    
+    {/* Nodes */}
+    <Node x={100} y={300} label="API" type="primary" />
+    <Node x={600} y={300} label="Core System" type="core" />
+    <Node x={1100} y={300} label="Storage" type="primary" />
+    <Node x={600} y={150} label="Database" type="secondary" />
+    <Node x={600} y={450} label="Cloud" type="secondary" />
+  </svg>
+);
 const SystemMapTablet = () => <svg viewBox="0 0 1000 560" className="w-full h-full">
     <defs>
       <GridPattern />
@@ -121,6 +148,24 @@ const SystemMapMobile = () => <svg viewBox="0 0 800 450" className="w-full h-ful
     <Node x={400} y={330} label="Cloud" type="secondary" />
   </svg>;
 const HeroSystemMap = () => {
-  return;
+  return (
+    <div className="w-full h-full min-h-[450px] md:min-h-[560px] lg:min-h-[600px]">
+      {/* Mobile: < 768px */}
+      <div className="block md:hidden">
+        <SystemMapMobile />
+      </div>
+      
+      {/* Tablet: 768px - 1023px */}
+      <div className="hidden md:block lg:hidden">
+        <SystemMapTablet />
+      </div>
+      
+      {/* Desktop: >= 1024px */}
+      <div className="hidden lg:block">
+        <SystemMapDesktop />
+      </div>
+    </div>
+  );
 };
+
 export default HeroSystemMap;
