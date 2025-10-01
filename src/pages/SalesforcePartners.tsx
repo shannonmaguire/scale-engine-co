@@ -156,12 +156,12 @@ const SalesforcePartners = () => {
               ))}
             </div>
             <div className="bg-primary text-primary-foreground p-6 rounded-lg">
-              <h3 className="font-semibold mb-2 text-primary-foreground">Technical Benefits We Provide</h3>
-              <ul className="text-sm space-y-1 text-primary-foreground">
-                <li>• <strong className="text-primary-foreground">Expert Assessment:</strong> Rapid technical evaluation and recommendations</li>
-                <li>• <strong className="text-primary-foreground">Implementation Support:</strong> Hands-on technical expertise during complex deals</li>
-                <li>• <strong className="text-primary-foreground">Risk Mitigation:</strong> Identify and address technical challenges early</li>
-                <li>• <strong className="text-primary-foreground">Industry Expertise:</strong> Deep knowledge of sector-specific Salesforce requirements</li>
+              <h3 className="font-semibold mb-2 !text-white">Technical Benefits We Provide</h3>
+              <ul className="text-sm space-y-1 !text-white">
+                <li className="!text-white">• <strong className="!text-white">Expert Assessment:</strong> Rapid technical evaluation and recommendations</li>
+                <li className="!text-white">• <strong className="!text-white">Implementation Support:</strong> Hands-on technical expertise during complex deals</li>
+                <li className="!text-white">• <strong className="!text-white">Risk Mitigation:</strong> Identify and address technical challenges early</li>
+                <li className="!text-white">• <strong className="!text-white">Industry Expertise:</strong> Deep knowledge of sector-specific Salesforce requirements</li>
               </ul>
             </div>
           </div>
