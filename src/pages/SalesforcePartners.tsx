@@ -130,7 +130,7 @@ const SalesforcePartners = () => {
               ))}
             </div>
             <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg">
-              <p className="text-sm text-foreground">
+              <p className="text-sm text-primary">
                 <strong>Reality:</strong> These are all fixable problems. The key is showing them quick wins 
                 first, then building momentum for bigger changes. We've handled orgs way messier than theirs.
               </p>
