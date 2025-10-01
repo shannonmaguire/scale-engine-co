@@ -73,7 +73,7 @@ export const FormField = ({
               hasError && "border-destructive focus:ring-destructive",
               showSuccess && "border-primary focus:ring-primary"
             )}
-            aria-describedby={`${hasError ? `${id}-error` : ''} ${helpText ? `${id}-help` : ''}`.trim() || undefined}
+            aria-describedby={`${id}-error ${id}-help`}
             aria-invalid={hasError}
           />
         ) : (
@@ -90,7 +90,7 @@ export const FormField = ({
               hasError && "border-destructive focus:ring-destructive",
               showSuccess && "border-primary focus:ring-primary"
             )}
-            aria-describedby={`${hasError ? `${id}-error` : ''} ${helpText ? `${id}-help` : ''}`.trim() || undefined}
+            aria-describedby={`${id}-error ${id}-help`}
             aria-invalid={hasError}
           />
         )}
@@ -108,14 +108,12 @@ export const FormField = ({
         )}
       </div>
 
-      {/* Error message with aria-live for screen readers */}
+      {/* Error message */}
       {hasError && (
         <p
           id={`${id}-error`}
           className="text-xs text-destructive flex items-center gap-1 animate-fade-in-up"
           role="alert"
-          aria-live="polite"
-          aria-atomic="true"
         >
           <AlertCircle className="w-3 h-3" />
           {error}
