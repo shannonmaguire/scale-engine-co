@@ -3,7 +3,7 @@ import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitl
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
-import HeroSystemMap from "@/components/HeroSystemMap";
+import { ImmersiveHero } from "@/components/ImmersiveHero";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
@@ -13,7 +13,7 @@ import { ChatWidget } from "@/components/ChatWidget";
 import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
 import { EngagementTracker } from "@/components/EngagementTracker";
 import CookieBanner from "@/components/CookieBanner";
-import { ArrowRight, CheckCircle, BarChart3, Target, Award, TrendingUp, Shield } from "lucide-react";
+import { CheckCircle, BarChart3, Target } from "lucide-react";
 import { useState } from "react";
 
 const Home = () => {
@@ -82,74 +82,8 @@ const Home = () => {
         keywords="revenue infrastructure, B2B sales operations, revenue sprint, fractional ops, sales system optimization, CRM consulting, outbound automation"
       />
       
-      {/* Hero Section */}
-      <Section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              
-              
-              <h1 className="heading-page mb-6 leading-tight">
-                The Competitive Advantage Is the Backend
-              </h1>
-              
-              <p className="text-description mb-8">
-                In an era of fractured attention and tool overload, the real advantage belongs to operators who install systems that are simple, resilient, and actually adopted. We turn complexity into seamless flow.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <ConversionOptimizedButton
-                  to="/contact"
-                  ctaName="Hero - Book Assessment"
-                  location="Homepage Hero"
-                  className="btn-console-accent"
-                >
-                  Book Assessment
-                </ConversionOptimizedButton>
-                <ConversionOptimizedButton
-                  to="#system"
-                  ctaName="Hero - See System"
-                  location="Homepage Hero"
-                  variant="outline"
-                  className="btn-console-secondary"
-                  showArrow={false}
-                >
-                  See the System
-                </ConversionOptimizedButton>
-              </div>
-              
-              {/* Enhanced Trust signals */}
-              <div className="mt-8 pt-8 border-t border-border/50">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
-                    <Award className="w-5 h-5 text-primary flex-shrink-0" />
-                    <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">50+ Systems</div>
-                      <div className="text-xs text-muted-foreground">Deployed & Scaled</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
-                    <TrendingUp className="w-5 h-5 text-primary flex-shrink-0" />
-                    <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">4x Average</div>
-                      <div className="text-xs text-muted-foreground">Efficiency Gain</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
-                    <Shield className="w-5 h-5 text-primary flex-shrink-0" />
-                    <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">24hr Response</div>
-                      <div className="text-xs text-muted-foreground">Guaranteed</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="lg:pl-12 flex items-center justify-center">
-              <HeroSystemMap />
-            </div>
-          </div>
-      </Section>
+      {/* Immersive Hero Section */}
+      <ImmersiveHero />
 
       {/* The System Section */}
       <Section id="system" variant="muted">
