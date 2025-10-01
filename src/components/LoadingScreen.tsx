@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import cwtLogoWhite from "@/assets/cwt-logo-white.svg";
+import cwtLogoBlack from "@/assets/cwt-logo-black.svg";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -70,7 +70,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
                    animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
                  }} />
             <img 
-              src={cwtLogoWhite} 
+              src={cwtLogoBlack} 
               alt="CWT Studio"
               width="256"
               height="64"
