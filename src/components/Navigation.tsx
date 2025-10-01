@@ -51,7 +51,7 @@ const Navigation = () => {
             {navLinks.map(link => <Link 
                 key={link.href} 
                 to={link.href} 
-                className={`text-sm font-mono font-medium transition-colors hover:text-success focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded px-2 py-1 ${isActive(link.href) ? "!text-white font-semibold" : "!text-white/80"}`}
+                className={`text-sm font-mono font-medium transition-colors hover:text-success focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded px-2 py-1 ${isActive(link.href) ? "!text-white font-semibold" : "!text-white"}`}
                 aria-current={isActive(link.href) ? "page" : undefined}
               >
                 {link.label}
@@ -59,7 +59,7 @@ const Navigation = () => {
             
             {/* Solutions Dropdown */}
             <DropdownMenu>
-              <DropdownMenuTrigger className={`text-sm font-mono font-medium transition-colors hover:text-success flex items-center gap-1 ${isSolutionsActive() ? "!text-white font-semibold" : "!text-white/80"}`}>
+              <DropdownMenuTrigger className={`text-sm font-mono font-medium transition-colors hover:text-success flex items-center gap-1 ${isSolutionsActive() ? "!text-white font-semibold" : "!text-white"}`}>
                 Solutions
                 <ChevronDown size={14} className="!text-white" />
               </DropdownMenuTrigger>
