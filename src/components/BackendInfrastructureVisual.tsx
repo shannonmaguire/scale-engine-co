@@ -1,248 +1,96 @@
-import { useEffect, useState } from 'react';
-
 const BackendInfrastructureVisual = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <div className="relative w-full aspect-[16/9] overflow-hidden">
-      {/* Background Grid */}
-      <svg
-        className="absolute inset-0 w-full h-full"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className="relative w-full aspect-[16/9] bg-black rounded-lg overflow-hidden border border-border/50">
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(hsl(var(--border)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+
+      {/* Main Architecture Layout */}
+      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 562.5" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <pattern
-            id="grid"
-            width="40"
-            height="40"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 40 0 L 0 0 0 40"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="0.5"
-              className="text-border/30"
-            />
-          </pattern>
+          {/* Clean gradient for connection line */}
+          <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#681038" stopOpacity="0.3" />
+            <stop offset="50%" stopColor="#681038" stopOpacity="0.8" />
+            <stop offset="100%" stopColor="#681038" stopOpacity="0.3" />
+          </linearGradient>
           
-          <linearGradient id="flow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
-            <stop offset="50%" stopColor="hsl(var(--primary))" stopOpacity="0.6" />
-            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+          {/* Animated dash pattern */}
+          <linearGradient id="data-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#681038" stopOpacity="0">
+              <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" stopColor="#681038" stopOpacity="1">
+              <animate attributeName="offset" values="0.5;1.5" dur="2s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" stopColor="#681038" stopOpacity="0">
+              <animate attributeName="offset" values="1;2" dur="2s" repeatCount="indefinite" />
+            </stop>
           </linearGradient>
         </defs>
 
-        <rect width="100%" height="100%" fill="url(#grid)" />
-
-        {/* Connection Lines with Flow Animation */}
-        <g className="connection-lines">
-          {/* Horizontal flows */}
-          <line
-            x1="15%"
-            y1="30%"
-            x2="45%"
-            y2="30%"
-            stroke="currentColor"
-            strokeWidth="1"
-            className={`text-foreground/20 ${mounted ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transition: 'opacity 0.8s ease-out' }}
-          />
-          <line
-            x1="55%"
-            y1="70%"
-            x2="85%"
-            y2="70%"
-            stroke="currentColor"
-            strokeWidth="1"
-            className={`text-foreground/20 ${mounted ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transition: 'opacity 0.8s ease-out 0.2s' }}
-          />
-          
-          {/* Diagonal flows */}
-          <line
-            x1="45%"
-            y1="30%"
-            x2="55%"
-            y2="50%"
-            stroke="currentColor"
-            strokeWidth="1"
-            className={`text-foreground/20 ${mounted ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transition: 'opacity 0.8s ease-out 0.4s' }}
-          />
-          <line
-            x1="55%"
-            y1="50%"
-            x2="55%"
-            y2="70%"
-            stroke="currentColor"
-            strokeWidth="1"
-            className={`text-foreground/20 ${mounted ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transition: 'opacity 0.8s ease-out 0.6s' }}
-          />
-          <line
-            x1="45%"
-            y1="50%"
-            x2="25%"
-            y2="65%"
-            stroke="currentColor"
-            strokeWidth="1"
-            className={`text-foreground/20 ${mounted ? 'opacity-100' : 'opacity-0'}`}
-            style={{ transition: 'opacity 0.8s ease-out 0.5s' }}
-          />
-          
-          {/* Animated flow indicators */}
-          <circle r="3" fill="url(#flow-gradient)" className="flow-particle">
-            <animateMotion
-              dur="3s"
-              repeatCount="indefinite"
-              path="M 15,30 L 45,30"
-            />
-          </circle>
-          <circle r="3" fill="url(#flow-gradient)" className="flow-particle">
-            <animateMotion
-              dur="3s"
-              repeatCount="indefinite"
-              begin="1s"
-              path="M 45,30 L 55,50"
-            />
-          </circle>
-          <circle r="3" fill="url(#flow-gradient)" className="flow-particle">
-            <animateMotion
-              dur="3s"
-              repeatCount="indefinite"
-              begin="2s"
-              path="M 55,50 L 55,70"
-            />
-          </circle>
+        {/* Connection Lines - Clean architecture flow */}
+        <g className="connection-layer" opacity="0.6">
+          <line x1="200" y1="180" x2="450" y2="180" stroke="url(#connection-gradient)" strokeWidth="2" />
+          <line x1="450" y1="180" x2="500" y2="280" stroke="url(#connection-gradient)" strokeWidth="2" />
+          <line x1="500" y1="280" x2="750" y2="380" stroke="url(#connection-gradient)" strokeWidth="2" />
+          <line x1="500" y1="280" x2="300" y2="420" stroke="url(#connection-gradient)" strokeWidth="2" />
         </g>
 
-        {/* System Nodes */}
-        <g className="system-nodes">
-          {/* Primary Hub - Center */}
-          <g className={`node ${mounted ? 'opacity-100' : 'opacity-0'}`} style={{ transition: 'opacity 0.8s ease-out 0.3s' }}>
-            <circle
-              cx="55%"
-              cy="50%"
-              r="20"
-              fill="hsl(var(--card))"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-primary animate-pulse"
-              style={{ animationDuration: '3s' }}
-            />
-            <circle
-              cx="55%"
-              cy="50%"
-              r="12"
-              fill="currentColor"
-              className="text-primary/20"
-            />
-            <circle
-              cx="55%"
-              cy="50%"
-              r="6"
-              fill="currentColor"
-              className="text-primary"
-            />
-          </g>
+        {/* Data Flow Indicator - Single clean animation */}
+        <circle r="6" fill="#681038" opacity="0.8">
+          <animateMotion dur="4s" repeatCount="indefinite">
+            <mpath href="#data-path" />
+          </animateMotion>
+        </circle>
+        <path id="data-path" d="M 200,180 L 450,180 L 500,280 L 750,380" fill="none" opacity="0" />
 
-          {/* Database Node - Left */}
-          <g className={`node ${mounted ? 'opacity-100' : 'opacity-0'}`} style={{ transition: 'opacity 0.8s ease-out 0.5s' }}>
-            <rect
-              x="calc(15% - 15)"
-              y="calc(30% - 15)"
-              width="30"
-              height="30"
-              fill="hsl(var(--card))"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-foreground animate-pulse"
-              style={{ animationDuration: '4s', animationDelay: '0.5s' }}
-            />
-            <rect
-              x="calc(15% - 8)"
-              y="calc(30% - 8)"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="text-foreground/30"
-            />
-          </g>
+        {/* API Gateway - Left */}
+        <g className="api-gateway">
+          <rect x="160" y="140" width="80" height="80" rx="4" fill="#000" stroke="#fff" strokeWidth="3" />
+          <rect x="175" y="155" width="50" height="50" rx="2" fill="#681038" opacity="0.2" />
+          <circle cx="200" cy="180" r="8" fill="#681038" />
+          <text x="200" y="235" fill="#fff" fontSize="12" textAnchor="middle" fontFamily="system-ui">API</text>
+        </g>
 
-          {/* API Gateway Node - Top */}
-          <g className={`node ${mounted ? 'opacity-100' : 'opacity-0'}`} style={{ transition: 'opacity 0.8s ease-out 0.4s' }}>
-            <polygon
-              points="45,15 60,25 60,45 45,55 30,45 30,25"
-              transform="translate(0, -10)"
-              fill="hsl(var(--card))"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-foreground animate-pulse"
-              style={{ animationDuration: '3.5s', animationDelay: '1s' }}
-            />
-            <polygon
-              points="45,22 54,28 54,42 45,48 36,42 36,28"
-              transform="translate(0, -10)"
-              fill="currentColor"
-              className="text-foreground/30"
-            />
-          </g>
+        {/* Core Processing - Center */}
+        <g className="core-processing">
+          <circle cx="500" cy="280" r="50" fill="#000" stroke="#fff" strokeWidth="3" />
+          <circle cx="500" cy="280" r="35" fill="#681038" opacity="0.1" />
+          <circle cx="500" cy="280" r="20" fill="#681038" opacity="0.3" />
+          <circle cx="500" cy="280" r="10" fill="#681038" />
+          <text x="500" y="350" fill="#fff" fontSize="12" textAnchor="middle" fontFamily="system-ui">Core Engine</text>
+        </g>
 
-          {/* Storage Node - Right */}
-          <g className={`node ${mounted ? 'opacity-100' : 'opacity-0'}`} style={{ transition: 'opacity 0.8s ease-out 0.7s' }}>
-            <circle
-              cx="85%"
-              cy="70%"
-              r="16"
-              fill="hsl(var(--card))"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-foreground animate-pulse"
-              style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}
-            />
-            <circle
-              cx="85%"
-              cy="70%"
-              r="9"
-              fill="currentColor"
-              className="text-foreground/30"
-            />
-          </g>
+        {/* Database Cluster - Top Right */}
+        <g className="database">
+          <rect x="410" y="140" width="80" height="80" rx="4" fill="#000" stroke="#fff" strokeWidth="3" />
+          <rect x="425" y="155" width="50" height="50" rx="2" fill="#fff" opacity="0.1" />
+          <rect x="435" y="165" width="30" height="3" fill="#fff" opacity="0.6" />
+          <rect x="435" y="175" width="30" height="3" fill="#fff" opacity="0.6" />
+          <rect x="435" y="185" width="30" height="3" fill="#fff" opacity="0.6" />
+          <text x="450" y="235" fill="#fff" fontSize="12" textAnchor="middle" fontFamily="system-ui">Database</text>
+        </g>
 
-          {/* Processing Node - Bottom Left */}
-          <g className={`node ${mounted ? 'opacity-100' : 'opacity-0'}`} style={{ transition: 'opacity 0.8s ease-out 0.6s' }}>
-            <rect
-              x="calc(25% - 12)"
-              y="calc(65% - 12)"
-              width="24"
-              height="24"
-              rx="4"
-              fill="hsl(var(--card))"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-primary animate-pulse"
-              style={{ animationDuration: '3.8s', animationDelay: '0.8s' }}
-            />
-            <rect
-              x="calc(25% - 6)"
-              y="calc(65% - 6)"
-              width="12"
-              height="12"
-              rx="2"
-              fill="currentColor"
-              className="text-primary/30"
-            />
-          </g>
+        {/* Storage Layer - Bottom Right */}
+        <g className="storage">
+          <rect x="710" y="340" width="80" height="80" rx="4" fill="#000" stroke="#fff" strokeWidth="3" />
+          <circle cx="750" cy="380" r="20" fill="#fff" opacity="0.1" />
+          <circle cx="750" cy="380" r="12" fill="#681038" opacity="0.3" />
+          <text x="750" y="435" fill="#fff" fontSize="12" textAnchor="middle" fontFamily="system-ui">Storage</text>
+        </g>
+
+        {/* Cache Layer - Bottom Left */}
+        <g className="cache">
+          <polygon points="300,380 330,395 330,425 300,440 270,425 270,395" fill="#000" stroke="#fff" strokeWidth="3" />
+          <polygon points="300,395 318,404 318,424 300,433 282,424 282,404" fill="#681038" opacity="0.2" />
+          <text x="300" y="460" fill="#fff" fontSize="12" textAnchor="middle" fontFamily="system-ui">Cache</text>
         </g>
       </svg>
-
-      {/* Overlay gradient for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/0 to-background/20 pointer-events-none" />
     </div>
   );
 };
