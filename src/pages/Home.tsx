@@ -3,7 +3,7 @@ import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitl
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
-import BackendInfrastructureVisual from "@/components/BackendInfrastructureVisual";
+import HeroSystemMap from "@/components/HeroSystemMap";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
@@ -146,7 +146,7 @@ const Home = () => {
             </div>
             
             <div className="lg:pl-12 flex items-center justify-center">
-              <BackendInfrastructureVisual />
+              <HeroSystemMap />
             </div>
           </div>
       </Section>
