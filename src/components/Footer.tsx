@@ -13,7 +13,7 @@ const Footer = () => {
           <img 
             src={cwtStudioHeader} 
             alt="CWT Studio" 
-            className="w-full max-w-md h-auto mb-4 hover:opacity-90 transition-opacity"
+            className="h-20 md:h-20 w-auto mb-4 hover:opacity-90 transition-opacity"
           />
           <p className="text-white/60 font-mono text-sm max-w-md text-center md:text-left">
             Revenue infrastructure that compounds
