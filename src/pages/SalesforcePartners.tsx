@@ -155,7 +155,7 @@ const SalesforcePartners = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-primary text-primary-foreground p-6 rounded-lg">
+            <div className="bg-primary text-white p-6 rounded-lg">
               <h3 className="font-semibold mb-2">Technical Benefits We Provide</h3>
               <ul className="text-sm space-y-1">
                 <li>• <strong>Expert Assessment:</strong> Rapid technical evaluation and recommendations</li>
