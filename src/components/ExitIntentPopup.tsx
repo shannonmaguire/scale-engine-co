@@ -22,7 +22,7 @@ export const ExitIntentPopup = ({
   isOpen,
   onClose,
   title = "Wait! Before You Go...",
-  description = "Get our free revenue operations guide delivered to your inbox.",
+  description = "Join friends and clients getting our free revenue operations guide.",
   ctaText = "Get Free Guide",
   onSubmit,
 }: ExitIntentPopupProps) => {
