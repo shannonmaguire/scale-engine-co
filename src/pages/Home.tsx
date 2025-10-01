@@ -456,7 +456,7 @@ const Home = () => {
         isOpen={showExitPopup}
         onClose={() => setShowExitPopup(false)}
         title="Wait! Get Our Free Guide"
-        description="Before you go, download our comprehensive revenue operations assessment framework—the same one we use with clients."
+        description="Join friends and clients getting our comprehensive revenue operations assessment framework."
         ctaText="Send Me The Guide"
         onSubmit={handleExitPopupSubmit}
       />
