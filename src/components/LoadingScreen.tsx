@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import cwtSymbolBurgundy from "@/assets/cwt-symbol-burgundy.svg";
+import cwtLogoWhite from "@/assets/cwt-logo-white.svg";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -7,164 +7,126 @@ interface LoadingScreenProps {
 
 const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
   const [progress, setProgress] = useState(0);
-  const [currentPhrase, setCurrentPhrase] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [showContent, setShowContent] = useState(false);
 
-  const phrases = [
-    'REVENUE INFRASTRUCTURE',
-    'SYSTEMATIZED GROWTH', 
-    'OPERATIONAL EXCELLENCE'
-  ];
-
   const skipIntro = () => {
     setIsVisible(false);
-    setTimeout(() => onComplete(), 500);
+    setTimeout(() => onComplete(), 400);
   };
 
   useEffect(() => {
-    // Fade in content
     setTimeout(() => setShowContent(true), 100);
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const duration = prefersReducedMotion ? 1500 : 2400;
     
-    // Progress animation
     const progressInterval = setInterval(() => {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(progressInterval);
           return 100;
         }
-        return prev + 2;
+        return prev + (100 / (duration / 50));
       });
     }, 50);
 
-    // Phrase rotation with staggered timing
-    const phraseDuration = prefersReducedMotion ? 1200 : 1800;
-    const phraseInterval = setInterval(() => {
-      setCurrentPhrase(prev => {
-        if (prev < phrases.length - 1) {
-          return prev + 1;
-        }
-        clearInterval(phraseInterval);
-        return prev;
-      });
-    }, phraseDuration);
-
-    // Complete loading sequence
     const completeTimer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(() => onComplete(), 600);
-    }, phraseDuration * phrases.length + 400);
+      setTimeout(() => onComplete(), 500);
+    }, duration);
 
     return () => {
       clearInterval(progressInterval);
-      clearInterval(phraseInterval);
       clearTimeout(completeTimer);
     };
   }, [onComplete]);
 
   if (!isVisible) {
-    return (
-      <div 
-        className="fixed inset-0 z-[9999] transition-opacity duration-600 opacity-0 pointer-events-none"
-        aria-hidden="true"
-      />
-    );
+    return null;
   }
 
   return (
     <div 
       className="fixed inset-0 z-[9999] overflow-hidden bg-background"
       role="dialog"
-      aria-label="Loading screen"
+      aria-label="Loading CWT Studio"
     >
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card/30" />
 
-      {/* Main content */}
-      <div className={`relative h-full flex flex-col items-center justify-center transition-all duration-700 ${
-        showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      <div className={`relative h-full flex flex-col items-center justify-center px-6 transition-all duration-700 ${
+        showContent ? 'opacity-100' : 'opacity-0'
       }`}>
         
-        {/* Logo with entrance animation */}
-        <div className="mb-16 transform transition-all duration-1000 ease-out" 
+        {/* Logo */}
+        <div className="mb-12 md:mb-16 transition-all duration-1000 ease-out" 
              style={{
-               transform: showContent ? 'scale(1) translateY(0)' : 'scale(0.9) translateY(20px)',
+               transform: showContent ? 'scale(1)' : 'scale(0.92)',
                opacity: showContent ? 1 : 0
              }}>
           <div className="relative">
-            <div className="absolute inset-0 bg-[hsl(var(--burgundy))]/10 blur-3xl rounded-full animate-pulse" />
+            <div className="absolute -inset-8 bg-primary/5 blur-3xl rounded-full" 
+                 style={{
+                   animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                 }} />
             <img 
-              src={cwtSymbolBurgundy} 
+              src={cwtLogoWhite} 
               alt="CWT Studio"
-              width="128"
-              height="128"
+              width="256"
+              height="64"
               loading="eager"
               decoding="async"
-              className="h-32 w-32 relative z-10 drop-shadow-2xl"
+              className="h-12 md:h-16 w-auto relative z-10"
+              style={{ filter: 'drop-shadow(0 4px 24px rgba(104, 16, 56, 0.15))' }}
             />
           </div>
         </div>
 
-        {/* Animated phrases with elegant transitions */}
-        <div className="relative h-32 flex items-center justify-center mb-12">
-          {phrases.map((phrase, index) => (
-            <h1
-              key={index}
-              className="absolute font-mono font-bold text-foreground uppercase tracking-[0.2em] leading-none select-none transition-all duration-700 ease-out"
-              style={{
-                fontSize: 'clamp(28px, 5vw, 56px)',
-                opacity: currentPhrase === index ? 1 : 0,
-                transform: currentPhrase === index 
-                  ? 'translateY(0) scale(1)' 
-                  : currentPhrase > index 
-                    ? 'translateY(-30px) scale(0.95)' 
-                    : 'translateY(30px) scale(0.95)',
-                filter: currentPhrase === index ? 'blur(0)' : 'blur(8px)',
-              }}
-              aria-live={currentPhrase === index ? "polite" : "off"}
-            >
-              {phrase}
-            </h1>
-          ))}
-        </div>
+        {/* System message */}
+        <h1 className="font-mono text-sm md:text-base font-medium text-foreground uppercase tracking-[0.25em] mb-8 md:mb-12 text-center">
+          Initializing Revenue Infrastructure
+        </h1>
 
-        {/* Progress bar with shimmer effect */}
-        <div className="relative w-80 h-1 bg-muted/30 rounded-full overflow-hidden">
-          <div 
-            className="h-full bg-primary relative transition-all duration-300 ease-out"
-            style={{ width: `${progress}%` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/20 to-transparent animate-shimmer" 
-                 style={{
-                   backgroundSize: '200% 100%',
-                   animation: 'shimmer 2s infinite linear'
-                 }} />
+        {/* Progress bar */}
+        <div className="relative w-full max-w-md">
+          <div className="h-[2px] bg-border/40 rounded-full overflow-hidden">
+            <div 
+              className="h-full bg-primary transition-all duration-300 ease-out relative"
+              style={{ width: `${progress}%` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/30 to-transparent"
+                   style={{
+                     animation: 'shimmer 1.5s infinite',
+                     backgroundSize: '200% 100%'
+                   }} />
+            </div>
+          </div>
+          <div className="mt-3 flex justify-between items-center">
+            <span className="font-mono text-xs text-muted-foreground tabular-nums">
+              {Math.round(progress)}%
+            </span>
+            <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider">
+              Loading
+            </span>
           </div>
         </div>
-
-        {/* Tagline */}
-        <p className={`mt-12 font-mono text-base text-muted-foreground tracking-[0.3em] uppercase transition-all duration-700 delay-500 ${
-          showContent ? 'opacity-60' : 'opacity-0'
-        }`}>
-          Revenue Systems That Scale
-        </p>
       </div>
 
       {/* Skip button */}
       <button
         onClick={skipIntro}
-        className="fixed bottom-8 right-8 text-sm text-muted-foreground hover:text-foreground underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-3 py-2 transition-colors duration-200"
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            skipIntro();
-          }
-        }}
+        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 font-sans text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded px-3 py-2"
+        aria-label="Skip loading animation"
       >
-        Skip intro
+        Skip
       </button>
+
+      <style>{`
+        @keyframes shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+      `}</style>
     </div>
   );
 };
