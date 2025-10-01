@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import cwtLogo from "@/assets/cwt-logo.svg";
+import cwtLogo from "@/assets/cwt-logo-white.svg";
 import { memo } from "react";
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
           <img 
             src={cwtLogo} 
             alt="CWT Studio" 
-            className="h-[30px] sm:h-[34px] md:h-10 w-auto mb-4 hover:opacity-90 transition-opacity"
+            className="h-[34px] sm:h-[38px] md:h-11 w-auto mb-4 hover:opacity-90 transition-opacity"
             style={{ imageRendering: 'crisp-edges' }}
           />
           <p className="text-white/60 font-mono text-sm max-w-md">
