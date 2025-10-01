@@ -105,6 +105,10 @@ img {
   --transition-fast: all 0.15s ease-out;
   --transition-standard: all 0.2s ease-out;
   --transition-slow: all 0.3s ease-out;
+  
+  /* ===== CRITICAL COLOR PAIRING RULES ===== */
+  /* NEVER use black text on burgundy (primary) backgrounds */
+  /* ALWAYS pair bg-primary with text-primary-foreground or text-white */
   }
 
   .dark {
@@ -146,6 +150,23 @@ img {
     --input: var(--forest);
     --ring: var(--burgundy);
   }
+}
+
+/* ===== CRITICAL COLOR SAFETY RULES ===== */
+/* Prevent common burgundy background + black text mistakes */
+/* These rules ensure accessibility and brand consistency */
+
+/* If someone tries to use bg-primary without explicit text color, 
+   ensure it defaults to white (not black) */
+.bg-primary:not([class*="text-"]) {
+  @apply text-primary-foreground;
+}
+
+/* Explicit warning class for development */
+.bg-primary.text-foreground,
+.bg-primary.text-black {
+  /* This combination violates WCAG contrast - use text-primary-foreground or text-white instead */
+  @apply text-primary-foreground !important;
 }
 
 @layer base {
@@ -522,6 +543,39 @@ img {
   
   .gutter-standard {
     @apply gap-6;  /* 24px - Standard grid gutter */
+  }
+  
+  /* ===== SAFE COLOR PAIRING UTILITIES ===== */
+  /* These utilities automatically pair backgrounds with correct text colors */
+  /* Use these to prevent black text on burgundy backgrounds */
+  
+  .bg-primary-safe {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .bg-primary-safe\/10 {
+    background-color: hsl(var(--primary) / 0.1);
+    /* Text inherits from parent - safe for decorative elements */
+  }
+  
+  .bg-primary-safe\/20 {
+    background-color: hsl(var(--primary) / 0.2);
+    /* Text inherits from parent - safe for decorative elements */
+  }
+  
+  /* Badge/pill variants with safe text */
+  .badge-primary-safe {
+    @apply inline-flex items-center rounded-full px-3 py-1;
+    @apply bg-primary text-primary-foreground;
+    @apply font-mono text-xs uppercase tracking-wide;
+  }
+  
+  /* Button variant with safe text */
+  .btn-primary-safe {
+    @apply inline-flex items-center justify-center;
+    @apply bg-primary text-primary-foreground;
+    @apply hover:bg-[hsl(327_82%_38%)] transition-all;
+    @apply px-8 py-4 rounded-md font-mono uppercase tracking-wide;
   }
   
   /* ===== TERMINAL/DIAGNOSTIC DESIGN ELEMENTS ===== */
