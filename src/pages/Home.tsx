@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
-import SystemDiagram from "@/components/SystemDiagram";
 import SEOHead from "@/components/SEOHead";
+import cwtStudioHeader from "@/assets/cwt-studio-header.svg";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { useExitIntent } from "@/hooks/useExitIntent";
@@ -145,8 +145,12 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="lg:pl-12">
-              <SystemDiagram />
+            <div className="lg:pl-12 flex items-center justify-center">
+              <img 
+                src={cwtStudioHeader} 
+                alt="CWT Studio" 
+                className="w-full max-w-2xl h-auto"
+              />
             </div>
           </div>
       </Section>
