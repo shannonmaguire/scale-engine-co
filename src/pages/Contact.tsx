@@ -14,9 +14,18 @@ import { Mail, Phone, Clock, ArrowRight, CheckCircle2, AlertCircle } from "lucid
 
 const Contact = () => {
   const [formData, setFormData] = useState({
+    fullName: "",
     email: "",
     company: "",
-    objective: "",
+    phone: "",
+    companySize: "",
+    revenue: "",
+    role: "",
+    serviceInterest: "",
+    challenge: "",
+    techStack: "",
+    timeline: "",
+    hearAbout: "",
     privacyConsent: false
   });
 
@@ -30,12 +39,30 @@ const Contact = () => {
     }
     
     switch (field) {
+      case "fullName":
+        return value.trim().length > 0 ? "" : "Full name is required";
       case "email":
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? "" : "Please enter a valid email";
       case "company":
         return value.trim().length > 0 ? "" : "Company name is required";
-      case "objective":
+      case "phone":
         return ""; // Optional field
+      case "companySize":
+        return value.trim().length > 0 ? "" : "Company size is required";
+      case "revenue":
+        return ""; // Optional field
+      case "role":
+        return value.trim().length > 0 ? "" : "Role/title is required";
+      case "serviceInterest":
+        return value.trim().length > 0 ? "" : "Service interest is required";
+      case "challenge":
+        return value.trim().length > 0 ? "" : "Please describe your challenge";
+      case "techStack":
+        return value.trim().length > 0 ? "" : "Tech stack is required";
+      case "timeline":
+        return value.trim().length > 0 ? "" : "Timeline is required";
+      case "hearAbout":
+        return value.trim().length > 0 ? "" : "Please tell us how you heard about us";
       default:
         return "";
     }
@@ -61,8 +88,14 @@ const Contact = () => {
     
     // Track form submission
     trackEvent('Contact Form Submitted', {
+      fullName: formData.fullName,
+      email: formData.email,
       company: formData.company,
-      hasObjective: !!formData.objective,
+      companySize: formData.companySize,
+      serviceInterest: formData.serviceInterest,
+      techStack: formData.techStack,
+      timeline: formData.timeline,
+      hearAbout: formData.hearAbout
     });
     
     // Simulate form submission
@@ -119,70 +152,290 @@ const Contact = () => {
                 <StandardCardTitle className="text-primary">Get Started</StandardCardTitle>
               </StandardCardHeader>
               <StandardCardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="email" className="font-mono text-sm font-medium">Email *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange("email", e.target.value)}
-                      onBlur={() => handleBlur("email")}
-                      required
-                      className={`mt-2 font-mono transition-all ${errors.email && touched.email ? 'border-destructive focus:ring-destructive' : ''}`}
-                      aria-describedby="email-error"
-                      aria-invalid={!!(errors.email && touched.email)}
-                    />
-                    {errors.email && touched.email && (
-                      <p id="email-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
-                        <AlertCircle className="w-3 h-3" />
-                        {errors.email}
-                      </p>
-                    )}
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  {/* Contact Information */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-mono font-bold text-primary border-b border-border pb-2">CONTACT INFORMATION</h3>
+                    
+                    <div>
+                      <Label htmlFor="fullName" className="font-mono text-sm font-medium">Full Name *</Label>
+                      <Input
+                        id="fullName"
+                        value={formData.fullName}
+                        onChange={(e) => handleInputChange("fullName", e.target.value)}
+                        onBlur={() => handleBlur("fullName")}
+                        required
+                        className={`mt-2 font-mono transition-all ${errors.fullName && touched.fullName ? 'border-destructive focus:ring-destructive' : ''}`}
+                        aria-describedby="fullName-error"
+                        aria-invalid={!!(errors.fullName && touched.fullName)}
+                      />
+                      {errors.fullName && touched.fullName && (
+                        <p id="fullName-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.fullName}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <Label htmlFor="email" className="font-mono text-sm font-medium">Email Address *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onBlur={() => handleBlur("email")}
+                        required
+                        className={`mt-2 font-mono transition-all ${errors.email && touched.email ? 'border-destructive focus:ring-destructive' : ''}`}
+                        aria-describedby="email-error"
+                        aria-invalid={!!(errors.email && touched.email)}
+                      />
+                      {errors.email && touched.email && (
+                        <p id="email-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.email}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <Label htmlFor="company" className="font-mono text-sm font-medium">Company Name *</Label>
+                      <Input
+                        id="company"
+                        value={formData.company}
+                        onChange={(e) => handleInputChange("company", e.target.value)}
+                        onBlur={() => handleBlur("company")}
+                        required
+                        className={`mt-2 font-mono transition-all ${errors.company && touched.company ? 'border-destructive focus:ring-destructive' : ''}`}
+                        aria-describedby="company-error"
+                        aria-invalid={!!(errors.company && touched.company)}
+                      />
+                      {errors.company && touched.company && (
+                        <p id="company-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.company}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <Label htmlFor="phone" className="font-mono text-sm font-medium">Phone Number (optional)</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange("phone", e.target.value)}
+                        onBlur={() => handleBlur("phone")}
+                        className="mt-2 font-mono transition-all"
+                      />
+                    </div>
                   </div>
 
-                  <div>
-                    <Label htmlFor="company" className="font-mono text-sm font-medium">Company *</Label>
-                    <Input
-                      id="company"
-                      value={formData.company}
-                      onChange={(e) => handleInputChange("company", e.target.value)}
-                      onBlur={() => handleBlur("company")}
-                      required
-                      className={`mt-2 font-mono transition-all ${errors.company && touched.company ? 'border-destructive focus:ring-destructive' : ''}`}
-                      aria-describedby="company-error"
-                      aria-invalid={!!(errors.company && touched.company)}
-                    />
-                    {errors.company && touched.company && (
-                      <p id="company-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
-                        <AlertCircle className="w-3 h-3" />
-                        {errors.company}
-                      </p>
-                    )}
+                  {/* Company Details */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-mono font-bold text-primary border-b border-border pb-2">COMPANY DETAILS</h3>
+                    
+                    <div>
+                      <Label htmlFor="companySize" className="font-mono text-sm font-medium">Company Size *</Label>
+                      <select
+                        id="companySize"
+                        value={formData.companySize}
+                        onChange={(e) => handleInputChange("companySize", e.target.value)}
+                        onBlur={() => handleBlur("companySize")}
+                        required
+                        className={`mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${errors.companySize && touched.companySize ? 'border-destructive' : ''}`}
+                      >
+                        <option value="">Select company size</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-1000">201-1,000 employees</option>
+                        <option value="1000+">1,000+ employees</option>
+                      </select>
+                      {errors.companySize && touched.companySize && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.companySize}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <Label htmlFor="revenue" className="font-mono text-sm font-medium">Annual Revenue Range (optional)</Label>
+                      <select
+                        id="revenue"
+                        value={formData.revenue}
+                        onChange={(e) => handleInputChange("revenue", e.target.value)}
+                        className="mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      >
+                        <option value="">Select revenue range</option>
+                        <option value="<1M">Less than $1M</option>
+                        <option value="1-5M">$1M - $5M</option>
+                        <option value="5-10M">$5M - $10M</option>
+                        <option value="10-50M">$10M - $50M</option>
+                        <option value="50M+">$50M+</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <Label htmlFor="role" className="font-mono text-sm font-medium">Your Role/Title *</Label>
+                      <Input
+                        id="role"
+                        value={formData.role}
+                        onChange={(e) => handleInputChange("role", e.target.value)}
+                        onBlur={() => handleBlur("role")}
+                        placeholder="e.g., CEO, VP Sales, RevOps Manager"
+                        required
+                        className={`mt-2 font-mono transition-all ${errors.role && touched.role ? 'border-destructive focus:ring-destructive' : ''}`}
+                        aria-describedby="role-error"
+                        aria-invalid={!!(errors.role && touched.role)}
+                      />
+                      {errors.role && touched.role && (
+                        <p id="role-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.role}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
-                  <div>
-                    <Label htmlFor="objective" className="font-mono text-sm font-medium">Tell us about your challenge (optional)</Label>
-                    <Textarea
-                      id="objective"
-                      value={formData.objective}
-                      onChange={(e) => handleInputChange("objective", e.target.value)}
-                      onBlur={() => handleBlur("objective")}
-                      placeholder="What's the main challenge you need help solving?"
-                      className={`mt-2 font-mono transition-all ${errors.objective && touched.objective ? 'border-destructive focus:ring-destructive' : ''}`}
-                      rows={4}
-                      aria-describedby="objective-error"
-                      aria-invalid={!!(errors.objective && touched.objective)}
-                    />
-                    {errors.objective && touched.objective && (
-                      <p id="objective-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
-                        <AlertCircle className="w-3 h-3" />
-                        {errors.objective}
-                      </p>
-                    )}
+                  {/* Service Interest */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-mono font-bold text-primary border-b border-border pb-2">SERVICE INTEREST</h3>
+                    
+                    <div>
+                      <Label htmlFor="serviceInterest" className="font-mono text-sm font-medium">What service are you interested in? *</Label>
+                      <select
+                        id="serviceInterest"
+                        value={formData.serviceInterest}
+                        onChange={(e) => handleInputChange("serviceInterest", e.target.value)}
+                        onBlur={() => handleBlur("serviceInterest")}
+                        required
+                        className={`mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${errors.serviceInterest && touched.serviceInterest ? 'border-destructive' : ''}`}
+                      >
+                        <option value="">Select a service</option>
+                        <option value="infrastructure-assessment">Infrastructure Assessment</option>
+                        <option value="revenue-sprint">Revenue Sprint</option>
+                        <option value="fractional-ops">Fractional RevOps</option>
+                        <option value="salesforce-partnership">Salesforce Partnership</option>
+                        <option value="assessment-tools">Assessment Tools</option>
+                        <option value="not-sure">Not Sure Yet</option>
+                      </select>
+                      {errors.serviceInterest && touched.serviceInterest && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.serviceInterest}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <Label htmlFor="challenge" className="font-mono text-sm font-medium">Current Challenge/Objective *</Label>
+                      <Textarea
+                        id="challenge"
+                        value={formData.challenge}
+                        onChange={(e) => handleInputChange("challenge", e.target.value)}
+                        onBlur={() => handleBlur("challenge")}
+                        placeholder="What revenue operations challenges are you facing? What outcomes are you looking to achieve?"
+                        required
+                        className={`mt-2 font-mono transition-all ${errors.challenge && touched.challenge ? 'border-destructive focus:ring-destructive' : ''}`}
+                        rows={4}
+                        aria-describedby="challenge-error"
+                        aria-invalid={!!(errors.challenge && touched.challenge)}
+                      />
+                      {errors.challenge && touched.challenge && (
+                        <p id="challenge-error" className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.challenge}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
-                  <div className="flex items-start gap-2">
+                  {/* Technical Context */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-mono font-bold text-primary border-b border-border pb-2">TECHNICAL CONTEXT</h3>
+                    
+                    <div>
+                      <Label htmlFor="techStack" className="font-mono text-sm font-medium">Current CRM/Tech Stack *</Label>
+                      <select
+                        id="techStack"
+                        value={formData.techStack}
+                        onChange={(e) => handleInputChange("techStack", e.target.value)}
+                        onBlur={() => handleBlur("techStack")}
+                        required
+                        className={`mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${errors.techStack && touched.techStack ? 'border-destructive' : ''}`}
+                      >
+                        <option value="">Select your tech stack</option>
+                        <option value="salesforce">Salesforce</option>
+                        <option value="hubspot">HubSpot</option>
+                        <option value="pipedrive">Pipedrive</option>
+                        <option value="other">Other CRM</option>
+                        <option value="none">No CRM Yet</option>
+                      </select>
+                      {errors.techStack && touched.techStack && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.techStack}
+                        </p>
+                      )}
+                    </div>
+
+                    <div>
+                      <Label htmlFor="timeline" className="font-mono text-sm font-medium">Timeline for Implementation *</Label>
+                      <select
+                        id="timeline"
+                        value={formData.timeline}
+                        onChange={(e) => handleInputChange("timeline", e.target.value)}
+                        onBlur={() => handleBlur("timeline")}
+                        required
+                        className={`mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${errors.timeline && touched.timeline ? 'border-destructive' : ''}`}
+                      >
+                        <option value="">Select timeline</option>
+                        <option value="asap">ASAP - Immediate Need</option>
+                        <option value="1-3-months">1-3 Months</option>
+                        <option value="3-6-months">3-6 Months</option>
+                        <option value="6+-months">6+ Months</option>
+                        <option value="exploring">Just Exploring Options</option>
+                      </select>
+                      {errors.timeline && touched.timeline && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.timeline}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Additional Info */}
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="hearAbout" className="font-mono text-sm font-medium">How did you hear about us? *</Label>
+                      <select
+                        id="hearAbout"
+                        value={formData.hearAbout}
+                        onChange={(e) => handleInputChange("hearAbout", e.target.value)}
+                        onBlur={() => handleBlur("hearAbout")}
+                        required
+                        className={`mt-2 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${errors.hearAbout && touched.hearAbout ? 'border-destructive' : ''}`}
+                      >
+                        <option value="">Select one</option>
+                        <option value="website">Website/Search</option>
+                        <option value="referral">Referral</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="salesforce">Salesforce AppExchange</option>
+                        <option value="other">Other</option>
+                      </select>
+                      {errors.hearAbout && touched.hearAbout && (
+                        <p className="text-xs text-destructive mt-1 flex items-center gap-1">
+                          <AlertCircle className="w-3 h-3" />
+                          {errors.hearAbout}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-2 pt-4 border-t border-border">
                     <Checkbox
                       id="privacyConsent"
                       checked={formData.privacyConsent}
@@ -213,14 +466,14 @@ const Contact = () => {
                   >
                     {isSubmitting ? (
                       <>
-                        <span className="opacity-0">Submit Request</span>
+                        <span className="opacity-0">Get Your Revenue Diagnostic</span>
                         <span className="absolute inset-0 flex items-center justify-center">
                           <div className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
                         </span>
                       </>
                     ) : (
                       <>
-                        Submit Request
+                        Get Your Revenue Diagnostic
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </>
                     )}
