@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, X, ChevronDown } from "lucide-react";
-import cwtStudioHeader from "@/assets/cwt-studio-header.svg";
+import cwtWordmarkWhite from "@/assets/cwt-wordmark-white.svg";
+import cwtSymbolWhite from "@/assets/cwt-symbol-white.svg";
 import { memo } from "react";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,14 +40,14 @@ const Navigation = () => {
           {/* CWT Studio Official Logo */}
           <Link to="/" className="flex items-center hover:opacity-90 transition-opacity group">
             <img 
-              src={cwtStudioHeader} 
+              src={cwtWordmarkWhite} 
               alt="CWT Studio" 
-              className="h-16 w-auto hidden md:block"
+              className="h-20 w-auto hidden md:block"
             />
             <img 
-              src={cwtStudioHeader} 
+              src={cwtSymbolWhite} 
               alt="CWT Studio" 
-              className="h-12 w-auto md:hidden"
+              className="h-14 w-auto md:hidden"
             />
           </Link>
 

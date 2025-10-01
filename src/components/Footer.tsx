@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
-import cwtStudioHeader from "@/assets/cwt-studio-header.svg";
+import cwtWordmarkWhite from "@/assets/cwt-wordmark-white.svg";
 import { memo } from "react";
 
 const Footer = () => {
@@ -9,13 +9,13 @@ const Footer = () => {
   return <footer className="bg-[hsl(var(--burgundy))] text-white border-t border-white/10">
       <div className="container mx-auto px-6 py-16">
         {/* Logo + Tagline */}
-        <div className="mb-12 flex flex-col items-center md:items-start">
+        <div className="mb-12">
           <img 
-            src={cwtStudioHeader} 
+            src={cwtWordmarkWhite} 
             alt="CWT Studio" 
-            className="h-20 md:h-20 w-auto mb-4 hover:opacity-90 transition-opacity"
+            className="h-14 w-auto mb-4 hover:opacity-90 transition-opacity"
           />
-          <p className="text-white/60 font-mono text-sm max-w-md text-center md:text-left">
+          <p className="text-white/60 font-mono text-sm max-w-md">
             Revenue infrastructure that compounds
           </p>
         </div>
