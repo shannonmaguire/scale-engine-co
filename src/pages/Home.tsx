@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitle } from "@/components/ui/standard-card";
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
-import SystemDiagram from "@/components/SystemDiagram";
 import SEOHead from "@/components/SEOHead";
 import { ConversionOptimizedButton } from "@/components/ConversionOptimizedButton";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
@@ -15,6 +14,7 @@ import { EngagementTracker } from "@/components/EngagementTracker";
 import CookieBanner from "@/components/CookieBanner";
 import { ArrowRight, CheckCircle, BarChart3, Target, Award, TrendingUp, Shield } from "lucide-react";
 import { useState } from "react";
+import heroSystemDiagram from "@/assets/hero-system-diagram.svg";
 
 const Home = () => {
   // Performance monitoring
@@ -146,7 +146,15 @@ const Home = () => {
             </div>
             
             <div className="lg:pl-12">
-              <SystemDiagram />
+              <div className="relative">
+                <img 
+                  src={heroSystemDiagram} 
+                  alt="Revenue system architecture diagram showing Core System connected to API Gateway, Database, Cloud Storage, and Functions modules"
+                  className="w-full h-auto rounded-lg"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
             </div>
           </div>
       </Section>
