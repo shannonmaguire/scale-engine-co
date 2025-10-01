@@ -106,8 +106,8 @@ const Home = () => {
                   Book Assessment
                 </ConversionOptimizedButton>
                 <ConversionOptimizedButton
-                  to="#system"
-                  ctaName="Hero - See System"
+                  to="/systems"
+                  ctaName="Hero - Systems Page"
                   location="Homepage Hero"
                   variant="outline"
                   className="btn-console-secondary"
