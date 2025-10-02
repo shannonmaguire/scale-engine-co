@@ -1,38 +1,29 @@
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-
 const SystemDiagram = () => {
   const [progress, setProgress] = useState(0);
-
   useEffect(() => {
     // Animate progress bar on mount
     const timer = setTimeout(() => setProgress(97), 100);
     return () => clearTimeout(timer);
   }, []);
-
-  const processes = [
-    {
-      step: "01",
-      title: "ASSESS",
-      items: ["Infrastructure audit", "Diagnostic complete"],
-      delay: "delay-[100ms]"
-    },
-    {
-      step: "02",
-      title: "BUILD",
-      items: ["System implementation", "Sprint execution"],
-      delay: "delay-[200ms]"
-    },
-    {
-      step: "03",
-      title: "OPERATE",
-      items: ["Ongoing maintenance", "Performance monitoring"],
-      delay: "delay-[300ms]"
-    }
-  ];
-
-  return (
-    <div className="w-full bg-card border border-border console-card font-mono overflow-hidden group">
+  const processes = [{
+    step: "01",
+    title: "ASSESS",
+    items: ["Infrastructure audit", "Diagnostic complete"],
+    delay: "delay-[100ms]"
+  }, {
+    step: "02",
+    title: "BUILD",
+    items: ["System implementation", "Sprint execution"],
+    delay: "delay-[200ms]"
+  }, {
+    step: "03",
+    title: "OPERATE",
+    items: ["Ongoing maintenance", "Performance monitoring"],
+    delay: "delay-[300ms]"
+  }];
+  return <div className="w-full bg-card border border-border console-card font-mono overflow-hidden group">
       {/* Console Header */}
       <div className="border-b border-border p-3 bg-muted/5">
         <div className="flex items-center justify-between">
@@ -55,29 +46,18 @@ const SystemDiagram = () => {
           
           <div className="grid grid-cols-3 gap-3 text-xs relative">
             {/* Connecting arrows */}
-            <div className="absolute top-4 left-[33%] right-[66%] h-px bg-primary/30 hidden md:block animate-fade-in delay-[400ms]">
-              <ArrowRight className="absolute -right-1 -top-[3px] h-2 w-2 text-primary/60" />
-            </div>
-            <div className="absolute top-4 left-[66%] right-[0%] h-px bg-primary/30 hidden md:block animate-fade-in delay-[500ms]">
-              <ArrowRight className="absolute -right-1 -top-[3px] h-2 w-2 text-primary/60" />
-            </div>
+            
+            
 
-            {processes.map((process, index) => (
-              <div 
-                key={index}
-                className={`space-y-2 p-3 rounded-lg bg-muted/5 border border-transparent hover:border-primary/20 hover:bg-muted/10 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/5 animate-fade-in ${process.delay}`}
-              >
+            {processes.map((process, index) => <div key={index} className={`space-y-2 p-3 rounded-lg bg-muted/5 border border-transparent hover:border-primary/20 hover:bg-muted/10 transition-all duration-300 cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-primary/5 animate-fade-in ${process.delay}`}>
                 <div className="text-primary font-bold flex items-center gap-2">
                   <span className="text-[10px] opacity-60">{process.step}</span>
                   <span>{process.title}</span>
                 </div>
-                {process.items.map((item, i) => (
-                  <div key={i} className="text-muted-foreground text-[11px] leading-relaxed">
+                {process.items.map((item, i) => <div key={i} className="text-muted-foreground text-[11px] leading-relaxed">
                     {item}
-                  </div>
-                ))}
-              </div>
-            ))}
+                  </div>)}
+              </div>)}
           </div>
         </div>
         
@@ -88,10 +68,9 @@ const SystemDiagram = () => {
             <span className="tabular-nums">{progress}%</span>
           </div>
           <div className="h-1 bg-muted/20 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-gradient-to-r from-primary to-primary/60 transition-all duration-1000 ease-out"
-              style={{ width: `${progress}%` }}
-            ></div>
+            <div className="h-full bg-gradient-to-r from-primary to-primary/60 transition-all duration-1000 ease-out" style={{
+            width: `${progress}%`
+          }}></div>
           </div>
         </div>
         
@@ -112,8 +91,6 @@ const SystemDiagram = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default SystemDiagram;
