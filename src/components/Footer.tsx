@@ -2,12 +2,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import cwtLogo from "@/assets/cwt-logo-white.svg";
-import { memo, useState } from "react";
-import { DealRegistrationModal } from "@/components/DealRegistrationModal";
+import { memo } from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [dealModalOpen, setDealModalOpen] = useState(false);
   return <footer className="bg-[hsl(var(--burgundy))] text-white border-t border-white/10">
       <div className="container mx-auto px-6 py-16">
         {/* Logo + Tagline */}
@@ -147,27 +145,14 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-4">
-            <p className="text-white/40 font-mono text-xs">
-              © {currentYear} CWT Studio
-            </p>
-            <button
-              onClick={() => setDealModalOpen(true)}
-              className="text-white/40 hover:text-white/60 font-mono text-xs transition-colors underline"
-            >
-              Partner Login
-            </button>
-          </div>
+          <p className="text-white/40 font-mono text-xs">
+            © {currentYear} CWT Studio
+          </p>
           <span className="text-white/30 font-mono text-xs uppercase tracking-wider">
             Backend Systems • Predictable Revenue • Operational Excellence
           </span>
         </div>
       </div>
-      
-      <DealRegistrationModal 
-        open={dealModalOpen}
-        onOpenChange={setDealModalOpen}
-      />
     </footer>;
 };
 
