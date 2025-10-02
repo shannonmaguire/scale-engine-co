@@ -32,19 +32,19 @@ const About = () => {
   const values = [{
     icon: Target,
     title: "Precision",
-    description: "We diagnose before we prescribe. Every recommendation is backed by data and benchmarked against best practices."
+    description: "We diagnose before we prescribe. Every recommendation is data-backed and benchmarked against Fortune 500 best practices."
   }, {
     icon: Zap,
     title: "Ownership",
-    description: "We take responsibility for outcomes, not just deliverables. Your success is our success."
+    description: "We take responsibility for outcomes, not deliverables. Your revenue success is our success metric."
   }, {
     icon: Clock,
     title: "Speed",
-    description: "Revenue systems can't wait for perfect. We optimize for speed of implementation and time to value."
+    description: "Revenue systems can't wait for perfection. We optimize for rapid implementation and immediate time-to-value."
   }, {
     icon: Palette,
-    title: "Taste",
-    description: "Good systems are elegant systems. We build infrastructure that's as beautiful as it is functional."
+    title: "Craft",
+    description: "Elegant systems are effective systems. We build Infrastructure that's as precise as it is powerful."
   }];
   return <div className="min-h-screen">
       <EngagementTracker />
@@ -62,20 +62,20 @@ const About = () => {
           </div>
           
           <h1 className="heading-page mb-6">
-            Built for Revenue Leaders
+            Built for Revenue Leaders Who Demand Systems That Scale
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            CWT Studio exists because scaling businesses deserve revenue systems that work. 
-            No endless decks. No random tools. No noise.
+            CWT Studio exists because scaling businesses deserve Revenue Infrastructure that compounds. 
+            No endless presentations. No random tool recommendations. No noise. Just systems that work.
           </p>
         </div>
 
         {/* Values */}
         <div className="mt-16">
           <div className="text-center mb-12">
-            <h2 className="font-mono text-3xl font-bold mb-4">How We Operate</h2>
+            <h2 className="font-mono text-3xl font-bold mb-4">Operating Principles</h2>
             <p className="text-xl text-muted-foreground">
-              The principles that guide every engagement
+              Four non-negotiable standards that guide every engagement
             </p>
           </div>
           
@@ -104,12 +104,12 @@ const About = () => {
             <h2 className="heading-section mb-6 text-center text-primary">Our Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
               <blockquote className="text-lg text-foreground italic leading-relaxed mb-6 pl-6">
-                "Revenue systems are like plumbing. When they work, nobody thinks about them. 
-                When they break, they break everything else."
+                "Revenue Infrastructure is like plumbing. When it works, nobody notices. 
+                When it breaks, it destroys everything downstream."
               </blockquote>
               <p className="text-foreground">
-                We build systems that work so well, you forget they're there. Until you need to scale. 
-                Then you're grateful they can handle whatever growth throws at them.
+                We install systems that work so reliably, you forget they're there—until you need to scale. 
+                Then you're prepared for whatever growth demands.
               </p>
             </div>
           </div>
@@ -118,14 +118,14 @@ const About = () => {
         {/* Working with Us */}
         <div>
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="heading-section mb-6">Working with CWT Studio</h2>
+            <h2 className="heading-section mb-6">Partnering with CWT Studio</h2>
             
             {/* Meet You Where You Are */}
             <div className="mb-8 p-6 bg-accent/10 border-2 border-accent/20 rounded-lg">
-              <h3 className="font-mono font-bold mb-4 text-primary">We Meet You Where You Are</h3>
+              <h3 className="font-mono font-bold mb-4 text-primary">We Meet You at Your Current State</h3>
               <p className="text-foreground leading-relaxed mb-4">
-                Every company is at a different stage with different constraints. We don't assume you should rip and replace everything. 
-                We work with your current systems, timeline, and team to create realistic improvements that stick.
+                Every organization operates at a different maturity level with unique constraints. We don't recommend rip-and-replace transformations. 
+                We work within your existing Infrastructure, timeline, and team to create sustainable improvements.
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -134,7 +134,7 @@ const About = () => {
                 </div>
                 <div>
                   <p className="text-sm font-medium mb-2 text-foreground">Industry Agnostic</p>
-                  <p className="text-xs text-muted-foreground">SaaS, services, manufacturing—revenue systems have common patterns.</p>
+                  <p className="text-xs text-muted-foreground">SaaS, services, manufacturing—Revenue Infrastructure follows universal patterns.</p>
                 </div>
               </div>
             </div>
@@ -143,24 +143,24 @@ const About = () => {
               <div>
                 <h3 className="font-mono font-bold mb-3 text-foreground">What We Do</h3>
                 <ul className="space-y-2 text-foreground">
-                  <li>• Meet you at your current operational state</li>
-                  <li>• Deep diagnostic of your revenue infrastructure</li>
-                  <li>• Work with existing tools and integrations</li>
-                  <li>• Fast implementation of priority fixes</li>
-                  <li>• Adapt methodology to your timeline</li>
-                  <li>• Ongoing optimization and iteration</li>
-                  <li>• Executive-level strategic guidance</li>
+                  <li>• Assess your current operational state</li>
+                  <li>• Comprehensive diagnostic of Revenue Infrastructure</li>
+                  <li>• Integrate with existing tooling and workflows</li>
+                  <li>• Rapid implementation of high-priority optimizations</li>
+                  <li>• Flexible methodology adapted to your timeline</li>
+                  <li>• Continuous optimization and iteration cycles</li>
+                  <li>• Executive-level strategic partnership</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-mono font-bold mb-3 text-foreground">What We Don't Do</h3>
                 <ul className="space-y-2 text-foreground">
-                  <li>• Assume you need to start over</li>
-                  <li>• Long discovery phases without action</li>
-                  <li>• Generic solutions that don't fit your stage</li>
-                  <li>• Hand over documentation and disappear</li>
-                  <li>• Over-engineer simple problems</li>
-                  <li>• Judge your current setup</li>
+                  <li>• Recommend complete system overhauls</li>
+                  <li>• Extended discovery phases without execution</li>
+                  <li>• Generic frameworks misaligned to your stage</li>
+                  <li>• Deliver documentation and disengage</li>
+                  <li>• Over-architect for premature complexity</li>
+                  <li>• Evaluate your current setup without context</li>
                 </ul>
               </div>
             </div>
@@ -174,17 +174,17 @@ const About = () => {
       {/* CTA Section */}
       <Section>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="heading-section mb-6">Ready to Transform Your Revenue Operations?</h2>
+          <h2 className="heading-section mb-6">Install Your Revenue Infrastructure</h2>
           <p className="text-description mb-8">
-            Let's discuss how we can help you build a revenue system that scales.
+            Transform your Revenue Operations with systems designed to scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <ConversionOptimizedButton
               to="/contact"
-              ctaName="About - Book Assessment"
+              ctaName="About - Start Assessment"
               location="About CTA Section"
             >
-              Book Assessment
+              Start Assessment
             </ConversionOptimizedButton>
             <ConversionOptimizedButton
               to="/sample-report"
@@ -202,8 +202,8 @@ const About = () => {
       <ExitIntentPopup
         isOpen={showExitPopup}
         onClose={() => setShowExitPopup(false)}
-        title="Get Our Values in Action Guide"
-        description="See real examples of how we apply our principles of Precision, Ownership, Speed, and Taste in client engagements."
+        title="Get Our Operating Principles Guide"
+        description="See real-world applications of Precision, Ownership, Speed, and Craft in Revenue Infrastructure implementations."
         onSubmit={handleExitPopupSubmit}
       />
     </div>;

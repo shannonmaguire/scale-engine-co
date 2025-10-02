@@ -34,31 +34,31 @@ const Services = () => {
     icon: Search,
     title: "Infrastructure Assessment",
     tagline: "Diagnose before you build",
-    description: "Complete MRI of your revenue system. We audit tech, ops, and pipeline to identify what's blocking scale. You get a scorecard, benchmarks, and 90-day roadmap.",
-    features: ["Revenue Infrastructure Scorecard", "Benchmarks against industry peers", "90-day roadmap with priority fixes", "Executive readout presentation"],
+    description: "Complete diagnostic of your Revenue Infrastructure. We audit technology, operations, and pipeline to identify scale blockers. Receive a comprehensive scorecard, industry benchmarks, and prioritized 90-day roadmap.",
+    features: ["Revenue Infrastructure Scorecard", "Industry peer benchmarking", "Prioritized 90-day implementation roadmap", "Executive presentation and alignment session"],
     pricing: "Virtual from $7,500 • In-person from $12,500",
     timeline: "3-4 weeks",
-    cta: "Get Started",
+    cta: "Start Assessment",
     link: "/contact"
   }, {
     icon: Zap,
     title: "Revenue Sprint",
-    tagline: "Install the fixes fast",
-    description: "Six to eight weeks of focused execution. We implement the high-impact fixes from your assessment. Outbound engine, dashboards, integrations, governance.",
-    features: ["Outbound engine build-out", "Campaign funnel optimization", "Salesforce alignment and automation", "Real-time revenue dashboards", "Pipeline governance implementation"],
+    tagline: "Install the system fast",
+    description: "Six to eight weeks of focused execution. We implement high-impact Infrastructure improvements from your Assessment. Outbound engines, revenue dashboards, Salesforce automation, pipeline governance.",
+    features: ["Outbound engine architecture and deployment", "Multi-touch campaign funnel optimization", "Salesforce process automation and data hygiene", "Real-time revenue dashboards and forecasting", "Pipeline governance framework implementation"],
     pricing: "$15,000 to $25,000",
     timeline: "6-8 weeks",
-    cta: "Plan Your Sprint",
+    cta: "Start Your Sprint",
     link: "/sprint"
   }, {
     icon: RotateCcw,
-    title: "Fractional Ops",
-    tagline: "Keep the system running",
-    description: "Monthly operating rhythm after your sprint. We maintain instrumentation, run experiments, and iterate based on what the data tells us.",
-    features: ["Monthly operating reviews", "Continuous system optimization", "New tool evaluation and integration", "Team training and enablement", "Executive reporting and insights"],
+    title: "Fractional Operations",
+    tagline: "Maintain operational excellence",
+    description: "Monthly operating rhythm following your Sprint. We maintain system health, run optimization experiments, and iterate based on performance data.",
+    features: ["Monthly operating reviews and scorecards", "Continuous Infrastructure optimization", "New tool evaluation and integration management", "Team training and enablement programs", "Executive reporting and strategic insights"],
     pricing: "From $5,000 per month",
-    timeline: "Ongoing",
-    cta: "Explore Retainer",
+    timeline: "Ongoing partnership",
+    cta: "Explore Partnership",
     link: "/fractional"
   }];
   return <div className="min-h-screen">
@@ -79,10 +79,10 @@ const Services = () => {
           </div>
           
           <h1 className="heading-page mb-6">
-            Revenue Systems That Scale
+            Revenue Infrastructure Services
           </h1>
           <p className="text-description">
-            We diagnose. We install. We operate. Three services that transform how your business captures and converts revenue.
+            We diagnose, install, and operate. Three services that transform how you capture and scale revenue.
           </p>
         </div>
 
@@ -121,9 +121,9 @@ const Services = () => {
                         <div className="bg-accent/10 border border-accent/20 rounded p-3">
                           <h5 className="text-xs font-mono font-bold text-accent mb-1">ADAPTS TO YOUR STAGE</h5>
                           <p className="text-xs text-muted-foreground">
-                            {index === 0 && "Works with any current system—from spreadsheets to enterprise platforms"}
-                            {index === 1 && "Integrates with existing tools. No rip-and-replace required"}  
-                            {index === 2 && "Scales with your growth. Monthly rhythm adapts to your pace"}
+                            {index === 0 && "Integrates with any current system—from spreadsheets to enterprise CRM platforms"}
+                            {index === 1 && "Works within your existing Infrastructure. No rip-and-replace required"}  
+                            {index === 2 && "Scales with your growth trajectory. Monthly rhythm adapts to business demands"}
                           </p>
                         </div>
                       
@@ -168,9 +168,9 @@ const Services = () => {
       <Section>
         {/* Process Flow */}
         <div className="text-center mb-12">
-          <h2 className="heading-section mb-4">The Complete System</h2>
+          <h2 className="heading-section mb-4">Integrated Service Framework</h2>
           <p className="text-description">
-            How our services work together to transform your revenue operations
+            How our services compound to transform Revenue Operations
           </p>
         </div>
         
@@ -182,7 +182,7 @@ const Services = () => {
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Assess</h3>
                 <p className="text-muted-foreground text-sm">
-                  Comprehensive diagnostic reveals what's blocking your scale
+                  Comprehensive diagnostic identifies what's blocking scale
                 </p>
               </div>
               
@@ -192,7 +192,7 @@ const Services = () => {
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Build</h3>
                 <p className="text-muted-foreground text-sm">
-                  Fast implementation of the systems that drive results
+                  Rapid implementation of systems that drive predictable results
                 </p>
               </div>
               
@@ -202,7 +202,7 @@ const Services = () => {
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Operate</h3>
                 <p className="text-muted-foreground text-sm">
-                  Ongoing optimization keeps your system ahead of growth
+                  Continuous optimization maintains system performance as you scale
                 </p>
               </div>
             </div>
@@ -216,8 +216,8 @@ const Services = () => {
       <ExitIntentPopup
         isOpen={showExitPopup}
         onClose={() => setShowExitPopup(false)}
-        title="Get Our Service Comparison Guide"
-        description="Download our detailed guide to choosing the right revenue operations engagement for your business stage."
+        title="Get Service Selection Framework"
+        description="Download our comprehensive guide to selecting the optimal Revenue Operations engagement for your organization's growth stage and Infrastructure maturity."
         onSubmit={handleExitPopupSubmit}
       />
     </div>;

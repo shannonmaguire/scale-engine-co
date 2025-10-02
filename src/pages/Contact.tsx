@@ -137,10 +137,10 @@ const Contact = () => {
             INTAKE READY
           </div>
           <h1 className="heading-page mb-6">
-            Get Started
+            Start Your Assessment
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            Ready to optimize your revenue system? Fill out the form below and we'll get back to you within 24 hours.
+            Install Revenue Infrastructure that scales. Complete this intake form and receive your diagnostic proposal within 24 hours.
           </p>
         </div>
 
@@ -149,7 +149,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <StandardCard>
               <StandardCardHeader>
-                <StandardCardTitle className="text-primary">Get Started</StandardCardTitle>
+                <StandardCardTitle className="text-primary">Assessment Intake</StandardCardTitle>
               </StandardCardHeader>
               <StandardCardContent>
                 <form onSubmit={handleSubmit} className="space-y-8">

@@ -9,50 +9,50 @@ const Fractional = () => {
   const services = [
     {
       icon: BarChart3,
-      title: "Monthly Reviews",
-      description: "Performance analysis, pipeline health checks, and optimization recommendations"
+      title: "Monthly Performance Reviews",
+      description: "Comprehensive performance analysis, pipeline health diagnostics, and optimization opportunity identification"
     },
     {
       icon: Settings,
-      title: "System Optimization",
-      description: "Continuous improvement of your revenue infrastructure and processes"
+      title: "Infrastructure Optimization",
+      description: "Continuous improvement of Revenue Infrastructure, process refinement, and system performance tuning"
     },
     {
       icon: Target,
-      title: "Strategy Alignment",
-      description: "Quarterly planning sessions to align operations with business goals"
+      title: "Strategic Alignment",
+      description: "Quarterly strategic planning sessions to align operational execution with evolving business objectives"
     },
     {
       icon: Users,
-      title: "Team Enablement",
-      description: "Training, documentation, and best practice implementation"
+      title: "Team Development",
+      description: "Ongoing training programs, documentation maintenance, and best practice implementation"
     }
   ];
 
   const deliverables = [
-    "Monthly operating review and scorecard",
-    "Quarterly strategy and planning sessions", 
-    "Ongoing system optimization and iteration",
+    "Monthly operating review with performance scorecard",
+    "Quarterly strategic planning and alignment sessions", 
+    "Continuous Infrastructure optimization and iteration",
     "New tool evaluation and integration support",
-    "Team training and enablement programs",
-    "Executive reporting and business insights"
+    "Comprehensive team training and enablement",
+    "Executive reporting with actionable business insights"
   ];
 
   const timeline = [
     {
       period: "Month 1",
-      focus: "Baseline & Planning",
-      activities: "Current state assessment, priority setting, team alignment"
+      focus: "Baseline & Strategic Planning",
+      activities: "Current state assessment, priority alignment, stakeholder onboarding"
     },
     {
       period: "Month 2-3",
-      focus: "Optimization",
-      activities: "System improvements, process refinement, training delivery"
+      focus: "Infrastructure Optimization",
+      activities: "System enhancements, process refinement, training deployment"
     },
     {
       period: "Month 4+",
-      focus: "Growth Support",
-      activities: "Scaling preparation, advanced automation, strategic guidance"
+      focus: "Scale Enablement",
+      activities: "Growth preparation, advanced automation, strategic executive partnership"
     }
   ];
 
@@ -68,8 +68,7 @@ const Fractional = () => {
             Fractional Revenue Operations
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Keep your revenue system running at peak performance. Monthly operating rhythm. 
-            Continuous optimization. Strategic guidance when you need it.
+            Maintain peak Revenue Infrastructure performance. Monthly operating rhythm with continuous optimization and strategic guidance.
           </p>
         </div>
 
@@ -77,10 +76,9 @@ const Fractional = () => {
         <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <RotateCcw className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="heading-section mb-4">After the Sprint</h2>
+            <h2 className="heading-section mb-4">Post-Sprint Operations</h2>
             <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Your revenue systems are installed and working. Now you need someone to keep them optimized, 
-              iterate based on results, and guide strategic decisions as you scale.
+              Your Revenue Infrastructure is operational. Now maintain optimization momentum, iterate based on performance data, and scale strategic capabilities as your organization grows.
             </p>
           </div>
         </div>
@@ -154,32 +152,32 @@ const Fractional = () => {
         <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="font-mono text-2xl font-bold mb-2">Monthly Retainer</h2>
-            <p className="text-3xl font-bold text-primary mb-2">From $5,000</p>
-            <p className="text-muted-foreground">Depends on scope and complexity</p>
+            <h2 className="font-mono text-2xl font-bold mb-2">Monthly Partnership Investment</h2>
+            <p className="text-3xl font-bold text-primary mb-2">From $5,000/month</p>
+            <p className="text-muted-foreground">Scaled to scope and Infrastructure complexity</p>
           </div>
         </div>
 
         {/* Prerequisites */}
         <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-mono text-xl font-bold mb-4">Requirements</h2>
+            <h2 className="font-mono text-xl font-bold mb-4">Partnership Requirements</h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Completed Revenue Sprint (or equivalent system implementation)
+                Completed Revenue Sprint or equivalent Infrastructure implementation
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Operational revenue systems in production
+                Operational Revenue Infrastructure in production environment
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Dedicated internal stakeholder for collaboration
+                Dedicated internal stakeholder for ongoing collaboration
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Monthly commitment (minimum 6 months)
+                Six-month minimum partnership commitment
               </li>
             </ul>
           </div>

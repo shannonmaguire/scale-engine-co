@@ -39,23 +39,23 @@ const Home = () => {
   
   const services = [{
     title: "Infrastructure Assessment",
-    description: "Deep diagnostic of tech, ops, pipeline. Scorecard and benchmarks. 90 day roadmap. Executive readout.",
-    price: "Virtual from $7,500. In person from $12,500.",
-    note: "50% of your fee credits to a Sprint if you move forward",
-    cta: "Get Started",
+    description: "Complete diagnostic of your Revenue Infrastructure. Scorecard, benchmarks, and 90-day roadmap with executive presentation.",
+    price: "Virtual from $7,500 • In-person from $12,500",
+    note: "50% of Assessment fee credits toward your Sprint",
+    cta: "Start Assessment",
     link: "/contact"
   }, {
     title: "Revenue Sprint",
-    description: "Install the fixes. Outbound engine. Integrations. Dashboards. Governance.",
-    timeline: "6 to 8 weeks",
+    description: "Six to eight weeks of focused execution. We install Outbound engines, revenue dashboards, Salesforce automation, and pipeline governance.",
+    timeline: "6-8 weeks",
     price: "$15,000 to $25,000",
-    cta: "Plan Your Sprint",
+    cta: "Start Your Sprint",
     link: "/sprint"
   }, {
-    title: "Fractional Ops",
-    description: "Monthly operating rhythm. Instrumentation. Iteration. Reviews with leadership.",
+    title: "Fractional Operations",
+    description: "Monthly operating rhythm after your Sprint. Continuous optimization, strategic reviews, and executive reporting.",
     price: "From $5,000 per month",
-    cta: "Explore Retainer",
+    cta: "Explore Partnership",
     link: "/fractional"
   }];
   const proofStats = [{
@@ -69,10 +69,10 @@ const Home = () => {
     label: "Single source of truth adoption"
   }];
   const beforeAfter = {
-    before: ["Founder led sales", "Stitched tools", "Leaking pipeline"],
-    after: ["Operating system", "Reliable pipeline", "Forecast you can defend"]
+    before: ["Founder-led sales chaos", "Disconnected tooling", "Unreliable pipeline data"],
+    after: ["Backend Revenue System", "Predictable pipeline", "Forecast you can defend"]
   };
-  const diagnosticDeliverables = ["Revenue Infrastructure Scorecard tech, ops, pipeline", "Benchmarks against peers", "90 day roadmap with priority fixes", "Executive readout with leadership"];
+  const diagnosticDeliverables = ["Revenue Infrastructure Scorecard — technology, operations, and pipeline analysis", "Industry benchmarks and peer comparisons", "Prioritized 90-day roadmap with implementation sequence", "Executive presentation with leadership alignment session"];
   return <div className="min-h-screen">
       <EngagementTracker />
       <CookieBanner />
@@ -89,31 +89,31 @@ const Home = () => {
               
               
               <h1 className="heading-page mb-6 leading-tight">
-                The Competitive Advantage Is the Backend
+                Revenue Systems That Compound
               </h1>
               
               <p className="text-description mb-8">
-                In an era of fractured attention and tool overload, the real advantage belongs to operators who install systems that are simple, resilient, and actually adopted. We turn complexity into seamless flow.
+                The competitive advantage isn't your product—it's your Infrastructure. We install Backend Revenue Systems that turn complexity into predictable growth. No endless decks. No random tools. Just systems that work.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConversionOptimizedButton
                   to="/contact"
-                  ctaName="Hero - Get Revenue Diagnostic"
+                  ctaName="Hero - Start Assessment"
                   location="Homepage Hero"
                   className="btn-console-accent"
                 >
-                  Get Your Revenue Diagnostic
+                  Start Your Assessment
                 </ConversionOptimizedButton>
                 <ConversionOptimizedButton
-                  to="/systems"
-                  ctaName="Hero - Systems Page"
+                  to="/proof"
+                  ctaName="Hero - See Our Work"
                   location="Homepage Hero"
                   variant="outline"
                   className="btn-console-secondary"
                   showArrow={false}
                 >
-                  See the System
+                  See Our Work
                 </ConversionOptimizedButton>
               </div>
               
@@ -156,10 +156,10 @@ const Home = () => {
         <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-6">
               <div className="system-status">
-                System Modules
+                Service Catalog
               </div>
             </div>
-            <h2 className="heading-section">How We Work</h2>
+            <h2 className="heading-section">Three Ways We Install Infrastructure</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -197,11 +197,11 @@ const Home = () => {
       <Section>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-section mb-8">Before and After</h2>
+              <h2 className="heading-section mb-8">Transformation Framework</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-mono text-lg font-bold mb-4 text-muted-foreground">Before</h3>
+                  <h3 className="font-mono text-lg font-bold mb-4 text-muted-foreground">Current State</h3>
                   <ul className="space-y-3">
                     {beforeAfter.before.map((item, index) => <li key={index} className="flex items-center text-muted-foreground font-mono text-sm">
                         <div className="w-1 h-1 bg-muted-foreground mr-3" />
@@ -211,7 +211,7 @@ const Home = () => {
                 </div>
                 
                 <div>
-                  <h3 className="font-mono text-lg font-bold mb-4 text-primary">After</h3>
+                  <h3 className="font-mono text-lg font-bold mb-4 text-primary">Installed System</h3>
                   <ul className="space-y-3">
                     {beforeAfter.after.map((item, index) => <li key={index} className="flex items-center font-mono text-sm">
                         <CheckCircle className="w-3 h-3 text-primary mr-3" />
@@ -224,11 +224,11 @@ const Home = () => {
               <div className="mt-8">
                 <ConversionOptimizedButton
                   to="/contact"
-                  ctaName="Before After - Book Assessment"
-                  location="Before After Section"
+                  ctaName="Transformation - Start Assessment"
+                  location="Transformation Section"
                   variant="warm"
                 >
-                  Book Assessment
+                  Start Assessment
                 </ConversionOptimizedButton>
               </div>
             </div>
@@ -242,9 +242,9 @@ const Home = () => {
                       System Health
                     </span>
                   </div>
-                  <BarChart3 className="w-16 h-16 accent-data mx-auto mb-4" />
-                  <h3 className="heading-subsection mb-2">Revenue System</h3>
-                  <p className="text-muted-foreground font-mono text-sm mb-6">Transparent, predictable, scalable</p>
+                  <BarChart3 className="w-16 h-16 text-accent-data mx-auto mb-4" />
+                  <h3 className="heading-subsection mb-2">Backend Revenue System</h3>
+                  <p className="text-muted-foreground font-mono text-sm mb-6">Predictable, scalable, defendable</p>
                   
                   {/* Inline metrics */}
                   <div className="grid grid-cols-3 gap-4 mt-6">
@@ -270,9 +270,9 @@ const Home = () => {
       {/* Meet You Where You Are Section */}
       <Section variant="muted">
         <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
+            <h2 className="heading-section mb-6">Tailored to Your Growth Stage</h2>
             <p className="text-description max-w-3xl mx-auto">
-              Strong backends make resilience visible. Whether you're early stage or enterprise, we install the infrastructure that lets execution beat volume every time.
+              Strong Infrastructure makes growth predictable. We meet you at your current operational state and install the systems that unlock your next phase.
             </p>
           </div>
           
@@ -282,10 +282,9 @@ const Home = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-accent font-mono font-bold">START</span>
                 </div>
-                <h3 className="heading-subsection mb-3">Early Stage</h3>
+                <h3 className="heading-subsection mb-3">Early-Stage Companies</h3>
                 <p className="text-muted-foreground text-sm">
-                  Founder-led sales with basic tools. We'll assess what you actually need to scale, 
-                  not over-engineer for problems you don't have yet.
+                  Founder-led sales with basic tooling. We diagnose what you need to scale without over-engineering for problems you don't have yet.
                 </p>
               </div>
             </StandardCard>
@@ -295,10 +294,9 @@ const Home = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-primary font-mono font-bold">GROW</span>
                 </div>
-                <h3 className="heading-subsection mb-3">Scaling</h3>
+                <h3 className="heading-subsection mb-3">Scaling Organizations</h3>
                 <p className="text-muted-foreground text-sm">
-                  Growing fast with stitched-together systems. We'll work with your existing tools 
-                  and team to optimize what you have while planning smart upgrades.
+                  Rapid growth with disconnected systems. We optimize your existing Infrastructure while architecting strategic upgrades.
                 </p>
               </div>
             </StandardCard>
@@ -308,10 +306,9 @@ const Home = () => {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-secondary font-mono font-bold">SCALE</span>
                 </div>
-                <h3 className="heading-subsection mb-3">Enterprise</h3>
+                <h3 className="heading-subsection mb-3">Enterprise Operations</h3>
                 <p className="text-muted-foreground text-sm">
-                  Complex operations with entrenched processes. We'll audit what's working, 
-                  identify what's blocking scale, and sequence changes realistically.
+                  Complex systems with legacy constraints. We audit what's working, identify scalability blockers, and sequence realistic improvements.
                 </p>
               </div>
             </StandardCard>
@@ -319,14 +316,14 @@ const Home = () => {
           
           <div className="text-center mt-12">
             <p className="text-muted-foreground font-mono text-sm mb-6">
-              No judgment. No assumptions. Just clear diagnosis and practical next steps.
+              No assumptions. Just clear diagnosis and actionable roadmaps.
             </p>
             <ConversionOptimizedButton
               to="/contact"
-              ctaName="Meet You - Get Started"
-              location="Meet You Section"
+              ctaName="Stage Match - Start Assessment"
+              location="Stage Matching Section"
             >
-              Get Started
+              Start Assessment
             </ConversionOptimizedButton>
           </div>
       </Section>
@@ -335,8 +332,8 @@ const Home = () => {
       <Section>
         <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="heading-section mb-4">The Diagnostic</h2>
-              <p className="text-description">What you get in an Assessment</p>
+              <h2 className="heading-section mb-4">Infrastructure Assessment Deliverables</h2>
+              <p className="text-description">What you receive in every Assessment</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -351,8 +348,8 @@ const Home = () => {
                 <div className="mt-8">
                   <ConversionOptimizedButton
                     to="/sample-report"
-                    ctaName="Diagnostic - View Sample"
-                    location="Diagnostic Section"
+                    ctaName="Assessment - View Sample Report"
+                    location="Assessment Deliverables Section"
                   >
                     View Sample Report
                   </ConversionOptimizedButton>

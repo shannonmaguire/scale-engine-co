@@ -9,27 +9,27 @@ const Sprint = () => {
     {
       icon: Target,
       title: "Outbound Engine",
-      description: "Sequences, templates, lead scoring, and cadence optimization"
+      description: "Email sequences, lead scoring models, cadence optimization, and conversion tracking"
     },
     {
       icon: BarChart3,
       title: "Campaign Funnels", 
-      description: "Multi-touch attribution, conversion tracking, and funnel optimization"
+      description: "Multi-touch attribution frameworks, conversion analytics, and funnel performance optimization"
     },
     {
       icon: Settings,
-      title: "Salesforce Alignment",
-      description: "Data hygiene, process automation, and workflow configuration"
+      title: "Salesforce Automation",
+      description: "Data hygiene protocols, workflow automation, process configuration, and integration architecture"
     },
     {
       icon: BarChart3,
       title: "Revenue Dashboards",
-      description: "Real-time reporting, forecasting tools, and executive scorecards"
+      description: "Real-time reporting infrastructure, forecasting models, and executive performance scorecards"
     },
     {
       icon: Shield,
       title: "Pipeline Governance",
-      description: "Stage definitions, exit criteria, and quality controls"
+      description: "Stage definitions, progression criteria, data quality controls, and compliance frameworks"
     }
   ];
 
@@ -37,27 +37,27 @@ const Sprint = () => {
     {
       week: "Week 1",
       title: "Foundation",
-      outputs: "System audit, data cleanup, baseline metrics"
+      outputs: "Infrastructure audit, data remediation, baseline metric establishment"
     },
     {
       week: "Week 2-3", 
       title: "Build",
-      outputs: "Process automation, dashboard creation, integration setup"
+      outputs: "Process automation implementation, dashboard architecture, integration deployment"
     },
     {
       week: "Week 4-5",
-      title: "Test", 
-      outputs: "User acceptance testing, workflow validation, training materials"
+      title: "Validation", 
+      outputs: "User acceptance testing, workflow optimization, training material development"
     },
     {
       week: "Week 6-7",
-      title: "Deploy",
-      outputs: "Go-live execution, user onboarding, process documentation"
+      title: "Deployment",
+      outputs: "Production go-live, team onboarding, comprehensive process documentation"
     },
     {
       week: "Week 8",
-      title: "Optimize",
-      outputs: "Performance tuning, feedback integration, handoff to operations"
+      title: "Optimization",
+      outputs: "Performance tuning, stakeholder feedback integration, operational handoff"
     }
   ];
 
@@ -73,13 +73,13 @@ const Sprint = () => {
             Revenue Sprint
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Install the fixes fast. Six to eight weeks. No detours.
+            Install high-impact Infrastructure improvements. Six to eight weeks of focused execution. No detours.
           </p>
         </div>
 
         {/* Workstreams */}
         <div className="mt-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">What We Build</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Sprint Deliverables</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {workstreams.map((stream, index) => (
               <StandardCard key={index} variant="bordered">
@@ -134,26 +134,26 @@ const Sprint = () => {
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="font-mono text-2xl font-bold mb-2">Sprint Investment</h2>
-            <p className="text-3xl font-bold text-primary mb-2">$15,000 - $25,000</p>
-            <p className="text-muted-foreground">Depending on scope and complexity</p>
+            <p className="text-3xl font-bold text-primary mb-2">$15,000 – $25,000</p>
+            <p className="text-muted-foreground">Scoped to complexity and Infrastructure maturity</p>
           </div>
         </div>
 
         {/* Success Metrics */}
         <div className="mt-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Success Metrics</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Sprint Performance Metrics</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">90%+</div>
-              <p className="text-sm text-muted-foreground">User adoption within 30 days</p>
+              <p className="text-sm text-muted-foreground">User adoption within first 30 days post-deployment</p>
             </div>
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">50%+</div>
-              <p className="text-sm text-muted-foreground">Improvement in pipeline visibility</p>
+              <p className="text-sm text-muted-foreground">Improvement in pipeline visibility and forecast accuracy</p>
             </div>
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">2-3x</div>
-              <p className="text-sm text-muted-foreground">Faster reporting and insights</p>
+              <p className="text-sm text-muted-foreground">Faster reporting cycles and strategic insight delivery</p>
             </div>
           </div>
         </div>
@@ -165,19 +165,19 @@ const Sprint = () => {
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Completed Infrastructure Assessment (or equivalent diagnostic)
+                Completed Infrastructure Assessment or equivalent diagnostic analysis
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Executive commitment to process changes
+                Executive-level commitment to process transformation
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Dedicated project stakeholders from each team
+                Dedicated project stakeholders from each functional team
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                System admin access to all relevant tools
+                Administrator access to all relevant systems and platforms
               </li>
             </ul>
           </div>

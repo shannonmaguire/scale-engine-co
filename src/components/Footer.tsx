@@ -19,7 +19,7 @@ const Footer = () => {
             style={{ imageRendering: 'crisp-edges' }}
           />
           <p className="text-white/60 font-mono text-sm max-w-md">
-            Revenue infrastructure that compounds
+            Revenue Infrastructure that compounds
           </p>
         </div>
 

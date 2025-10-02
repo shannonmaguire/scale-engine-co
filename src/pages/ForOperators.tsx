@@ -32,12 +32,12 @@ const ForOperators = () => {
       <Section id="hero" className="pt-32 pb-20">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-mono font-bold tracking-tight mb-8 text-foreground">
-            Built for operators.
+            Built by Operators.
             <br />
-            <span className="text-primary">Run by operators.</span>
+            <span className="text-primary">For Operators.</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-mono mb-12 leading-relaxed">
-            Partner with CWT Studio to deliver enterprise-grade revenue infrastructure to scaling companies. Access our playbooks, systems, and support network.
+            Partner with CWT Studio to deliver Fortune 500-grade Revenue Infrastructure to scaling organizations. Access proven playbooks, operational systems, and enterprise support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
@@ -45,7 +45,7 @@ const ForOperators = () => {
               onClick={handleCTAClick}
               className="hover-lift hover-glow font-mono"
             >
-              Apply to the Operator Network
+              Apply to Operator Network
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button 
@@ -67,7 +67,7 @@ const ForOperators = () => {
             Who This Is For
           </h2>
           <p className="text-lg text-muted-foreground font-mono">
-            We're looking for experienced operators who understand revenue systems at scale.
+            Experienced operators who architect Revenue Infrastructure at enterprise scale.
           </p>
         </div>
 
@@ -75,9 +75,9 @@ const ForOperators = () => {
           <StandardCard>
             <div className="p-8">
               <Users className="h-12 w-12 text-primary mb-6" />
-              <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Revenue Operators</h3>
+              <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Revenue Operations Leaders</h3>
               <p className="text-muted-foreground font-mono leading-relaxed">
-                5+ years in RevOps, Sales Ops, or Marketing Ops with proven system implementations.
+                5+ years in RevOps, Sales Ops, or Marketing Ops with documented system implementation success.
               </p>
             </div>
           </StandardCard>
@@ -85,9 +85,9 @@ const ForOperators = () => {
           <StandardCard>
             <div className="p-8">
               <Briefcase className="h-12 w-12 text-primary mb-6" />
-              <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Salesforce Experts</h3>
+              <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Salesforce Architects</h3>
               <p className="text-muted-foreground font-mono leading-relaxed">
-                Certified admins or architects who build revenue systems that compound.
+                Certified administrators or architects who architect Revenue Infrastructure that compounds value.
               </p>
             </div>
           </StandardCard>
@@ -95,9 +95,9 @@ const ForOperators = () => {
           <StandardCard>
             <div className="p-8">
               <TrendingUp className="h-12 w-12 text-primary mb-6" />
-              <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Fractional Leaders</h3>
+              <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Fractional Executives</h3>
               <p className="text-muted-foreground font-mono leading-relaxed">
-                Former CROs/VPs who want to scale their expertise across multiple clients.
+                Former CROs/VPs seeking to scale their operational expertise across multiple client engagements.
               </p>
             </div>
           </StandardCard>
@@ -111,7 +111,7 @@ const ForOperators = () => {
             Why Partner With Us
           </h2>
           <p className="text-lg text-muted-foreground font-mono">
-            Access systems, support, and deal flow while maintaining your independence.
+            Access proven systems, qualified clients, and collaborative support while maintaining operational independence.
           </p>
         </div>
 
