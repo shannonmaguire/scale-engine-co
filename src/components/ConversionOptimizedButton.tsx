@@ -30,7 +30,7 @@ export const ConversionOptimizedButton = ({
   return (
     <Button
       asChild
-      className={`hover-lift hover-glow group ${className}`}
+      className={`hover-lift hover-glow group text-foreground hover:text-foreground ${className}`}
       {...props}
       onClick={handleClick}
     >
