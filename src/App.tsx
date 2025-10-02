@@ -14,6 +14,8 @@ import { usePerformanceMonitoring, reportWebVitals } from "@/hooks/usePerformanc
 import { useServiceWorker } from "@/hooks/useServiceWorker";
 import { useErrorTracking } from "@/hooks/useErrorTracking";
 import ChatWidget from "@/components/ChatWidget";
+import InstallPrompt from "@/components/InstallPrompt";
+import NetworkStatusBanner from "@/components/NetworkStatusBanner";
 import analytics from "@/lib/analytics";
 
 // Lazy load route components for better performance
@@ -50,6 +52,7 @@ const AppContent = () => {
 
   return (
     <>
+      <NetworkStatusBanner />
       <Navigation />
       <main id="main-content" tabIndex={-1}>
         <Suspense fallback={
@@ -88,6 +91,7 @@ const AppContent = () => {
       <Footer />
       <CookieBanner />
       <ChatWidget />
+      <InstallPrompt />
     </>
   );
 };
