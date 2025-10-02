@@ -28,6 +28,8 @@ const Salesforce = lazy(() => import("@/pages/Salesforce"));
 const SalesforcePartners = lazy(() => import("@/pages/SalesforcePartners"));
 const SalesforceDelivery = lazy(() => import("@/pages/SalesforceDelivery"));
 const Fractional = lazy(() => import("@/pages/Fractional"));
+const ForOperators = lazy(() => import("@/pages/ForOperators"));
+const PartnerDashboard = lazy(() => import("@/pages/PartnerDashboard"));
 const SampleReport = lazy(() => import("@/pages/SampleReport"));
 const Proof = lazy(() => import("@/pages/Proof"));
 const Blog = lazy(() => import("@/pages/Blog"));
@@ -70,6 +72,8 @@ const AppContent = () => {
             <Route path="/salesforce/partners" element={<SalesforcePartners />} />
             <Route path="/salesforce/delivery" element={<SalesforceDelivery />} />
             <Route path="/fractional" element={<Fractional />} />
+            <Route path="/for-operators" element={<ForOperators />} />
+            <Route path="/partner-dashboard" element={<PartnerDashboard />} />
             <Route path="/sample-report" element={<SampleReport />} />
             <Route path="/proof" element={<Proof />} />
             <Route path="/blog" element={<Blog />} />
