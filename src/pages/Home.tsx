@@ -86,14 +86,19 @@ const Home = () => {
       <Section className="relative overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              
+              <div className="inline-flex items-center gap-2 mb-4">
+                <div className="w-2 h-2 bg-primary rounded-full" />
+                <span className="font-mono text-sm uppercase tracking-wider text-primary">
+                  Win on infrastructure.
+                </span>
+              </div>
               
               <h1 className="heading-page mb-6 leading-tight">
-                Backend Revenue Systems
+                The Competitive Advantage Is the Backend
               </h1>
               
               <p className="text-description mb-8">
-                Most companies break at revenue scale. You don't need more strategy. You need infrastructure that works. We install backend systems—Assessment, Sprint, Ops. No decks. No theory. Just systems that compound.
+                Build a spine for revenue. Clean data. Clear ownership. Measured loops.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
