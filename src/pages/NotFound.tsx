@@ -20,7 +20,7 @@ const NotFound = () => {
         
         <h1 className="mb-6 text-6xl font-bold font-mono text-foreground">404</h1>
         <p className="mb-4 text-xl text-foreground font-mono leading-relaxed">
-          This page doesn't exist in our Infrastructure.
+          This page doesn't exist.
         </p>
         <p className="mb-8 text-sm text-muted-foreground font-mono">
           Even the best systems have dead ends.
@@ -30,7 +30,7 @@ const NotFound = () => {
           href="/" 
           className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono text-sm font-medium rounded-md hover:bg-primary/90 transition-colors"
         >
-          Return to Mission Control
+          Return Home
         </a>
       </div>
     </div>

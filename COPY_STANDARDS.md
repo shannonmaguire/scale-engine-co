@@ -1,15 +1,20 @@
 # CWT Studio Copy Standards & Glossary
-## Fortune 500 Copy Framework
+## Human-First Voice Framework
+
+### Voice Rules
+1. **Human first, never formulaic.** Write like a person, not an algorithm.
+2. **No empty flourishes.** No "this isn't just X, it's Y." Burn that.
+3. **Short, declarative sentences.** Sharp edges. Clear restraint.
+4. **No buzzwords, no jargon padding.** If it reads like filler, delete it.
+5. **Write like someone with a spine.** Direct, real, undeniable.
+6. **Contradictions welcome.** Don't smooth over complexity.
+7. **CTAs must be commands.** "Start Your Sprint," "Apply to Join." Never "Learn More."
+8. **Every word must cost something.** Copy should feel meant, not optimized.
 
 ### Messaging Architecture
-
-**Problem → Solution → Outcome**
-- **Problem**: Revenue leaks, broken systems, unreliable forecasts, stalled growth
-- **Solution**: Backend Revenue Infrastructure — Assessments, Sprints, Operators
-- **Outcome**: Predictable revenue, scalable operations, defendable forecasts, trusted data
-
-### Core Value Proposition
-"The competitive advantage is the backend. We install revenue systems that compound."
+**What we do**: Backend revenue systems. Infrastructure over inspiration.
+**What we fix**: Revenue leaks. Broken systems. Unreliable forecasts.
+**What you get**: Predictable revenue. Clean data. Systems that compound.
 
 ---
 
@@ -40,17 +45,17 @@
 ## Voice & Tone Guidelines
 
 ### Voice Attributes
-1. **Decisive** — No hedging. "We install" not "We can help you install"
-2. **Revenue-Focused** — Lead with business impact, not features
-3. **Consultative Authority** — McKinsey-level confidence, operator-level relatability
-4. **Minimal** — Every word earns its place
-5. **Technical Precision** — Specific deliverables, not vague promises
+1. **Human** — Real voice. No corporate-speak.
+2. **Sharp** — Short sentences. Sharp edges. No padding.
+3. **Direct** — Say what you mean. Mean what you say.
+4. **Honest** — Trade-offs exist. Complexity exists. Don't hide it.
+5. **Confident** — Know what we do. Don't apologize for it.
 
 ### Tone Calibration
-- **Enterprise-Grade**: Professional, measured, credible
-- **Operator-First**: Direct, no-nonsense, implementation-focused
-- **Modern**: Contemporary language, not corporate-speak
-- **Confident**: Assertive but not arrogant
+- **Real, not polished**: Edges over smoothness
+- **Operator-first**: Built by people who do the work
+- **No fluff**: If it doesn't add value, delete it
+- **Spine over polish**: Would rather be too direct than too vague
 
 ---
 
@@ -77,37 +82,31 @@
 
 ---
 
-## CTA Library (Enterprise-Grade)
+## CTA Library (Command-Based)
 
-### Primary CTAs (High Intent)
-1. **"Start Your Assessment"** — Main conversion action
-2. **"Book Your Diagnostic"** — Alternative primary
-3. **"Get Revenue Diagnostic"** — Homepage hero
-4. **"Install Your System"** — Sprint-focused
-5. **"Start Your Sprint"** — Sprint page primary
+### Primary CTAs
+1. **"Start Your Assessment"**
+2. **"Start Your Sprint"**
+3. **"Apply to Join"**
+4. **"Book Assessment"**
+5. **"Install Your System"**
 
-### Secondary CTAs (Discovery)
-6. **"View Sample Report"** — Proof/credibility
-7. **"See the System"** — Educational
-8. **"Review Methodology"** — Technical audience
-9. **"Explore Partnership"** — Partner-focused
-10. **"See Our Work"** — Proof page
-
-### Tertiary CTAs (Low Friction)
-11. **"Download Framework"** — Lead magnet
-12. **"Get Scorecard Template"** — Tool download
-13. **"See Pricing"** — Transparency
-14. **"Read Case Study"** — Proof content
+### Secondary CTAs
+6. **"See Our Work"**
+7. **"View Sample Report"**
+8. **"Get the Framework"**
+9. **"Apply Now"**
+10. **"Show Me How"**
 
 ### Navigation CTAs
-- **"Get Started"** — Primary nav CTA (universal)
+- **"Get Started"** — Primary nav CTA
 
-### Never Use
+### Burn These
 - ❌ "Learn More"
-- ❌ "Click Here"
-- ❌ "Find Out More"
 - ❌ "Discover"
-- ❌ "Explore" (unless paired with noun: "Explore Partnership")
+- ❌ "Find Out How"
+- ❌ "Click Here"
+- ❌ "Explore" (unless commanding: "Explore Partnership")
 
 ---
 

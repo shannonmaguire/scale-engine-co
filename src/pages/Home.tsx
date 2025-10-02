@@ -38,24 +38,24 @@ const Home = () => {
   };
   
   const services = [{
-    title: "Infrastructure Assessment",
-    description: "Complete diagnostic of your Revenue Infrastructure. Scorecard, benchmarks, and 90-day roadmap with executive presentation.",
+    title: "Assessment",
+    description: "Diagnose what's broken. Get a scorecard, benchmarks, and a 90-day roadmap. Know exactly what to fix.",
     price: "Virtual from $7,500 • In-person from $12,500",
-    note: "50% of Assessment fee credits toward your Sprint",
+    note: "50% credits toward Sprint",
     cta: "Start Assessment",
     link: "/contact"
   }, {
-    title: "Revenue Sprint",
-    description: "Six to eight weeks of focused execution. We install Outbound engines, revenue dashboards, Salesforce automation, and pipeline governance.",
+    title: "Sprint",
+    description: "Six to eight weeks. We install it. Outbound engine, dashboards, Salesforce automation, pipeline governance. Done.",
     timeline: "6-8 weeks",
     price: "$15,000 to $25,000",
     cta: "Start Your Sprint",
     link: "/sprint"
   }, {
-    title: "Fractional Operations",
-    description: "Monthly operating rhythm after your Sprint. Continuous optimization, strategic reviews, and executive reporting.",
-    price: "From $5,000 per month",
-    cta: "Explore Partnership",
+    title: "Fractional Ops",
+    description: "Monthly rhythm. We keep your system running. Optimization, reviews, reporting. No surprises.",
+    price: "From $5,000/month",
+    cta: "Apply Now",
     link: "/fractional"
   }];
   const proofStats = [{
@@ -89,11 +89,11 @@ const Home = () => {
               
               
               <h1 className="heading-page mb-6 leading-tight">
-                Revenue Systems That Compound
+                Backend Revenue Systems
               </h1>
               
               <p className="text-description mb-8">
-                The competitive advantage isn't your product—it's your Infrastructure. We install Backend Revenue Systems that turn complexity into predictable growth. No endless decks. No random tools. Just systems that work.
+                Most companies break at revenue scale. You don't need more strategy. You need infrastructure that works. We install backend systems—Assessment, Sprint, Ops. No decks. No theory. Just systems that compound.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -159,7 +159,7 @@ const Home = () => {
                 Service Catalog
               </div>
             </div>
-            <h2 className="heading-section">Three Ways We Install Infrastructure</h2>
+            <h2 className="heading-section">How We Work</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -197,7 +197,7 @@ const Home = () => {
       <Section>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-section mb-8">Transformation Framework</h2>
+              <h2 className="heading-section mb-8">Before and After</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -270,9 +270,9 @@ const Home = () => {
       {/* Meet You Where You Are Section */}
       <Section variant="muted">
         <div className="text-center mb-16">
-            <h2 className="heading-section mb-6">Tailored to Your Growth Stage</h2>
+            <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
             <p className="text-description max-w-3xl mx-auto">
-              Strong Infrastructure makes growth predictable. We meet you at your current operational state and install the systems that unlock your next phase.
+              Every company has different constraints. We don't force rip-and-replace. We work with what you have and build what you need.
             </p>
           </div>
           
@@ -282,9 +282,9 @@ const Home = () => {
                 <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-accent font-mono font-bold">START</span>
                 </div>
-                <h3 className="heading-subsection mb-3">Early-Stage Companies</h3>
+                <h3 className="heading-subsection mb-3">Early-Stage</h3>
                 <p className="text-muted-foreground text-sm">
-                  Founder-led sales with basic tooling. We diagnose what you need to scale without over-engineering for problems you don't have yet.
+                  Founder-led sales. Basic tools. We diagnose what matters now. Not what might matter in three years.
                 </p>
               </div>
             </StandardCard>
@@ -294,9 +294,9 @@ const Home = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-primary font-mono font-bold">GROW</span>
                 </div>
-                <h3 className="heading-subsection mb-3">Scaling Organizations</h3>
+                <h3 className="heading-subsection mb-3">Scaling</h3>
                 <p className="text-muted-foreground text-sm">
-                  Rapid growth with disconnected systems. We optimize your existing Infrastructure while architecting strategic upgrades.
+                  Fast growth. Disconnected tools. We optimize what you have. Build what's missing. No philosophy.
                 </p>
               </div>
             </StandardCard>
@@ -306,9 +306,9 @@ const Home = () => {
                 <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <span className="text-secondary font-mono font-bold">SCALE</span>
                 </div>
-                <h3 className="heading-subsection mb-3">Enterprise Operations</h3>
+                <h3 className="heading-subsection mb-3">Enterprise</h3>
                 <p className="text-muted-foreground text-sm">
-                  Complex systems with legacy constraints. We audit what's working, identify scalability blockers, and sequence realistic improvements.
+                  Complex systems. Legacy debt. We audit what works. Fix what doesn't. Sequence it right.
                 </p>
               </div>
             </StandardCard>
@@ -316,7 +316,7 @@ const Home = () => {
           
           <div className="text-center mt-12">
             <p className="text-muted-foreground font-mono text-sm mb-6">
-              No assumptions. Just clear diagnosis and actionable roadmaps.
+              No assumptions. No templates. Just diagnosis and a plan.
             </p>
             <ConversionOptimizedButton
               to="/contact"
@@ -332,8 +332,8 @@ const Home = () => {
       <Section>
         <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="heading-section mb-4">Infrastructure Assessment Deliverables</h2>
-              <p className="text-description">What you receive in every Assessment</p>
+              <h2 className="heading-section mb-4">What You Get</h2>
+              <p className="text-description">Every Assessment includes</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">

@@ -37,7 +37,7 @@ const ForOperators = () => {
             <span className="text-primary">For Operators.</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-mono mb-12 leading-relaxed">
-            Partner with CWT Studio to deliver Fortune 500-grade Revenue Infrastructure to scaling organizations. Access proven playbooks, operational systems, and enterprise support.
+            Partner with CWT Studio to deliver backend revenue infrastructure. Access proven playbooks, qualified clients, and operator support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
@@ -103,7 +103,7 @@ const ForOperators = () => {
             Who This Is For
           </h2>
           <p className="text-lg text-muted-foreground font-mono">
-            Experienced operators who architect Revenue Infrastructure at enterprise scale.
+            Operators who architect revenue infrastructure. Not talkers.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ const ForOperators = () => {
               <Users className="h-12 w-12 text-primary mb-6" />
               <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Revenue Operations Leaders</h3>
               <p className="text-muted-foreground font-mono leading-relaxed">
-                5+ years in RevOps, Sales Ops, or Marketing Ops with documented system implementation success.
+                5+ years in RevOps, Sales Ops, or Marketing Ops. Documented implementation success.
               </p>
             </div>
           </StandardCard>
@@ -123,7 +123,7 @@ const ForOperators = () => {
               <Briefcase className="h-12 w-12 text-primary mb-6" />
               <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Salesforce Architects</h3>
               <p className="text-muted-foreground font-mono leading-relaxed">
-                Certified administrators or architects who architect Revenue Infrastructure that compounds value.
+                Certified admins or architects. Revenue infrastructure that compounds.
               </p>
             </div>
           </StandardCard>
@@ -133,7 +133,7 @@ const ForOperators = () => {
               <TrendingUp className="h-12 w-12 text-primary mb-6" />
               <h3 className="text-xl font-mono font-bold mb-4 text-foreground">Fractional Executives</h3>
               <p className="text-muted-foreground font-mono leading-relaxed">
-                Former CROs/VPs seeking to scale their operational expertise across multiple client engagements.
+                Former CROs/VPs scaling operational expertise across multiple clients.
               </p>
             </div>
           </StandardCard>
@@ -147,7 +147,7 @@ const ForOperators = () => {
             Why Partner With Us
           </h2>
           <p className="text-lg text-muted-foreground font-mono">
-            Access proven systems, qualified clients, and collaborative support while maintaining operational independence.
+            Proven systems. Qualified clients. Collaborative support. Operational independence.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ const ForOperators = () => {
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground font-mono">
-            A simple process from application to active partnership.
+            From application to active partnership.
           </p>
         </div>
 

@@ -32,33 +32,33 @@ const Services = () => {
   };
   const services = [{
     icon: Search,
-    title: "Infrastructure Assessment",
-    tagline: "Diagnose before you build",
-    description: "Complete diagnostic of your Revenue Infrastructure. We audit technology, operations, and pipeline to identify scale blockers. Receive a comprehensive scorecard, industry benchmarks, and prioritized 90-day roadmap.",
-    features: ["Revenue Infrastructure Scorecard", "Industry peer benchmarking", "Prioritized 90-day implementation roadmap", "Executive presentation and alignment session"],
+    title: "Assessment",
+    tagline: "Diagnose first",
+    description: "Complete diagnostic. We audit tech, ops, and pipeline. Find what's blocking scale. Get scorecard, benchmarks, 90-day roadmap. Know what to fix.",
+    features: ["Revenue Infrastructure Scorecard", "Industry benchmarks", "90-day roadmap with sequence", "Executive presentation"],
     pricing: "Virtual from $7,500 • In-person from $12,500",
     timeline: "3-4 weeks",
     cta: "Start Assessment",
     link: "/contact"
   }, {
     icon: Zap,
-    title: "Revenue Sprint",
-    tagline: "Install the system fast",
-    description: "Six to eight weeks of focused execution. We implement high-impact Infrastructure improvements from your Assessment. Outbound engines, revenue dashboards, Salesforce automation, pipeline governance.",
-    features: ["Outbound engine architecture and deployment", "Multi-touch campaign funnel optimization", "Salesforce process automation and data hygiene", "Real-time revenue dashboards and forecasting", "Pipeline governance framework implementation"],
+    title: "Sprint",
+    tagline: "Install fast",
+    description: "Six to eight weeks. Focused execution. Outbound engines, dashboards, Salesforce automation, pipeline governance. We build it.",
+    features: ["Outbound engine architecture", "Multi-touch funnel optimization", "Salesforce automation and hygiene", "Real-time revenue dashboards", "Pipeline governance framework"],
     pricing: "$15,000 to $25,000",
     timeline: "6-8 weeks",
     cta: "Start Your Sprint",
     link: "/sprint"
   }, {
     icon: RotateCcw,
-    title: "Fractional Operations",
-    tagline: "Maintain operational excellence",
-    description: "Monthly operating rhythm following your Sprint. We maintain system health, run optimization experiments, and iterate based on performance data.",
-    features: ["Monthly operating reviews and scorecards", "Continuous Infrastructure optimization", "New tool evaluation and integration management", "Team training and enablement programs", "Executive reporting and strategic insights"],
-    pricing: "From $5,000 per month",
-    timeline: "Ongoing partnership",
-    cta: "Explore Partnership",
+    title: "Fractional Ops",
+    tagline: "Keep it running",
+    description: "Monthly operating rhythm. Post-Sprint maintenance. System health, optimization experiments, performance iteration. No surprises.",
+    features: ["Monthly operating reviews", "Continuous optimization", "Tool evaluation and integration", "Team training and enablement", "Executive reporting and insights"],
+    pricing: "From $5,000/month",
+    timeline: "Ongoing",
+    cta: "Apply Now",
     link: "/fractional"
   }];
   return <div className="min-h-screen">
@@ -79,10 +79,10 @@ const Services = () => {
           </div>
           
           <h1 className="heading-page mb-6">
-            Revenue Infrastructure Services
+            Services
           </h1>
           <p className="text-description">
-            We diagnose, install, and operate. Three services that transform how you capture and scale revenue.
+            Diagnose. Install. Operate. Three ways we work.
           </p>
         </div>
 
@@ -168,9 +168,9 @@ const Services = () => {
       <Section>
         {/* Process Flow */}
         <div className="text-center mb-12">
-          <h2 className="heading-section mb-4">Integrated Service Framework</h2>
+          <h2 className="heading-section mb-4">How They Connect</h2>
           <p className="text-description">
-            How our services compound to transform Revenue Operations
+            How the services compound
           </p>
         </div>
         
@@ -182,7 +182,7 @@ const Services = () => {
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Assess</h3>
                 <p className="text-muted-foreground text-sm">
-                  Comprehensive diagnostic identifies what's blocking scale
+                  Diagnose what's blocking scale
                 </p>
               </div>
               
@@ -192,7 +192,7 @@ const Services = () => {
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Build</h3>
                 <p className="text-muted-foreground text-sm">
-                  Rapid implementation of systems that drive predictable results
+                  Install systems that drive results
                 </p>
               </div>
               
@@ -202,7 +202,7 @@ const Services = () => {
                 </div>
                 <h3 className="font-mono font-bold text-lg mb-2 text-primary">Operate</h3>
                 <p className="text-muted-foreground text-sm">
-                  Continuous optimization maintains system performance as you scale
+                  Keep it running as you scale
                 </p>
               </div>
             </div>

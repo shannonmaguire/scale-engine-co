@@ -137,10 +137,10 @@ const Contact = () => {
             INTAKE READY
           </div>
           <h1 className="heading-page mb-6">
-            Start Your Assessment
+            Start Assessment
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            Install Revenue Infrastructure that scales. Complete this intake form and receive your diagnostic proposal within 24 hours.
+            Install infrastructure that scales. Complete intake. Get your diagnostic proposal within 24 hours.
           </p>
         </div>
 

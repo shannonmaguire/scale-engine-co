@@ -70,16 +70,16 @@ const Sprint = () => {
             SPRINT READY
           </div>
           <h1 className="font-mono text-4xl lg:text-5xl font-bold mb-6">
-            Revenue Sprint
+            Sprint
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Install high-impact Infrastructure improvements. Six to eight weeks of focused execution. No detours.
+            Install high-impact infrastructure. Six to eight weeks. Focused execution. No detours.
           </p>
         </div>
 
         {/* Workstreams */}
         <div className="mt-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Sprint Deliverables</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">What We Ship</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {workstreams.map((stream, index) => (
               <StandardCard key={index} variant="bordered">
@@ -101,7 +101,7 @@ const Sprint = () => {
 
         {/* Timeline */}
         <div className="mt-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Sprint Timeline</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Timeline</h2>
           <div className="space-y-6">
             {timeline.map((phase, index) => (
               <div key={index} className="relative">
@@ -133,27 +133,27 @@ const Sprint = () => {
         <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="font-mono text-2xl font-bold mb-2">Sprint Investment</h2>
+            <h2 className="font-mono text-2xl font-bold mb-2">Sprint Price</h2>
             <p className="text-3xl font-bold text-primary mb-2">$15,000 – $25,000</p>
-            <p className="text-muted-foreground">Scoped to complexity and Infrastructure maturity</p>
+            <p className="text-muted-foreground">Scoped to complexity</p>
           </div>
         </div>
 
         {/* Success Metrics */}
         <div className="mt-16">
-          <h2 className="font-mono text-2xl font-bold mb-8">Sprint Performance Metrics</h2>
+          <h2 className="font-mono text-2xl font-bold mb-8">Performance</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">90%+</div>
-              <p className="text-sm text-muted-foreground">User adoption within first 30 days post-deployment</p>
+              <p className="text-sm text-muted-foreground">User adoption in first 30 days</p>
             </div>
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">50%+</div>
-              <p className="text-sm text-muted-foreground">Improvement in pipeline visibility and forecast accuracy</p>
+              <p className="text-sm text-muted-foreground">Pipeline visibility and forecast accuracy</p>
             </div>
             <div className="text-center p-6 border border-border rounded-lg">
               <div className="text-2xl font-bold text-primary mb-2">2-3x</div>
-              <p className="text-sm text-muted-foreground">Faster reporting cycles and strategic insight delivery</p>
+              <p className="text-sm text-muted-foreground">Faster reporting and insights</p>
             </div>
           </div>
         </div>
@@ -161,23 +161,23 @@ const Sprint = () => {
         {/* Prerequisites */}
         <div className="mt-16">
           <div className="bg-card border border-border rounded-lg p-8">
-            <h2 className="font-mono text-xl font-bold mb-4">Sprint Prerequisites</h2>
+            <h2 className="font-mono text-xl font-bold mb-4">Prerequisites</h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Completed Infrastructure Assessment or equivalent diagnostic analysis
+                Completed Assessment or equivalent diagnostic
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Executive-level commitment to process transformation
+                Executive commitment to process change
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Dedicated project stakeholders from each functional team
+                Stakeholders from each team
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                Administrator access to all relevant systems and platforms
+                Admin access to systems
               </li>
             </ul>
           </div>

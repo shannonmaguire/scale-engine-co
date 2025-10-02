@@ -19,7 +19,7 @@ const Footer = () => {
             style={{ imageRendering: 'crisp-edges' }}
           />
           <p className="text-white/60 font-mono text-sm max-w-md">
-            Revenue Infrastructure that compounds
+            Infrastructure that compounds
           </p>
         </div>
 
@@ -159,7 +159,7 @@ const Footer = () => {
             </button>
           </div>
           <span className="text-white/30 font-mono text-xs uppercase tracking-wider">
-            Revenue Infrastructure • Systematized Growth • Operational Excellence
+            Backend Systems • Predictable Revenue • Operational Excellence
           </span>
         </div>
       </div>
