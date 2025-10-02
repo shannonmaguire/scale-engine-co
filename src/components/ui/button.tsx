@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         // CRITICAL: bg-primary MUST always pair with text-primary-foreground (white)
         // Never use black text on burgundy backgrounds
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-foreground hover:shadow-lg hover:shadow-primary/20",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-muted-foreground bg-transparent text-foreground hover:bg-muted/10 hover:border-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
