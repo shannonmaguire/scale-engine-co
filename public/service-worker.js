@@ -1,6 +1,6 @@
 // CWT Studio Service Worker - Performance Optimization
 // Cache version - increment when assets change
-const CACHE_VERSION = 'cwt-v1';
+const CACHE_VERSION = 'cwt-v3';
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const DYNAMIC_CACHE = `${CACHE_VERSION}-dynamic`;
 
@@ -60,7 +60,14 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache, fallback to network
+// Listen for skip waiting message
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
+// Fetch event - network-first for HTML, cache-first for assets
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -71,6 +78,30 @@ self.addEventListener('fetch', (event) => {
   // Skip external requests
   if (url.origin !== location.origin) return;
   
+  // Skip Vite dev paths
+  if (url.pathname.startsWith('/@vite') || url.pathname.startsWith('/src/')) return;
+  
+  // Network-first strategy for HTML/navigation requests
+  const isHTMLRequest = request.mode === 'navigate' || 
+                        request.headers.get('Accept')?.includes('text/html');
+  
+  if (isHTMLRequest) {
+    event.respondWith(
+      fetch(request)
+        .then(networkResponse => {
+          // Don't cache HTML to avoid stale content
+          return networkResponse;
+        })
+        .catch(() => {
+          // Fallback to cache if offline
+          return caches.match(request)
+            .then(cachedResponse => cachedResponse || caches.match('/offline.html'));
+        })
+    );
+    return;
+  }
+  
+  // Cache-first strategy for assets (JS, CSS, images, etc.)
   event.respondWith(
     caches.match(request)
       .then(cachedResponse => {
@@ -98,7 +129,6 @@ self.addEventListener('fetch', (event) => {
             return networkResponse;
           })
           .catch(() => {
-            // Offline fallback could go here
             console.log('[SW] Fetch failed, offline');
           });
       })
