@@ -39,21 +39,21 @@ const Home = () => {
   
   const services = [{
     title: "Assessment",
-    description: "Diagnose what's broken. Get a scorecard, benchmarks, and a 90-day roadmap. Know exactly what to fix.",
+    description: "Diagnose what's broken. Scorecard, benchmarks, 90-day roadmap.",
     price: "Virtual from $7,500 • In-person from $12,500",
     note: "50% credits toward Sprint",
     cta: "Start Assessment",
     link: "/contact"
   }, {
     title: "Sprint",
-    description: "Six to eight weeks. We install it. Outbound engine, dashboards, Salesforce automation, pipeline governance. Done.",
+    description: "Six to eight weeks. Outbound engine, dashboards, automation, governance. Installed.",
     timeline: "6-8 weeks",
     price: "$15,000 to $25,000",
     cta: "Start Your Sprint",
     link: "/sprint"
   }, {
     title: "Fractional Ops",
-    description: "Monthly rhythm. We keep your system running. Optimization, reviews, reporting. No surprises.",
+    description: "Monthly ops rhythm. Optimization, reviews, reporting. Continuous.",
     price: "From $5,000/month",
     cta: "Apply Now",
     link: "/fractional"
@@ -72,7 +72,7 @@ const Home = () => {
     before: ["Founder-led sales chaos", "Disconnected tooling", "Unreliable pipeline data"],
     after: ["Backend Revenue System", "Predictable pipeline", "Forecast you can defend"]
   };
-  const diagnosticDeliverables = ["Revenue Infrastructure Scorecard — technology, operations, and pipeline analysis", "Industry benchmarks and peer comparisons", "Prioritized 90-day roadmap with implementation sequence", "Executive presentation with leadership alignment session"];
+  const diagnosticDeliverables = ["Revenue Infrastructure Scorecard—tech, ops, pipeline", "Industry benchmarks and peer comparisons", "Prioritized 90-day roadmap with implementation sequence", "Executive presentation with leadership alignment"];
   return <div className="min-h-screen">
       <EngagementTracker />
       <CookieBanner />
@@ -198,11 +198,11 @@ const Home = () => {
           </div>
       </Section>
 
-      {/* Before and After Section */}
+      {/* What Changes Section */}
       <Section>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="heading-section mb-8">Before and After</h2>
+              <h2 className="heading-section mb-8">What Changes</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -277,7 +277,7 @@ const Home = () => {
         <div className="text-center mb-16">
             <h2 className="heading-section mb-6">We Meet You Where You Are</h2>
             <p className="text-description max-w-3xl mx-auto">
-              Every company has different constraints. We don't force rip-and-replace. We work with what you have and build what you need.
+              Different stage, different constraints. No rip-and-replace. Work with what you have. Build what you need.
             </p>
           </div>
           
@@ -289,7 +289,7 @@ const Home = () => {
                 </div>
                 <h3 className="heading-subsection mb-3">Early-Stage</h3>
                 <p className="text-muted-foreground text-sm">
-                  Founder-led sales. Basic tools. We diagnose what matters now. Not what might matter in three years.
+                  Founder-led sales. Basic tools. Diagnose what matters now.
                 </p>
               </div>
             </StandardCard>
@@ -301,7 +301,7 @@ const Home = () => {
                 </div>
                 <h3 className="heading-subsection mb-3">Scaling</h3>
                 <p className="text-muted-foreground text-sm">
-                  Fast growth. Disconnected tools. We optimize what you have. Build what's missing. No philosophy.
+                  Fast growth. Disconnected tools. Optimize what you have. Build what's missing.
                 </p>
               </div>
             </StandardCard>
@@ -313,7 +313,7 @@ const Home = () => {
                 </div>
                 <h3 className="heading-subsection mb-3">Enterprise</h3>
                 <p className="text-muted-foreground text-sm">
-                  Complex systems. Legacy debt. We audit what works. Fix what doesn't. Sequence it right.
+                  Complex systems. Legacy debt. Audit what works. Fix what doesn't.
                 </p>
               </div>
             </StandardCard>
@@ -321,7 +321,7 @@ const Home = () => {
           
           <div className="text-center mt-12">
             <p className="text-muted-foreground font-mono text-sm mb-6">
-              No assumptions. No templates. Just diagnosis and a plan.
+              No assumptions. No templates. Diagnosis and a plan.
             </p>
             <ConversionOptimizedButton
               to="/contact"
@@ -428,7 +428,7 @@ const Home = () => {
               Revenue Infrastructure for Complex Industries
             </h2>
             <p className="text-description mb-8">
-              Healthcare, cybersecurity, law, compliance—industries where relationships matter and buying cycles are long. We build the backend that compounds success, not friction.
+              Healthcare, cybersecurity, law, compliance. Long cycles. High trust. Backend that compounds.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

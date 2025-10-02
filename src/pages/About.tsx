@@ -65,7 +65,7 @@ const About = () => {
             We Install Backend Revenue Systems
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            CWT Studio builds infrastructure that compounds. Most companies have strategy but broken execution. We fix execution. Assess, install, operate. That's it.
+            Infrastructure that compounds. Most companies have strategy. Broken execution. We fix execution.
           </p>
         </div>
 
@@ -103,11 +103,10 @@ const About = () => {
             <h2 className="heading-section mb-6 text-center text-primary">Philosophy</h2>
             <div className="max-w-2xl mx-auto text-center">
               <blockquote className="text-lg text-foreground italic leading-relaxed mb-6 pl-6">
-                "Revenue infrastructure is like plumbing. When it works, nobody notices. 
-                When it breaks, everything downstream floods."
+                "Revenue infrastructure is like plumbing. When it works, nobody notices. When it breaks, everything floods."
               </blockquote>
               <p className="text-foreground">
-                We install systems so reliable you forget they exist. Until you scale. Then you're ready.
+                Install systems so reliable you forget they exist. Until you scale.
               </p>
             </div>
           </div>
@@ -138,25 +137,25 @@ const About = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-mono font-bold mb-3 text-foreground">What We Do</h3>
+              <h3 className="font-mono font-bold mb-3 text-foreground">What We Do</h3>
                 <ul className="space-y-2 text-foreground">
                   <li>• Assess current state</li>
-                  <li>• Diagnose infrastructure gaps</li>
+                  <li>• Diagnose gaps</li>
                   <li>• Work with existing tools</li>
-                  <li>• Install high-priority fixes fast</li>
-                  <li>• Adapt to your timeline</li>
+                  <li>• Install fixes fast</li>
+                  <li>• Adapt to timeline</li>
                   <li>• Optimize continuously</li>
                   <li>• Partner at exec level</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-mono font-bold mb-3 text-foreground">What We Don't Do</h3>
+              <h3 className="font-mono font-bold mb-3 text-foreground">What We Don't Do</h3>
                 <ul className="space-y-2 text-foreground">
-                  <li>• Force complete overhauls</li>
-                  <li>• Discovery phases without execution</li>
+                  <li>• Force overhauls</li>
+                  <li>• Discovery without execution</li>
                   <li>• Generic frameworks</li>
                   <li>• Drop docs and disappear</li>
-                  <li>• Over-architect early problems</li>
+                  <li>• Over-architect early</li>
                   <li>• Evaluate without context</li>
                 </ul>
               </div>

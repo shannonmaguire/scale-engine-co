@@ -73,7 +73,7 @@ const Sprint = () => {
             Sprint
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Install high-impact infrastructure. Six to eight weeks. Focused execution. No detours.
+            High-impact infrastructure. Six to eight weeks. No detours.
           </p>
         </div>
 

@@ -34,7 +34,7 @@ const Services = () => {
     icon: Search,
     title: "Assessment",
     tagline: "Diagnose first",
-    description: "Complete diagnostic. We audit tech, ops, and pipeline. Find what's blocking scale. Get scorecard, benchmarks, 90-day roadmap. Know what to fix.",
+    description: "Audit tech, ops, pipeline. Find what's blocking scale. Scorecard, benchmarks, 90-day roadmap.",
     features: ["Revenue Infrastructure Scorecard", "Industry benchmarks", "90-day roadmap with sequence", "Executive presentation"],
     pricing: "Virtual from $7,500 • In-person from $12,500",
     timeline: "3-4 weeks",
@@ -44,7 +44,7 @@ const Services = () => {
     icon: Zap,
     title: "Sprint",
     tagline: "Install fast",
-    description: "Six to eight weeks. Focused execution. Outbound engines, dashboards, Salesforce automation, pipeline governance. We build it.",
+    description: "Six to eight weeks. Outbound engines, dashboards, automation, governance. Installed.",
     features: ["Outbound engine architecture", "Multi-touch funnel optimization", "Salesforce automation and hygiene", "Real-time revenue dashboards", "Pipeline governance framework"],
     pricing: "$15,000 to $25,000",
     timeline: "6-8 weeks",
@@ -54,7 +54,7 @@ const Services = () => {
     icon: RotateCcw,
     title: "Fractional Ops",
     tagline: "Keep it running",
-    description: "Monthly operating rhythm. Post-Sprint maintenance. System health, optimization experiments, performance iteration. No surprises.",
+    description: "Monthly ops rhythm. System health, optimization, performance iteration. Continuous.",
     features: ["Monthly operating reviews", "Continuous optimization", "Tool evaluation and integration", "Team training and enablement", "Executive reporting and insights"],
     pricing: "From $5,000/month",
     timeline: "Ongoing",
@@ -82,7 +82,7 @@ const Services = () => {
             Services
           </h1>
           <p className="text-description">
-            Diagnose. Install. Operate. Three ways we work.
+            Three ways we work. Diagnose. Install. Operate.
           </p>
         </div>
 

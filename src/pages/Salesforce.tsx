@@ -75,19 +75,18 @@ const Salesforce = () => {
               Salesforce Revenue Systems
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Transform your Salesforce investment into a predictable revenue engine. 
-              We install the systems that scale—assessment, sprint implementation, and ongoing optimization.
+              Salesforce investment into predictable revenue. Assessment, sprint, optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link to="/contact">
-                  Schedule Free Assessment
+                  Start Assessment
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/contact">
-                  Get Started
+                <Link to="/proof">
+                  See Proof
                 </Link>
               </Button>
             </div>
@@ -186,9 +185,9 @@ const Salesforce = () => {
             <Shield className="w-4 h-4" />
             FOR ACCOUNT EXECUTIVES
           </div>
-          <h2 className="text-3xl font-bold mb-4">Technical Support for Your Salesforce Deals</h2>
+          <h2 className="text-3xl font-bold mb-4">Technical Support for Salesforce Deals</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            We help Account Executives close deals faster by providing technical expertise for Salesforce technical debt and implementation challenges
+            Close deals faster. Technical expertise for Salesforce debt and implementation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
@@ -199,7 +198,7 @@ const Salesforce = () => {
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link to="/ae-technical-support">
-                Request Technical Support
+                Request Support
               </Link>
             </Button>
           </div>

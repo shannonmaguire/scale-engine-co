@@ -68,7 +68,7 @@ const Fractional = () => {
             Fractional Ops
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            Keep your infrastructure running. Monthly operating rhythm. Continuous optimization. No surprises.
+            Monthly ops rhythm. Continuous optimization. No surprises.
           </p>
         </div>
 

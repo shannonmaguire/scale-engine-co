@@ -140,7 +140,7 @@ const Contact = () => {
             Start Assessment
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            Install infrastructure that scales. Complete intake. Get your diagnostic proposal within 24 hours.
+            Complete intake. Get diagnostic proposal within 24 hours.
           </p>
         </div>
 
