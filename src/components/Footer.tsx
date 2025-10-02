@@ -146,7 +146,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-2">
           <p className="text-white/40 font-mono text-xs">
-            © {currentYear} CWT Studio
+            © {currentYear} CWT Studio. All rights reserved.
           </p>
           <span className="text-white/30 font-mono text-xs uppercase tracking-wider">
             Backend Systems • Predictable Revenue • Operational Excellence
