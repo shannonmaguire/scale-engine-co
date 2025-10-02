@@ -60,6 +60,42 @@ const ForOperators = () => {
         </div>
       </Section>
 
+      {/* Letter Section */}
+      <Section className="py-20">
+        <div className="max-w-3xl mx-auto">
+          <StandardCard variant="bordered">
+            <div className="p-12 space-y-6 font-mono">
+              <div className="space-y-6 text-base leading-relaxed text-foreground">
+                <p>
+                  If you've found this page, you're probably already building systems, leading teams, or keeping companies from breaking at the seams.
+                </p>
+                
+                <p>
+                  We install backend Revenue Infrastructure. You're in the trenches too. Most companies think they need advice — what they actually need is execution. Audits that uncover the truth. Sprints that build what's missing. Operators who can run it without handholding.
+                </p>
+                
+                <p>
+                  Together, we can close bigger gaps for clients. You drive strategy. We execute the build. You expand your client impact without rebuilding your delivery model from scratch.
+                </p>
+                
+                <p>
+                  When you bring a deal, you don't get a kickback — you get an operator-level share. We protect margins, maintain quality, and ensure every install compounds value. This isn't affiliate marketing. It's shared upside for shared trust.
+                </p>
+                
+                <p>
+                  We don't accept everyone. Apply if you run tight, high-trust systems. If we're aligned, we'll run together.
+                </p>
+              </div>
+              
+              <div className="pt-6 mt-6 border-t border-border">
+                <div className="font-bold">— CWT Studio</div>
+                <div className="text-sm text-muted-foreground mt-1">Backend Revenue Infrastructure</div>
+              </div>
+            </div>
+          </StandardCard>
+        </div>
+      </Section>
+
       {/* Who It's For Section */}
       <Section id="who-its-for" variant="muted">
         <div className="max-w-3xl mx-auto text-center mb-16">
