@@ -15,6 +15,9 @@ const Navigation = () => {
     label: "Proof",
     href: "/proof"
   }, {
+    label: "Network",
+    href: "/network"
+  }, {
     label: "Blog",
     href: "/blog"
   }, {
@@ -30,9 +33,6 @@ const Navigation = () => {
   }, {
     label: "For AEs",
     href: "/salesforce/partners"
-  }, {
-    label: "For Operators",
-    href: "/for-operators"
   }];
   const isActive = (href: string) => location.pathname === href;
   const isSolutionsActive = () => solutionsLinks.some(link => isActive(link.href));

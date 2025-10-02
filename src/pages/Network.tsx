@@ -9,7 +9,7 @@ import { CheckCircle2, Users, Zap, Target, Trophy, Shield, Briefcase, TrendingUp
 import { PartnerApplicationModal } from "@/components/PartnerApplicationModal";
 import analytics from "@/lib/analytics";
 
-const ForOperators = () => {
+const Network = () => {
   const [applicationModalOpen, setApplicationModalOpen] = useState(false);
 
   const handleCTAClick = () => {
@@ -23,7 +23,7 @@ const ForOperators = () => {
   return (
     <>
       <SEOHead 
-        title="For Operators - Partner Network | CWT Studio"
+        title="Network - Join Our Operator Network | CWT Studio"
         description="Join the CWT Studio operator network. Partner with us to deliver Fortune 500-level revenue infrastructure to scaling companies."
         keywords="revenue operations partnership, operator network, CWT partners, salesforce implementation partners"
       />
@@ -550,4 +550,4 @@ const ForOperators = () => {
   );
 };
 
-export default ForOperators;
+export default Network;

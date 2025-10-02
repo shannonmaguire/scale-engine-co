@@ -123,7 +123,7 @@ const PartnerDashboard = () => {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-mono font-bold text-foreground">Registered Deals</h2>
               <Button size="sm" asChild className="font-mono">
-                <Link to="/for-operators">Register New Deal</Link>
+                <Link to="/network">Register New Deal</Link>
               </Button>
             </div>
             
