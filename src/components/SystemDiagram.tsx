@@ -37,7 +37,10 @@ const SystemDiagram = () => {
       <div className="border-b border-border p-3 bg-muted/5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
+            <div className="relative">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+              <div className="absolute inset-0 w-2 h-2 bg-primary rounded-full animate-ping opacity-75"></div>
+            </div>
             <span className="text-xs font-mono text-muted-foreground">SYSTEM STATUS</span>
           </div>
           <span className="text-xs font-mono text-primary font-bold">ONLINE</span>
