@@ -80,85 +80,6 @@ const Proof = () => {
       "Partner time shifted from growth logistics to client service",
       "Proven subscription growth framework operational"
     ]
-  }, {
-    id: 1,
-    industry: "Gov Contractor",
-    vertical: "Federal Compliance",
-    size: "12-person team",
-    timeline: "90 Days",
-    // Context
-    challenge: "Scaling from ad-hoc projects to repeatable service delivery with no standardized processes",
-    pullQuote: "We went from fighting fires to running plays",
-    // System Installed
-    system: ["Fixed-scope service packages ($25K-$50K)", "Compliance-aligned documentation system", "GTM sprint targeting SaaS/GovTech", "CRM + RevOps pipeline tracking"],
-    // Outcome
-    beforeMetric: {
-      label: "Project-based chaos",
-      value: "Ad-hoc"
-    },
-    afterMetric: {
-      label: "ARR",
-      value: "$2.5M"
-    },
-    growth: "250%",
-    outcomes: ["Standardized service productization", "Clear sales motion for SaaS compliance", "Founder extracted from delivery", "Recurring revenue operational"]
-  }, {
-    id: 2,
-    industry: "Professional Services",
-    vertical: "Legal Advisory",
-    size: "6 partners",
-    timeline: "120 Days",
-    challenge: "High-trust, high-ticket work with no scalable backend requiring transition to subscription revenue",
-    pullQuote: "Finally, we could see what was coming",
-    system: ["Subscription architecture (tiers, deliverables, billing)", "Client journey: funnels → onboarding → retention", "Revenue dashboard + partner reporting", "90-day repositioning sprint"],
-    beforeMetric: {
-      label: "Unpredictable one-offs",
-      value: "$0 MRR"
-    },
-    afterMetric: {
-      label: "Monthly recurring",
-      value: "$480K"
-    },
-    growth: "340%",
-    outcomes: ["Subscription model with predictable MRR", "Category-defining market position", "Pipeline visibility for all partners", "Revenue predictability achieved"]
-  }, {
-    id: 3,
-    industry: "Creator Economy",
-    vertical: "Media + Education",
-    size: "Solo operator + team",
-    timeline: "150 Days",
-    challenge: "Strong audience reach with weak revenue infrastructure and no backend systems to convert followers",
-    pullQuote: "The audience was there. The money wasn't",
-    system: ["Funnel audit: pricing, community mechanics", "Revenue Sprint: growth roadmap + affiliate program", "Automation backbone: CRM, billing, analytics", "Internal team training on GTM ops"],
-    beforeMetric: {
-      label: "Followers without revenue",
-      value: "0 systems"
-    },
-    afterMetric: {
-      label: "ARR",
-      value: "$1.8M"
-    },
-    growth: "520%",
-    outcomes: ["LTV increased via upsell flows", "Audience converted to paying members", "Operational system matches creative output", "Founder bottleneck eliminated"]
-  }, {
-    id: 4,
-    industry: "SaaS Startup",
-    vertical: "Enterprise Software",
-    size: "8-person team",
-    timeline: "180 Days",
-    challenge: "Strong product with zero GTM discipline and no revenue systems or market positioning clarity",
-    pullQuote: "We built software. They built the go-to-market",
-    system: ["ICP + GTM framework for enterprise/SMB", "Outbound/inbound motion via ecosystem", "RevOps pipeline + customer success loops", "Pricing architecture + packaging strategy"],
-    beforeMetric: {
-      label: "Spray and pray",
-      value: "No process"
-    },
-    afterMetric: {
-      label: "ARR",
-      value: "$3.2M"
-    },
-    growth: "420%",
-    outcomes: ["First enterprise deals secured", "GTM risk eliminated", "Repeatable SaaS revenue foundation", "Revenue growth infrastructure live"]
   }];
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -210,7 +131,7 @@ const Proof = () => {
             </div>
             <div className="hidden md:flex items-center gap-3">
               <div className="system-monitor">
-                <span>6 Deployments</span>
+                <span>2 Deployments</span>
               </div>
               <div className="h-6 w-px bg-border" />
               <div className="system-monitor">
