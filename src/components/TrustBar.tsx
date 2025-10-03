@@ -20,7 +20,7 @@ export const TrustBar = ({ variant = "default", className }: TrustBarProps) => {
     {
       icon: Award,
       label: "Proven Results",
-      value: "50+ Systems Deployed",
+      value: "Federal + Legal Sectors",
     },
     {
       icon: Clock,
