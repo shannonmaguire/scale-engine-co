@@ -166,7 +166,7 @@ const Fractional = () => {
           <div className="bg-card border border-border rounded-lg p-8 text-center">
             <Clock className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="font-mono text-2xl font-bold mb-2">Monthly Price</h2>
-            <p className="text-3xl font-bold text-primary mb-2">From $5,000/month</p>
+            <p className="text-3xl font-bold text-primary mb-2">$5–10K/month</p>
             <p className="text-muted-foreground">Scaled to scope and complexity</p>
           </div>
         </div>

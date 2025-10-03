@@ -36,17 +36,17 @@ const Services = () => {
     tagline: "Diagnose first",
     description: "Audit tech, ops, pipeline. Find what's blocking scale. Scorecard, benchmarks, 90-day roadmap.",
     features: ["Revenue Infrastructure Scorecard", "Industry benchmarks", "90-day roadmap with sequence", "Executive presentation"],
-    pricing: "From $7,500",
+    pricing: "$750–$1.5K",
     timeline: "3-4 weeks",
     cta: "Start Assessment",
-    link: "/contact"
+    link: "/assessment"
   }, {
     icon: Zap,
     title: "Sprint",
     tagline: "Install fast",
     description: "Six to eight weeks. Outbound engines, dashboards, automation, governance. Installed.",
     features: ["Outbound engine architecture", "Multi-touch funnel optimization", "Salesforce automation and hygiene", "Real-time revenue dashboards", "Pipeline governance framework"],
-    pricing: "$15,000 to $25,000",
+    pricing: "$7.5–15K",
     timeline: "6-8 weeks",
     cta: "Start Your Sprint",
     link: "/sprint"
@@ -56,7 +56,7 @@ const Services = () => {
     tagline: "Keep it running",
     description: "Monthly ops rhythm. System health, optimization, performance iteration. Continuous.",
     features: ["Monthly operating reviews", "Continuous optimization", "Tool evaluation and integration", "Team training and enablement", "Executive reporting and insights"],
-    pricing: "From $5,000/month",
+    pricing: "$5–10K/month",
     timeline: "Ongoing",
     cta: "Apply Now",
     link: "/fractional"

@@ -22,13 +22,13 @@ const Navigation = () => {
     href: "/about"
   }];
   const solutionsLinks = [{
-    label: "Assessment ($7.5K)",
+    label: "Assessment ($750–$1.5K)",
     href: "/assessment"
   }, {
-    label: "Sprint ($15-25K)",
+    label: "Sprint ($7.5–15K)",
     href: "/sprint"
   }, {
-    label: "Fractional Ops ($5K+/mo)",
+    label: "Fractional Ops ($5–10K/mo)",
     href: "/fractional"
   }, {
     label: "Salesforce Services",

@@ -40,21 +40,21 @@ const Home = () => {
   const services = [{
     title: "Assessment",
     description: "Diagnose what's broken. Scorecard, benchmarks, 90-day roadmap.",
-    price: "From $7,500",
+    price: "$750–$1.5K",
     note: "50% credits toward Sprint",
     cta: "Start Assessment",
-    link: "/contact"
+    link: "/assessment"
   }, {
     title: "Sprint",
     description: "Six to eight weeks. Outbound engine, dashboards, automation, governance. Installed.",
     timeline: "6-8 weeks",
-    price: "$15,000 to $25,000",
+    price: "$7.5–15K",
     cta: "Start Your Sprint",
     link: "/sprint"
   }, {
     title: "Fractional Ops",
     description: "Monthly ops rhythm. Optimization, reviews, reporting. Continuous.",
-    price: "From $5,000/month",
+    price: "$5–10K/month",
     cta: "Apply Now",
     link: "/fractional"
   }];

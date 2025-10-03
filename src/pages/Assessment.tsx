@@ -148,7 +148,7 @@ const Assessment = () => {
             Technical Infrastructure Assessment
           </h1>
           <div className="inline-flex items-center justify-center px-6 py-3 bg-primary/10 border border-primary/20 rounded-lg mb-6">
-            <span className="text-3xl font-bold text-primary font-mono">$7,500</span>
+            <span className="text-3xl font-bold text-primary font-mono">$750–$1.5K</span>
             <span className="text-muted-foreground ml-2">• One-time engagement</span>
           </div>
           <p className="text-description max-w-2xl mx-auto">
