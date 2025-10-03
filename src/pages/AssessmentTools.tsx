@@ -108,7 +108,7 @@ const AssessmentTools = () => {
             <div className="mb-8">
               <Link to="/salesforce/partners" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-4">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Partner Resources
+                Back to Deal Playbook
               </Link>
               <h1 className="text-3xl lg:text-4xl font-bold mb-4">Assessment Tools & Resources</h1>
               <p className="text-lg text-muted-foreground">
