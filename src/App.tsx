@@ -22,6 +22,7 @@ import analytics from "@/lib/analytics";
 const Home = lazy(() => import("@/pages/Home"));
 const Sprint = lazy(() => import("@/pages/Sprint"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const Assessment = lazy(() => import("@/pages/Assessment"));
 const About = lazy(() => import("@/pages/About"));
 const Services = lazy(() => import("@/pages/Services"));
 const Salesforce = lazy(() => import("@/pages/Salesforce"));
@@ -67,7 +68,7 @@ const AppContent = () => {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/systems" element={<Navigate to="/services" replace />} />
-            <Route path="/assessment" element={<Navigate to="/contact" replace />} />
+            <Route path="/assessment" element={<Assessment />} />
             <Route path="/sprint" element={<Sprint />} />
             <Route path="/salesforce" element={<Salesforce />} />
             <Route path="/salesforce/partners" element={<SalesforcePartners />} />

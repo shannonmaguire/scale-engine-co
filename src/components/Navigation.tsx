@@ -23,7 +23,7 @@ const Navigation = () => {
   }];
   const solutionsLinks = [{
     label: "Assessment ($7.5K)",
-    href: "/contact"
+    href: "/assessment"
   }, {
     label: "Sprint ($15-25K)",
     href: "/sprint"
