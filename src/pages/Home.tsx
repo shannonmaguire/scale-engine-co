@@ -134,15 +134,15 @@ const Home = () => {
                   <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
                     <Award className="w-5 h-5 text-primary flex-shrink-0" />
                     <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">&gt;40% Open Rates</div>
-                      <div className="text-xs text-muted-foreground">Exceeding industry benchmarks</div>
+                      <div className="font-mono text-sm font-semibold text-foreground">Documented Systems</div>
+                      <div className="text-xs text-muted-foreground">Every workflow repeatable</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
                     <TrendingUp className="w-5 h-5 text-primary flex-shrink-0" />
                     <div>
-                      <div className="font-mono text-sm font-semibold text-foreground">90-Day Foundations</div>
-                      <div className="text-xs text-muted-foreground">From chaos to repeatable</div>
+                      <div className="font-mono text-sm font-semibold text-foreground">90-Day Sprints</div>
+                      <div className="text-xs text-muted-foreground">Assessment to deployment</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg hover-lift">
