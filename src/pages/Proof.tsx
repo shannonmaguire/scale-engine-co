@@ -46,6 +46,41 @@ const Proof = () => {
       "Repeatable outbound engine operational"
     ]
   }, {
+    id: 6,
+    industry: "Legal Services",
+    vertical: "Subscription Legal",
+    size: "Boutique firm",
+    timeline: "90 Days",
+    challenge: "Boutique legal practice sought to break free from the traditional billable-hour model and reposition as a premium, subscription-first service. The foundation was in place — MemberSpace, Stripe, Acuity, and Clio — but growth decisions were consuming partner time at $500/hr, and the subscription model had not yet crossed into repeatable traction.",
+    pullQuote: "From billable hours to scalable subscriptions",
+    system: [
+      "Refined subscription tiers and usage caps for profitability",
+      "Designed attorney compensation tied to subscriber growth",
+      "Built end-to-end subscriber funnel (signup → onboarding → usage → renewal)",
+      "Launched Atlanta pilot campaign to validate messaging and targeting",
+      "Created partnership/referral framework leveraging existing networks",
+      "Configured MemberSpace, Stripe, Acuity, and Clio for subscription model",
+      "Implemented quick-win automations to remove onboarding friction",
+      "Delivered live dashboards for subscribers, usage, and churn risk"
+    ],
+    beforeMetric: {
+      label: "Billable hour model",
+      value: "$500/hr consumed"
+    },
+    afterMetric: {
+      label: "Subscription model",
+      value: "Framework live"
+    },
+    growth: "Foundation",
+    outcomes: [
+      "Subscription tiers refined with profitability alignment",
+      "Atlanta pilot launched with validated acquisition data",
+      "Live subscriber dashboard deployed for real-time visibility",
+      "Quick-win automations freed attorney time from manual intake",
+      "Partner time shifted from growth logistics to client service",
+      "Proven subscription growth framework operational"
+    ]
+  }, {
     id: 1,
     industry: "Gov Contractor",
     vertical: "Federal Compliance",
@@ -169,7 +204,7 @@ const Proof = () => {
             </div>
             <div className="hidden md:flex items-center gap-3">
               <div className="system-monitor">
-                <span>5 Deployments</span>
+                <span>6 Deployments</span>
               </div>
               <div className="h-6 w-px bg-border" />
               <div className="system-monitor">
