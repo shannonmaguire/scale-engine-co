@@ -3,6 +3,7 @@ import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitl
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import { Zap, Target, BarChart3, Settings, Shield } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const Sprint = () => {
   const workstreams = [
@@ -63,6 +64,18 @@ const Sprint = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Automation Sprint | CWT Studio 6-Week Implementation"
+        description="Launch a Creator Wealth Tools sprint to install automation, Salesforce workflows, and high-performing web or mobile experiences in under eight weeks."
+        keywords={[
+          'business automation sprint',
+          'Salesforce implementation sprint',
+          'Creator Wealth Tools deployment',
+          'web and mobile launch sprint',
+          'revenue operations project plan'
+        ]}
+        canonicalUrl="/sprint"
+      />
       <Section>
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">

@@ -69,9 +69,16 @@ const PartnerDashboard = () => {
   return (
     <>
       <SEOHead 
-        title="Partner Dashboard | CWT Studio"
-        description="Partner portal for CWT Studio operator network members."
-        keywords="partner dashboard, operator network, CWT partners"
+        title="CWT Studio Partner Dashboard | Creator Wealth Tools Network"
+        description="Secure dashboard for Creator Wealth Tools partners to monitor business automation deals, Salesforce delivery, and revenue share payouts."
+        keywords={[
+          'CWT Studio partner portal',
+          'Creator Wealth Tools operators',
+          'business automation referrals',
+          'Salesforce delivery network',
+          'partner revenue dashboard'
+        ]}
+        noindex
       />
 
       <Section className="pt-32 pb-20">

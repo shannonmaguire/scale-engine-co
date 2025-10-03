@@ -74,9 +74,15 @@ const DesignSystem = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Design System - CWT Studio"
-        description="Fortune 500-grade design token reference and component library for CWT Studio."
-        noindex={true}
+        title="CWT Studio Design System | Creator Wealth Tools UI Standards"
+        description="Explore the design language powering CWT Studio's business automation, Salesforce, web, and mobile experiences through Creator Wealth Tools."
+        keywords={[
+          'CWT Studio design system',
+          'Creator Wealth Tools UI',
+          'business automation design tokens',
+          'Salesforce app design standards'
+        ]}
+        noindex
       />
 
       {/* Hero */}

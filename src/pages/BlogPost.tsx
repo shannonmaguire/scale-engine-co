@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, Clock, Share2, Calendar, User } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 // Sample blog posts data (in production, this would come from a CMS or API)
 const blogPosts = [
@@ -371,6 +372,13 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={`${post.title} | CWT Studio Insights`}
+        description={post.excerpt}
+        keywords={[...post.tags, 'Creator Wealth Tools blog', 'business automation storytelling']}
+        ogImage="https://lovable.dev/opengraph-image-p98pqg.png"
+        canonicalUrl={`https://cwtstudio.com/blog/${post.slug}`}
+      />
       {/* Header */}
       <header className="border-b border-border bg-background/95 backdrop-blur">
         <div className="container mx-auto px-6 py-4">

@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { AlertTriangle, CheckCircle, TrendingUp, TrendingDown, DollarSign, Clock, Users, Database, Zap, Shield } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 const SampleReport = () => {
   const scorecard = [{
     category: "Technology Stack",
@@ -163,6 +164,18 @@ const SampleReport = () => {
     }
   };
   return <div className="min-h-screen">
+      <SEOHead
+        title="Sample Automation & Salesforce Assessment Report | CWT Studio"
+        description="Preview a Creator Wealth Tools assessment showcasing how we evaluate business automation, Salesforce health, and product readiness across web and mobile stacks."
+        keywords={[
+          'business automation sample report',
+          'Salesforce assessment example',
+          'Creator Wealth Tools scorecard',
+          'revenue operations audit template',
+          'web and mobile readiness report'
+        ]}
+        canonicalUrl="/sample-report"
+      />
       <Section>
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">

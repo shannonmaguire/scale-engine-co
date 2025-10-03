@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import SEOHead from "@/components/SEOHead";
 
 const NotFound = () => {
   const location = useLocation();
@@ -10,6 +11,16 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
+      <SEOHead
+        title="Page Not Found | CWT Studio"
+        description="The page you are looking for is unavailable. Continue exploring CWT Studio business automation, Salesforce, web, and mobile services."
+        keywords={[
+          'CWT Studio 404',
+          'business automation services',
+          'Creator Wealth Tools support'
+        ]}
+        noindex
+      />
       <div className="text-center max-w-md mx-auto px-6">
         <div className="inline-flex items-center gap-2 mb-6">
           <div className="w-3 h-3 bg-destructive rounded-full animate-pulse" />

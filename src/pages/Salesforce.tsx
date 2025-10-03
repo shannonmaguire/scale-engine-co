@@ -3,6 +3,7 @@ import { StandardCard, StandardCardContent, StandardCardHeader, StandardCardTitl
 import { Section } from "@/components/ui/section";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight, BarChart3, Clock, Zap, Target, Shield } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const Salesforce = () => {
   const services = [
@@ -65,6 +66,18 @@ const Salesforce = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Salesforce Services | CWT Studio Business Automation Experts"
+        description="Partner with CWT Studio to audit, automate, and accelerate your Salesforce stack. We align business automation, custom web, and mobile experiences to local revenue goals."
+        keywords={[
+          'Salesforce consulting services',
+          'business automation experts',
+          'Creator Wealth Tools Salesforce',
+          'Salesforce optimization agency',
+          'web and mobile integrations for Salesforce'
+        ]}
+        canonicalUrl="/salesforce"
+      />
       {/* Hero Section */}
       <Section className="bg-card border-b border-border">
         <div className="max-w-4xl mx-auto text-center">

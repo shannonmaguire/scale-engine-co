@@ -49,9 +49,15 @@ const About = () => {
   return <div className="min-h-screen">
       <EngagementTracker />
       <SEOHead
-        title="About CWT Studio | Revenue Operations Leadership & Expertise"
-        description="Built for revenue leaders who need systems that scale. We diagnose, build, and operate revenue infrastructure with precision, ownership, and speed."
-        keywords="revenue operations consulting, revenue leadership, systems consulting, operational excellence, fractional revenue operations, CRM implementation"
+        title="About CWT Studio | Creator Wealth Tools for Automated Growth"
+        description="Meet the CWT Studio team behind Creator Wealth Tools. We blend business automation, Salesforce mastery, and product engineering to build resilient revenue systems for founders and regional operators."
+        keywords={[
+          'about CWT Studio',
+          'Creator Wealth Tools leadership',
+          'business automation experts',
+          'Salesforce architects',
+          'web and mobile innovation agency'
+        ]}
       />
       
       <Section>

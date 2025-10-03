@@ -183,9 +183,15 @@ const Proof = () => {
   }, [emblaApi, onSelect]);
   return <div className="min-h-screen bg-white">
       <SEOHead
-        title="Proof of Execution - Real Results | CWT Studio"
-        description="See how we've generated $12M+ in ARR for clients with 420% average growth. Real case studies from infrastructure assessments and revenue sprints."
-        keywords="case studies, revenue growth, sales operations results, B2B success stories, ROI proof"
+        title="CWT Studio Case Studies | Automation, Salesforce & Product Wins"
+        description="Review Creator Wealth Tools success stories featuring business automation, Salesforce delivery, and full-stack product rollouts that boosted ARR for local operators."
+        keywords={[
+          'business automation case study',
+          'Salesforce success story',
+          'Creator Wealth Tools results',
+          'web and mobile app ROI',
+          'revenue operations proof'
+        ]}
       />
       
       <Breadcrumbs />

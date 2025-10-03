@@ -1,14 +1,13 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
+
+# Priority landing pages for Creator Wealth Tools
+Allow: /services
+Allow: /salesforce
+Allow: /proof
+Allow: /blog
+
+Sitemap: https://cwtstudio.com/sitemap.xml
+
+# Contact
+Host: cwtstudio.com

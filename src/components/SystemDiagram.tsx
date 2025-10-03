@@ -11,22 +11,22 @@ const SystemDiagram = () => {
     step: "01",
     title: "ASSESS",
     items: ["Infrastructure audit", "Diagnostic complete"],
-    delay: "delay-[100ms]"
+    delay: "[animation-delay:100ms]"
   }, {
     step: "02",
     title: "BUILD",
     items: ["System implementation", "Sprint execution"],
-    delay: "delay-[200ms]"
+    delay: "[animation-delay:200ms]"
   }, {
     step: "03",
     title: "OPERATE",
     items: ["Ongoing maintenance", "Performance monitoring"],
-    delay: "delay-[300ms]"
+    delay: "[animation-delay:300ms]"
   }];
-  return <div className="w-full bg-card border border-border console-card font-mono overflow-hidden group">
+  return <div className="w-full bg-card border border-border rounded-2xl console-card font-mono overflow-hidden group">
       {/* Console Header */}
       <div className="border-b border-border p-3 bg-muted/5">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <div className="flex items-center gap-2">
             <div className="relative">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
@@ -62,7 +62,7 @@ const SystemDiagram = () => {
         </div>
         
         {/* Progress Bar */}
-        <div className="space-y-2 animate-fade-in delay-[600ms]">
+        <div className="space-y-2 animate-fade-in [animation-delay:600ms]">
           <div className="flex items-center justify-between text-[10px] text-muted-foreground">
             <span>SYSTEM.PERFORMANCE</span>
             <span className="tabular-nums">{progress}%</span>
@@ -77,11 +77,11 @@ const SystemDiagram = () => {
         {/* Status Indicators */}
         <div className="border-t border-border pt-3 mt-4">
           <div className="grid grid-cols-2 gap-4 text-xs">
-            <div className="space-y-1 animate-fade-in delay-[700ms]">
+            <div className="space-y-1 animate-fade-in [animation-delay:700ms]">
               <div className="text-muted-foreground text-[10px]">UPTIME:</div>
               <div className="tabular-nums text-foreground font-bold">99.97%</div>
             </div>
-            <div className="space-y-1 animate-fade-in delay-[800ms]">
+            <div className="space-y-1 animate-fade-in [animation-delay:800ms]">
               <div className="text-muted-foreground text-[10px]">PIPELINE.HEALTH:</div>
               <div className="text-primary tabular-nums font-bold flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>

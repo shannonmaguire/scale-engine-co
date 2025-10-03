@@ -123,9 +123,15 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Contact CWT Studio | Get Your Revenue Diagnostic"
-        description="Book your revenue infrastructure assessment. Get expert analysis of your sales systems, ops, and pipeline. $12M+ ARR generated for clients. 24-hour response guaranteed."
-        keywords="contact revenue consultant, sales operations assessment, book consultation, revenue infrastructure audit"
+        title="Contact CWT Studio | Schedule a Business Automation & Salesforce Consultation"
+        description="Connect with CWT Studio to plan your Creator Wealth Tools roadmap. We deliver business automation, Salesforce integration, and bespoke web and mobile builds with local response inside 24 hours."
+        keywords={[
+          'contact CWT Studio',
+          'business automation consultation',
+          'Salesforce partner meeting',
+          'web and mobile app discovery call',
+          'Creator Wealth Tools support'
+        ]}
       />
       
       <Breadcrumbs />

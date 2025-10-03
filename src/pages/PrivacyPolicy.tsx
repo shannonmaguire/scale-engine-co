@@ -6,9 +6,15 @@ const PrivacyPolicy = memo(() => {
   return (
     <>
       <SEOHead
-        title="Privacy Policy | CWT Studio"
-        description="Learn how CWT Studio collects, uses, and protects your personal information. Our privacy policy explains your rights under GDPR and CCPA."
-        keywords="privacy policy, data protection, GDPR, CCPA, personal information"
+        title="Privacy Policy | CWT Studio Business Automation & Salesforce Services"
+        description="Understand how CWT Studio protects data for business automation, Salesforce, web, and mobile projects. Review your privacy rights when partnering with Creator Wealth Tools."
+        keywords={[
+          'CWT Studio privacy policy',
+          'business automation data protection',
+          'Salesforce services privacy',
+          'Creator Wealth Tools compliance',
+          'GDPR CCPA notice'
+        ]}
         canonicalUrl="/privacy-policy"
       />
       

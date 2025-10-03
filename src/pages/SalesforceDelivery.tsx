@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Settings, Users, Shield, Clock, CheckCircle, Target, Zap } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const SalesforceDelivery = () => {
   const deliveryPhases = [
@@ -101,6 +102,18 @@ const SalesforceDelivery = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Salesforce Delivery Model | CWT Studio & Creator Wealth Tools"
+        description="See how CWT Studio partners with CloudRoute to deliver end-to-end Salesforce automation, web, and mobile modernization for fast-moving operators."
+        keywords={[
+          'Salesforce delivery model',
+          'business automation implementation',
+          'Creator Wealth Tools methodology',
+          'CloudRoute partnership',
+          'Salesforce automation project plan'
+        ]}
+        canonicalUrl="/salesforce/delivery"
+      />
       <main className="container mx-auto px-4 section-spacing">
         {/* Navigation */}
         <div className="mb-8">

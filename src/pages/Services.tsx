@@ -64,9 +64,15 @@ const Services = () => {
   return <div className="min-h-screen">
       <EngagementTracker />
       <SEOHead
-        title="Revenue Operations Services | Infrastructure Assessment, Sprints & Fractional Ops"
-        description="Complete revenue systems services: diagnostic assessments, 6-8 week implementation sprints, and ongoing fractional operations. Transform your sales infrastructure."
-        keywords="revenue operations services, infrastructure assessment, revenue sprint, fractional COO, sales system implementation, CRM consulting, operational excellence"
+        title="CWT Studio Services | Assessments, Automation Sprints & Fractional RevOps"
+        description="Explore Creator Wealth Tools services. We deliver local-first business automation, Salesforce upgrades, and ongoing fractional operations to modernize revenue, web, and mobile channels."
+        keywords={[
+          'business automation services',
+          'Salesforce implementation sprint',
+          'fractional revenue operations',
+          'web and mobile modernization',
+          'Creator Wealth Tools services'
+        ]}
       />
       
       <Breadcrumbs />

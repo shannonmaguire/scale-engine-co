@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import cwtLogoWhite from '@/assets/cwt-logo-white.svg';
 import { ArrowLeft } from 'lucide-react';
+import SEOHead from '@/components/SEOHead';
 
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -52,6 +53,18 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4 py-8">
+      <SEOHead
+        title="CWT Studio Portal Access | Creator Wealth Tools Login"
+        description="Sign in to the CWT Studio Creator Wealth Tools portal to manage business automation, Salesforce, and product delivery engagements."
+        keywords={[
+          'CWT Studio login',
+          'Creator Wealth Tools portal',
+          'business automation account access',
+          'Salesforce service dashboard',
+          'client portal authentication'
+        ]}
+        noindex
+      />
       {/* Background gradient */}
       <div className="fixed inset-0 bg-gradient-to-br from-background via-background to-card/20 -z-10" />
 

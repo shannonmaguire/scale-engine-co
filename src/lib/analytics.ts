@@ -5,8 +5,8 @@
 
 // Analytics configuration
 const ANALYTICS_CONFIG = {
-  GA4_MEASUREMENT_ID: '', // Add your GA4 ID: G-XXXXXXXXXX
-  CLARITY_PROJECT_ID: '', // Add your Clarity ID
+  GA4_MEASUREMENT_ID: 'G-3TCBNNN6PE', // Add your GA4 ID: G-XXXXXXXXXX
+  CLARITY_PROJECT_ID: 'tkis36g9ug', // Add your Clarity ID
   DEBUG_MODE: import.meta.env.DEV,
 };
 

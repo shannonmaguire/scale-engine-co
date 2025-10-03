@@ -1,8 +1,22 @@
 import IndustryLandingTemplate from "@/components/IndustryLandingTemplate";
+import SEOHead from "@/components/SEOHead";
 
 const IndustrySaaS = () => {
   return (
-    <IndustryLandingTemplate
+    <>
+      <SEOHead
+        title="SaaS Revenue Operations & Automation | CWT Studio"
+        description="CWT Studio helps SaaS teams deploy business automation, Salesforce workflows, and modern web and mobile product experiences with Creator Wealth Tools."
+        keywords={[
+          'SaaS business automation',
+          'Salesforce for SaaS companies',
+          'Creator Wealth Tools SaaS',
+          'SaaS web and mobile development',
+          'revenue operations for SaaS'
+        ]}
+        canonicalUrl="/industry/saas"
+      />
+      <IndustryLandingTemplate
       industry={{
         name: "SaaS Companies",
         tagline: "Scale Your SaaS Revenue Operations Without Breaking Your Systems",
@@ -47,6 +61,7 @@ const IndustrySaaS = () => {
       }}
       ctaText="Get Your Free SaaS Operations Assessment"
     />
+    </>
   );
 };
 

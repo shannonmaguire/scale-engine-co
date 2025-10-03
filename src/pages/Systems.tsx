@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, FileText, Slack, Calendar, BarChart3, Database, Zap, Settings, Users, MessageSquare, Clock } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const Systems = () => {
   const toolsWired = [
@@ -38,6 +39,18 @@ const Systems = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Automation Systems Library | CWT Studio Creator Wealth Tools"
+        description="Browse production-ready automation workflows, Salesforce integrations, and web/mobile playbooks from the CWT Studio Creator Wealth Tools library."
+        keywords={[
+          'automation systems library',
+          'Creator Wealth Tools workflows',
+          'business automation blueprints',
+          'Salesforce integration kits',
+          'web and mobile automation'
+        ]}
+        canonicalUrl="/systems"
+      />
       {/* Hero Section */}
       <section className="section-spacing">
         <div className="container mx-auto px-6 max-w-7xl">

@@ -87,9 +87,15 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead 
-        title="CWT Studio Blog - Revenue Operations Insights & Best Practices"
-        description="Expert insights on revenue operations, Salesforce optimization, and business systems. Learn from proven strategies that drive growth and operational excellence."
-        keywords="revenue operations blog, Salesforce best practices, business systems, sales automation, fractional executive insights, B2B operations"
+        title="CWT Studio Insights | Automation, Salesforce & Product Growth Blog"
+        description="Stay ahead with Creator Wealth Tools insights on business automation, Salesforce delivery, and high-performing web and mobile product strategies for local teams."
+        keywords={[
+          'business automation blog',
+          'Salesforce implementation tips',
+          'Creator Wealth Tools articles',
+          'web and mobile app strategy',
+          'revenue operations insights'
+        ]}
       />
       {/* Streamlined Masthead */}
       <section className="bg-background border-b-2 border-primary/30 section-spacing-quarter">

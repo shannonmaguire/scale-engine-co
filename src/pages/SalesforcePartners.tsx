@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { CheckCircle, Download, AlertTriangle, ArrowRight, TrendingUp, Clock, DollarSign, Users } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const SalesforcePartners = () => {
   const objectionScenarios = [{
@@ -51,6 +52,18 @@ const SalesforcePartners = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Salesforce Partner Resources | CWT Studio Automations for AEs"
+        description="Equip your team with Creator Wealth Tools playbooks to solve Salesforce technical debt, accelerate automation, and win web and mobile modernisation deals."
+        keywords={[
+          'Salesforce partner resources',
+          'business automation enablement',
+          'Creator Wealth Tools for AEs',
+          'technical debt objection handling',
+          'Salesforce deal support'
+        ]}
+        canonicalUrl="/salesforce/partners"
+      />
       {/* Breadcrumb Navigation */}
       <section className="bg-muted/30 border-b border-border py-3">
         <div className="container mx-auto px-6">

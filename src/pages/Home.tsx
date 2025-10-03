@@ -77,9 +77,15 @@ const Home = () => {
       <EngagementTracker />
       <CookieBanner />
       <SEOHead
-        title="CWT Studio - Revenue Infrastructure | $12M+ ARR Generated for B2B Clients"
-        description="We install the systems that drive revenue. Infrastructure assessments, revenue sprints, and fractional ops. $12M+ ARR generated with 420% average growth rate."
-        keywords="revenue infrastructure, B2B sales operations, revenue sprint, fractional ops, sales system optimization, CRM consulting, outbound automation"
+        title="CWT Studio | Business Automation, Web Development & Salesforce Experts"
+        description="Scale faster with Creator Wealth Tools. CWT Studio builds automated revenue systems, Salesforce optimizations, and custom web and mobile apps tailored to operators and local teams."
+        keywords={[
+          'business automation agency',
+          'Salesforce consultants in North America',
+          'web development for revenue teams',
+          'mobile app development studio',
+          'Creator Wealth Tools automation'
+        ]}
       />
       
       {/* Hero Section */}
@@ -106,7 +112,7 @@ const Home = () => {
                   to="/contact"
                   ctaName="Hero - Start Assessment"
                   location="Homepage Hero"
-                  className="btn-console-accent"
+                  className="btn-console-accent rounded-2xl"
                 >
                   Start Your Assessment
                 </ConversionOptimizedButton>
@@ -115,7 +121,7 @@ const Home = () => {
                   ctaName="Hero - See Our Work"
                   location="Homepage Hero"
                   variant="outline"
-                  className="btn-console-secondary"
+                  className="btn-console-secondary rounded-2xl"
                   showArrow={false}
                 >
                   See Our Work
@@ -171,7 +177,7 @@ const Home = () => {
             {services.map((service, index) => <StandardCard key={index} equalHeight className="hover-lift group">
                 <div className="flex flex-col flex-1">
                   <div className="mb-6">
-                    <div className="w-8 h-8 bg-primary/10 flex items-center justify-center mb-4 transition-all group-hover:bg-primary/20">
+                    <div className="w-8 h-8  bg-primary/10 flex items-center justify-center mb-4 transition-all group-hover:bg-primary/20">
                       <span className="text-primary font-mono font-bold text-lg">{index + 1}</span>
                     </div>
                     <h3 className="heading-subsection mb-3">{service.title}</h3>

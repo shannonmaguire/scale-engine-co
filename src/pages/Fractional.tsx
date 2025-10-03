@@ -4,6 +4,7 @@ import { Section } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { RotateCcw, Target, BarChart3, Settings, Users, Clock, CheckCircle } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const Fractional = () => {
   const services = [
@@ -58,6 +59,18 @@ const Fractional = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Fractional RevOps & Automation Retainers | CWT Studio"
+        description="Keep Creator Wealth Tools humming with monthly business automation, Salesforce optimization, and web and mobile enhancements managed by CWT Studio."
+        keywords={[
+          'fractional revenue operations',
+          'business automation retainer',
+          'Creator Wealth Tools fractional',
+          'Salesforce managed services',
+          'ongoing web and mobile optimization'
+        ]}
+        canonicalUrl="/fractional"
+      />
       <Section>
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">

@@ -6,10 +6,23 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Clock, CheckCircle, Users, AlertTriangle } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const AETechnicalSupport = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Salesforce Technical Support for AEs | CWT Studio"
+        description="Request Creator Wealth Tools technical backup for Salesforce deals. Our automation engineers triage complex revenue, web, and mobile requirements within four business hours."
+        keywords={[
+          'Salesforce AE technical support',
+          'business automation solution desk',
+          'Creator Wealth Tools assistance',
+          'Salesforce deal engineering help',
+          'automation technical assessment request'
+        ]}
+        canonicalUrl="/ae-technical-support"
+      />
       {/* Header */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">

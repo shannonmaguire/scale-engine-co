@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Download, FileText, Calculator, CheckSquare, BookOpen, Target, Users, Clock, Zap } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const AssessmentTools = () => {
   const tools = [
@@ -88,6 +89,18 @@ const AssessmentTools = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Salesforce Assessment Tools | CWT Studio Business Automation Resources"
+        description="Download Creator Wealth Tools assessments, ROI calculators, and objection guides to qualify business automation and Salesforce opportunities faster."
+        keywords={[
+          'Salesforce assessment tools',
+          'business automation toolkit',
+          'Creator Wealth Tools downloads',
+          'ROI calculator for Salesforce cleanup',
+          'technical debt discovery checklist'
+        ]}
+        canonicalUrl="/assessment-tools"
+      />
       {/* Header */}
       <section className="section-spacing-half bg-muted/30">
         <div className="container mx-auto px-6">

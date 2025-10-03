@@ -6,9 +6,15 @@ const TermsOfService = memo(() => {
   return (
     <>
       <SEOHead
-        title="Terms of Service | CWT Studio"
-        description="Review the terms and conditions for using CWT Studio's services. Learn about your rights, obligations, and our service limitations."
-        keywords="terms of service, terms and conditions, user agreement, service terms"
+        title="Terms of Service | CWT Studio Automation, Web & Salesforce Engagements"
+        description="Read the service terms that govern CWT Studio's business automation, Salesforce consulting, and custom web and mobile development engagements."
+        keywords={[
+          'CWT Studio terms',
+          'business automation contract',
+          'Salesforce consulting agreement',
+          'Creator Wealth Tools legal terms',
+          'web development service terms'
+        ]}
         canonicalUrl="/terms-of-service"
       />
       
