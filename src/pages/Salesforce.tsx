@@ -299,13 +299,13 @@ const Salesforce = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <Link to="/salesforce/partners">
-                AE Resources & Quick Wins
+              <Link to="/ae-hub">
+                AE Hub & Resources
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link to="/ae-technical-support">
+              <Link to="/ae-hub">
                 Request Support
               </Link>
             </Button>

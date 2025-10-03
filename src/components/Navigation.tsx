@@ -39,14 +39,8 @@ const Navigation = () => {
   }];
 
   const forAEsLinks = [{
-    label: "Technical Support (48hr)",
-    href: "/ae-technical-support"
-  }, {
-    label: "Deal Playbook",
-    href: "/salesforce/partners"
-  }, {
-    label: "Assessment Tools",
-    href: "/assessment-tools"
+    label: "AE Hub",
+    href: "/ae-hub"
   }];
   const isActive = (href: string) => location.pathname === href;
   const isSolutionsActive = () => solutionsLinks.some(link => isActive(link.href));
