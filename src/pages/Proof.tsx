@@ -91,6 +91,39 @@ const Proof = () => {
     },
     growth: "420%",
     outcomes: ["First enterprise deals secured", "GTM risk eliminated", "Repeatable SaaS revenue foundation", "Revenue growth infrastructure live"]
+  }, {
+    id: 5,
+    industry: "Compliance Advisory",
+    vertical: "Federal Cybersecurity",
+    size: "Founder + contractors",
+    timeline: "90 Days",
+    challenge: "Strong subject matter credibility but no repeatable acquisition system. Deals arrived sporadically via freelance platforms, with no ICP focus, no outbound process, and no CRM discipline.",
+    pullQuote: "From ad-hoc deal chasing to a repeatable outbound engine",
+    system: [
+      "Narrowed 9 ICPs into 3 structured lanes with targeting rules",
+      "Apollo + SmartLead + HubSpot outbound stack",
+      "CRM pipeline: New → Contacted → Warm → Discovery → Decision → Won/Lost",
+      "Lane-specific cold sequences focused on artifacts (risk checklists, readiness proof)",
+      "Sales Navigator + Apollo LinkedIn workflows with safety protocols",
+      "Complete documentation for VA/SDR handoff"
+    ],
+    beforeMetric: {
+      label: "Freelance platforms",
+      value: "0 systems"
+    },
+    afterMetric: {
+      label: "Pipeline activated",
+      value: "Foundation live"
+    },
+    growth: ">40%",
+    outcomes: [
+      ">40% open rates across all lanes",
+      "1 qualified opportunity sourced in 90 days",
+      "Clean data hygiene & deliverability validated",
+      "Every workflow documented for handoff",
+      "ICP clarity: 9 lanes → 3 focused targets",
+      "Repeatable outbound engine operational"
+    ]
   }];
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -136,7 +169,7 @@ const Proof = () => {
             </div>
             <div className="hidden md:flex items-center gap-3">
               <div className="system-monitor">
-                <span>4 Deployments</span>
+                <span>5 Deployments</span>
               </div>
               <div className="h-6 w-px bg-border" />
               <div className="system-monitor">
