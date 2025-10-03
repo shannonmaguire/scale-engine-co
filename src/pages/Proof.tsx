@@ -18,7 +18,7 @@ const Proof = () => {
     vertical: "Federal Cybersecurity",
     size: "Founder + contractors",
     timeline: "90 Days",
-    challenge: "Strong subject matter credibility but no repeatable acquisition system. Deals arrived sporadically via freelance platforms, with no ICP focus, no outbound process, and no CRM discipline.",
+    challenge: "Strong subject matter credibility but no repeatable acquisition system. Deals arrived sporadically via freelance platforms, with no ICP focus, no outbound process, and no CRM discipline. Every deal required founder time, with no path to scale beyond personal network and referrals.",
     pullQuote: "From ad-hoc deal chasing to a repeatable outbound engine",
     system: [
       "Narrowed 9 ICPs into 3 structured lanes with targeting rules",
@@ -36,14 +36,14 @@ const Proof = () => {
       label: "Pipeline activated",
       value: "Foundation live"
     },
-    growth: ">40%",
+    growth: "Foundation",
     outcomes: [
-      ">40% open rates across all lanes",
-      "1 qualified opportunity sourced in 90 days",
-      "Clean data hygiene & deliverability validated",
-      "Every workflow documented for handoff",
-      "ICP clarity: 9 lanes → 3 focused targets",
-      "Repeatable outbound engine operational"
+      "System readiness achieved: documented, repeatable engine operational",
+      "Benchmarks exceeded: >40% open rates (industry avg: 15-25%), 0% bounce rate",
+      "Pipeline activated: first qualified opportunity sourced within 90 days from cold",
+      "Founder leverage: complete VA/SDR handoff documentation created",
+      "ICP clarity: 9 unfocused lanes refined to 3 high-conviction targets",
+      "12-month trajectory: foundation for $500K+ predictable pipeline growth"
     ]
   }, {
     id: 6,
