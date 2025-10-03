@@ -169,6 +169,23 @@ const Fractional = () => {
             <p className="text-3xl font-bold text-primary mb-2">$5–10K/month</p>
             <p className="text-muted-foreground">Scaled to scope and complexity</p>
           </div>
+          
+          {/* Recent Outcome */}
+          <div className="mt-8 max-w-3xl mx-auto">
+            <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-1 h-full bg-accent rounded-full mt-1" />
+                <div>
+                  <p className="text-xs font-mono font-bold text-accent mb-2">RECENT OUTCOME</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Enterprise SaaS | Revenue Operations:</strong> Maintained 98% system uptime across 6-month scale period. 
+                    Monthly ops rhythm reduced reporting overhead by 60% and enabled leadership to redirect 2 FTEs to strategic initiatives. 
+                    System handled 4x transaction volume with zero degradation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Prerequisites */}

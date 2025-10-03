@@ -144,6 +144,29 @@ const Services = () => {
                           <p className="font-medium text-foreground">{service.timeline}</p>
                         </div>
                       </div>
+                      
+                      {/* Anonymized Proof */}
+                      {index === 0 && (
+                        <div className="bg-accent/5 border border-accent/20 rounded p-3 mt-4">
+                          <p className="text-xs text-muted-foreground italic">
+                            <strong className="text-accent">Recent outcome:</strong> Federal cybersecurity consultancy identified $240K+ in technical debt in initial audit
+                          </p>
+                        </div>
+                      )}
+                      {index === 1 && (
+                        <div className="bg-accent/5 border border-accent/20 rounded p-3 mt-4">
+                          <p className="text-xs text-muted-foreground italic">
+                            <strong className="text-accent">Recent outcome:</strong> Legal subscription firm built repeatable outbound engine in 8 weeks, 3x pipeline velocity
+                          </p>
+                        </div>
+                      )}
+                      {index === 2 && (
+                        <div className="bg-accent/5 border border-accent/20 rounded p-3 mt-4">
+                          <p className="text-xs text-muted-foreground italic">
+                            <strong className="text-accent">Recent outcome:</strong> SaaS platform maintained 98% system uptime across 6-month growth sprint
+                          </p>
+                        </div>
+                      )}
                     </div>
                     
                     <Button asChild className="w-full hover-lift">

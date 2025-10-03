@@ -150,6 +150,23 @@ const Sprint = () => {
             <p className="text-3xl font-bold text-primary mb-2">$7.5–15K</p>
             <p className="text-muted-foreground">Scoped to complexity</p>
           </div>
+          
+          {/* Recent Outcome */}
+          <div className="mt-8 max-w-3xl mx-auto">
+            <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-1 h-full bg-accent rounded-full mt-1" />
+                <div>
+                  <p className="text-xs font-mono font-bold text-accent mb-2">RECENT OUTCOME</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Legal Boutique | Subscription Growth Model:</strong> Built complete subscription pipeline system in 8 weeks. 
+                    Installed multi-touch outbound engine, automated Salesforce workflows, and real-time dashboards. 
+                    Pipeline velocity increased 3x in first 90 days post-install.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Success Metrics */}

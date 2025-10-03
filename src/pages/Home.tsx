@@ -199,6 +199,23 @@ const Home = () => {
                   <Button asChild className="w-full mt-auto">
                     <Link to={service.link}>{service.cta}</Link>
                   </Button>
+                  
+                  {/* Anonymized Proof */}
+                  {index === 0 && (
+                    <p className="text-xs text-muted-foreground italic mt-3 border-l-2 border-accent/30 pl-3">
+                      "Cybersecurity advisory identified 14 compliance gaps in first diagnostic"
+                    </p>
+                  )}
+                  {index === 1 && (
+                    <p className="text-xs text-muted-foreground italic mt-3 border-l-2 border-accent/30 pl-3">
+                      "Legal boutique installed subscription pipeline system in 90 days"
+                    </p>
+                  )}
+                  {index === 2 && (
+                    <p className="text-xs text-muted-foreground italic mt-3 border-l-2 border-accent/30 pl-3">
+                      "SaaS company reduced reporting overhead by 60% with monthly ops rhythm"
+                    </p>
+                  )}
                 </div>
               </StandardCard>)}
           </div>

@@ -155,6 +155,22 @@ const Assessment = () => {
             Get a complete diagnostic of your revenue infrastructure with a prioritized remediation roadmap. 
             Delivered in 7 business days.
           </p>
+          
+          {/* Recent Outcome */}
+          <div className="mt-8 max-w-2xl mx-auto">
+            <div className="bg-accent/5 border border-accent/20 rounded-lg p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-1 h-full bg-accent rounded-full mt-1" />
+                <div>
+                  <p className="text-xs font-mono font-bold text-accent mb-2">RECENT OUTCOME</p>
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Compliance Advisory | Federal Cybersecurity:</strong> Identified 14 technical debt issues blocking $2M+ pipeline. 
+                    Assessment led to immediate Sprint engagement. Client closed 3 federal deals in 90 days.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* What You Get */}
