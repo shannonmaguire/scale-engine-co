@@ -151,10 +151,25 @@ const Assessment = () => {
             <span className="text-3xl font-bold text-primary font-mono">$750–$1.5K</span>
             <span className="text-muted-foreground ml-2">• One-time engagement</span>
           </div>
-          <p className="text-description max-w-2xl mx-auto">
+          <p className="text-description max-w-2xl mx-auto mb-6">
             Get a complete diagnostic of your revenue infrastructure with a prioritized remediation roadmap. 
             Delivered in 7 business days.
           </p>
+          
+          {/* Credit Messaging */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-success/10 border border-success/20 rounded-lg p-4">
+              <div className="flex items-center justify-center gap-2 text-success">
+                <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                <p className="text-sm font-semibold">
+                  Assessment fee fully credited toward 90-Day Sprint if you proceed
+                </p>
+              </div>
+              <p className="text-xs text-center text-muted-foreground mt-2">
+                Zero risk diagnostic. Full value applied to implementation.
+              </p>
+            </div>
+          </div>
           
           {/* Recent Outcome */}
           <div className="mt-8 max-w-2xl mx-auto">

@@ -148,7 +148,13 @@ const Sprint = () => {
             <Zap className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="font-mono text-2xl font-bold mb-2">Sprint Price</h2>
             <p className="text-3xl font-bold text-primary mb-2">$7.5–15K</p>
-            <p className="text-muted-foreground">Scoped to complexity</p>
+            <p className="text-muted-foreground mb-4">Scoped to complexity</p>
+            <div className="mt-4 pt-4 border-t border-border">
+              <p className="text-sm text-muted-foreground">
+                Already completed an Assessment with us?{' '}
+                <span className="text-primary font-semibold">Your assessment fee is fully credited toward this engagement.</span>
+              </p>
+            </div>
           </div>
           
           {/* Recent Outcome */}

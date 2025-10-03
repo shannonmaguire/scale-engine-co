@@ -178,13 +178,13 @@ const Contact = () => {
         {/* Hero */}
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <div className="system-status mb-6">
-            INTAKE READY
+            CONTACT US
           </div>
           <h1 className="heading-page mb-6">
-            Start Assessment
+            Get In Touch
           </h1>
           <p className="text-description max-w-2xl mx-auto">
-            Complete intake. Get diagnostic proposal within 24 hours.
+            General inquiries, partnerships, or questions? Reach out below.
           </p>
         </div>
 
@@ -193,7 +193,7 @@ const Contact = () => {
           <div className="lg:col-span-2">
             <StandardCard>
               <StandardCardHeader>
-                <StandardCardTitle className="text-primary">Assessment Intake</StandardCardTitle>
+                <StandardCardTitle className="text-primary">Contact Form</StandardCardTitle>
               </StandardCardHeader>
               <StandardCardContent>
                 <form onSubmit={handleSubmit} className="space-y-8">
@@ -370,6 +370,20 @@ const Contact = () => {
                           <AlertCircle className="w-3 h-3" />
                           {errors.serviceInterest}
                         </p>
+                      )}
+                      {formData.serviceInterest === 'infrastructure-assessment' && (
+                        <div className="mt-3 p-3 bg-primary/10 border border-primary/20 rounded-lg">
+                          <p className="text-sm text-foreground flex items-start gap-2">
+                            <AlertCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                            <span>
+                              For assessment requests, please use our dedicated{' '}
+                              <a href="/assessment" className="text-primary hover:underline font-semibold">
+                                Assessment page
+                              </a>
+                              {' '}for faster processing.
+                            </span>
+                          </p>
+                        </div>
                       )}
                     </div>
 
