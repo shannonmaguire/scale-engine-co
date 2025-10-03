@@ -191,6 +191,102 @@ const Salesforce = () => {
           </div>
       </Section>
 
+      {/* Salesforce Partner Ecosystem */}
+      <Section className="bg-primary/5 border-y-2 border-primary/20">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-mono mb-6">
+              <Shield className="w-4 h-4" />
+              PARTNER ECOSYSTEM
+            </div>
+            <h2 className="heading-section mb-6">Powered by Salesforce Partner Collaboration</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              CWT Studio operates in a <strong>50% profit-share partnership with CloudRoute</strong>, 
+              a certified Salesforce Partner. This strategic collaboration delivers:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-card p-6 rounded-lg border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-mono font-bold text-lg text-foreground mb-2">
+                    Direct Ecosystem Credibility
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Certified Partner status gives us priority access to Salesforce resources and faster deal velocity through trusted channels
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-mono font-bold text-lg text-foreground mb-2">
+                    Accelerated Implementation
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Partner-tier technical resources enable faster deployment and enterprise-grade support without traditional agency overhead
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Target className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-mono font-bold text-lg text-foreground mb-2">
+                    Technical Debt Resolution
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Unblock messy orgs and legacy implementations with proven frameworks that accelerate deal cycles by 30%
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card p-6 rounded-lg border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <BarChart3 className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-mono font-bold text-lg text-foreground mb-2">
+                    Measurable ROI
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Every engagement includes documented outcomes, adoption metrics, and 12-month projections for scalable growth
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-warm/20 border-2 border-warm rounded-lg p-8 text-center">
+            <p className="text-lg text-foreground mb-6">
+              <strong>The Result:</strong> Operator-led revenue systems backed by certified Partner ecosystem credibility. 
+              We deliver the speed and pragmatism of a consultancy with the technical authority of a Salesforce Partner.
+            </p>
+            <Button size="lg" asChild>
+              <Link to="/contact">
+                Book Partnership Conversation
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </Section>
+
       {/* AE Resources CTA */}
       <Section variant="muted">
         <div className="max-w-4xl mx-auto text-center">
@@ -200,12 +296,12 @@ const Salesforce = () => {
           </div>
           <h2 className="text-3xl font-bold mb-4">Technical Support for Salesforce Deals</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Close deals faster. Technical expertise for Salesforce debt and implementation.
+            Unblock technical debt, shorten sales cycles, and get 48-hour turnaround on complex deals
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link to="/salesforce/partners">
-                AE Resources
+                AE Resources & Quick Wins
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>

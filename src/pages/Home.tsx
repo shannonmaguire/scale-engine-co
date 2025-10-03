@@ -406,23 +406,45 @@ const Home = () => {
                 Performance Metrics
               </div>
             </div>
-            <h2 className="heading-section">Results That Matter</h2>
+            <h2 className="heading-section">By the Numbers</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
+              Real deployments. Measured outcomes. No inflated promises.
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {proofStats.map((stat, index) => <div key={index} className="stat-block-data text-center">
-                <div className="stat-number-data">{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>)}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="bg-card border-2 border-primary/20 p-8 rounded-lg text-center hover-lift">
+              <div className="text-5xl font-bold font-mono text-primary mb-2">2</div>
+              <div className="text-sm font-mono text-muted-foreground uppercase tracking-wide">Case Studies</div>
+              <div className="text-xs text-muted-foreground mt-2">Federal + Legal Sectors</div>
+            </div>
+            
+            <div className="bg-card border-2 border-primary/20 p-8 rounded-lg text-center hover-lift">
+              <div className="text-5xl font-bold font-mono text-primary mb-2">&gt;40%</div>
+              <div className="text-sm font-mono text-muted-foreground uppercase tracking-wide">Open Rates</div>
+              <div className="text-xs text-muted-foreground mt-2">Industry avg: 15-25%</div>
+            </div>
+            
+            <div className="bg-card border-2 border-primary/20 p-8 rounded-lg text-center hover-lift">
+              <div className="text-5xl font-bold font-mono text-primary mb-2">90</div>
+              <div className="text-sm font-mono text-muted-foreground uppercase tracking-wide">Day Foundation</div>
+              <div className="text-xs text-muted-foreground mt-2">Assessment to operational system</div>
+            </div>
+            
+            <div className="bg-card border-2 border-primary/20 p-8 rounded-lg text-center hover-lift">
+              <div className="text-5xl font-bold font-mono text-primary mb-2">100%</div>
+              <div className="text-sm font-mono text-muted-foreground uppercase tracking-wide">Documentation</div>
+              <div className="text-xs text-muted-foreground mt-2">Every workflow repeatable</div>
+            </div>
           </div>
           
           <div className="text-center">
             <ConversionOptimizedButton
-              to="/services"
-              ctaName="Proof - See Services"
-              location="Proof Section"
+              to="/proof"
+              ctaName="By Numbers - See Proof"
+              location="By Numbers Section"
             >
-              See Services
+              See Full Case Studies
             </ConversionOptimizedButton>
           </div>
       </Section>

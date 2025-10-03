@@ -7,63 +7,63 @@ import SEOHead from "@/components/SEOHead";
 import { useScrollDepth } from "@/hooks/useScrollDepth";
 import { Search, Clock, ArrowRight } from "lucide-react";
 
-// Sample blog posts data
+// Sample blog posts data - Real content structure
 const blogPosts = [
   {
     id: 1,
-    slug: "revenue-systems-automation-guide",
-    title: "The Complete Guide to Revenue Systems Automation",
-    excerpt: "Learn how to identify, design, and implement automated revenue systems that scale your business operations and improve conversion rates.",
-    content: "Revenue systems automation is the foundation of scalable business growth...",
+    slug: "90-day-revenue-system-installation",
+    title: "The 90-Day Revenue System Installation: A Deployment Framework",
+    excerpt: "How we install documented, repeatable revenue systems for Salesforce-driven businesses in 90 days. No 18-month transformation projects. Just measurable outcomes and operational leverage.",
+    content: "Revenue systems installation requires...",
     author: "Shannon Mitchell",
     publishedAt: "2024-01-15",
-    readTime: "8 min read",
-    category: "Revenue Operations",
-    tags: ["automation", "revenue", "systems", "scaling"],
+    readTime: "12 min read",
+    category: "System Installation",
+    tags: ["90-day sprint", "revenue systems", "implementation", "frameworks"],
     featured: true
   },
   {
     id: 2,
-    slug: "salesforce-optimization-strategies",
-    title: "Advanced Salesforce Optimization Strategies for Enterprise Teams",
-    excerpt: "Discover proven techniques to maximize your Salesforce investment and streamline complex business processes for enterprise-scale operations.",
-    content: "Enterprise Salesforce implementations require sophisticated optimization...",
+    slug: "salesforce-technical-debt-competitive-advantage",
+    title: "Why Salesforce Technical Debt Is Actually a Competitive Advantage",
+    excerpt: "Most Salesforce orgs are messy. That's not a bug — it's an opportunity. How technical debt becomes your edge when you have the right cleanup framework.",
+    content: "Technical debt in Salesforce...",
     author: "Shannon Mitchell",
     publishedAt: "2024-01-10",
-    readTime: "12 min read",
-    category: "Salesforce",
-    tags: ["salesforce", "optimization", "enterprise", "crm"],
+    readTime: "10 min read",
+    category: "Salesforce Ecosystem",
+    tags: ["technical debt", "Salesforce", "competitive advantage", "cleanup"],
     featured: false
   },
   {
     id: 3,
-    slug: "data-driven-decision-making-framework",
-    title: "Building a Data-Driven Decision Making Framework",
-    excerpt: "Establish systematic approaches to business intelligence that transform raw data into actionable insights for strategic decision making.",
-    content: "Data-driven decision making requires more than just collecting metrics...",
+    slug: "documented-operations-playbook",
+    title: "The Documented Operations Playbook: How to Fire Yourself from Revenue Execution",
+    excerpt: "Founder-led revenue execution doesn't scale. Here's the documentation framework that enables VA/SDR handoff without losing control or quality.",
+    content: "Fractional operations...",
     author: "Shannon Mitchell",
     publishedAt: "2024-01-05",
-    readTime: "6 min read",
-    category: "Strategy",
-    tags: ["data", "analytics", "framework", "decisions"],
+    readTime: "8 min read",
+    category: "Fractional Ops",
+    tags: ["documentation", "delegation", "fractional", "operations"],
     featured: false
   },
   {
     id: 4,
-    slug: "fractional-executive-benefits",
-    title: "Why Fractional Executives Are the Future of Business Growth",
-    excerpt: "Explore how fractional executive services provide enterprise-level expertise without the overhead of full-time executive hiring.",
-    content: "The traditional model of executive hiring is being disrupted...",
+    slug: "federal-compliance-outbound-engine",
+    title: "Federal Compliance Sector: Outbound Engine Design for High-Trust Industries",
+    excerpt: "Cold outbound for federal cybersecurity and compliance sectors requires artifact-led sequences, not spray-and-pray tactics. Here's the ICP targeting framework.",
+    content: "High-trust industries require...",
     author: "Shannon Mitchell",
     publishedAt: "2023-12-28",
-    readTime: "10 min read",
-    category: "Leadership",
-    tags: ["fractional", "executive", "growth", "strategy"],
+    readTime: "11 min read",
+    category: "Revenue Infrastructure",
+    tags: ["federal", "compliance", "outbound", "ICP"],
     featured: true
   }
 ];
 
-const categories = ["All", "Revenue Operations", "Salesforce", "Strategy", "Leadership"];
+const categories = ["All", "Revenue Infrastructure", "System Installation", "Fractional Ops", "Salesforce Ecosystem"];
 
 const Blog = () => {
   useScrollDepth();
@@ -111,13 +111,15 @@ const Blog = () => {
                 year: 'numeric' 
               })}</time>
               <span>•</span>
+              <span className="uppercase tracking-wide">Volume 1</span>
+              <span>•</span>
               <span className="uppercase tracking-wide">Digital Edition</span>
             </div>
           </div>
           
           <div className="text-center">
             <p className="text-base text-muted-foreground italic max-w-2xl mx-auto">
-              Setting the standard for revenue operations excellence
+              Revenue operations insights for Salesforce-driven businesses. Documented frameworks, proven systems, measurable outcomes.
             </p>
           </div>
         </div>

@@ -28,6 +28,7 @@ const Salesforce = lazy(() => import("@/pages/Salesforce"));
 const SalesforcePartners = lazy(() => import("@/pages/SalesforcePartners"));
 const SalesforceDelivery = lazy(() => import("@/pages/SalesforceDelivery"));
 const Fractional = lazy(() => import("@/pages/Fractional"));
+const Resources = lazy(() => import("@/pages/Resources"));
 
 const PartnerDashboard = lazy(() => import("@/pages/PartnerDashboard"));
 const SampleReport = lazy(() => import("@/pages/SampleReport"));
@@ -81,6 +82,7 @@ const AppContent = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/ae-technical-support" element={<AETechnicalSupport />} />
             <Route path="/assessment-tools" element={<AssessmentTools />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

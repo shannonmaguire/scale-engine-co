@@ -12,7 +12,21 @@ const Proof = () => {
     align: "start"
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const caseStudies = [{
+  const caseStudies: Array<{
+    id: number;
+    industry: string;
+    vertical: string;
+    size: string;
+    timeline: string;
+    challenge: string;
+    pullQuote: string;
+    system: string[];
+    beforeMetric: { label: string; value: string };
+    afterMetric: { label: string; value: string };
+    growth: string;
+    outcomes: string[];
+    whyItWorked?: string;
+  }> = [{
     id: 5,
     industry: "Compliance Advisory",
     vertical: "Federal Cybersecurity",
@@ -38,13 +52,14 @@ const Proof = () => {
     },
     growth: "Foundation",
     outcomes: [
-      "System readiness achieved: documented, repeatable engine operational",
-      "Benchmarks exceeded: >40% open rates (industry avg: 15-25%), 0% bounce rate",
-      "Pipeline activated: first qualified opportunity sourced within 90 days from cold",
-      "Founder leverage: complete VA/SDR handoff documentation created",
-      "ICP clarity: 9 unfocused lanes refined to 3 high-conviction targets",
-      "12-month trajectory: foundation for $500K+ predictable pipeline growth"
-    ]
+      "Eliminated founder dependency: 3-lane ICP system now runs via documented VA workflows",
+      "Exceeded benchmarks: >40% open rates vs. industry avg 15-25%, 0% bounce rate maintained",
+      "Pipeline activated: First qualified opportunity sourced within 90 days from cold outbound",
+      "Complete VA/SDR handoff: Every workflow documented and repeatable without founder involvement",
+      "ICP clarity achieved: Narrowed 9 unfocused lanes to 3 high-conviction target segments",
+      "**12-month projection:** $500K+ predictable pipeline based on validated open rates and targeting"
+    ],
+    whyItWorked: "Tight ICP focus + artifact-led sequences + safety-first LinkedIn protocols. No spray-and-pray tactics — every touch designed to demonstrate subject matter authority through valuable deliverables."
   }, {
     id: 6,
     industry: "Legal Services",
@@ -73,13 +88,14 @@ const Proof = () => {
     },
     growth: "Foundation",
     outcomes: [
-      "Subscription tiers refined with profitability alignment",
-      "Atlanta pilot launched with validated acquisition data",
-      "Live subscriber dashboard deployed for real-time visibility",
-      "Quick-win automations freed attorney time from manual intake",
-      "Partner time shifted from growth logistics to client service",
-      "Proven subscription growth framework operational"
-    ]
+      "Subscription economics validated: Profitable tier structure with clear usage caps and attorney compensation aligned to growth",
+      "Atlanta pilot delivered data: Validated messaging, targeting, and acquisition economics for replication",
+      "Real-time visibility: Live dashboards track subscribers, usage patterns, and churn risk indicators",
+      "Attorney leverage achieved: Onboarding automation freed $500/hr partner time for client service",
+      "Partner time reclaimed: Growth logistics shifted from manual execution to strategic oversight",
+      "**12-month projection:** Proven subscription framework ready for geographic expansion and partnership activation"
+    ],
+    whyItWorked: "Subscription model required economic validation before scale. Atlanta pilot proved unit economics, automation removed friction, and dashboards enabled data-driven expansion decisions."
   }];
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -213,10 +229,27 @@ const Proof = () => {
                           <div className="space-y-2">
                             {study.outcomes.map((outcome, idx) => <div key={idx} className="flex items-start gap-2">
                                 <CheckCircle className="w-3 h-3 text-accent mt-1 flex-shrink-0" />
-                                <span className="text-sm text-foreground">{outcome}</span>
+                                <span className={`text-sm ${outcome.includes('12-month projection') ? 'font-bold text-primary' : 'text-foreground'}`}>
+                                  {outcome.replace(/\*\*/g, '')}
+                                </span>
                               </div>)}
                           </div>
                         </div>
+
+                        {/* 4. Why It Worked */}
+                        {study.whyItWorked && (
+                          <div className="border-t-2 border-border pt-6">
+                            <div className="flex items-center gap-2 mb-3">
+                              <div className="w-6 h-6 rounded-full bg-warm/20 flex items-center justify-center">
+                                <span className="text-warm-foreground font-mono text-xs font-bold">4</span>
+                              </div>
+                              <h3 className="text-lg font-bold text-foreground">Why It Worked</h3>
+                            </div>
+                            <p className="text-sm text-foreground bg-warm/10 p-4 rounded-lg border border-warm/20">
+                              {study.whyItWorked}
+                            </p>
+                          </div>
+                        )}
                       </div>
 
                         {/* Right Column - Data Visualization */}

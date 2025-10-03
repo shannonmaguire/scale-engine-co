@@ -101,6 +101,14 @@ img {
   --spacing-quarter: 1.25rem;        /* 20px - Internal spacing */
   --spacing-gutter: 1.5rem;          /* 24px - Grid gutter */
   
+  /* Fortune 500 Grid System */
+  --grid-max-width: 1440px;        /* Cap content width */
+  --grid-gutter: 2rem;             /* Consistent outer margins */
+  --section-spacing-xl: 120px;     /* Hero sections */
+  --section-spacing-lg: 96px;      /* Major sections */
+  --section-spacing-md: 64px;      /* Sub-sections */
+  --section-spacing-sm: 32px;      /* Internal spacing */
+  
   /* Animation variables - Fortune 500 standard timing */
   --transition-fast: all 0.15s ease-out;
   --transition-standard: all 0.2s ease-out;
