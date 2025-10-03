@@ -6,92 +6,75 @@ import { Section } from "@/components/ui/section";
 import { StandardCard, StandardCardHeader, StandardCardTitle, StandardCardDescription, StandardCardContent } from "@/components/ui/standard-card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Separator } from "@/components/ui/separator";
-
 const AEHub = () => {
-  const resources = [
-    {
-      icon: FileText,
-      title: "Technical Debt Assessment",
-      format: "PDF · 12 pages",
-      description: "Complete framework for diagnosing revenue system issues with scorecard and ROI calculator",
-      downloadUrl: "#"
-    },
-    {
-      icon: Calculator,
-      title: "Deal Qualification Calculator",
-      format: "Excel · Interactive",
-      description: "Instant ROI and deal sizing for prospect conversations with time savings calculator",
-      downloadUrl: "#"
-    },
-    {
-      icon: Target,
-      title: "Discovery Question Bank",
-      format: "PDF · 8 pages",
-      description: "Pre-qualified questions that surface technical debt with objection handling scripts",
-      downloadUrl: "#"
-    }
-  ];
-
-  const quickWins = [
-    {
-      scenario: "Data quality issues mentioned",
-      action: "Offer free 1-hour diagnostic",
-      outcome: "Surface 3-5 quick wins → Assessment"
-    },
-    {
-      scenario: "Deal stalled on technical objections",
-      action: "Request support (we join next call)",
-      outcome: "Real-time resolution → Deal unstuck"
-    },
-    {
-      scenario: "Prospect unsure about ROI",
-      action: "Share qualification calculator",
-      outcome: "Quantified value → Executive buy-in"
-    }
-  ];
-
-  const objectionReframes = [
-    {
-      objection: "We don't have budget for consulting",
-      reframe: "This is a diagnostic, not consulting. Under $1.5K to know exactly what's broken.",
-      impact: "Turns objection into urgency"
-    },
-    {
-      objection: "Our admin can handle this",
-      reframe: "Great! We find 47 issues on average — what should they tackle first?",
-      impact: "Positions as enablement, not replacement"
-    },
-    {
-      objection: "Need executive buy-in first",
-      reframe: "That's what our assessment provides — a board-ready ROI report.",
-      impact: "Assessment becomes the buy-in tool"
-    }
-  ];
-
-  const supportTiers = [
-    { urgency: "CRITICAL", time: "4 hours", color: "text-destructive" },
-    { urgency: "HIGH", time: "24 hours", color: "text-warm" },
-    { urgency: "MEDIUM", time: "48 hours", color: "text-data" },
-    { urgency: "GENERAL", time: "3-5 days", color: "text-muted-foreground" }
-  ];
-
-  return (
-    <>
-      <SEOHead
-        title="AE Hub - Technical Support for Salesforce Deals | CWT Studio"
-        description="Technical backstop for Account Executives selling Salesforce services. Request support, download tools, and access deal playbooks."
-        canonicalUrl="https://coalescentwebtech.com/ae-hub"
-      />
+  const resources = [{
+    icon: FileText,
+    title: "Technical Debt Assessment",
+    format: "PDF · 12 pages",
+    description: "Complete framework for diagnosing revenue system issues with scorecard and ROI calculator",
+    downloadUrl: "#"
+  }, {
+    icon: Calculator,
+    title: "Deal Qualification Calculator",
+    format: "Excel · Interactive",
+    description: "Instant ROI and deal sizing for prospect conversations with time savings calculator",
+    downloadUrl: "#"
+  }, {
+    icon: Target,
+    title: "Discovery Question Bank",
+    format: "PDF · 8 pages",
+    description: "Pre-qualified questions that surface technical debt with objection handling scripts",
+    downloadUrl: "#"
+  }];
+  const quickWins = [{
+    scenario: "Data quality issues mentioned",
+    action: "Offer free 1-hour diagnostic",
+    outcome: "Surface 3-5 quick wins → Assessment"
+  }, {
+    scenario: "Deal stalled on technical objections",
+    action: "Request support (we join next call)",
+    outcome: "Real-time resolution → Deal unstuck"
+  }, {
+    scenario: "Prospect unsure about ROI",
+    action: "Share qualification calculator",
+    outcome: "Quantified value → Executive buy-in"
+  }];
+  const objectionReframes = [{
+    objection: "We don't have budget for consulting",
+    reframe: "This is a diagnostic, not consulting. Under $1.5K to know exactly what's broken.",
+    impact: "Turns objection into urgency"
+  }, {
+    objection: "Our admin can handle this",
+    reframe: "Great! We find 47 issues on average — what should they tackle first?",
+    impact: "Positions as enablement, not replacement"
+  }, {
+    objection: "Need executive buy-in first",
+    reframe: "That's what our assessment provides — a board-ready ROI report.",
+    impact: "Assessment becomes the buy-in tool"
+  }];
+  const supportTiers = [{
+    urgency: "CRITICAL",
+    time: "4 hours",
+    color: "text-destructive"
+  }, {
+    urgency: "HIGH",
+    time: "24 hours",
+    color: "text-warm"
+  }, {
+    urgency: "MEDIUM",
+    time: "48 hours",
+    color: "text-data"
+  }, {
+    urgency: "GENERAL",
+    time: "3-5 days",
+    color: "text-muted-foreground"
+  }];
+  return <>
+      <SEOHead title="AE Hub - Technical Support for Salesforce Deals | CWT Studio" description="Technical backstop for Account Executives selling Salesforce services. Request support, download tools, and access deal playbooks." canonicalUrl="https://coalescentwebtech.com/ae-hub" />
 
       {/* Header */}
       <Section noPadding className="pt-12 pb-8 border-b border-border">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-sm font-mono text-muted-foreground hover:text-foreground mb-6 transition-colors group"
-        >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back to Home
-        </Link>
+        
         
         <div className="system-status mb-6">AE RESOURCES PORTAL</div>
         
@@ -105,14 +88,12 @@ const AEHub = () => {
 
         {/* Response Time Badges */}
         <div className="flex flex-wrap gap-3">
-          {supportTiers.map((tier) => (
-            <div key={tier.urgency} className="flex items-center gap-2 px-3 py-1.5 bg-muted/50 rounded border border-border">
+          {supportTiers.map(tier => <div key={tier.urgency} className="flex items-center gap-2 px-3 py-1.5 bg-muted/50 rounded border border-border">
               <Clock className={`w-3.5 h-3.5 ${tier.color}`} />
               <span className="text-xs font-mono font-medium">{tier.urgency}</span>
               <span className="text-xs text-muted-foreground">→</span>
               <span className="text-xs font-mono">{tier.time}</span>
-            </div>
-          ))}
+            </div>)}
         </div>
       </Section>
 
@@ -170,8 +151,7 @@ const AEHub = () => {
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {resources.map((resource) => (
-            <StandardCard key={resource.title} equalHeight className="group">
+          {resources.map(resource => <StandardCard key={resource.title} equalHeight className="group">
               <StandardCardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <resource.icon className="w-6 h-6 text-primary" />
@@ -195,8 +175,7 @@ const AEHub = () => {
                   Download
                 </Button>
               </StandardCardContent>
-            </StandardCard>
-          ))}
+            </StandardCard>)}
         </div>
       </Section>
 
@@ -218,8 +197,7 @@ const AEHub = () => {
           </h3>
           
           <div className="space-y-4">
-            {quickWins.map((win, index) => (
-              <StandardCard key={index} variant="default">
+            {quickWins.map((win, index) => <StandardCard key={index} variant="default">
                 <div className="grid md:grid-cols-3 gap-6 items-center">
                   <div>
                     <div className="text-xs font-mono text-muted-foreground mb-2">SCENARIO</div>
@@ -236,8 +214,7 @@ const AEHub = () => {
                     <p className="text-sm font-medium text-success">{win.outcome}</p>
                   </div>
                 </div>
-              </StandardCard>
-            ))}
+              </StandardCard>)}
           </div>
         </div>
 
@@ -251,8 +228,7 @@ const AEHub = () => {
           </h3>
           
           <div className="space-y-4">
-            {objectionReframes.map((item, index) => (
-              <Collapsible key={index}>
+            {objectionReframes.map((item, index) => <Collapsible key={index}>
                 <StandardCard variant="muted">
                   <CollapsibleTrigger className="w-full text-left">
                     <div className="flex items-start justify-between gap-4">
@@ -282,8 +258,7 @@ const AEHub = () => {
                     </div>
                   </CollapsibleContent>
                 </StandardCard>
-              </Collapsible>
-            ))}
+              </Collapsible>)}
           </div>
         </div>
       </Section>
@@ -379,8 +354,6 @@ const AEHub = () => {
           </div>
         </div>
       </Section>
-    </>
-  );
+    </>;
 };
-
 export default AEHub;
