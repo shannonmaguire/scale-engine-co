@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,26 +12,33 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { trackEvent } from "@/hooks/usePageTracking";
 import { Mail, Phone, Clock, ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 
+const initialFormState = {
+  fullName: "",
+  email: "",
+  company: "",
+  phone: "",
+  companySize: "",
+  revenue: "",
+  role: "",
+  serviceInterest: "",
+  challenge: "",
+  techStack: "",
+  timeline: "",
+  hearAbout: "",
+  privacyConsent: false,
+};
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    company: "",
-    phone: "",
-    companySize: "",
-    revenue: "",
-    role: "",
-    serviceInterest: "",
-    challenge: "",
-    techStack: "",
-    timeline: "",
-    hearAbout: "",
-    privacyConsent: false
-  });
+  const [formData, setFormData] = useState(initialFormState);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [status, setStatus] = useState<{ type: "success" | "error"; message: string } | null>(null);
+
+  const contactEndpoint = useMemo(() => {
+    return import.meta.env.VITE_CONTACT_ENDPOINT || "/.netlify/functions/send-contact";
+  }, []);
 
   const validateField = (field: string, value: string | boolean): string => {
     if (typeof value === 'boolean') {
@@ -70,8 +77,6 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
     // Validate all fields
     const newErrors: Record<string, string> = {};
     Object.keys(formData).forEach(key => {
@@ -82,26 +87,59 @@ const Contact = () => {
     
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      const allTouched: Record<string, boolean> = {};
+      Object.keys(formData).forEach((key) => {
+        allTouched[key] = true;
+      });
+      setTouched((prev) => ({ ...prev, ...allTouched }));
       setIsSubmitting(false);
       return;
     }
+    setIsSubmitting(true);
+    setStatus(null);
     
-    // Track form submission
-    trackEvent('Contact Form Submitted', {
-      fullName: formData.fullName,
-      email: formData.email,
-      company: formData.company,
-      companySize: formData.companySize,
-      serviceInterest: formData.serviceInterest,
-      techStack: formData.techStack,
-      timeline: formData.timeline,
-      hearAbout: formData.hearAbout
-    });
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
+    try {
+      const response = await fetch(contactEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result?.error || 'Failed to send contact request');
+      }
+
+      trackEvent('Contact Form Submitted', {
+        fullName: formData.fullName,
+        email: formData.email,
+        company: formData.company,
+        companySize: formData.companySize,
+        serviceInterest: formData.serviceInterest,
+        techStack: formData.techStack,
+        timeline: formData.timeline,
+        hearAbout: formData.hearAbout,
+      });
+
+      setStatus({
+        type: 'success',
+        message: 'Thanks for reaching out. A confirmation is on the way and we will respond within one business day.',
+      });
+      setFormData(initialFormState);
+      setErrors({});
+      setTouched({});
+    } catch (error) {
+      console.error('Contact submission failed', error);
+      setStatus({
+        type: 'error',
+        message: 'We were unable to send your message. Please try again or email shanon@creatorwealthtools.com directly.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string | boolean) => {
@@ -484,6 +522,18 @@ const Contact = () => {
                       </>
                     )}
                   </Button>
+
+                  {status && (
+                    <p
+                      className={`text-sm font-mono text-center ${
+                        status.type === 'success' ? 'text-emerald-600' : 'text-destructive'
+                      }`}
+                      role="status"
+                      aria-live="polite"
+                    >
+                      {status.message}
+                    </p>
+                  )}
                   
                   {/* Trust signal */}
                   <p className="text-xs text-muted-foreground text-center font-mono flex items-center justify-center gap-2">
