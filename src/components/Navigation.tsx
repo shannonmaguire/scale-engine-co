@@ -42,7 +42,7 @@ const Navigation = () => {
     label: "Technical Support (48hr)",
     href: "/ae-technical-support"
   }, {
-    label: "Partner Resources",
+    label: "Resource Library",
     href: "/salesforce/partners"
   }, {
     label: "Assessment Tools",
