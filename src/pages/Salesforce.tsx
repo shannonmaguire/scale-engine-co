@@ -92,7 +92,7 @@ const Salesforce = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link to="/contact">
+                <Link to="/assessment">
                   Start Assessment
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -277,7 +277,7 @@ const Salesforce = () => {
               We deliver the speed and pragmatism of a consultancy with enterprise-grade technical authority.
             </p>
             <Button size="lg" asChild>
-              <Link to="/contact">
+              <Link to="/assessment">
                 Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

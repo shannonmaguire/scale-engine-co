@@ -251,7 +251,7 @@ const Home = () => {
               
               <div className="mt-8">
                 <ConversionOptimizedButton
-                  to="/contact"
+                  to="/assessment"
                   ctaName="Transformation - Start Assessment"
                   location="Transformation Section"
                   variant="warm"

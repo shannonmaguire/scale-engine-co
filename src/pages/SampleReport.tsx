@@ -724,7 +724,7 @@ const SampleReport = () => {
                 infrastructure, challenges, and growth goals.
               </p>
               <Button asChild size="lg" className="btn-console">
-                <Link to="/contact">Book Your Assessment</Link>
+                <Link to="/assessment">Book Your Assessment</Link>
               </Button>
             </StandardCardContent>
           </StandardCard>
