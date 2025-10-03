@@ -191,18 +191,17 @@ const Salesforce = () => {
           </div>
       </Section>
 
-      {/* Salesforce Partner Ecosystem */}
+      {/* Salesforce Expertise */}
       <Section className="bg-primary/5 border-y-2 border-primary/20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-mono mb-6">
               <Shield className="w-4 h-4" />
-              PARTNER ECOSYSTEM
+              SALESFORCE EXPERTISE
             </div>
-            <h2 className="heading-section mb-6">Powered by Salesforce Partner Collaboration</h2>
+            <h2 className="heading-section mb-6">Enterprise-Grade Salesforce Implementation</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              CWT Studio operates in a <strong>50% profit-share partnership with CloudRoute</strong>, 
-              a certified Salesforce Partner. This strategic collaboration delivers:
+              We bring certified Salesforce expertise and proven frameworks to optimize your revenue operations
             </p>
           </div>
 
@@ -214,10 +213,10 @@ const Salesforce = () => {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-lg text-foreground mb-2">
-                    Direct Ecosystem Credibility
+                    Certified Platform Knowledge
                   </h3>
                   <p className="text-muted-foreground">
-                    Certified Partner status gives us priority access to Salesforce resources and faster deal velocity through trusted channels
+                    Deep Salesforce expertise with access to partner-level resources and enterprise support channels
                   </p>
                 </div>
               </div>
@@ -230,10 +229,10 @@ const Salesforce = () => {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-lg text-foreground mb-2">
-                    Accelerated Implementation
+                    Rapid Implementation
                   </h3>
                   <p className="text-muted-foreground">
-                    Partner-tier technical resources enable faster deployment and enterprise-grade support without traditional agency overhead
+                    Faster deployment timelines without sacrificing quality or enterprise-grade standards
                   </p>
                 </div>
               </div>
@@ -249,7 +248,7 @@ const Salesforce = () => {
                     Technical Debt Resolution
                   </h3>
                   <p className="text-muted-foreground">
-                    Unblock messy orgs and legacy implementations with proven frameworks that accelerate deal cycles by 30%
+                    Proven frameworks to clean up legacy implementations and accelerate your deal cycles by 30%
                   </p>
                 </div>
               </div>
@@ -265,7 +264,7 @@ const Salesforce = () => {
                     Measurable ROI
                   </h3>
                   <p className="text-muted-foreground">
-                    Every engagement includes documented outcomes, adoption metrics, and 12-month projections for scalable growth
+                    Every engagement includes documented outcomes, adoption metrics, and 12-month growth projections
                   </p>
                 </div>
               </div>
@@ -274,12 +273,12 @@ const Salesforce = () => {
 
           <div className="bg-warm/20 border-2 border-warm rounded-lg p-8 text-center">
             <p className="text-lg text-foreground mb-6">
-              <strong>The Result:</strong> Operator-led revenue systems backed by certified Partner ecosystem credibility. 
-              We deliver the speed and pragmatism of a consultancy with the technical authority of a Salesforce Partner.
+              <strong>The Result:</strong> Operator-led revenue systems with certified Salesforce expertise. 
+              We deliver the speed and pragmatism of a consultancy with enterprise-grade technical authority.
             </p>
             <Button size="lg" asChild>
               <Link to="/contact">
-                Book Partnership Conversation
+                Start Your Project
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
