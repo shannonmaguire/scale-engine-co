@@ -217,24 +217,24 @@ const SalesforcePartners = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-primary text-primary-foreground p-6 rounded-lg">
-              <h3 className="font-semibold mb-3 !text-white">Our Technical Collaboration Benefits</h3>
-              <ul className="text-sm space-y-2 !text-white">
-                <li className="!text-white flex items-start gap-2">
+            <div className="bg-primary p-6 rounded-lg text-white [&_*]:text-white">
+              <h3 className="font-semibold mb-3">Our Technical Collaboration Benefits</h3>
+              <ul className="text-sm space-y-2">
+                <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span><strong className="!text-white">48-Hour Assessment:</strong> Rapid technical evaluation with actionable recommendations</span>
+                  <span><strong>48-Hour Assessment:</strong> Rapid technical evaluation with actionable recommendations</span>
                 </li>
-                <li className="!text-white flex items-start gap-2">
+                <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span><strong className="!text-white">Deal Support:</strong> Join calls to address technical objections and scope complexity</span>
+                  <span><strong>Deal Support:</strong> Join calls to address technical objections and scope complexity</span>
                 </li>
-                <li className="!text-white flex items-start gap-2">
+                <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span><strong className="!text-white">Risk Mitigation:</strong> Identify technical landmines before they kill momentum</span>
+                  <span><strong>Risk Mitigation:</strong> Identify technical landmines before they kill momentum</span>
                 </li>
-                <li className="!text-white flex items-start gap-2">
+                <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span><strong className="!text-white">Ecosystem Credibility:</strong> Certified Salesforce Partner backing via CloudRoute</span>
+                  <span><strong>Ecosystem Credibility:</strong> Certified Salesforce Partner backing via CloudRoute</span>
                 </li>
               </ul>
             </div>
