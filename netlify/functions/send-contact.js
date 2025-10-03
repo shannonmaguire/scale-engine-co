@@ -1,4 +1,4 @@
-const RECIPIENT = process.env.CONTACT_RECIPIENT || 'wasifmehmood238@gmail.com';
+const RECIPIENT = process.env.CONTACT_RECIPIENT || 'shannon@creatorwealthtools.com';
 // Use Resend's sandbox sender. Replace with a verified domain once available.
 const FROM_ADDRESS = process.env.CONTACT_FROM || 'Creator Wealth Tools <onboarding@resend.dev>';
 
