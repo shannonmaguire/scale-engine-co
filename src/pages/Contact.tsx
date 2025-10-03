@@ -126,7 +126,7 @@ const Contact = () => {
 
       setStatus({
         type: 'success',
-        message: 'Thanks for reaching out. A confirmation is on the way and we will respond within one business day.',
+        message: 'Thanks for reaching out. We received your request and will respond within one business day.',
       });
       setFormData(initialFormState);
       setErrors({});
@@ -135,7 +135,7 @@ const Contact = () => {
       console.error('Contact submission failed', error);
       setStatus({
         type: 'error',
-        message: 'We were unable to send your message. Please try again or email shanon@creatorwealthtools.com directly.',
+        message: 'We were unable to send your message. Please try again soon or contact us through an alternate channel.',
       });
     } finally {
       setIsSubmitting(false);

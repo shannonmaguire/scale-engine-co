@@ -1,5 +1,6 @@
 const RECIPIENT = 'shanon@creatorwealthtools.com';
-const FROM_ADDRESS = 'CWT Studio <no-reply@cwtstudio.com>';
+// Use Resend's sandbox sender. Replace with a verified domain once available.
+const FROM_ADDRESS = 'Creator Wealth Tools <cwt-studio.netlify.app>';
 
 const escapeHtml = (value = '') =>
   String(value)
