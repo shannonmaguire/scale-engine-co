@@ -11,7 +11,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
 import { EngagementTracker } from "@/components/EngagementTracker";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Search, Zap, RotateCcw, ArrowRight } from "lucide-react";
+import { Search, Zap, RotateCcw, ArrowRight, Target, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 
 const Services = () => {
@@ -191,6 +191,138 @@ const Services = () => {
                 </div>
               </div>
             </div>)}
+        </div>
+      </Section>
+
+      {/* Competitive Positioning */}
+      <Section className="bg-primary/5 border-y-2 border-primary/20">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-mono mb-6">
+            <Target className="w-4 h-4" />
+            POSITIONING
+          </div>
+          <h2 className="heading-section mb-4">Why CWT vs. Alternatives</h2>
+          <p className="text-description max-w-3xl mx-auto">
+            We operate in the gap between a full-time hire and a traditional consultancy—faster than hiring, 
+            more invested than freelancers, and more pragmatic than big firms.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* Full-Time Hire */}
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="flex items-start justify-between mb-4">
+              <h3 className="font-mono font-bold text-lg">Full-Time Hire</h3>
+              <span className="text-xs px-2 py-1 bg-muted text-muted-foreground rounded font-mono">$120K–180K/yr</span>
+            </div>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">6–9 month hiring process</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">Requires onboarding & training</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">Single expertise domain</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">Fixed cost regardless of workload</p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-border">
+              <p className="text-xs font-mono font-bold text-primary mb-2">BEST FOR:</p>
+              <p className="text-xs text-muted-foreground">Companies with consistent 40hr/week ops workload and established systems</p>
+            </div>
+          </div>
+
+          {/* CWT Studio */}
+          <div className="bg-primary/10 border-2 border-primary rounded-lg p-6 relative">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-mono font-bold">
+                CWT STUDIO
+              </span>
+            </div>
+            <div className="flex items-start justify-between mb-4 mt-2">
+              <h3 className="font-mono font-bold text-lg text-primary">Operator-Led Shop</h3>
+              <span className="text-xs px-2 py-1 bg-primary/20 text-primary rounded font-mono">$750–15K</span>
+            </div>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-foreground">Start in 48 hours, ship in weeks</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-foreground">Built-in systems expertise + frameworks</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-foreground">Cross-functional: tech, ops, Salesforce</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-foreground">Pay for outcomes, not hours</p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-primary/20">
+              <p className="text-xs font-mono font-bold text-primary mb-2">BEST FOR:</p>
+              <p className="text-xs text-foreground">Fast-moving companies needing systems installed quickly without hiring overhead</p>
+            </div>
+          </div>
+
+          {/* Big Consultancy */}
+          <div className="bg-card border border-border rounded-lg p-6">
+            <div className="flex items-start justify-between mb-4">
+              <h3 className="font-mono font-bold text-lg">Big Consultancy</h3>
+              <span className="text-xs px-2 py-1 bg-muted text-muted-foreground rounded font-mono">$50K–250K+</span>
+            </div>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">6–12 month engagements minimum</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">Strategy-heavy, implementation-light</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">Junior analysts executing work</p>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">Extensive documentation overhead</p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-border">
+              <p className="text-xs font-mono font-bold text-primary mb-2">BEST FOR:</p>
+              <p className="text-xs text-muted-foreground">Enterprise transformation programs with multi-year budgets and compliance requirements</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-card border-2 border-primary/20 rounded-lg p-8">
+            <h3 className="font-mono font-bold text-xl mb-4 text-center">The CWT Positioning</h3>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="text-2xl font-bold text-primary mb-2">10x</p>
+                <p className="text-sm text-muted-foreground font-mono">Faster than hiring internally</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-primary mb-2">1/5th</p>
+                <p className="text-sm text-muted-foreground font-mono">Cost of big consultancy</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-primary mb-2">100%</p>
+                <p className="text-sm text-muted-foreground font-mono">Operator ownership (no juniors)</p>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
