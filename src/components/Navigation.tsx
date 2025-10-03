@@ -38,13 +38,8 @@ const Navigation = () => {
     href: "/resources"
   }];
 
-  const forAEsLinks = [{
-    label: "AE Hub",
-    href: "/ae-hub"
-  }];
   const isActive = (href: string) => location.pathname === href;
   const isSolutionsActive = () => solutionsLinks.some(link => isActive(link.href));
-  const isForAEsActive = () => forAEsLinks.some(link => isActive(link.href));
   return <nav className="sticky top-0 z-50 bg-authority backdrop-blur border-b border-white/10">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -84,20 +79,14 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* For AEs Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className={`text-sm font-mono font-medium transition-colors hover:text-success flex items-center gap-1 ${isForAEsActive() ? "!text-white font-semibold" : "!text-white"}`}>
-                For AEs
-                <ChevronDown size={14} className="!text-white" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56 bg-authority border-white/20">
-                {forAEsLinks.map(link => <DropdownMenuItem key={link.href} asChild>
-                    <Link to={link.href} className="w-full font-mono text-sm font-medium !text-white hover:!text-success">
-                      {link.label}
-                    </Link>
-                  </DropdownMenuItem>)}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* AE Hub Direct Link */}
+            <Link 
+              to="/ae-hub" 
+              className={`text-sm font-mono font-medium transition-colors hover:text-success focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-authority rounded px-2 py-1 ${isActive("/ae-hub") ? "!text-white font-semibold" : "!text-white"}`}
+              aria-current={isActive("/ae-hub") ? "page" : undefined}
+            >
+              AE Hub
+            </Link>
           </div>
 
           {/* Primary CTA - Console Button */}
@@ -134,13 +123,14 @@ const Navigation = () => {
                   </Link>)}
               </div>
 
-              {/* For AEs section in mobile */}
-              <div className="px-3 py-1">
-                <div className="text-sm font-mono font-semibold !text-white/60 mb-2">For AEs</div>
-                {forAEsLinks.map(link => <Link key={link.href} to={link.href} className={`block px-3 py-2 text-sm font-mono font-medium transition-colors hover:text-success ${isActive(link.href) ? "!text-white font-semibold" : "!text-white/80"}`} onClick={() => setIsOpen(false)}>
-                    {link.label}
-                  </Link>)}
-              </div>
+              {/* AE Hub in mobile */}
+              <Link 
+                to="/ae-hub" 
+                className={`block px-3 py-2 text-base font-mono font-medium transition-colors hover:text-success ${isActive("/ae-hub") ? "!text-white font-semibold" : "!text-white/80"}`} 
+                onClick={() => setIsOpen(false)}
+              >
+                AE Hub
+              </Link>
               
               <div className="px-3 py-2">
                 <Button asChild className="btn-console w-full">
