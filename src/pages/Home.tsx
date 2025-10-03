@@ -40,7 +40,7 @@ const Home = () => {
   const services = [{
     title: "Assessment",
     description: "Diagnose what's broken. Scorecard, benchmarks, 90-day roadmap.",
-    price: "Virtual from $7,500 • In-person from $12,500",
+    price: "From $7,500",
     note: "50% credits toward Sprint",
     cta: "Start Assessment",
     link: "/contact"

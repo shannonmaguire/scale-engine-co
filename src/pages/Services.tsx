@@ -36,7 +36,7 @@ const Services = () => {
     tagline: "Diagnose first",
     description: "Audit tech, ops, pipeline. Find what's blocking scale. Scorecard, benchmarks, 90-day roadmap.",
     features: ["Revenue Infrastructure Scorecard", "Industry benchmarks", "90-day roadmap with sequence", "Executive presentation"],
-    pricing: "Virtual from $7,500 • In-person from $12,500",
+    pricing: "From $7,500",
     timeline: "3-4 weeks",
     cta: "Start Assessment",
     link: "/contact"
